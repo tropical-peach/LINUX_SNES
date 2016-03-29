@@ -1,0 +1,5 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+if [ -z "$D" ]; then
+	/etc/init.d/inetd.busybox stop
+fi

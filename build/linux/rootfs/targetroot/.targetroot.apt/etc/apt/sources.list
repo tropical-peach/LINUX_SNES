@@ -1,0 +1,2 @@
+
+deb file:/opt/petalinux/petalinux-v2014.4-final/components/packages-repo/plnx-repo/ default main

@@ -1,0 +1,8 @@
+kernel/drivers/usb/common/usb-common.ko
+kernel/drivers/usb/core/usbcore.ko
+kernel/drivers/usb/gadget/udc/udc-core.ko
+kernel/drivers/usb/gadget/udc/zynq_udc.ko
+kernel/drivers/usb/host/ehci-hcd.ko
+kernel/drivers/usb/host/ehci-pci.ko
+kernel/drivers/usb/host/zynq-dr-of.ko
+kernel/drivers/usb/storage/usb-storage.ko

@@ -1,0 +1,10 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+if type update-rc.d >/dev/null 2>/dev/null; then
+	if [ -n "$D" ]; then
+		OPT="-r $D"
+	else
+		OPT=""
+	fi
+	update-rc.d $OPT run-postinsts remove
+fi

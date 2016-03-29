@@ -1,0 +1,1 @@
+cmd_net/8021q/8021q.ko := arm-xilinx-linux-gnueabi-ld -EL -r  -T /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/module-common.lds --build-id  -o net/8021q/8021q.ko net/8021q/8021q.o net/8021q/8021q.mod.o

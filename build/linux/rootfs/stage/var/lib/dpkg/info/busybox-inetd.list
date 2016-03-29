@@ -1,0 +1,5 @@
+/.
+/etc
+/etc/inetd.conf
+/etc/init.d
+/etc/init.d/inetd.busybox

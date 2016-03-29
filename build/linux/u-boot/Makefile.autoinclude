@@ -1,0 +1,7 @@
+PROOT:=/home/steven/Desktop/LINUX_SNES
+INSTANCE:=linux/u-boot
+-include /home/steven/Desktop/LINUX_SNES/build/linux/Makefile.export
+-include /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/Makefile.export
+CONFIGFILE:=/home/steven/Desktop/LINUX_SNES/subsystems/linux/config
+dir_u_boot_y=/opt/petalinux/petalinux-v2014.4-final/components/u-boot/u-boot-plnx
+

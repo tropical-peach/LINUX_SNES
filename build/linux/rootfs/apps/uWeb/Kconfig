@@ -1,0 +1,16 @@
+###############################################################################
+# Please modify this file if you want to configure your own application.
+# You can uncommon and/or change the following Kconfig elements.
+###############################################################################
+
+if APPS_UWEB
+
+config APPS_UWEB_DEMO_INETD
+	bool "Run uWeb from inetd"
+	help
+	 By default, uWeb will run as a server listening on port 80.
+	 Chose this option to run the uWeb demo as an inetd service instead,
+	 for example if you are low on memory and don't wish the server to be
+	 running permanently.
+
+endif

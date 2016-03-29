@@ -1,0 +1,937 @@
+dir / 0755 0 0
+dir /boot 755 0 0
+dir /.stage.apt 775 0 0
+dir /.stage.apt/etc 775 0 0
+dir /.stage.apt/etc/apt 775 0 0
+dir /.stage.apt/etc/apt/apt.conf.d 775 0 0
+dir /.stage.apt/etc/apt/preferences.d 775 0 0
+dir /.stage.apt/etc/alternatives 775 0 0
+dir /.stage.apt/var 775 0 0
+dir /.stage.apt/var/log 775 0 0
+dir /.stage.apt/var/log/apt 775 0 0
+dir /.stage.apt/var/cache 775 0 0
+dir /.stage.apt/var/cache/apt 775 0 0
+dir /.stage.apt/var/cache/apt/archives 775 0 0
+dir /.stage.apt/var/cache/apt/archives/partial 775 0 0
+dir /.stage.apt/var/lib 775 0 0
+dir /.stage.apt/var/lib/apt 775 0 0
+dir /.stage.apt/var/lib/apt/lists 775 0 0
+dir /.stage.apt/var/lib/apt/lists/partial 775 0 0
+dir /.stage.apt/var/lib/dpkg 775 0 0
+dir /.stage.apt/var/lib/dpkg/info 775 0 0
+dir /.stage.apt/var/lib/dpkg/alternatives 775 0 0
+dir /.stage.apt/var/lib/dpkg/updates 775 0 0
+dir /.stage.apt/var/lib/opkg 775 0 0
+dir /.stage.apt/var/lib/opkg/alternatives 775 0 0
+dir /.stage.apt/usr 775 0 0
+dir /.stage.apt/usr/sbin 775 0 0
+dir /.stage.apt/usr/bin 775 0 0
+dir /etc 775 0 0
+dir /etc/rc1.d 755 0 0
+dir /etc/deb-postinsts 775 0 0
+dir /etc/rc2.d 755 0 0
+dir /etc/udhcpc.d 755 0 0
+dir /etc/rc6.d 755 0 0
+dir /etc/rc0.d 755 0 0
+dir /etc/config 775 0 0
+dir /etc/rc3.d 755 0 0
+dir /etc/rcS.d 755 0 0
+dir /etc/rc5.d 755 0 0
+dir /etc/rc4.d 755 0 0
+dir /etc/init.d 755 0 0
+dir /etc/network 755 0 0
+dir /etc/network/if-pre-up.d 755 0 0
+dir /etc/network/if-post-down.d 755 0 0
+dir /etc/network/if-up.d 755 0 0
+dir /etc/network/if-down.d 755 0 0
+dir /etc/default 755 0 0
+dir /etc/default/volatiles 755 0 0
+dir /etc/skel 755 0 0
+dir /home 775 0 0
+dir /home/httpd 775 0 0
+dir /home/httpd/cgi-bin 775 0 0
+dir /home/httpd/css 755 0 0
+dir /home/httpd/javascript 755 0 0
+dir /home/httpd/source 755 0 0
+dir /home/httpd/img 755 0 0
+dir /home/root 755 0 0
+dir /sbin 755 0 0
+dir /media 755 0 0
+dir /var 775 0 0
+dir /var/ftp 775 0 0
+dir /var/lib 775 0 0
+dir /var/lib/dpkg 775 0 0
+dir /var/lib/dpkg/info 775 0 0
+dir /var/lib/dpkg/alternatives 775 0 0
+dir /var/lib/dpkg/updates 775 0 0
+dir /var/lib/dpkg/triggers 755 0 0
+dir /var/lib/urandom 755 0 0
+dir /var/lib/misc 755 0 0
+dir /var/backups 755 0 0
+dir /var/spool 755 0 0
+dir /var/local 755 0 0
+dir /var/volatile 755 0 0
+dir /var/volatile/log 755 0 0
+dir /var/volatile/tmp 1777 0 0
+dir /bin 755 0 0
+dir /lib 755 0 0
+dir /lib/modules 775 0 0
+dir /lib/modules/3.17.0-xilinx 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/drivers 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/drivers/usb 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget/function 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget/legacy 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/drivers/rpmsg 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/drivers/virtio 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/drivers/remoteproc 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/fs 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/fs/configfs 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/net 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/net/ipv4 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/net/8021q 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/net/ipv6 775 0 0
+dir /lib/modules/3.17.0-xilinx/kernel/crypto 775 0 0
+dir /lib/jim 755 0 0
+dir /sys 755 0 0
+dir /mnt 755 0 0
+dir /usr 755 0 0
+dir /usr/src 755 0 0
+dir /usr/sbin 755 0 0
+dir /usr/bin 755 0 0
+dir /usr/lib 755 0 0
+dir /usr/lib/opkg 755 0 0
+dir /usr/lib/opkg/alternatives 755 0 0
+dir /usr/include 755 0 0
+dir /usr/share 755 0 0
+dir /usr/share/man 755 0 0
+dir /usr/share/info 755 0 0
+dir /usr/share/udhcpc 755 0 0
+dir /usr/share/misc 755 0 0
+dir /usr/share/dict 755 0 0
+dir /usr/games 755 0 0
+dir /proc 755 0 0
+dir /.targetroot.apt 775 0 0
+dir /.targetroot.apt/etc 775 0 0
+dir /.targetroot.apt/etc/apt 775 0 0
+dir /.targetroot.apt/etc/apt/apt.conf.d 775 0 0
+dir /.targetroot.apt/etc/apt/preferences.d 775 0 0
+dir /.targetroot.apt/etc/alternatives 775 0 0
+dir /.targetroot.apt/var 775 0 0
+dir /.targetroot.apt/var/log 775 0 0
+dir /.targetroot.apt/var/log/apt 775 0 0
+dir /.targetroot.apt/var/cache 775 0 0
+dir /.targetroot.apt/var/cache/apt 775 0 0
+dir /.targetroot.apt/var/cache/apt/archives 775 0 0
+dir /.targetroot.apt/var/cache/apt/archives/partial 775 0 0
+dir /.targetroot.apt/var/lib 775 0 0
+dir /.targetroot.apt/var/lib/apt 775 0 0
+dir /.targetroot.apt/var/lib/apt/lists 775 0 0
+dir /.targetroot.apt/var/lib/apt/lists/partial 775 0 0
+dir /.targetroot.apt/var/lib/dpkg 775 0 0
+dir /.targetroot.apt/var/lib/dpkg/info 775 0 0
+dir /.targetroot.apt/var/lib/dpkg/alternatives 775 0 0
+dir /.targetroot.apt/var/lib/dpkg/updates 775 0 0
+dir /.targetroot.apt/var/lib/opkg 775 0 0
+dir /.targetroot.apt/var/lib/opkg/alternatives 775 0 0
+dir /.targetroot.apt/usr 775 0 0
+dir /.targetroot.apt/usr/sbin 775 0 0
+dir /.targetroot.apt/usr/bin 775 0 0
+dir /run 755 0 0
+dir /dev 755 0 0
+dir /dev/pts 775 0 0
+file /.stage.apt/etc/apt/apt.conf.d/apt.conf /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf 644 0 0
+file /.stage.apt/etc/apt/sources.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/sources.list 644 0 0
+file /.stage.apt/etc/apt/preferences.d/preferences /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/preferences.d/preferences 644 0 0
+file /.stage.apt/var/log/apt/history.log /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/var/log/apt/history.log 644 0 0
+file /.stage.apt/var/log/apt/term.log /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/var/log/apt/term.log 600 0 0
+file /.stage.apt/var/cache/apt/archives/lock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/var/cache/apt/archives/lock 640 0 0
+file /.stage.apt/var/lib/apt/extended_states /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/var/lib/apt/extended_states 644 0 0
+file /.stage.apt/var/lib/apt/lists/_opt_petalinux_petalinux-v2014.4-final_components_packages-repo_plnx-repo_dists_default_main_binary-armv7a-vfp-neon_Packages /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/var/lib/apt/lists/_opt_petalinux_petalinux-v2014.4-final_components_packages-repo_plnx-repo_dists_default_main_binary-armv7a-vfp-neon_Packages 644 0 0
+file /.stage.apt/var/lib/apt/lists/lock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/var/lib/apt/lists/lock 640 0 0
+file /etc/inputrc /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/inputrc 644 0 0
+file /etc/udhcpc.d/50default /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/udhcpc.d/50default 755 0 0
+file /etc/rpc /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/rpc 644 0 0
+file /etc/shells /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/shells 644 0 0
+file /etc/logrotate-dmesg.conf /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/logrotate-dmesg.conf 644 0 0
+file /etc/hosts /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/hosts 644 0 0
+file /etc/version /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/version 664 0 0
+file /etc/host.conf /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/host.conf 644 0 0
+file /etc/issue.net /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/issue.net 644 0 0
+file /etc/fstab /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/fstab 644 0 0
+file /etc/hostname /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/hostname 644 0 0
+file /etc/inetd.conf /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/inetd.conf 644 0 0
+file /etc/profile /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/profile 644 0 0
+file /etc/busybox.links.suid /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/busybox.links.suid 644 0 0
+file /etc/init.d/checkroot.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/checkroot.sh 755 0 0
+file /etc/init.d/modutils.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/modutils.sh 755 0 0
+file /etc/init.d/single /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/single 755 0 0
+file /etc/init.d/devpts.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/devpts.sh 755 0 0
+file /etc/init.d/run-postinsts /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/run-postinsts 755 0 0
+file /etc/init.d/rc /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/rc 755 0 0
+file /etc/init.d/bootlogd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/bootlogd 755 0 0
+file /etc/init.d/rcS /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/rcS 755 0 0
+file /etc/init.d/functions.initscripts /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/functions.initscripts 644 0 0
+file /etc/init.d/umountfs /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/umountfs 755 0 0
+file /etc/init.d/umountnfs.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/umountnfs.sh 755 0 0
+file /etc/init.d/reboot /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/reboot 755 0 0
+file /etc/init.d/alignment.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/alignment.sh 755 0 0
+file /etc/init.d/hostname.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/hostname.sh 755 0 0
+file /etc/init.d/dmesg.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/dmesg.sh 755 0 0
+file /etc/init.d/banner.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/banner.sh 755 0 0
+file /etc/init.d/sendsigs /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/sendsigs 755 0 0
+file /etc/init.d/urandom /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/urandom 755 0 0
+file /etc/init.d/flashdev /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/flashdev 755 0 0
+file /etc/init.d/mdev /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/mdev 755 0 0
+file /etc/init.d/networking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/networking 755 0 0
+file /etc/init.d/save-rtc.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/save-rtc.sh 755 0 0
+file /etc/init.d/rmnologin.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/rmnologin.sh 755 0 0
+file /etc/init.d/bootmisc.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/bootmisc.sh 755 0 0
+file /etc/init.d/sysfs.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/sysfs.sh 755 0 0
+file /etc/init.d/inetd.busybox /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/inetd.busybox 755 0 0
+file /etc/init.d/populate-volatile.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/populate-volatile.sh 755 0 0
+file /etc/init.d/uWeb /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/uWeb 755 0 0
+file /etc/init.d/halt /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/halt 755 0 0
+file /etc/init.d/mountnfs.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/mountnfs.sh 755 0 0
+file /etc/init.d/read-only-rootfs-hook.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/read-only-rootfs-hook.sh 755 0 0
+file /etc/init.d/mountall.sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/mountall.sh 755 0 0
+file /etc/services /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/services 644 0 0
+file /etc/network/if-pre-up.d/nfsroot /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/network/if-pre-up.d/nfsroot 755 0 0
+file /etc/network/interfaces /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/network/interfaces 644 0 0
+file /etc/busybox.links.nosuid /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/busybox.links.nosuid 644 0 0
+file /etc/default/usbd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/default/usbd 644 0 0
+file /etc/default/devpts /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/default/devpts 755 0 0
+file /etc/default/rcS /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/default/rcS 644 0 0
+file /etc/default/volatiles/01_bootlogd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/default/volatiles/01_bootlogd 644 0 0
+file /etc/default/volatiles/00_core /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/default/volatiles/00_core 644 0 0
+file /etc/inittab /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/inittab 644 0 0
+file /etc/filesystems /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/filesystems 644 0 0
+file /etc/nsswitch.conf /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/nsswitch.conf 644 0 0
+file /etc/issue /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/issue 644 0 0
+file /etc/skel/.bashrc /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/skel/.bashrc 755 0 0
+file /etc/skel/.profile /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/skel/.profile 755 0 0
+file /etc/product /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/product 664 0 0
+file /etc/protocols /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/protocols 644 0 0
+file /etc/group /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/group 644 0 0
+file /etc/mdev.conf /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/mdev.conf 644 0 0
+file /etc/motd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/motd 644 0 0
+file /etc/passwd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/passwd 644 0 0
+file /home/httpd/cgi-bin/petalinux /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/cgi-bin/petalinux 775 0 0
+file /home/httpd/css/help.css /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/css/help.css 755 0 0
+file /home/httpd/css/petalinux.css /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/css/petalinux.css 755 0 0
+file /home/httpd/css/basic.css /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/css/basic.css 755 0 0
+file /home/httpd/javascript/help.js /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/javascript/help.js 755 0 0
+file /home/httpd/javascript/petalinux.js /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/javascript/petalinux.js 755 0 0
+file /home/httpd/javascript/sh_page.js /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/javascript/sh_page.js 755 0 0
+file /home/httpd/source/null.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/null.page 755 0 0
+file /home/httpd/source/debug.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/debug.page 755 0 0
+file /home/httpd/source/petalinux.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/petalinux.page 755 0 0
+file /home/httpd/source/reboot.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/reboot.page 755 0 0
+file /home/httpd/source/overview.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/overview.page 755 0 0
+file /home/httpd/source/sshauthkeys.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/sshauthkeys.page 755 0 0
+file /home/httpd/source/firmware.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/firmware.page 755 0 0
+file /home/httpd/source/users.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/users.page 755 0 0
+file /home/httpd/source/syslog.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/syslog.page 755 0 0
+file /home/httpd/source/uweb.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/uweb.page 755 0 0
+file /home/httpd/source/config.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/config.page 755 0 0
+file /home/httpd/source/network.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/network.page 755 0 0
+file /home/httpd/source/showcode.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/showcode.page 755 0 0
+file /home/httpd/source/help.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/help.page 755 0 0
+file /home/httpd/source/sshhostkeys.page /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/source/sshhostkeys.page 755 0 0
+file /home/httpd/img/print.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/print.png 755 0 0
+file /home/httpd/img/up.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/up.png 755 0 0
+file /home/httpd/img/xilinx-banner.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/xilinx-banner.png 755 0 0
+file /home/httpd/img/down.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/down.png 755 0 0
+file /home/httpd/img/white-bg-logo.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/white-bg-logo.png 755 0 0
+file /home/httpd/img/logo.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/logo.png 755 0 0
+file /home/httpd/img/info.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/info.png 755 0 0
+file /home/httpd/img/config-modified.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/config-modified.png 755 0 0
+file /home/httpd/img/gallerylink.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/gallerylink.png 755 0 0
+file /home/httpd/img/sp605-2.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/sp605-2.png 755 0 0
+file /home/httpd/img/xilinx-favicon.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/xilinx-favicon.png 755 0 0
+file /home/httpd/img/unchecked.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/unchecked.png 755 0 0
+file /home/httpd/img/chartlink.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/chartlink.png 755 0 0
+file /home/httpd/img/imagelink.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/imagelink.png 755 0 0
+file /home/httpd/img/edit.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/edit.png 755 0 0
+file /home/httpd/img/trash.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/trash.png 755 0 0
+file /home/httpd/img/delete.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/delete.png 755 0 0
+file /home/httpd/img/help.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/help.png 755 0 0
+file /home/httpd/img/home-bg.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/home-bg.png 755 0 0
+file /home/httpd/img/uweb-banner.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/uweb-banner.png 755 0 0
+file /home/httpd/img/logotype-float.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/logotype-float.png 755 0 0
+file /home/httpd/img/checked.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/checked.png 755 0 0
+file /home/httpd/img/close.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/close.png 755 0 0
+file /home/httpd/img/modify.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/modify.png 755 0 0
+file /home/httpd/img/view.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/view.png 755 0 0
+file /sbin/fstab-decode /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/fstab-decode 755 0 0
+file /sbin/bootlogd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/bootlogd 755 0 0
+file /sbin/runlevel.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/runlevel.sysvinit 755 0 0
+file /sbin/halt.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/halt.sysvinit 4754 0 0
+file /sbin/shutdown.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/shutdown.sysvinit 4754 0 0
+file /sbin/ldconfig /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/ldconfig 755 0 0
+file /sbin/init.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/init.sysvinit 755 0 0
+file /sbin/killall5 /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/killall5 755 0 0
+file /var/lib/dpkg/available /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/available 644 0 0
+file /var/lib/dpkg/status-old /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/status-old 644 0 0
+file /var/lib/dpkg/info/init-ifupdown.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/init-ifupdown.postrm 755 0 0
+file /var/lib/dpkg/info/initscripts.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/initscripts.list 644 0 0
+file /var/lib/dpkg/info/run-postinsts.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/run-postinsts.postrm 755 0 0
+file /var/lib/dpkg/info/busybox-udhcpc.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-udhcpc.list 644 0 0
+file /var/lib/dpkg/info/busybox-mdev.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-mdev.postrm 755 0 0
+file /var/lib/dpkg/info/libc6.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/libc6.list 644 0 0
+file /var/lib/dpkg/info/busybox-mdev.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-mdev.list 644 0 0
+file /var/lib/dpkg/info/base-passwd.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/base-passwd.md5sums 644 0 0
+file /var/lib/dpkg/info/sysvinit.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit.postrm 755 0 0
+file /var/lib/dpkg/info/init-ifupdown.prerm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/init-ifupdown.prerm 755 0 0
+file /var/lib/dpkg/info/modutils-initscripts.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/modutils-initscripts.postinst 755 0 0
+file /var/lib/dpkg/info/base-passwd.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/base-passwd.list 644 0 0
+file /var/lib/dpkg/info/initscripts.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/initscripts.postinst 755 0 0
+file /var/lib/dpkg/info/netbase.conffiles /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/netbase.conffiles 644 0 0
+file /var/lib/dpkg/info/sysvinit-pidof.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit-pidof.md5sums 644 0 0
+file /var/lib/dpkg/info/sysvinit-pidof.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit-pidof.postinst 755 0 0
+file /var/lib/dpkg/info/sysvinit.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit.postinst 755 0 0
+file /var/lib/dpkg/info/gdbserver.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/gdbserver.list 644 0 0
+file /var/lib/dpkg/info/format /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/format 644 0 0
+file /var/lib/dpkg/info/busybox-inetd.conffiles /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-inetd.conffiles 644 0 0
+file /var/lib/dpkg/info/update-alternatives-opkg.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/update-alternatives-opkg.list 644 0 0
+file /var/lib/dpkg/info/init-ifupdown.preinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/init-ifupdown.preinst 755 0 0
+file /var/lib/dpkg/info/busybox-inetd.preinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-inetd.preinst 755 0 0
+file /var/lib/dpkg/info/netbase.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/netbase.md5sums 644 0 0
+file /var/lib/dpkg/info/mtd-utils.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/mtd-utils.md5sums 644 0 0
+file /var/lib/dpkg/info/busybox-inetd.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-inetd.md5sums 644 0 0
+file /var/lib/dpkg/info/busybox-mdev.prerm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-mdev.prerm 755 0 0
+file /var/lib/dpkg/info/update-rc.d.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/update-rc.d.md5sums 644 0 0
+file /var/lib/dpkg/info/libc6.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/libc6.md5sums 644 0 0
+file /var/lib/dpkg/info/base-passwd.preinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/base-passwd.preinst 755 0 0
+file /var/lib/dpkg/info/busybox-mdev.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-mdev.md5sums 644 0 0
+file /var/lib/dpkg/info/initscripts-functions.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/initscripts-functions.list 644 0 0
+file /var/lib/dpkg/info/sysvinit-inittab.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit-inittab.list 644 0 0
+file /var/lib/dpkg/info/sysvinit-inittab.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit-inittab.postinst 755 0 0
+file /var/lib/dpkg/info/sysvinit-inittab.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit-inittab.md5sums 644 0 0
+file /var/lib/dpkg/info/libgcc-s1.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/libgcc-s1.postinst 755 0 0
+file /var/lib/dpkg/info/busybox.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox.list 644 0 0
+file /var/lib/dpkg/info/initscripts.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/initscripts.md5sums 644 0 0
+file /var/lib/dpkg/info/sysvinit-inittab.conffiles /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit-inittab.conffiles 644 0 0
+file /var/lib/dpkg/info/run-postinsts.prerm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/run-postinsts.prerm 755 0 0
+file /var/lib/dpkg/info/libgcc-s1.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/libgcc-s1.md5sums 644 0 0
+file /var/lib/dpkg/info/gdbserver.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/gdbserver.md5sums 644 0 0
+file /var/lib/dpkg/info/busybox.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox.postrm 755 0 0
+file /var/lib/dpkg/info/netbase.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/netbase.list 644 0 0
+file /var/lib/dpkg/info/sysvinit.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit.list 644 0 0
+file /var/lib/dpkg/info/init-ifupdown.conffiles /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/init-ifupdown.conffiles 644 0 0
+file /var/lib/dpkg/info/modutils-initscripts.preinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/modutils-initscripts.preinst 755 0 0
+file /var/lib/dpkg/info/initscripts-functions.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/initscripts-functions.md5sums 644 0 0
+file /var/lib/dpkg/info/libc6.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/libc6.postinst 755 0 0
+file /var/lib/dpkg/info/sysvinit-pidof.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit-pidof.postrm 755 0 0
+file /var/lib/dpkg/info/modutils-initscripts.prerm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/modutils-initscripts.prerm 755 0 0
+file /var/lib/dpkg/info/busybox-udhcpc.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-udhcpc.md5sums 644 0 0
+file /var/lib/dpkg/info/busybox-mdev.preinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-mdev.preinst 755 0 0
+file /var/lib/dpkg/info/base-files.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/base-files.list 644 0 0
+file /var/lib/dpkg/info/base-files.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/base-files.md5sums 644 0 0
+file /var/lib/dpkg/info/base-files.conffiles /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/base-files.conffiles 644 0 0
+file /var/lib/dpkg/info/update-alternatives-opkg.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/update-alternatives-opkg.md5sums 644 0 0
+file /var/lib/dpkg/info/busybox.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox.postinst 755 0 0
+file /var/lib/dpkg/info/run-postinsts.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/run-postinsts.list 644 0 0
+file /var/lib/dpkg/info/busybox.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox.md5sums 644 0 0
+file /var/lib/dpkg/info/run-postinsts.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/run-postinsts.postinst 755 0 0
+file /var/lib/dpkg/info/initscripts-functions.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/initscripts-functions.postrm 755 0 0
+file /var/lib/dpkg/info/init-ifupdown.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/init-ifupdown.list 644 0 0
+file /var/lib/dpkg/info/busybox.prerm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox.prerm 755 0 0
+file /var/lib/dpkg/info/init-ifupdown.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/init-ifupdown.postinst 755 0 0
+file /var/lib/dpkg/info/modutils-initscripts.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/modutils-initscripts.list 644 0 0
+file /var/lib/dpkg/info/busybox-inetd.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-inetd.postinst 755 0 0
+file /var/lib/dpkg/info/sysvinit-pidof.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit-pidof.list 644 0 0
+file /var/lib/dpkg/info/initscripts-functions.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/initscripts-functions.postinst 755 0 0
+file /var/lib/dpkg/info/run-postinsts.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/run-postinsts.md5sums 644 0 0
+file /var/lib/dpkg/info/init-ifupdown.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/init-ifupdown.md5sums 644 0 0
+file /var/lib/dpkg/info/sysvinit.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/sysvinit.md5sums 644 0 0
+file /var/lib/dpkg/info/modutils-initscripts.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/modutils-initscripts.postrm 755 0 0
+file /var/lib/dpkg/info/busybox-inetd.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-inetd.list 644 0 0
+file /var/lib/dpkg/info/busybox-inetd.prerm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-inetd.prerm 755 0 0
+file /var/lib/dpkg/info/busybox-mdev.postinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-mdev.postinst 755 0 0
+file /var/lib/dpkg/info/modutils-initscripts.md5sums /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/modutils-initscripts.md5sums 644 0 0
+file /var/lib/dpkg/info/run-postinsts.preinst /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/run-postinsts.preinst 755 0 0
+file /var/lib/dpkg/info/busybox-inetd.postrm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-inetd.postrm 755 0 0
+file /var/lib/dpkg/info/busybox-mdev.conffiles /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/busybox-mdev.conffiles 644 0 0
+file /var/lib/dpkg/info/update-rc.d.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/update-rc.d.list 644 0 0
+file /var/lib/dpkg/info/libgcc-s1.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/libgcc-s1.list 644 0 0
+file /var/lib/dpkg/info/mtd-utils.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/info/mtd-utils.list 644 0 0
+file /var/lib/dpkg/status /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/status 644 0 0
+file /var/lib/dpkg/triggers/Unincorp /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/triggers/Unincorp 644 0 0
+file /var/lib/dpkg/triggers/Lock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/triggers/Lock 600 0 0
+file /var/lib/dpkg/lock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/lock 640 0 0
+file /var/lib/dpkg/available-old /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/lib/dpkg/available-old 644 0 0
+file /bin/peek /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/peek 775 0 0
+file /bin/fwupgrade /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/fwupgrade 775 0 0
+file /bin/mountpoint.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/mountpoint.sysvinit 755 0 0
+file /bin/upgrade-firmware /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/upgrade-firmware 755 0 0
+file /bin/busybox.nosuid /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/busybox.nosuid 755 0 0
+file /bin/busybox.suid /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/busybox.suid 4755 0 0
+file /bin/poke /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/poke 775 0 0
+file /lib/libpthread-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libpthread-2.18.so 755 0 0
+file /lib/modules/3.17.0-xilinx/modules.dep.bin /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.dep.bin 644 0 0
+file /lib/modules/3.17.0-xilinx/modules.builtin.bin /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.builtin.bin 644 0 0
+file /lib/modules/3.17.0-xilinx/modules.order /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.order 664 0 0
+file /lib/modules/3.17.0-xilinx/modules.dep /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.dep 644 0 0
+file /lib/modules/3.17.0-xilinx/modules.symbols /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.symbols 644 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget/libcomposite.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget/libcomposite.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget/function/usb_f_ss_lb.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget/function/usb_f_ss_lb.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget/legacy/g_zero.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/usb/gadget/legacy/g_zero.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/rpmsg/virtio_rpmsg_bus.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/rpmsg/virtio_rpmsg_bus.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/virtio/virtio_ring.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/virtio/virtio_ring.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/virtio/virtio.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/virtio/virtio.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/remoteproc/remoteproc.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/remoteproc/remoteproc.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/remoteproc/zynq_remoteproc.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/remoteproc/zynq_remoteproc.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/drivers/remoteproc/mb_remoteproc.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/drivers/remoteproc/mb_remoteproc.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/fs/configfs/configfs.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/fs/configfs/configfs.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/ipv4/ip_tunnel.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/ipv4/ip_tunnel.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/ipv4/tunnel4.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/ipv4/tunnel4.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/ipv4/ipip.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/ipv4/ipip.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/8021q/8021q.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/8021q/8021q.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/ipv6/sit.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/ipv6/sit.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/ipv6/xfrm6_mode_beet.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/ipv6/xfrm6_mode_beet.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/ipv6/xfrm6_mode_tunnel.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/ipv6/xfrm6_mode_tunnel.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/ipv6/ipv6.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/ipv6/ipv6.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/net/ipv6/xfrm6_mode_transport.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/net/ipv6/xfrm6_mode_transport.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/crypto/ansi_cprng.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/crypto/ansi_cprng.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/crypto/krng.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/crypto/krng.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/kernel/crypto/rng.ko /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/kernel/crypto/rng.ko 664 0 0
+file /lib/modules/3.17.0-xilinx/modules.devname /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.devname 644 0 0
+file /lib/modules/3.17.0-xilinx/modules.alias /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.alias 644 0 0
+file /lib/modules/3.17.0-xilinx/modules.builtin /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.builtin 664 0 0
+file /lib/modules/3.17.0-xilinx/modules.symbols.bin /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.symbols.bin 644 0 0
+file /lib/modules/3.17.0-xilinx/modules.softdep /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.softdep 644 0 0
+file /lib/modules/3.17.0-xilinx/modules.alias.bin /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.alias.bin 644 0 0
+file /lib/libdl-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libdl-2.18.so 755 0 0
+file /lib/librt-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/librt-2.18.so 755 0 0
+file /lib/libnsl-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libnsl-2.18.so 755 0 0
+file /lib/libgcc_s.so.1 /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libgcc_s.so.1 644 0 0
+file /lib/libresolv-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libresolv-2.18.so 755 0 0
+file /lib/jim/network.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/network.tcl 755 0 0
+file /lib/jim/petalinux.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/petalinux.tcl 755 0 0
+file /lib/jim/vfs.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/vfs.tcl 755 0 0
+file /lib/jim/oo.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/oo.tcl 755 0 0
+file /lib/jim/fileutil.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/fileutil.tcl 755 0 0
+file /lib/jim/toolbars.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/toolbars.tcl 755 0 0
+file /lib/jim/toolbar_showcode.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/toolbar_showcode.tcl 755 0 0
+file /lib/jim/tableutil.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/tableutil.tcl 755 0 0
+file /lib/jim/javascript.tcl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/jim/javascript.tcl 755 0 0
+file /lib/libcrypt-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libcrypt-2.18.so 755 0 0
+file /lib/libnss_files-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libnss_files-2.18.so 755 0 0
+file /lib/libanl-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libanl-2.18.so 755 0 0
+file /lib/libc-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libc-2.18.so 755 0 0
+file /lib/libnss_compat-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libnss_compat-2.18.so 755 0 0
+file /lib/libm-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libm-2.18.so 755 0 0
+file /lib/libutil-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libutil-2.18.so 755 0 0
+file /lib/libnss_dns-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libnss_dns-2.18.so 755 0 0
+file /lib/ld-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/ld-2.18.so 755 0 0
+file /lib/libBrokenLocale-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libBrokenLocale-2.18.so 755 0 0
+file /usr/sbin/flash_otp_write /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flash_otp_write 755 0 0
+file /usr/sbin/flash_eraseall /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flash_eraseall 755 0 0
+file /usr/sbin/nandtest /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/nandtest 755 0 0
+file /usr/sbin/nanddump /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/nanddump 755 0 0
+file /usr/sbin/run-postinsts /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/run-postinsts 755 0 0
+file /usr/sbin/flash_otp_lock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flash_otp_lock 755 0 0
+file /usr/sbin/flash_unlock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flash_unlock 755 0 0
+file /usr/sbin/update-rc.d /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/update-rc.d 755 0 0
+file /usr/sbin/flash_otp_dump /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flash_otp_dump 755 0 0
+file /usr/sbin/mtdinfo /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/mtdinfo 755 0 0
+file /usr/sbin/mtd_debug /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/mtd_debug 755 0 0
+file /usr/sbin/flash_otp_info /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flash_otp_info 755 0 0
+file /usr/sbin/flash_lock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flash_lock 755 0 0
+file /usr/sbin/flashcp /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flashcp 755 0 0
+file /usr/sbin/nandwrite /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/nandwrite 755 0 0
+file /usr/sbin/flash_erase /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/sbin/flash_erase 755 0 0
+file /usr/bin/wall.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/bin/wall.sysvinit 755 0 0
+file /usr/bin/gdbserver /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/bin/gdbserver 755 0 0
+file /usr/bin/last.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/bin/last.sysvinit 755 0 0
+file /usr/bin/mesg.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/bin/mesg.sysvinit 755 0 0
+file /usr/bin/update-alternatives /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/bin/update-alternatives 755 0 0
+file /usr/bin/utmpdump.sysvinit /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/bin/utmpdump.sysvinit 755 0 0
+file /usr/lib/opkg/alternatives/od /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/od 644 0 0
+file /usr/lib/opkg/alternatives/dd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/dd 644 0 0
+file /usr/lib/opkg/alternatives/cp /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/cp 644 0 0
+file /usr/lib/opkg/alternatives/mknod /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mknod 644 0 0
+file /usr/lib/opkg/alternatives/[[ /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/[[ 644 0 0
+file /usr/lib/opkg/alternatives/inetd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/inetd 644 0 0
+file /usr/lib/opkg/alternatives/sed /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sed 644 0 0
+file /usr/lib/opkg/alternatives/usleep /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/usleep 644 0 0
+file /usr/lib/opkg/alternatives/du /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/du 644 0 0
+file /usr/lib/opkg/alternatives/lsmod /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/lsmod 644 0 0
+file /usr/lib/opkg/alternatives/openvt /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/openvt 644 0 0
+file /usr/lib/opkg/alternatives/telnetd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/telnetd 644 0 0
+file /usr/lib/opkg/alternatives/netstat /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/netstat 644 0 0
+file /usr/lib/opkg/alternatives/udhcpd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/udhcpd 644 0 0
+file /usr/lib/opkg/alternatives/chown /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/chown 644 0 0
+file /usr/lib/opkg/alternatives/ftpput /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ftpput 644 0 0
+file /usr/lib/opkg/alternatives/expr /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/expr 644 0 0
+file /usr/lib/opkg/alternatives/tftp /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/tftp 644 0 0
+file /usr/lib/opkg/alternatives/mktemp /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mktemp 644 0 0
+file /usr/lib/opkg/alternatives/awk /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/awk 644 0 0
+file /usr/lib/opkg/alternatives/dc /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/dc 644 0 0
+file /usr/lib/opkg/alternatives/sleep /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sleep 644 0 0
+file /usr/lib/opkg/alternatives/shutdown /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/shutdown 644 0 0
+file /usr/lib/opkg/alternatives/logread /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/logread 644 0 0
+file /usr/lib/opkg/alternatives/mkfifo /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mkfifo 644 0 0
+file /usr/lib/opkg/alternatives/time /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/time 644 0 0
+file /usr/lib/opkg/alternatives/login /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/login 644 0 0
+file /usr/lib/opkg/alternatives/strings /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/strings 644 0 0
+file /usr/lib/opkg/alternatives/deluser /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/deluser 644 0 0
+file /usr/lib/opkg/alternatives/id /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/id 644 0 0
+file /usr/lib/opkg/alternatives/vi /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/vi 644 0 0
+file /usr/lib/opkg/alternatives/route /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/route 644 0 0
+file /usr/lib/opkg/alternatives/ping6 /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ping6 644 0 0
+file /usr/lib/opkg/alternatives/dirname /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/dirname 644 0 0
+file /usr/lib/opkg/alternatives/pwd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/pwd 644 0 0
+file /usr/lib/opkg/alternatives/test /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/test 644 0 0
+file /usr/lib/opkg/alternatives/start-stop-daemon /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/start-stop-daemon 644 0 0
+file /usr/lib/opkg/alternatives/date /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/date 644 0 0
+file /usr/lib/opkg/alternatives/sysctl /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sysctl 644 0 0
+file /usr/lib/opkg/alternatives/chroot /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/chroot 644 0 0
+file /usr/lib/opkg/alternatives/seq /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/seq 644 0 0
+file /usr/lib/opkg/alternatives/sort /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sort 644 0 0
+file /usr/lib/opkg/alternatives/users /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/users 644 0 0
+file /usr/lib/opkg/alternatives/syslogd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/syslogd 644 0 0
+file /usr/lib/opkg/alternatives/wall /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/wall 644 0 0
+file /usr/lib/opkg/alternatives/dnsdomainname /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/dnsdomainname 644 0 0
+file /usr/lib/opkg/alternatives/ar /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ar 644 0 0
+file /usr/lib/opkg/alternatives/mountpoint /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mountpoint 644 0 0
+file /usr/lib/opkg/alternatives/fdisk /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/fdisk 644 0 0
+file /usr/lib/opkg/alternatives/rdate /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/rdate 644 0 0
+file /usr/lib/opkg/alternatives/ln /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ln 644 0 0
+file /usr/lib/opkg/alternatives/ftpget /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ftpget 644 0 0
+file /usr/lib/opkg/alternatives/flock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/flock 644 0 0
+file /usr/lib/opkg/alternatives/loadkmap /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/loadkmap 644 0 0
+file /usr/lib/opkg/alternatives/find /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/find 644 0 0
+file /usr/lib/opkg/alternatives/udhcpc /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/udhcpc 644 0 0
+file /usr/lib/opkg/alternatives/fuser /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/fuser 644 0 0
+file /usr/lib/opkg/alternatives/cat /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/cat 644 0 0
+file /usr/lib/opkg/alternatives/dumpleases /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/dumpleases 644 0 0
+file /usr/lib/opkg/alternatives/watch /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/watch 644 0 0
+file /usr/lib/opkg/alternatives/hexdump /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/hexdump 644 0 0
+file /usr/lib/opkg/alternatives/wc /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/wc 644 0 0
+file /usr/lib/opkg/alternatives/ip /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ip 644 0 0
+file /usr/lib/opkg/alternatives/pivot_root /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/pivot_root 644 0 0
+file /usr/lib/opkg/alternatives/delgroup /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/delgroup 644 0 0
+file /usr/lib/opkg/alternatives/loadfont /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/loadfont 644 0 0
+file /usr/lib/opkg/alternatives/hostname /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/hostname 644 0 0
+file /usr/lib/opkg/alternatives/rmmod /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/rmmod 644 0 0
+file /usr/lib/opkg/alternatives/utmpdump /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/utmpdump 644 0 0
+file /usr/lib/opkg/alternatives/chvt /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/chvt 644 0 0
+file /usr/lib/opkg/alternatives/ifdown /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ifdown 644 0 0
+file /usr/lib/opkg/alternatives/hwclock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/hwclock 644 0 0
+file /usr/lib/opkg/alternatives/httpd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/httpd 644 0 0
+file /usr/lib/opkg/alternatives/who /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/who 644 0 0
+file /usr/lib/opkg/alternatives/sha256sum /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sha256sum 644 0 0
+file /usr/lib/opkg/alternatives/more /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/more 644 0 0
+file /usr/lib/opkg/alternatives/setconsole /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/setconsole 644 0 0
+file /usr/lib/opkg/alternatives/top /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/top 644 0 0
+file /usr/lib/opkg/alternatives/mkfs.vfat /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mkfs.vfat 644 0 0
+file /usr/lib/opkg/alternatives/tr /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/tr 644 0 0
+file /usr/lib/opkg/alternatives/ftpd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ftpd 644 0 0
+file /usr/lib/opkg/alternatives/devmem /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/devmem 644 0 0
+file /usr/lib/opkg/alternatives/fsck /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/fsck 644 0 0
+file /usr/lib/opkg/alternatives/printf /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/printf 644 0 0
+file /usr/lib/opkg/alternatives/sha512sum /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sha512sum 644 0 0
+file /usr/lib/opkg/alternatives/gunzip /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/gunzip 644 0 0
+file /usr/lib/opkg/alternatives/logname /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/logname 644 0 0
+file /usr/lib/opkg/alternatives/functions /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/functions 644 0 0
+file /usr/lib/opkg/alternatives/echo /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/echo 644 0 0
+file /usr/lib/opkg/alternatives/tail /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/tail 644 0 0
+file /usr/lib/opkg/alternatives/ifconfig /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ifconfig 644 0 0
+file /usr/lib/opkg/alternatives/deallocvt /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/deallocvt 644 0 0
+file /usr/lib/opkg/alternatives/yes /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/yes 644 0 0
+file /usr/lib/opkg/alternatives/diff /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/diff 644 0 0
+file /usr/lib/opkg/alternatives/reboot /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/reboot 644 0 0
+file /usr/lib/opkg/alternatives/sync /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sync 644 0 0
+file /usr/lib/opkg/alternatives/run-parts /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/run-parts 644 0 0
+file /usr/lib/opkg/alternatives/df /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/df 644 0 0
+file /usr/lib/opkg/alternatives/wget /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/wget 644 0 0
+file /usr/lib/opkg/alternatives/unzip /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/unzip 644 0 0
+file /usr/lib/opkg/alternatives/chgrp /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/chgrp 644 0 0
+file /usr/lib/opkg/alternatives/realpath /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/realpath 644 0 0
+file /usr/lib/opkg/alternatives/zcat /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/zcat 644 0 0
+file /usr/lib/opkg/alternatives/telnet /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/telnet 644 0 0
+file /usr/lib/opkg/alternatives/ifup /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ifup 644 0 0
+file /usr/lib/opkg/alternatives/ping /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ping 644 0 0
+file /usr/lib/opkg/alternatives/kill /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/kill 644 0 0
+file /usr/lib/opkg/alternatives/env /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/env 644 0 0
+file /usr/lib/opkg/alternatives/xargs /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/xargs 644 0 0
+file /usr/lib/opkg/alternatives/fbset /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/fbset 644 0 0
+file /usr/lib/opkg/alternatives/sha1sum /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sha1sum 644 0 0
+file /usr/lib/opkg/alternatives/stat /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/stat 644 0 0
+file /usr/lib/opkg/alternatives/depmod /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/depmod 644 0 0
+file /usr/lib/opkg/alternatives/losetup /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/losetup 644 0 0
+file /usr/lib/opkg/alternatives/su /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/su 644 0 0
+file /usr/lib/opkg/alternatives/sh /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sh 644 0 0
+file /usr/lib/opkg/alternatives/ls /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ls 644 0 0
+file /usr/lib/opkg/alternatives/runlevel /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/runlevel 644 0 0
+file /usr/lib/opkg/alternatives/dumpkmap /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/dumpkmap 644 0 0
+file /usr/lib/opkg/alternatives/basename /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/basename 644 0 0
+file /usr/lib/opkg/alternatives/switch_root /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/switch_root 644 0 0
+file /usr/lib/opkg/alternatives/getopt /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/getopt 644 0 0
+file /usr/lib/opkg/alternatives/chmod /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/chmod 644 0 0
+file /usr/lib/opkg/alternatives/ps /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ps 644 0 0
+file /usr/lib/opkg/alternatives/tar /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/tar 644 0 0
+file /usr/lib/opkg/alternatives/reset /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/reset 644 0 0
+file /usr/lib/opkg/alternatives/whoami /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/whoami 644 0 0
+file /usr/lib/opkg/alternatives/mesg /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mesg 644 0 0
+file /usr/lib/opkg/alternatives/cut /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/cut 644 0 0
+file /usr/lib/opkg/alternatives/sha3sum /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sha3sum 644 0 0
+file /usr/lib/opkg/alternatives/gzip /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/gzip 644 0 0
+file /usr/lib/opkg/alternatives/tty /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/tty 644 0 0
+file /usr/lib/opkg/alternatives/true /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/true 644 0 0
+file /usr/lib/opkg/alternatives/microcom /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/microcom 644 0 0
+file /usr/lib/opkg/alternatives/head /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/head 644 0 0
+file /usr/lib/opkg/alternatives/fgrep /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/fgrep 644 0 0
+file /usr/lib/opkg/alternatives/mkdosfs /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mkdosfs 644 0 0
+file /usr/lib/opkg/alternatives/rmdir /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/rmdir 644 0 0
+file /usr/lib/opkg/alternatives/last /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/last 644 0 0
+file /usr/lib/opkg/alternatives/dmesg /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/dmesg 644 0 0
+file /usr/lib/opkg/alternatives/md5sum /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/md5sum 644 0 0
+file /usr/lib/opkg/alternatives/umount /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/umount 644 0 0
+file /usr/lib/opkg/alternatives/swapoff /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/swapoff 644 0 0
+file /usr/lib/opkg/alternatives/cpio /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/cpio 644 0 0
+file /usr/lib/opkg/alternatives/nice /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/nice 644 0 0
+file /usr/lib/opkg/alternatives/touch /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/touch 644 0 0
+file /usr/lib/opkg/alternatives/traceroute /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/traceroute 644 0 0
+file /usr/lib/opkg/alternatives/patch /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/patch 644 0 0
+file /usr/lib/opkg/alternatives/uptime /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/uptime 644 0 0
+file /usr/lib/opkg/alternatives/rm /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/rm 644 0 0
+file /usr/lib/opkg/alternatives/readlink /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/readlink 644 0 0
+file /usr/lib/opkg/alternatives/renice /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/renice 644 0 0
+file /usr/lib/opkg/alternatives/watchdog /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/watchdog 644 0 0
+file /usr/lib/opkg/alternatives/lbracket /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/lbracket 644 0 0
+file /usr/lib/opkg/alternatives/mdev /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mdev 644 0 0
+file /usr/lib/opkg/alternatives/hd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/hd 644 0 0
+file /usr/lib/opkg/alternatives/vlock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/vlock 644 0 0
+file /usr/lib/opkg/alternatives/insmod /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/insmod 644 0 0
+file /usr/lib/opkg/alternatives/uniq /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/uniq 644 0 0
+file /usr/lib/opkg/alternatives/klogd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/klogd 644 0 0
+file /usr/lib/opkg/alternatives/nslookup /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/nslookup 644 0 0
+file /usr/lib/opkg/alternatives/getty /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/getty 644 0 0
+file /usr/lib/opkg/alternatives/addgroup /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/addgroup 644 0 0
+file /usr/lib/opkg/alternatives/clear /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/clear 644 0 0
+file /usr/lib/opkg/alternatives/egrep /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/egrep 644 0 0
+file /usr/lib/opkg/alternatives/swapon /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/swapon 644 0 0
+file /usr/lib/opkg/alternatives/init /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/init 644 0 0
+file /usr/lib/opkg/alternatives/groups /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/groups 644 0 0
+file /usr/lib/opkg/alternatives/logger /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/logger 644 0 0
+file /usr/lib/opkg/alternatives/adduser /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/adduser 644 0 0
+file /usr/lib/opkg/alternatives/stty /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/stty 644 0 0
+file /usr/lib/opkg/alternatives/grep /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/grep 644 0 0
+file /usr/lib/opkg/alternatives/tee /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/tee 644 0 0
+file /usr/lib/opkg/alternatives/nohup /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/nohup 644 0 0
+file /usr/lib/opkg/alternatives/false /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/false 644 0 0
+file /usr/lib/opkg/alternatives/cmp /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/cmp 644 0 0
+file /usr/lib/opkg/alternatives/sulogin /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/sulogin 644 0 0
+file /usr/lib/opkg/alternatives/ash /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/ash 644 0 0
+file /usr/lib/opkg/alternatives/pidof /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/pidof 644 0 0
+file /usr/lib/opkg/alternatives/killall /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/killall 644 0 0
+file /usr/lib/opkg/alternatives/chattr /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/chattr 644 0 0
+file /usr/lib/opkg/alternatives/mkdir /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mkdir 644 0 0
+file /usr/lib/opkg/alternatives/free /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/free 644 0 0
+file /usr/lib/opkg/alternatives/fstrim /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/fstrim 644 0 0
+file /usr/lib/opkg/alternatives/uname /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/uname 644 0 0
+file /usr/lib/opkg/alternatives/mount /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mount 644 0 0
+file /usr/lib/opkg/alternatives/mv /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mv 644 0 0
+file /usr/lib/opkg/alternatives/poweroff /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/poweroff 644 0 0
+file /usr/lib/opkg/alternatives/halt /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/halt 644 0 0
+file /usr/lib/opkg/alternatives/mkswap /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/mkswap 644 0 0
+file /usr/lib/opkg/alternatives/modprobe /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/modprobe 644 0 0
+file /usr/lib/opkg/alternatives/which /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/which 644 0 0
+file /usr/lib/opkg/alternatives/less /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/less 644 0 0
+file /usr/lib/opkg/alternatives/passwd /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/lib/opkg/alternatives/passwd 644 0 0
+file /usr/share/udhcpc/default.script /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/usr/share/udhcpc/default.script 755 0 0
+file /.targetroot.apt/etc/apt/apt.conf.d/apt.conf /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d/apt.conf 644 0 0
+file /.targetroot.apt/etc/apt/sources.list /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/sources.list 644 0 0
+file /.targetroot.apt/etc/apt/preferences.d/preferences /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/preferences.d/preferences 644 0 0
+file /.targetroot.apt/var/log/apt/history.log /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/var/log/apt/history.log 644 0 0
+file /.targetroot.apt/var/log/apt/term.log /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/var/log/apt/term.log 600 0 0
+file /.targetroot.apt/var/cache/apt/archives/lock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/var/cache/apt/archives/lock 640 0 0
+file /.targetroot.apt/var/lib/apt/extended_states /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/var/lib/apt/extended_states 644 0 0
+file /.targetroot.apt/var/lib/apt/lists/_opt_petalinux_petalinux-v2014.4-final_components_packages-repo_plnx-repo_dists_default_main_binary-armv7a-vfp-neon_Packages /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/var/lib/apt/lists/_opt_petalinux_petalinux-v2014.4-final_components_packages-repo_plnx-repo_dists_default_main_binary-armv7a-vfp-neon_Packages 644 0 0
+file /.targetroot.apt/var/lib/apt/lists/lock /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/var/lib/apt/lists/lock 640 0 0
+slink /.stage.apt/usr/sbin/update-rc.d /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage/usr/sbin/update-rc.d 777 0 0
+slink /.stage.apt/usr/bin/update-alternatives /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage/usr/bin/update-alternatives 777 0 0
+slink /etc/rc1.d/S31umountnfs.sh ../init.d/umountnfs.sh 777 0 0
+slink /etc/rc1.d/K80networking ../init.d/networking 777 0 0
+slink /etc/rc2.d/S99rmnologin.sh ../init.d/rmnologin.sh 777 0 0
+slink /etc/rc2.d/S01networking ../init.d/networking 777 0 0
+slink /etc/rc2.d/S15mountnfs.sh ../init.d/mountnfs.sh 777 0 0
+slink /etc/rc2.d/S99stop-bootlogd ../init.d/stop-bootlogd 777 0 0
+slink /etc/rc6.d/S31umountnfs.sh ../init.d/umountnfs.sh 777 0 0
+slink /etc/rc6.d/S30urandom ../init.d/urandom 777 0 0
+slink /etc/rc6.d/S90reboot ../init.d/reboot 777 0 0
+slink /etc/rc6.d/K80networking ../init.d/networking 777 0 0
+slink /etc/rc6.d/S20sendsigs ../init.d/sendsigs 777 0 0
+slink /etc/rc6.d/S25save-rtc.sh ../init.d/save-rtc.sh 777 0 0
+slink /etc/rc6.d/S40umountfs ../init.d/umountfs 777 0 0
+slink /etc/rc0.d/S31umountnfs.sh ../init.d/umountnfs.sh 777 0 0
+slink /etc/rc0.d/S30urandom ../init.d/urandom 777 0 0
+slink /etc/rc0.d/S90halt ../init.d/halt 777 0 0
+slink /etc/rc0.d/K80networking ../init.d/networking 777 0 0
+slink /etc/rc0.d/S20sendsigs ../init.d/sendsigs 777 0 0
+slink /etc/rc0.d/S25save-rtc.sh ../init.d/save-rtc.sh 777 0 0
+slink /etc/rc0.d/S40umountfs ../init.d/umountfs 777 0 0
+slink /etc/config/interfaces /etc/network/interfaces 777 0 0
+slink /etc/rc3.d/S99rmnologin.sh ../init.d/rmnologin.sh 777 0 0
+slink /etc/rc3.d/S01networking ../init.d/networking 777 0 0
+slink /etc/rc3.d/S15mountnfs.sh ../init.d/mountnfs.sh 777 0 0
+slink /etc/rc3.d/S99stop-bootlogd ../init.d/stop-bootlogd 777 0 0
+slink /etc/rcS.d/S39hostname.sh ../init.d/hostname.sh 777 0 0
+slink /etc/rcS.d/S30urandom ../init.d/urandom 777 0 0
+slink /etc/rcS.d/S03mountall.sh ../init.d/mountall.sh 777 0 0
+slink /etc/rcS.d/S07bootlogd ../init.d/bootlogd 777 0 0
+slink /etc/rcS.d/S06checkroot.sh ../init.d/checkroot.sh 777 0 0
+slink /etc/rcS.d/S06alignment.sh ../init.d/alignment.sh 777 0 0
+slink /etc/rcS.d/S02banner.sh ../init.d/banner.sh 777 0 0
+slink /etc/rcS.d/S65inetd.busybox ../init.d/inetd.busybox 777 0 0
+slink /etc/rcS.d/S10flashdev /etc/init.d/flashdev 777 0 0
+slink /etc/rcS.d/S55bootmisc.sh ../init.d/bootmisc.sh 777 0 0
+slink /etc/rcS.d/S38dmesg.sh ../init.d/dmesg.sh 777 0 0
+slink /etc/rcS.d/S38devpts.sh ../init.d/devpts.sh 777 0 0
+slink /etc/rcS.d/S02sysfs.sh ../init.d/sysfs.sh 777 0 0
+slink /etc/rcS.d/S37populate-volatile.sh ../init.d/populate-volatile.sh 777 0 0
+slink /etc/rcS.d/S90uWeb /etc/init.d/uWeb 777 0 0
+slink /etc/rcS.d/S03mdev ../init.d/mdev 777 0 0
+slink /etc/rcS.d/S99run-postinsts ../init.d/run-postinsts 777 0 0
+slink /etc/rcS.d/S05modutils.sh ../init.d/modutils.sh 777 0 0
+slink /etc/rcS.d/S29read-only-rootfs-hook.sh ../init.d/read-only-rootfs-hook.sh 777 0 0
+slink /etc/mtab /proc/mounts 777 0 0
+slink /etc/rc5.d/S99rmnologin.sh ../init.d/rmnologin.sh 777 0 0
+slink /etc/rc5.d/S01networking ../init.d/networking 777 0 0
+slink /etc/rc5.d/S15mountnfs.sh ../init.d/mountnfs.sh 777 0 0
+slink /etc/rc5.d/S99stop-bootlogd ../init.d/stop-bootlogd 777 0 0
+slink /etc/rc4.d/S99rmnologin.sh ../init.d/rmnologin.sh 777 0 0
+slink /etc/rc4.d/S01networking ../init.d/networking 777 0 0
+slink /etc/rc4.d/S15mountnfs.sh ../init.d/mountnfs.sh 777 0 0
+slink /etc/rc4.d/S99stop-bootlogd ../init.d/stop-bootlogd 777 0 0
+slink /etc/init.d/stop-bootlogd bootlogd 777 0 0
+slink /etc/init.d/functions /etc/init.d/functions.initscripts 777 0 0
+slink /sbin/inetd /bin/busybox.nosuid 777 0 0
+slink /sbin/lsmod /bin/busybox.nosuid 777 0 0
+slink /sbin/telnetd /bin/busybox.nosuid 777 0 0
+slink /sbin/udhcpd /bin/busybox.nosuid 777 0 0
+slink /sbin/shutdown /sbin/shutdown.sysvinit 777 0 0
+slink /sbin/logread /bin/busybox.nosuid 777 0 0
+slink /sbin/deluser /bin/busybox.nosuid 777 0 0
+slink /sbin/route /bin/busybox.nosuid 777 0 0
+slink /sbin/start-stop-daemon /bin/busybox.nosuid 777 0 0
+slink /sbin/sysctl /bin/busybox.nosuid 777 0 0
+slink /sbin/chroot /bin/busybox.nosuid 777 0 0
+slink /sbin/syslogd /bin/busybox.nosuid 777 0 0
+slink /sbin/fdisk /bin/busybox.nosuid 777 0 0
+slink /sbin/rdate /bin/busybox.nosuid 777 0 0
+slink /sbin/loadkmap /bin/busybox.nosuid 777 0 0
+slink /sbin/udhcpc /bin/busybox.nosuid 777 0 0
+slink /sbin/ip /bin/busybox.nosuid 777 0 0
+slink /sbin/pivot_root /bin/busybox.nosuid 777 0 0
+slink /sbin/reboot.sysvinit halt.sysvinit 777 0 0
+slink /sbin/delgroup /bin/busybox.nosuid 777 0 0
+slink /sbin/loadfont /bin/busybox.nosuid 777 0 0
+slink /sbin/rmmod /bin/busybox.nosuid 777 0 0
+slink /sbin/ifdown /bin/busybox.nosuid 777 0 0
+slink /sbin/hwclock /bin/busybox.nosuid 777 0 0
+slink /sbin/httpd /bin/busybox.nosuid 777 0 0
+slink /sbin/setconsole /bin/busybox.nosuid 777 0 0
+slink /sbin/mkfs.vfat /bin/busybox.nosuid 777 0 0
+slink /sbin/ftpd /bin/busybox.nosuid 777 0 0
+slink /sbin/devmem /bin/busybox.nosuid 777 0 0
+slink /sbin/fsck /bin/busybox.nosuid 777 0 0
+slink /sbin/ifconfig /bin/busybox.nosuid 777 0 0
+slink /sbin/reboot /sbin/reboot.sysvinit 777 0 0
+slink /sbin/telinit init 777 0 0
+slink /sbin/ifup /bin/busybox.nosuid 777 0 0
+slink /sbin/fbset /bin/busybox.nosuid 777 0 0
+slink /sbin/depmod /bin/busybox.nosuid 777 0 0
+slink /sbin/losetup /bin/busybox.nosuid 777 0 0
+slink /sbin/runlevel /sbin/runlevel.sysvinit 777 0 0
+slink /sbin/switch_root /bin/busybox.nosuid 777 0 0
+slink /sbin/mkdosfs /bin/busybox.nosuid 777 0 0
+slink /sbin/swapoff /bin/busybox.nosuid 777 0 0
+slink /sbin/watchdog /bin/busybox.nosuid 777 0 0
+slink /sbin/mdev /bin/busybox.nosuid 777 0 0
+slink /sbin/insmod /bin/busybox.nosuid 777 0 0
+slink /sbin/klogd /bin/busybox.nosuid 777 0 0
+slink /sbin/getty /bin/busybox.nosuid 777 0 0
+slink /sbin/addgroup /bin/busybox.nosuid 777 0 0
+slink /sbin/swapon /bin/busybox.nosuid 777 0 0
+slink /sbin/init /sbin/init.sysvinit 777 0 0
+slink /sbin/adduser /bin/busybox.nosuid 777 0 0
+slink /sbin/poweroff.sysvinit halt.sysvinit 777 0 0
+slink /sbin/sulogin /bin/busybox.nosuid 777 0 0
+slink /sbin/fstrim /bin/busybox.nosuid 777 0 0
+slink /sbin/poweroff /sbin/poweroff.sysvinit 777 0 0
+slink /sbin/halt /sbin/halt.sysvinit 777 0 0
+slink /sbin/mkswap /bin/busybox.nosuid 777 0 0
+slink /sbin/modprobe /bin/busybox.nosuid 777 0 0
+slink /var/log volatile/log 777 0 0
+slink /var/tmp volatile/tmp 777 0 0
+slink /var/run ../run 777 0 0
+slink /var/lock ../run/lock 777 0 0
+slink /bin/od /bin/busybox.nosuid 777 0 0
+slink /bin/dd /bin/busybox.nosuid 777 0 0
+slink /bin/cp /bin/busybox.nosuid 777 0 0
+slink /bin/mknod /bin/busybox.nosuid 777 0 0
+slink /bin/[[ /bin/busybox.nosuid 777 0 0
+slink /bin/sed /bin/busybox.nosuid 777 0 0
+slink /bin/usleep /bin/busybox.nosuid 777 0 0
+slink /bin/du /bin/busybox.nosuid 777 0 0
+slink /bin/openvt /bin/busybox.nosuid 777 0 0
+slink /bin/netstat /bin/busybox.nosuid 777 0 0
+slink /bin/chown /bin/busybox.nosuid 777 0 0
+slink /bin/ftpput /bin/busybox.nosuid 777 0 0
+slink /bin/expr /bin/busybox.nosuid 777 0 0
+slink /bin/tftp /bin/busybox.nosuid 777 0 0
+slink /bin/mktemp /bin/busybox.nosuid 777 0 0
+slink /bin/awk /bin/busybox.nosuid 777 0 0
+slink /bin/dc /bin/busybox.nosuid 777 0 0
+slink /bin/sleep /bin/busybox.nosuid 777 0 0
+slink /bin/mkfifo /bin/busybox.nosuid 777 0 0
+slink /bin/time /bin/busybox.nosuid 777 0 0
+slink /bin/login /bin/busybox.suid 777 0 0
+slink /bin/strings /bin/busybox.nosuid 777 0 0
+slink /bin/id /bin/busybox.nosuid 777 0 0
+slink /bin/vi /bin/busybox.nosuid 777 0 0
+slink /bin/ping6 /bin/busybox.suid 777 0 0
+slink /bin/[ /bin/busybox.nosuid 777 0 0
+slink /bin/dirname /bin/busybox.nosuid 777 0 0
+slink /bin/pwd /bin/busybox.nosuid 777 0 0
+slink /bin/test /bin/busybox.nosuid 777 0 0
+slink /bin/date /bin/busybox.nosuid 777 0 0
+slink /bin/seq /bin/busybox.nosuid 777 0 0
+slink /bin/sort /bin/busybox.nosuid 777 0 0
+slink /bin/users /bin/busybox.nosuid 777 0 0
+slink /bin/dnsdomainname /bin/busybox.nosuid 777 0 0
+slink /bin/ar /bin/busybox.nosuid 777 0 0
+slink /bin/mountpoint /bin/mountpoint.sysvinit 777 0 0
+slink /bin/ln /bin/busybox.nosuid 777 0 0
+slink /bin/ftpget /bin/busybox.nosuid 777 0 0
+slink /bin/flock /bin/busybox.nosuid 777 0 0
+slink /bin/find /bin/busybox.nosuid 777 0 0
+slink /bin/fuser /bin/busybox.nosuid 777 0 0
+slink /bin/cat /bin/busybox.nosuid 777 0 0
+slink /bin/dumpleases /bin/busybox.nosuid 777 0 0
+slink /bin/watch /bin/busybox.nosuid 777 0 0
+slink /bin/hexdump /bin/busybox.nosuid 777 0 0
+slink /bin/wc /bin/busybox.nosuid 777 0 0
+slink /bin/hostname /bin/busybox.nosuid 777 0 0
+slink /bin/chvt /bin/busybox.nosuid 777 0 0
+slink /bin/who /bin/busybox.nosuid 777 0 0
+slink /bin/sha256sum /bin/busybox.nosuid 777 0 0
+slink /bin/more /bin/busybox.nosuid 777 0 0
+slink /bin/top /bin/busybox.nosuid 777 0 0
+slink /bin/tr /bin/busybox.nosuid 777 0 0
+slink /bin/printf /bin/busybox.nosuid 777 0 0
+slink /bin/sha512sum /bin/busybox.nosuid 777 0 0
+slink /bin/gunzip /bin/busybox.nosuid 777 0 0
+slink /bin/logname /bin/busybox.nosuid 777 0 0
+slink /bin/echo /bin/busybox.nosuid 777 0 0
+slink /bin/tail /bin/busybox.nosuid 777 0 0
+slink /bin/deallocvt /bin/busybox.nosuid 777 0 0
+slink /bin/yes /bin/busybox.nosuid 777 0 0
+slink /bin/diff /bin/busybox.nosuid 777 0 0
+slink /bin/sync /bin/busybox.nosuid 777 0 0
+slink /bin/run-parts /bin/busybox.nosuid 777 0 0
+slink /bin/df /bin/busybox.nosuid 777 0 0
+slink /bin/wget /bin/busybox.nosuid 777 0 0
+slink /bin/unzip /bin/busybox.nosuid 777 0 0
+slink /bin/chgrp /bin/busybox.nosuid 777 0 0
+slink /bin/realpath /bin/busybox.nosuid 777 0 0
+slink /bin/zcat /bin/busybox.nosuid 777 0 0
+slink /bin/telnet /bin/busybox.nosuid 777 0 0
+slink /bin/ping /bin/busybox.suid 777 0 0
+slink /bin/kill /bin/busybox.nosuid 777 0 0
+slink /bin/env /bin/busybox.nosuid 777 0 0
+slink /bin/xargs /bin/busybox.nosuid 777 0 0
+slink /bin/sha1sum /bin/busybox.nosuid 777 0 0
+slink /bin/stat /bin/busybox.nosuid 777 0 0
+slink /bin/su /bin/busybox.suid 777 0 0
+slink /bin/sh /bin/busybox.nosuid 777 0 0
+slink /bin/ls /bin/busybox.nosuid 777 0 0
+slink /bin/dumpkmap /bin/busybox.nosuid 777 0 0
+slink /bin/basename /bin/busybox.nosuid 777 0 0
+slink /bin/getopt /bin/busybox.nosuid 777 0 0
+slink /bin/chmod /bin/busybox.nosuid 777 0 0
+slink /bin/ps /bin/busybox.nosuid 777 0 0
+slink /bin/tar /bin/busybox.nosuid 777 0 0
+slink /bin/reset /bin/busybox.nosuid 777 0 0
+slink /bin/whoami /bin/busybox.nosuid 777 0 0
+slink /bin/cut /bin/busybox.nosuid 777 0 0
+slink /bin/sha3sum /bin/busybox.nosuid 777 0 0
+slink /bin/gzip /bin/busybox.nosuid 777 0 0
+slink /bin/tty /bin/busybox.nosuid 777 0 0
+slink /bin/true /bin/busybox.nosuid 777 0 0
+slink /bin/microcom /bin/busybox.nosuid 777 0 0
+slink /bin/head /bin/busybox.nosuid 777 0 0
+slink /bin/fgrep /bin/busybox.nosuid 777 0 0
+slink /bin/rmdir /bin/busybox.nosuid 777 0 0
+slink /bin/dmesg /bin/busybox.nosuid 777 0 0
+slink /bin/md5sum /bin/busybox.nosuid 777 0 0
+slink /bin/umount /bin/busybox.nosuid 777 0 0
+slink /bin/cpio /bin/busybox.nosuid 777 0 0
+slink /bin/nice /bin/busybox.nosuid 777 0 0
+slink /bin/touch /bin/busybox.nosuid 777 0 0
+slink /bin/busybox busybox.nosuid 777 0 0
+slink /bin/traceroute /bin/busybox.suid 777 0 0
+slink /bin/patch /bin/busybox.nosuid 777 0 0
+slink /bin/uptime /bin/busybox.nosuid 777 0 0
+slink /bin/rm /bin/busybox.nosuid 777 0 0
+slink /bin/readlink /bin/busybox.nosuid 777 0 0
+slink /bin/renice /bin/busybox.nosuid 777 0 0
+slink /bin/hd /bin/busybox.nosuid 777 0 0
+slink /bin/vlock /bin/busybox.suid 777 0 0
+slink /bin/uniq /bin/busybox.nosuid 777 0 0
+slink /bin/nslookup /bin/busybox.nosuid 777 0 0
+slink /bin/clear /bin/busybox.nosuid 777 0 0
+slink /bin/egrep /bin/busybox.nosuid 777 0 0
+slink /bin/groups /bin/busybox.nosuid 777 0 0
+slink /bin/logger /bin/busybox.nosuid 777 0 0
+slink /bin/stty /bin/busybox.nosuid 777 0 0
+slink /bin/grep /bin/busybox.nosuid 777 0 0
+slink /bin/tee /bin/busybox.nosuid 777 0 0
+slink /bin/nohup /bin/busybox.nosuid 777 0 0
+slink /bin/false /bin/busybox.nosuid 777 0 0
+slink /bin/cmp /bin/busybox.nosuid 777 0 0
+slink /bin/ash /bin/busybox.nosuid 777 0 0
+slink /bin/pidof /bin/pidof.sysvinit 777 0 0
+slink /bin/killall /bin/busybox.nosuid 777 0 0
+slink /bin/chattr /bin/busybox.nosuid 777 0 0
+slink /bin/mkdir /bin/busybox.nosuid 777 0 0
+slink /bin/free /bin/busybox.nosuid 777 0 0
+slink /bin/pidof.sysvinit /sbin/killall5 777 0 0
+slink /bin/uname /bin/busybox.nosuid 777 0 0
+slink /bin/mount /bin/busybox.nosuid 777 0 0
+slink /bin/mv /bin/busybox.nosuid 777 0 0
+slink /bin/which /bin/busybox.nosuid 777 0 0
+slink /bin/less /bin/busybox.nosuid 777 0 0
+slink /bin/passwd /bin/busybox.suid 777 0 0
+slink /lib/modules/3.17.0-xilinx/source /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 777 0 0
+slink /lib/modules/3.17.0-xilinx/build /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17 777 0 0
+slink /lib/libpthread.so.0 libpthread-2.18.so 777 0 0
+slink /lib/libnss_compat.so.2 libnss_compat-2.18.so 777 0 0
+slink /lib/libnsl.so.1 libnsl-2.18.so 777 0 0
+slink /lib/ld-linux.so.3 ld-2.18.so 777 0 0
+slink /lib/libutil.so.1 libutil-2.18.so 777 0 0
+slink /lib/libdl.so.2 libdl-2.18.so 777 0 0
+slink /lib/libcrypt.so.1 libcrypt-2.18.so 777 0 0
+slink /lib/librt.so.1 librt-2.18.so 777 0 0
+slink /lib/libresolv.so.2 libresolv-2.18.so 777 0 0
+slink /lib/libnss_files.so.2 libnss_files-2.18.so 777 0 0
+slink /lib/libm.so.6 libm-2.18.so 777 0 0
+slink /lib/libBrokenLocale.so.1 libBrokenLocale-2.18.so 777 0 0
+slink /lib/libnss_dns.so.2 libnss_dns-2.18.so 777 0 0
+slink /lib/libc.so.6 libc-2.18.so 777 0 0
+slink /lib/libanl.so.1 libanl-2.18.so 777 0 0
+slink /usr/bin/wall /usr/bin/wall.sysvinit 777 0 0
+slink /usr/bin/utmpdump /usr/bin/utmpdump.sysvinit 777 0 0
+slink /usr/bin/mesg /usr/bin/mesg.sysvinit 777 0 0
+slink /usr/bin/lastb last 777 0 0
+slink /usr/bin/last /usr/bin/last.sysvinit 777 0 0
+slink /.targetroot.apt/usr/sbin/update-rc.d /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot/usr/sbin/update-rc.d 777 0 0
+slink /.targetroot.apt/usr/bin/update-alternatives /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot/usr/bin/update-alternatives 777 0 0
+slink /init sbin/init 777 0 0
+slink /tmp /var/tmp 777 0 0
+nod /dev/console 0755 0 0 c 5 1

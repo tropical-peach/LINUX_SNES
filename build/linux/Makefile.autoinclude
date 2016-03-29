@@ -1,0 +1,36 @@
+PROOT:=/home/steven/Desktop/LINUX_SNES
+INSTANCE:=linux
+-include /home/steven/Desktop/LINUX_SNES/build/linux/Makefile.export
+CONFIGFILE:=/home/steven/Desktop/LINUX_SNES/subsystems/linux/config
+dir_subsystem_y=/opt/petalinux/petalinux-v2014.4-final/components/subsystem/linux
+dir_bootloader_y+=/none/bootloader/single/zynq_fsbl
+dir_device_tree_y+=/none/device-tree/single/device-tree-generator
+dir_kernel_y+=/kernel/linux-kernel/single/xlnx-3.17
+dir_rootfs_y+=/none/rootfs/single/petalinux-rootfs
+depend_rootfs_y+=$(dir_kernel_y)
+dir_u_boot_y+=/none/u-boot/single/u-boot-plnx
+ifeq ($(dir_kernel_y),)
+$(addprefix sub_build_component_,$(dir_kernel_y)):$(addprefix sub_build_component_,$(depend_kernel_y))
+$(addprefix sub_install_component_,$(dir_kernel_y)):$(addprefix sub_install_component_,$(depend_kernel_y))
+endif
+ifeq ($(dir_kernel_y),)
+$(addprefix sub_build_component_,$(dir_kernel_y)):$(addprefix sub_build_component_,$(depend_kernel_y))
+$(addprefix sub_install_component_,$(dir_kernel_y)):$(addprefix sub_install_component_,$(depend_kernel_y))
+endif
+ifeq ($(dir_kernel_y),)
+$(addprefix sub_build_component_,$(dir_kernel_y)):$(addprefix sub_build_component_,$(depend_kernel_y))
+$(addprefix sub_install_component_,$(dir_kernel_y)):$(addprefix sub_install_component_,$(depend_kernel_y))
+endif
+ifeq ($(dir_kernel_y),)
+$(addprefix sub_build_component_,$(dir_kernel_y)):$(addprefix sub_build_component_,$(depend_kernel_y))
+$(addprefix sub_install_component_,$(dir_kernel_y)):$(addprefix sub_install_component_,$(depend_kernel_y))
+endif
+ifeq ($(dir_kernel_y),)
+$(addprefix sub_build_component_,$(dir_kernel_y)):$(addprefix sub_build_component_,$(depend_kernel_y))
+$(addprefix sub_install_component_,$(dir_kernel_y)):$(addprefix sub_install_component_,$(depend_kernel_y))
+endif
+ifeq ($(dir_kernel_y),)
+$(addprefix sub_build_component_,$(dir_kernel_y)):$(addprefix sub_build_component_,$(depend_kernel_y))
+$(addprefix sub_install_component_,$(dir_kernel_y)):$(addprefix sub_install_component_,$(depend_kernel_y))
+endif
+

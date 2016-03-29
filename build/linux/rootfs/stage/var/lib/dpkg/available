@@ -1,0 +1,617 @@
+Package: busybox-udhcpc
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.22.1-r32
+Size: 1884
+Description: Tiny versions of many common UNIX utilities in a single small executable
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.
+OE: busybox
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.busybox.net
+
+Package: libc6-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.18-r1
+Provides: virtual-libc-dev, libc6-dev, eglibc-dev, external-xilinx-toolchain-dev, libc-dev
+Depends: libthread-db1, libcidn1, glibc-extra-nss, libc6 (= 2.18-r1)
+Size: 556016
+Description: External Xilinx toolchain - Development files
+ External Xilinx toolchain.  This package contains symbolic links, header
+ files, and related items necessary for software development.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: netbase
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1:5.2-r0
+Size: 10036
+Description: Basic TCP/IP networking support
+ This package provides the necessary infrastructure for basic TCP/IP based
+ networking
+OE: netbase
+PackageArch: armv7a-vfp-neon
+Homepage: http://packages.debian.org/netbase
+
+Package: busybox-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.22.1-r32
+Depends: busybox (= 1.22.1-r32)
+Recommends: libc6-dev, update-alternatives-opkg-dev, initscripts-dev
+Size: 1030
+Description: Tiny versions of many common UNIX utilities in a single small executable - Development files
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.  This package contains symbolic links, header files, and
+ related items necessary for software development.
+OE: busybox
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.busybox.net
+
+Package: base-files
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.0.14-r89
+Size: 3682
+Description: Miscellaneous files for the base system
+ The base-files package creates the basic system directory structure and
+ provides a small set of key configuration files for the system.
+OE: base-files
+PackageArch: armv7a-vfp-neon
+
+Package: update-alternatives-opkg
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 0.1.8+git0+eae0d8fa44-r0
+Replaces: update-alternatives-cworth
+Provides: update-alternatives-cworth, update-alternatives
+Conflicts: update-alternatives-cworth
+Size: 2444
+Description: Utility for managing the alternatives system
+ Additional utilities for the opkg package manager.
+OE: opkg-utils
+PackageArch: armv7a-vfp-neon
+Homepage: http://code.google.com/p/opkg/
+
+Package: mtd-utils-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.5.1+git0+9f107132a6-r0
+Depends: mtd-utils (= 1.5.1+git0+9f107132a6-r0)
+Recommends: libgcc-s-dev, util-linux-dev, util-linux-libuuid-dev, libz-dev, liblzo2-dev, libc6-dev, e2fsprogs-dev
+Size: 810
+Description: Tools for managing memory technology devices - Development files
+ Tools for managing memory technology devices.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+OE: mtd-utils
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.linux-mtd.infradead.org/
+
+Package: libthread-db1
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.18-r1
+Provides: eglibc-thread-db, glibc-thread-db
+Depends: libc6 (>= 2.18)
+Size: 19788
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: libgcc-s1
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 4.8.3-r1
+Provides: libgcc
+Depends: libc6 (>= 2.18)
+Size: 201454
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: mtd-utils
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.5.1+git0+9f107132a6-r0
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Size: 267124
+Description: Tools for managing memory technology devices
+ Tools for managing memory technology devices.
+OE: mtd-utils
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.linux-mtd.infradead.org/
+
+Package: modutils-initscripts-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.0-r7
+Depends: modutils-initscripts (= 1.0-r7)
+Recommends: initscripts-dev
+Size: 728
+Description: Initscript for auto-loading kernel modules on boot - Development files
+ Initscript for auto-loading kernel modules on boot.  This package
+ contains symbolic links, header files, and related items necessary for
+ software development.
+OE: modutils-initscripts
+PackageArch: armv7a-vfp-neon
+
+Package: sysvinit-inittab
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.88dsf-r10
+Size: 1496
+Description: Inittab configuration for SysVinit
+ Inittab configuration for SysVinit.
+OE: sysvinit-inittab
+PackageArch: armv7a-vfp-neon
+
+Package: base-passwd
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.5.29-r0
+Size: 1322
+Description: Base system master password/group files
+ The master copies of the user database files (/etc/passwd and
+ /etc/group).  The update-passwd tool is also provided to keep the system
+ databases synchronized with these master files.
+OE: base-passwd
+PackageArch: armv7a-vfp-neon
+
+Package: libcidn1
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.18-r1
+Provides: libcidn
+Depends: libc6 (>= 2.18)
+Size: 64058
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: linux-libc-headers
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.13.0-r1
+Size: 858562
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: modutils-initscripts
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.0-r7
+Recommends: update-rc.d
+Size: 1590
+Description: Initscript for auto-loading kernel modules on boot
+ Initscript for auto-loading kernel modules on boot.
+OE: modutils-initscripts
+PackageArch: armv7a-vfp-neon
+
+Package: libstdc++-dev
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 4.8.3-r1
+Depends: libstdc++6
+Recommends: libc6-dev, libgcc-s-dev
+Size: 710
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: update-rc.d-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: all
+Version: 0.7-r5
+Depends: update-rc.d (= 0.7-r5)
+Size: 748
+Description: manage symlinks in /etc/rcN.d - Development files
+ update-rc.d is a utilities that allows the management of symlinks to the
+ initscripts in the /etc/rcN.d directory structure.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+OE: update-rc.d
+PackageArch: all
+
+Package: sysvinit-pidof
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.88dsf-r14
+Depends: update-alternatives-opkg, libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Size: 25300
+Description: System-V like init
+ This package is required to boot in most configurations.  It provides the
+ /sbin/init program.  This is the first process started on boot, and the
+ last process terminated before the system halts.
+OE: sysvinit
+PackageArch: armv7a-vfp-neon
+Homepage: http://savannah.nongnu.org/projects/sysvinit/
+
+Package: sysvinit
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.88dsf-r14
+Depends: sysvinit-pidof, libc6 (>= 2.18), update-alternatives-opkg, initscripts-functions, sysvinit-inittab, libgcc-s1 (>= 4.8.3)
+Size: 171586
+Description: System-V like init
+ This package is required to boot in most configurations.  It provides the
+ /sbin/init program.  This is the first process started on boot, and the
+ last process terminated before the system halts.
+OE: sysvinit
+PackageArch: armv7a-vfp-neon
+Homepage: http://savannah.nongnu.org/projects/sysvinit/
+
+Package: base-passwd-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.5.29-r0
+Depends: base-passwd (= 3.5.29-r0)
+Recommends: libc6-dev, libgcc-s-dev
+Size: 818
+Description: Base system master password/group files - Development files
+ The master copies of the user database files (/etc/passwd and
+ /etc/group).  The update-passwd tool is also provided to keep the system
+ databases synchronized with these master files.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+OE: base-passwd
+PackageArch: armv7a-vfp-neon
+
+Package: initscripts
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.0-r155
+Depends: initscripts-functions
+Size: 10494
+Description: SysV init scripts
+ Initscripts provide the basic system startup initialization scripts for
+ the system.  These scripts include actions such as filesystem mounting,
+ fsck, RTC manipulation and other actions routinely performed at system
+ startup.  In addition, the scripts are also used during system shutdown
+ to reverse the actions performed at startup.
+OE: initscripts
+PackageArch: armv7a-vfp-neon
+
+Package: init-ifupdown
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.0-r7
+Depends: netbase
+Recommends: update-rc.d
+Conflicts: netbase (<< 1:5.0)
+Size: 2640
+Description: Basic TCP/IP networking init scripts and configuration files
+ This package provides high level tools to configure network interfaces
+OE: init-ifupdown
+PackageArch: armv7a-vfp-neon
+Homepage: http://packages.debian.org/ifupdown
+
+Package: sysvinit-inittab-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.88dsf-r10
+Depends: sysvinit-inittab (= 2.88dsf-r10)
+Size: 714
+Description: Inittab configuration for SysVinit - Development files
+ Inittab configuration for SysVinit.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+OE: sysvinit-inittab
+PackageArch: armv7a-vfp-neon
+
+Package: base-files-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.0.14-r89
+Depends: base-files (= 3.0.14-r89)
+Size: 770
+Description: Miscellaneous files for the base system - Development files
+ The base-files package creates the basic system directory structure and
+ provides a small set of key configuration files for the system.  This
+ package contains symbolic links, header files, and related items
+ necessary for software development.
+OE: base-files
+PackageArch: armv7a-vfp-neon
+
+Package: gdbserver
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 7.7.50.20140217-cvs-r1
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Size: 134158
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: update-rc.d
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: all
+Version: 0.7-r5
+Size: 2716
+Description: manage symlinks in /etc/rcN.d
+ update-rc.d is a utilities that allows the management of symlinks to the
+ initscripts in the /etc/rcN.d directory structure.
+OE: update-rc.d
+PackageArch: all
+
+Package: initscripts-functions
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.0-r155
+Depends: update-alternatives-opkg
+Size: 1982
+Description: SysV init scripts
+ Initscripts provide the basic system startup initialization scripts for
+ the system.  These scripts include actions such as filesystem mounting,
+ fsck, RTC manipulation and other actions routinely performed at system
+ startup.  In addition, the scripts are also used during system shutdown
+ to reverse the actions performed at startup.
+OE: initscripts
+PackageArch: armv7a-vfp-neon
+
+Package: sysvinit-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.88dsf-r14
+Depends: sysvinit (= 2.88dsf-r14)
+Recommends: sysvinit-pidof-dev, base-passwd-dev, libgcc-s-dev, initscripts-functions-dev, libc6-dev, sysvinit-inittab-dev, update-alternatives-opkg-dev
+Size: 2216
+Description: System-V like init - Development files
+ This package is required to boot in most configurations.  It provides the
+ /sbin/init program.  This is the first process started on boot, and the
+ last process terminated before the system halts.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+OE: sysvinit
+PackageArch: armv7a-vfp-neon
+Homepage: http://savannah.nongnu.org/projects/sysvinit/
+
+Package: libc6
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.18-r1
+Provides: eglibc, external-xilinx-toolchain, rtld__gnu_hash__
+Size: 1789782
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: initscripts-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.0-r155
+Depends: initscripts (= 1.0-r155)
+Recommends: update-alternatives-opkg-dev, initscripts-functions-dev
+Size: 892
+Description: SysV init scripts - Development files
+ Initscripts provide the basic system startup initialization scripts for
+ the system.  These scripts include actions such as filesystem mounting,
+ fsck, RTC manipulation and other actions routinely performed at system
+ startup.  In addition, the scripts are also used during system shutdown
+ to reverse the actions performed at startup.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+OE: initscripts
+PackageArch: armv7a-vfp-neon
+
+Package: busybox-inetd
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.22.1-r32
+Size: 1878
+Description: Tiny versions of many common UNIX utilities in a single small executable
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.
+OE: busybox
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.busybox.net
+
+Package: init-ifupdown-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.0-r7
+Depends: init-ifupdown (= 1.0-r7)
+Recommends: netbase-dev, initscripts-dev
+Size: 796
+Description: Basic TCP/IP networking init scripts and configuration files - Development files
+ This package provides high level tools to configure network interfaces
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+OE: init-ifupdown
+PackageArch: armv7a-vfp-neon
+Homepage: http://packages.debian.org/ifupdown
+
+Package: glibc-extra-nss
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.18-r1
+Provides: eglibc-extra-nss
+Depends: libc6 (>= 2.18)
+Size: 75820
+Description: hesiod, NIS and NIS+ nss libraries
+ glibc: nis, nisplus and hesiod search services.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: libstdc++6
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 4.8.3-r1
+Provides: libstdc++
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Size: 355386
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: busybox
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.22.1-r32
+Depends: update-alternatives-opkg, libc6 (>= 2.18)
+Recommends: update-rc.d, busybox-syslog, busybox-udhcpc
+Size: 1477884
+Description: Tiny versions of many common UNIX utilities in a single small executable
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.
+OE: busybox
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.busybox.net
+
+Package: libgcc-s-dev
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 4.8.3-r1
+Provides: libgcc-dev
+Recommends: libc6-dev
+Size: 810
+Description: External Xilinx toolchain
+ External Xilinx toolchain.
+OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: busybox-mdev
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.22.1-r32
+Size: 1712
+Description: Tiny versions of many common UNIX utilities in a single small executable
+ BusyBox combines tiny versions of many common UNIX utilities into a
+ single small executable. It provides minimalist replacements for most of
+ the utilities you usually find in GNU fileutils, shellutils, etc. The
+ utilities in BusyBox generally have fewer options than their full-
+ featured GNU cousins; however, the options that are included provide the
+ expected functionality and behave very much like their GNU counterparts.
+ BusyBox provides a fairly complete POSIX environment for any small or
+ embedded system.
+OE: busybox
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.busybox.net
+
+Package: netbase-dev
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1:5.2-r0
+Depends: netbase (= 1:5.2-r0)
+Size: 758
+Description: Basic TCP/IP networking support - Development files
+ This package provides the necessary infrastructure for basic TCP/IP based
+ networking  This package contains symbolic links, header files, and
+ related items necessary for software development.
+OE: netbase
+PackageArch: armv7a-vfp-neon
+Homepage: http://packages.debian.org/netbase
+

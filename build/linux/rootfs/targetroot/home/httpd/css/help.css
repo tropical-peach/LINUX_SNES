@@ -1,0 +1,81 @@
+#help_heading {
+	font-size: large;
+	font-weight: bold;
+	margin-top: 25px;
+	padding: 3px 0px 8px 3px;
+}
+
+.help_summary {
+	font-style: italic;
+}
+
+.help_links {
+	padding-left: 2em;
+}
+
+.help_links a:visited {
+	color: blue;
+}
+
+.help_links a:hover {
+	color: orange;
+}
+
+.help_element_text {
+	padding-left: 2em;
+}
+
+.help_search_results {
+	padding-top: 20px;
+	font-style: italic;
+}
+
+body#help {
+	padding: 0px;
+	margin: 1px;
+	border-left: solid 3px #6699CC;
+	border-top: solid 3px #6699CC;
+	border-right: solid 3px #003399;
+	border-bottom: solid 3px #003399;
+}
+
+.help_section_body {
+	padding: 7px 10px 10px 10px;
+	background: #f0f0ff;
+	border: 1px solid #aaf;
+}
+
+.help_results {
+	width: 100%;
+}
+
+.nolayout#help {
+	padding: 0px 5px 0 5px;
+}
+
+#help_close {
+	background-image: url("/img/close.png");
+	vertical-align: middle;
+	padding: 2px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 17px;
+	height: 17px;
+	text-indent: -1000em;
+}
+
+/* Need a back button */
+#help_back {
+	/*background-image: url("/img/but_back.png");*/
+	vertical-align: middle;
+	padding: 2px;
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 30px;
+	top: 10px;
+	width: 17px;
+	height: 17px;
+	/*text-indent: -1000em;*/
+}

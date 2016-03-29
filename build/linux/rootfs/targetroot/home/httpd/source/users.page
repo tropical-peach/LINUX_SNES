@@ -1,0 +1,90 @@
+label "Users"
+
+title "Users"
+
+bar "Users"
+
+storage none
+
+text {
+	display {
+		html eval div class=note {
+			html str p "
+				\u00b5Web provides a built-in role based authentication
+				and authorisation system which can be enabled on a production system.
+				However for the simplicity of this demo, the auth system is disabled
+				in this application.
+			"
+		}
+	}
+}
+
+table users {
+	field username {
+		label "User Name"
+	}
+	field password {
+		label Password
+		type password
+		stdmode none
+	}
+	field confirm {
+		label Confirm
+		type password
+		stdmode none
+	}
+	field access {
+		label "Access Level"
+		type {enum install admin user}
+		display {
+			if {[cgi mode] == "edit" && [cgi get username] == "root"} {
+				cgi return done
+			}
+		}
+	}
+	button modify {
+		label Modify
+		editmode none
+		stdmode image disabled=1
+		setmode edit
+	}
+}
+
+button submit {
+	label Submit
+	stdmode none
+}
+
+button cancel {
+	label Cancel
+	stdmode none
+}
+
+button deleteuser {
+	label Delete
+	stdmode none
+	display {
+		if {[cgi get username] == "root"} {
+			cgi return done
+		}
+	}
+}
+
+button new {
+	label "Add User"
+	editmode none
+	setmode edit
+	stdmode disabled=1
+}
+
+display {
+	# Some dummy data
+	if {[cgi mode] == "std"} {
+		set i 0
+		foreach {username access} {root root install install admin admin user user} {
+			cgi row $i
+			incr i
+			cgi set username $username access $access
+		}
+	}
+}

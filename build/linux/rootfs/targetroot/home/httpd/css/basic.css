@@ -1,0 +1,375 @@
+/* basic stylesheet. override elements with the application-specific stylesheet */
+body {
+	padding: 0px;
+	margin: 5px;
+	font-family: sans-serif;
+	background: white;
+}
+
+/* No border on images by default */
+img {
+	border: none;
+}
+
+td {
+	text-align: left;
+	vertical-align: top;
+	font-size: small;
+	padding: 0px 0px 2px 0px;
+}
+
+/* The menu layout */
+/* This is the menu column container */
+td.menu {
+	width: 30em;
+	padding-top: 0px;
+	padding-right: 5px;
+	vertical-align:top;
+}
+
+/* The menu header */
+h3.menu {
+	background-color: #666;
+	color: white;
+	font-size: 12px;
+	font-weight:bold;
+	text-transform: uppercase;
+	margin:0;
+	padding: 9px 5px 7px 5px;
+	text-align: center;
+}
+
+/* The container for the menu items */
+ul.menu {
+	list-style:none;
+
+	margin-top: 0px;
+	margin-left: 0;
+
+	padding-top: 0;
+	padding-left: 0;
+	padding-bottom: 0;
+
+	border-left: 1px solid #333;
+	border-right: 1px solid #333;
+}
+
+/* Menu items */
+ul.menu li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	white-space: nowrap;
+}
+
+/* Menu item links */
+ul.menu li a, ul.menu li div {
+	color: #333;
+	text-decoration:none;
+	display:block;
+
+	padding: 7px 12px 7px 12px;
+
+	border-bottom: 1px solid #333;
+	background-color: #EEE;
+}
+
+div.menulabel {
+	font-size: smaller;
+	text-align: center;
+}
+
+/* Mouse over menu item link */
+ul.menu li a:hover {
+	text-decoration:underline;
+}
+
+/* Current menu item link */
+ul.menu li.menu_selected a {
+	background-color: white;
+	font-weight: normal;
+}
+
+/* Tabs */
+ul.tabmenu {
+	margin: 0px;
+	padding: 3px 0px 3px 4px;
+	list-style-type: none;
+}
+
+ul.tabmenu li {
+	display: inline;
+	overflow: hidden;
+}
+
+ul.tabmenu a, a.open {
+	color: black;
+	background: #eee;
+	border: 1px solid #aaa;
+	font-weight: bold;
+	padding: 4px 6px 3px 6px;
+	text-decoration: none;
+	white-space: nowrap;
+	overflow: hidden;
+}
+ul.tabmenu a:visited {
+	color: black;
+}
+ul.tabmenu a:active {
+	color: black;
+	text-decoration: underline;
+}
+ul.tabmenu a:hover {
+	text-decoration: underline;
+}
+ul.tabmenu a.open {
+	background: white;
+	color: black;
+	border-bottom: 1px solid white;
+}
+
+*.infobox {
+	padding: 5px;
+	margin: 2px 0px 10px 0px;
+	display: block;
+	background: #ffc;
+	border: 1px solid black;
+}
+
+/* Messages at the top of the page */
+*.successmsg, *.warningmsg, *.errormsg {
+	margin: 2px 0px 5px 0px;
+	width: 100%;
+}
+
+*.errormsg h2, *.warningmsg h2, *.successmsg h2 {
+	font-size: 16px;
+	margin: 6px 2px 6px 6px;
+}
+
+*.errormsg p, *.warningmsg p, *.successmsg p {
+	margin: 2px 2px 6px 6px;
+}
+
+/* Error message at the top of the page */
+*.errormsg {
+	background: #FFE8E8;
+	border: 1px solid red;
+}
+
+*.errormsg h3 {
+	font-size: 12px; 
+	color: red;
+	margin: 4px 2px 4px 6px;
+}
+
+/* success messages at the top of the page. */
+*.successmsg {
+	background: #E8FFE8;
+	border: 1px solid green;
+}
+
+/* Warning messages at the top of the page. */
+*.warningmsg {
+	background: #E8E8FF;
+	border: 1px solid #666699;
+}
+
+/* content, page, form */
+*.content {
+	background: white;
+	border: 1px solid #aaa;
+	padding: 12px 10px 12px 10px;
+	z-index: 2;
+	vertical-align: top;
+}
+
+td.page {
+   width: 100%;
+   padding: 7px 10px 10px 10px;
+   background: #f0f0ff;
+   border: 1px solid #aaf;
+}
+
+div.page {
+	text-align: left;
+	margin: 0px auto;
+}
+
+form {
+	margin: 0px;
+	padding: 0px;
+}
+
+/* Note: Can't use display:none or else this doesn't work.
+ * But visibility:hidden + float:left do the trick
+ */
+input#defaultbutton {
+	visibility: hidden;
+	width: 0;
+	height: 0;
+	float: left;
+}
+
+/* Element rows, labels and fields */
+
+/* Create some margins for these contained elements */
+div.elemvalue, div.elemtext, div.elemlabel, div.elemerror {
+	margin: 2px 0 2px 0;
+	display: inline-block;
+	/* For IE */
+	zoom: 1;
+	*display: inline;
+	vertical-align: top;
+}
+
+/* elembutton is a bit more like a row than a row element */
+div.elembutton {
+	margin: 0px 0px 6px 0px;
+}
+
+div.elemtable, div.elemtext {
+	width: 100%;
+}
+
+/* This is column 1 of the virtual table */
+div.elemlabel, div.elemerror {
+	width: 10em;
+	min-height: 23px;
+
+	font-size: small;
+	padding-right: 4px;
+}
+
+/* Label for field in error */
+div.elemerror {
+	color: red;
+}
+
+div.label {
+	white-space: normal;
+	display: inline;
+}
+
+/* Element values are in column 2 of the virtual table */
+div.elemvalue {
+	text-align: left;
+	font-size: small;
+	padding: 0px 0px 2px 2px;
+}
+
+/* readonly fields such as text and booleans (checkboxes) */
+div.elemvalue *.rotext {
+	font-weight: bold;
+	padding: 4px 2px 2px 2px;
+}
+
+.checked {
+	display: block;
+	vertical-align: middle;
+	padding: 2px;
+	background-image: url("/img/checked.png");
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+.unchecked {
+	display: block;
+	vertical-align: middle;
+	padding: 2px;
+	background-image: url("/img/unchecked.png");
+	background-repeat: no-repeat;
+	width: 16px;
+	height: 16px;
+}
+
+/* Tables of elements */
+tr.elemtable th {
+	background: #7bb86f;
+	padding: 4px 4px 2px 4px;
+	font-size: small;
+	white-space: nowrap;
+}
+
+tr.elemtable td {
+	vertical-align: middle;
+	background: #9dbc97;
+	padding: 2px 4px 2px 4px;
+	font-size: small;
+}
+
+input.button {
+	vertical-align: middle;
+}
+
+/* List all the image button types here
+ * and set the background images below
+ */
+input#delete, input#modify, input#up, input#down {
+	/* Common settings for IE (image) buttons */
+	cursor: pointer; /* hand-shaped cursor */
+	border: none;
+	margin: 0;
+	padding: 0;
+	width: 16px;
+	height: 16px;
+	background: transparent no-repeat center;
+}
+
+/* Button images */
+input#delete {
+	background: url("/img/delete.png") no-repeat;
+}
+input#modify {
+	background: url("/img/modify.png") no-repeat;
+}
+input#up {
+	background: url("/img/up.png") no-repeat;
+}
+input#down {
+	background: url("/img/down.png") no-repeat;
+}
+
+/* This is useful in help text to force a paragraph separation */
+hr.para {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* titlebar: heading, toolbar and toolbar items */
+div#titlebar {
+	display: inline-block;
+	/* For IE */
+	zoom: 1;
+	*display: inline;
+	width: 100%;
+	margin-bottom: 5px;
+	overflow: hidden;
+}
+
+div#titlebar #heading {
+	float: left;
+	font-size: large;
+	font-weight: bold;
+	margin: 0;
+	padding: 5px 0px 5px 5px;
+	white-space: nowrap;
+}
+
+div#titlebar #toolbar {
+	float: right;
+}
+
+/* Common settings for toolbar links */
+div#toolbar div {
+	display: inline-block;
+	/* For IE */
+	zoom: 1;
+	*display: inline;
+	vertical-align: middle;
+	white-space: nowrap;
+	margin-left: 5px;
+}

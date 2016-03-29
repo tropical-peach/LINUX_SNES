@@ -1,0 +1,7 @@
+PROOT:=/home/steven/Desktop/LINUX_SNES
+INSTANCE:=linux/kernel
+-include /home/steven/Desktop/LINUX_SNES/build/linux/Makefile.export
+-include /home/steven/Desktop/LINUX_SNES/build/linux/kernel/Makefile.export
+CONFIGFILE:=/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config
+dir_linux_kernel_y=/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17
+

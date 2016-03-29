@@ -1,0 +1,52 @@
+label "Configuration"
+
+title "System Configuration"
+
+summary "Write configuration changes to flash"
+
+help {
+	On this platform, changes must be explicitly written to flash.
+	
+	Use the <b>Submit</b> button to save changes.
+}
+
+init {
+	package require petalinux
+}
+
+bar "Save System Configuration"
+
+text {
+	display {
+		if {[is_modified]} {
+			html eval p class=noteheading {
+				html tag img src=/img/config-modified.png
+				html puts "Configuration Modified"
+			}
+			html str p {
+				Saving the configuration will write your changes to flash where
+				they will be remembered across a reboot.
+			}
+			html str p {
+				Rebooting without saving the configuration will discard any changes
+				you have made.
+			}
+		} else {
+			html str p {
+				The configuration has not been modified.
+			}
+		}
+	}
+}
+
+button submit {
+	label "Save Config"
+	display {
+		if {![is_modified]} {
+			cgi addattrs disabled
+		}
+	}
+	submit {
+		save_modified
+	}
+}

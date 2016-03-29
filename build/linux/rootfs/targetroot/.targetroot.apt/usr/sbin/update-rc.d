@@ -1,0 +1,1 @@
+/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot/usr/sbin/update-rc.d

@@ -1,0 +1,3 @@
+#!/bin/sh
+[ "$1" != "upgrade" ] || exit 0
+	update-alternatives --remove  pidof /bin/pidof.sysvinit

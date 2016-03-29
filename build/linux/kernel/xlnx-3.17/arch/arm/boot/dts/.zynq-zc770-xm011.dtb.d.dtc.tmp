@@ -1,0 +1,1 @@
+arch/arm/boot/dts/zynq-zc770-xm011.dtb: arch/arm/boot/dts/.zynq-zc770-xm011.dtb.dts.tmp /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/arch/arm/boot/dts/zynq-7000.dtsi /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/arch/arm/boot/dts/skeleton.dtsi

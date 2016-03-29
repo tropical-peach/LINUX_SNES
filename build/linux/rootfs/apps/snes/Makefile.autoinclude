@@ -1,0 +1,8 @@
+PROOT:=/home/steven/Desktop/LINUX_SNES
+INSTANCE:=linux/rootfs/snes
+-include /home/steven/Desktop/LINUX_SNES/build/linux/Makefile.export
+-include /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/Makefile.export
+-include /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes/Makefile.export
+CONFIGFILE:=/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/rootfs/config
+dir_apps_y=/home/steven/Desktop/LINUX_SNES/components/apps/snes
+

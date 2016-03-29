@@ -1,0 +1,32 @@
+# vim: set fileencoding=utf-8:
+
+label "About \u00b5Web"
+title "About \u00b5Web Embedded Web Framework"
+
+bar "Welcome to \u00b5Web"
+
+text {
+	display {
+		html eval div class=aboutuweb {
+			html str h1 "\u00b5Web Embedded Web Framework"
+			html str p "
+				The \u00b5Web Embedded Web Framework is the fastest way to develop a high quality, professional
+				web interface for your embedded product.
+			"
+			html eval p {
+				html puts "Try it today. The source code for every page is available via the <b>View Code</b> link"
+			}
+			html eval ul {
+				html str li "Rapid Development: Dramatically reduces the time needed to build real embedded web interfaces"
+				html str li "Professional Look-and-Feel: Cascading Stylesheets, Intuitive Menus and Tabs, Online Help"
+				html str li "Embedded Focus: Small, Fast, Complete"
+			}
+			html eval p {
+				html puts "Find out more at "
+				html str a href=http://uweb.workware.net.au/ uweb.workware.net.au
+				html puts "or contact us at "
+				html str a "href=mailto:sales@workware.net.au?Subject=\u00b5Web on PetaLinux" sales@workware.net.au
+			}
+		}
+	}
+}

@@ -1,0 +1,100 @@
+title "ssh: Host Key Generation"
+
+label "Host Keys"
+
+summary "Generate ssh host keys"
+
+setmode edit
+storage none
+
+bar "Manage ssh Host Keys"
+
+text {
+	str {
+		<p>
+		A dropbear ssh host key is automatically created by the system, however
+		it is possible to generate a new key with a different type or key length.
+		</p>
+		<p>
+		<b>Note</b> that this will replace the existing key. Clients will typically
+		complain that the host key has changed. This is expected behaviour.
+		</p>
+	}
+}
+
+init {
+	package require petalinux
+
+	# These can be moved
+	set PIDFILE [root]/var/run/genkey.pid
+	set ERRFILE [root]/var/run/genkey.err
+	set HOSTKEYFILE [cgi configdir]/dropbear_host_key
+
+	set inprogress [pid_alive $PIDFILE]
+}
+
+text {
+	display {
+		if {$inprogress} {
+			html str div class=infobox "Key generation is currently in progress. Please wait."
+		}
+	}
+}
+
+field type {
+	label "Key Type"
+	type {enum rsa dsa}
+	editmode {radio rsa "RSA Key" dsa "DSA Key"}
+	help "Specify the type of key to generate"
+	default rsa
+}
+
+field length {
+	label "Key Length"
+	type {enum 512 1024 2048 4096}
+	editmode {select 512 "512 bits" 1024 "1024 bits (recommended)" 2048 "2048 bits" 4096 "4096 bits (slow!)"}
+	help "Specify the key length"
+	default 1024
+}
+
+button submit {
+	label Generate
+
+	display {
+		if {$inprogress} {
+			cgi addattrs disabled
+		} elseif {[file exists $HOSTKEYFILE]} {
+			cgi addattrs {onclick="javascript:return confirm('Existing host key will be replaced')"}
+		}
+	}
+	submit {
+		if {!$inprogress} {
+			set pid [exec dropbearkey 2>$ERRFILE -t [cgi get type] -s [cgi get length] -f $HOSTKEYFILE &]
+			writefile $PIDFILE $pid
+
+			# Wait a moment. If the process is already dead, it failed.
+			# Note that we can't use pid_alive until after os.wait here because the process will be a zombie
+			sleep 0.5
+			foreach {waitpid type value} [os.wait -nohang $pid] {}
+			if {$waitpid == $pid} {
+				cgi warning "Failed to generate a key ([readfile $ERRFILE])"
+				file delete $ERRFILE
+			} else {
+				cgi success "Key generation is in progress. This may take some time."
+				set inprogress 1
+			}
+		}
+	}
+}
+
+button refresh {
+	label Refresh
+	display {
+		if {!$inprogress} {
+			cgi return done
+		}
+	}
+	submit {
+		cgi nextpage $page
+	}
+}

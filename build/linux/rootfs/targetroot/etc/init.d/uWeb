@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "Starting uWeb server:"
+/home/httpd/cgi-bin/petalinux server 80 &

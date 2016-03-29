@@ -1,0 +1,36 @@
+# vim: set fileencoding=utf-8:
+
+label "About PetaLinux"
+title "About PetaLinux SDK"
+
+bar "Welcome to PetaLinux SDK"
+
+text {
+	str {
+		<div class="aboutpetalinux">
+		<h1>PetaLinux SDK</h1>
+
+		<p>
+		Introducing PetaLinux SDK - the System Development Kit for Embedded
+		Linux on Xilinx FPGAs.
+		Supporting all phases of the embedded system design flow, PetaLinux offers
+		</p>
+		<ul>
+		<li>Integration with Xilinx EDK tools for hardware design entry and
+		implementation</li>
+		<li>A complete embedded Linux platform including Linux kernel,
+		libraries and applications, system image builder and
+		application/driver template generators</li>
+		<li>Full system simulator integrated in the development environment</li>
+		<li>Automated BSP generation tools to synchronise hardware and software flows</li>
+		</ul>
+		</div>
+		<p>
+		Contact <a href="http://www.xilinx.com/company/">Xilinx</a> today to kick start your Embedded Linux
+		development on Xilinx FPGAs.
+		</p>
+	}
+}
+
+
+

@@ -1,0 +1,1 @@
+cmd_drivers/virtio/virtio_ring.ko := arm-xilinx-linux-gnueabi-ld -EL -r  -T /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/module-common.lds --build-id  -o drivers/virtio/virtio_ring.ko drivers/virtio/virtio_ring.o drivers/virtio/virtio_ring.mod.o

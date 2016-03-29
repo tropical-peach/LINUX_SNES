@@ -1,0 +1,5 @@
+/.
+/etc
+/etc/mdev.conf
+/etc/init.d
+/etc/init.d/mdev

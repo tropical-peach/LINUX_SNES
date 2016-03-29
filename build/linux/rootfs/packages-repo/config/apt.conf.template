@@ -1,0 +1,68 @@
+Dir::State "#ROOTFS_CONF#/var/lib/apt/"
+{
+  Lists "lists/";
+  status "#ROOTFS#/var/lib/dpkg/status";
+};
+Dir::Cache "#ROOTFS_CONF#/var/cache/apt/"
+{
+  Archives "archives/";
+  pkgcache "";
+  srcpkgcache "";
+};
+Dir::Bin "#HOSTBIN#/bin/"
+{
+  methods "#HOSTBIN#/lib/apt/methods/";
+  gzip "/bin/gzip";
+  dpkg "#HOSTBIN#/bin/dpkg";
+  dpkg-architecture "#HOSTBIN#/bin/dpkg-architecture";
+  dpkg-buildflags "#HOSTBIN#/bin/dpkg-buildflags";
+  dpkg-buildpackage "#HOSTBIN#/bin/dpkg-buildpackage";
+  dpkg-checkbuilddeps "#HOSTBIN#/bin/dpkg-checkbuilddeps";
+  dpkg-deb "#HOSTBIN#/bin/dpkg-deb";
+  dpkg-distaddfile "#HOSTBIN#/bin/dpkg-distaddfile";
+  dpkg-divert "#HOSTBIN#/bin/dpkg-divert";
+  dpkg-genchanges "#HOSTBIN#/bin/dpkg-genchanges";
+  dpkg-gencontrol "#HOSTBIN#/bin/dpkg-gencontrol";
+  dpkg-gensymbols "#HOSTBIN#/bin/dpkg-gensymbols";
+  dpkg-maintscript-helper "#HOSTBIN#/bin/dpkg-maintscript-helper";
+  dpkg-mergechangelogs "#HOSTBIN#/bin/dpkg-mergechangelogs";
+  dpkg-name "#HOSTBIN#/bin/dpkg-name";
+  dpkg-parsechangelog "#HOSTBIN#/bin/dpkg-parsechangelog";
+  dpkg-query "#HOSTBIN#/bin/dpkg-query";
+  dpkg-scanpackages "#HOSTBIN#/bin/dpkg-scanpackages";
+  dpkg-scansources "#HOSTBIN#/bin/dpkg-scansources";
+  dpkg-shlibdeps "#HOSTBIN#/bin/dpkg-shlibdeps";
+  dpkg-source "#HOSTBIN#/bin/dpkg-source";
+  dpkg-split "#HOSTBIN#/bin/dpkg-split";
+  dpkg-statoverride "#HOSTBIN#/bin/dpkg-statoverride";
+  dpkg-trigger "#HOSTBIN#/bin/dpkg-trigger";
+  dpkg-vendor "#HOSTBIN#/bin/dpkg-vendor";
+  apt-get "#HOSTBIN#/bin/apt-get";
+  apt-cache "#HOSTBIN#/bin/apt-cache";
+};
+Dir::Log "#ROOTFS_CONF#/var/log/apt";
+Dir::Log "#ROOTFS_CONF#/var/log/apt"
+{
+  Terminal "term.log";
+  History "history.log";
+};
+Dir::Etc "#ROOTFS_CONF#/etc/apt/"
+{
+  Preferences "preferences";
+};
+
+APT
+{
+  Install-Recommends "true";
+  Immediate-Configure "false";
+  Architecture "#ARCH#";
+  Get
+  {
+     Assume-Yes "true";
+     Force-Yes "true"
+  };
+};
+
+DPkg::Options {"--root=#ROOTFS#";"--admindir=#ROOTFS#/var/lib/dpkg";"--force-all";"--no-debsig";"--force-not-root"};
+};
+

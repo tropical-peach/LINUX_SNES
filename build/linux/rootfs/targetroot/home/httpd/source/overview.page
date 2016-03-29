@@ -1,0 +1,65 @@
+label "Welcome"
+title "Welcome to \u00b5Web on PetaLinux"
+
+bar "\u00b5Web on PetaLinux"
+
+summary "Introduction to \u00b5Web on PetaLinux"
+
+text {
+	str {
+		<!-- Example of outputting raw html -->
+		<div id=boardimage></div>
+		<p>
+		This web application is running on your PetaLinux system, and is built
+		with the &micro;Web (micro-Web) application framework from WorkWare Systems.
+		</p>
+		<p>
+		It demonstrates the power and ease of creating a fully customised web
+		interface for your next embedded product - logo, menu structure, tabs,
+		in fact everything you see here can be easily modified to your
+		requirements.
+		</p>
+		<p>
+		This demonstration allows you to examine the system status, modify the
+		system configuration and remotely upgrade the system firmware.
+		</p>
+		<p>Use the navigation menu on the left, or go directly to:
+		<ul class="navlist">
+		<li><a href="network">Network Settings</a></li>
+		<li><a href="firmware">Firmware Upgrade</a></li>
+		<li><a href="syslog">System Log</a></li>
+		</ul>
+		</p>
+		<p>
+		See the tabs above for more information about &micro;Web and PetaLinux, or
+		click below to go straight to the &micro;Web and PetaLinux product pages.
+		</p>
+	}
+}
+
+text {
+	display {
+		# Example of dynamic output via the Tcl html command
+
+		html eval table class=welcome {
+			html eval tr {
+				html eval td {
+					html eval a href=http://uweb.workware.net.au/ {
+						html eval p {
+							html puts "Web Interface by:"
+						}
+						html tag img width=200 src=/img/uweb-banner.png
+					}
+				}
+				html eval td {
+					html eval a href=http://www.xilinx.com/ {
+						html eval p {
+							html puts "Embedded Linux by:"
+						}
+						html tag img width=300 src=/img/xilinx-banner.png
+					}
+				}
+			}
+		}
+	}
+}

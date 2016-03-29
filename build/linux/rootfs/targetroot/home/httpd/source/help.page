@@ -1,0 +1,269 @@
+stylesheet media=screen /css/help.css
+
+storage none
+setmode edit
+auth none
+menus none
+
+verbatim {
+	#include <stdio.h>
+	#include <string.h>
+	#include <compat.h>
+
+	#include <html.h>
+	#include <log.h>
+
+	#include <cgi.h>
+	#include <cgipage.h>
+	#include <appinfo.h>
+
+	#include "help_search.h"
+
+	/*
+	 * 0 - no help was found or output.
+	 * 1 - some help was found and output.
+	 */
+	int output_element_help(elem_t *elem)
+	{
+		const char *help = elem_help(elem);
+		if (help && elem_label(elem)) {
+			tx("h3", "class", "help_element_label");
+			fputs(elem_label(elem), stdout);
+			_tx("h3");
+
+			tx("p", "class", "help_element_text");
+			fputs(help, stdout);
+			_tx("p");
+			return 1;
+		}
+		else {
+			log_debug("help", "No help available for element %s", elem_name(elem));
+			return 0;
+		}
+	}
+
+	int display_element_help(page_t *page)
+	{
+		elem_iter_t ei;
+		int summaries_available = 0;
+		for (ei = elem_first(page); ei; ei = elem_next(ei)) {
+		 	if (elem_help(elem_of(ei)) && elem_label(elem_of(ei))) {
+				summaries_available++;
+				break;
+			}
+		}
+
+		if (summaries_available) {
+			summaries_available = 0;
+			tx("h2", "class", "help_section_heading");
+			fputs("Fields", stdout);
+			_tx("h2");
+
+
+			tx ("div", "class", "help_section_body");
+
+			for (ei = elem_first(page); ei; ei = elem_next(ei)) {
+				if (elem_is_table(elem_of(ei))) {
+					elem_iter_t e_table;
+					for (e_table = elem_table_first(elem_of(ei)); e_table; e_table = elem_next(e_table)) {
+						summaries_available += output_element_help(elem_of(e_table));
+					}
+				} else {
+					summaries_available += output_element_help(elem_of(ei));
+				}
+			}
+
+			_tx("div");
+		}
+
+		return summaries_available;
+	}
+
+	static void display_page_heading(page_t *page)
+	{
+		tx("h2", "class", "help_section_heading");
+		fputs(page_label(page) ?: "", stdout);
+		_tx("h2");
+	}
+
+	int display_summary_help (page_t *page, const char *heading_level)
+	{
+		if (page_summary(page)) {
+
+			tx("div", "class", "help_section_body");
+			tx("div", "class", "help_summary");
+			fputs(page_summary(page), stdout);
+			_tx("div");
+			_tx("div");
+
+			return 1;
+		} else {
+			log_debug("help", "No summary help found");
+			return 0;
+		}
+	}
+
+	int display_page_help(page_t *page)
+	{
+		if (page_help(page)) {
+
+			tx("p", "id", "help_page_help");
+			fputs(page_help(page), stdout);
+			_tx("p");
+
+			return 1;
+		} else {
+			return 0;
+		}
+	}
+}
+
+field back {
+	editmode hidden
+	storage page
+	default 0
+}
+
+field heading {
+
+	# REVISIT: It would be nice if the back button went away when there was no history
+	display -c {
+		const web_appinfo_t *app;
+
+		app = get_appinfo();
+
+		tx("div", "id", "help_heading");
+			puts (app->appname);
+			puts (" Help");
+		_tx("div");
+
+		tx("a", "id", "help_close", "title", "Close", "href", "javascript:window.close()");
+		fputs("Close", stdout);
+		_tx("a");
+
+		if (*cgi_get("back") == '1') {
+			tx("a", "id", "help_back", "title", "Back", "href", "javascript:history.go(-1)");
+			fputs("Back", stdout);
+			_tx("a");
+		}
+
+		return CALLBACK_DONE;
+	}
+}
+
+field page {
+	editmode hidden
+}
+
+field page_mode {
+	editmode hidden
+}
+
+field search {
+	type text blank
+	editmode nonewline
+}
+
+button go {
+	label "Search"
+	editmode newline
+	submit -c {
+		cgi_set("back", "1");
+		return CALLBACK_CONT;
+	}
+}
+
+field results {
+	display -c {
+		tx("table", "class", "help_results");
+		tx("tr");
+		tx("td", "colspan", "2", "id", "help_results");
+
+		if (*cgi_get("go") == '1') {
+
+			/* We need to search for the string on each of its lines */
+			page_t ** pages = page_search(cgi_get("search"));	
+			int i;
+
+			if (!pages[0]) {
+				tx("p", "id", "help_no_match", "class", "help_search_results");
+				fputs("No matching pages found. Please try again.", stdout);
+				_tx("p");
+			}
+			else {
+				tx("p", "id", "help_matches", "class", "help_search_results");
+				fputs("Your search found the following results", stdout);
+				_tx("p");
+			}
+
+			for(i = 0; pages[i]; i++) {
+				char buf[256];
+				stringlist *sl;
+				char *href;
+
+				if (page_label(pages[i])) {
+					tx("h2");
+					fputs(page_label(pages[i]), stdout);
+					_tx("h2");
+				}
+
+				tx("p", "id", "help_match_summary");
+				display_summary_help(pages[i], "h3");
+				_tx("p");
+
+				tx("div", "class", "help_links");
+
+				sl = sl_alloc();
+				sl_append(sl, "page");
+				sl_append(sl, page_name(pages[i]));
+
+				href = cgi_make_href("help", sl);
+				sl_free(sl);
+
+				tx("a", "href", href, "class", "help_page_show");
+				fputs("Show Help", stdout);
+				_tx("a");
+
+				free(href);
+
+				snprintf(buf, sizeof(buf), "javascript:open_main_window('%s')", cgi_page_href(page_name(pages[i])));
+				tx("a", "href", buf, "class", "help_page_link");
+				fputs("Go to this page", stdout);
+				_tx("a");
+
+				_tx("div");
+
+				tx("br");
+			}
+			
+		} else {
+			page_t *page = page_get(cgi_get("page"));
+
+			if (page) {
+				int page_help_found = 0;
+
+				display_page_heading(page);
+
+				/* Only display the summary help if there is no page help */
+				page_help_found += display_summary_help(page, "h2");
+
+				page_help_found += display_page_help(page);
+
+				/* Display the help for the elements */
+				page_help_found += display_element_help(page);
+
+				if (!page_help_found) {
+					tx("p", "id", "help_not_found", "class", "help_search_results");
+					fputs("Sorry, No help is available for this page", stdout);
+					_tx("p");
+				}
+			}
+		}
+
+		_tx("td");
+		_tx("tr");
+		_tx("table");
+
+		return CALLBACK_DONE;
+	}
+}

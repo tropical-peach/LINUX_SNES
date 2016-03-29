@@ -1,0 +1,1 @@
+cmd_crypto/krng.ko := arm-xilinx-linux-gnueabi-ld -EL -r  -T /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/module-common.lds --build-id  -o crypto/krng.ko crypto/krng.o crypto/krng.mod.o

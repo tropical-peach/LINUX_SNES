@@ -1,0 +1,7 @@
+PROOT:=/home/steven/Desktop/LINUX_SNES
+INSTANCE:=linux/device-tree
+-include /home/steven/Desktop/LINUX_SNES/build/linux/Makefile.export
+-include /home/steven/Desktop/LINUX_SNES/build/linux/device-tree/Makefile.export
+CONFIGFILE:=/home/steven/Desktop/LINUX_SNES/subsystems/linux/config
+dir_device_tree_y=/opt/petalinux/petalinux-v2014.4-final/components/device-tree/device-tree-generator
+

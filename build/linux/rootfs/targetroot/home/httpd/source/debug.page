@@ -1,0 +1,87 @@
+label "Debug Settings"
+
+title "Debug: Settings"
+
+summary {Enable/Disable debug settings}
+
+setmode edit
+
+bar "Debug Settings"
+
+text {
+	str {
+		<p>This page allows certain debugging settings to be enabled or disabled</p>
+		<ul>
+		<li><b>Enable Debug Logging</b> will send log info to stderr.
+		Note that this will require the app to be restarted if running in <i>server</i> mode.
+		</li>
+		<li><b>Enable CGI Debug</b> will display state to the browser</li>
+		<li><b>Enable Debug Menu</b> will display this page in the left menu</li>
+		</ul>
+	}
+}
+
+field version {
+	label "uWeb Version"
+	editmode readonly
+	storage none
+	display {
+		cgi set $field [cgi version]
+	}
+}
+
+field demoversion {
+	label "Demo Version"
+	editmode readonly
+	storage none
+	default "[env VERSION unknown]"
+}
+
+field configdir {
+	label "Config Dir"
+	editmode readonly
+	storage none
+	display {
+		cgi set $field [cgi configdir]
+	}
+}
+
+field enable {
+	label "Enable Debug Logging"
+	type boolean
+}
+
+field cgi {
+	label "Enable CGI Debug"
+	type boolean
+}
+
+field menu {
+	label "Enable Debug Menu"
+	type boolean
+}
+
+button submit {
+	label Submit
+	submit {
+		cgi success "Settings updated"
+	}
+}
+
+bar "CGI Environment"
+
+text {
+	display {
+		cgi display row {
+			html eval table {
+				array set cgienv [cgi getenv]
+				foreach e [lsort [array names cgienv]] {
+					html eval tr {
+						html str td $e
+						html str td $cgienv($e)
+					}
+				}
+			}
+		}
+	}
+}

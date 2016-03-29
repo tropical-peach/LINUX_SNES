@@ -1,0 +1,144 @@
+title "ssh: Authorised Keys"
+
+label "Authorised Keys"
+
+summary "Manage ssh authorised keys for the root user"
+
+storage none
+
+bar "Manage ssh Authorised Keys"
+
+text {
+	editmode none
+	str {
+		<p>
+		Adding ssh authorised keys allow direct login without a password.
+		</p>
+		<p>
+		This page allows authorised keys to be added and deleted for the root user.
+		</p>
+	}
+}
+
+init {
+	package require petalinux
+
+	set AUTHORIZED_KEYS [root]/.ssh/authorized_keys
+
+	proc add_auth_key {key} {
+		set f [open $AUTHORIZED_KEYS a]
+		puts $f $key
+		close $f
+	}
+
+	proc delete_auth_key {id} {
+		if {![file exists $AUTHORIZED_KEYS]} {
+			return
+		}
+		foreachlineupdate line $AUTHORIZED_KEYS {
+			if {[llength $line] == 3} {
+				foreach {type hash name} $line {}
+				if {$id eq $name} {
+					continue
+				}
+			}
+		}
+	}
+}
+
+table {
+	callbacks table
+	field name {
+		label Id
+		editmode none
+		display -tcl {
+			if {[cgi displaymode] eq "tablefooter" && [cgi rows] == 0} {
+				html eval td id=norecfooter colspan=5 {
+					html str i "No ssh authorised keys"
+				}
+			}
+		}
+		help {The user@host identity of the key}
+	}
+	field hash {
+		label Key
+		editmode none
+		help {The abbreviated hash for the key}
+	}
+	button delete {
+		label Delete
+		editmode none
+		stdmode image
+		submit {
+			delete_auth_key [cgi get name]
+			# Make sure the table data is now reread
+			cgi vars discard
+		}
+	}
+}
+
+button add {
+	label "Add New Key"
+	setmode edit
+	editmode none
+}
+
+text {
+	stdmode none
+	str {
+		<p>
+		Select a file containg an ssh public key to upload.
+		</p>
+	}
+}
+
+upload newkey {
+	label "Public Key"
+	stdmode none
+}
+
+button submit {
+	label "Submit"
+	stdmode none
+	submit {
+		set len [cgi file length newkey]
+		if {$len == 0 || $len > 10000} {
+			cgi error "Please select a public key file"
+			return
+		}
+		set pubkey [cgi file contents newkey]
+		if {[string match "*PRIVATE*" $pubkey]} {
+			cgi error "This looks like a private key, not a public key"
+			return
+		}
+		if {![string match "ssh-*" $pubkey]} {
+			cgi error "This doesn't look like an ssh public key"
+			return
+		}
+		# REVISIT: Check for a duplicate
+		add_auth_key $pubkey
+
+		cgi success "Public key added"
+		cgi vars discard
+	}
+}
+
+button cancel {
+	label Cancel
+	stdmode none
+}
+
+display {
+	if {[cgi mode] eq "std" && [file exists $AUTHORIZED_KEYS]} {
+		# Populate the table
+		set row 0
+		foreachline line $AUTHORIZED_KEYS {
+			if {[llength $line] == 3} {
+				cgi row $row
+				foreach {type hash name} $line {}
+				cgi set name $name hash [string range $hash 0 10]...[string range $hash end-10 end]
+				incr row
+			}
+		}
+	}
+}

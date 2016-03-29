@@ -1,0 +1,37 @@
+label "Show Code"
+
+menus none
+storage none
+
+javascript http://www.workware.net.au/javascript/sh_main.min.js
+stylesheet http://www.workware.net.au/css/sh_style.css
+javascript /javascript/sh_page.js
+
+field path {
+	label "path"
+	editmode none
+	stdmode none
+}
+
+display -tcl {
+	# If anything goes wrong, we will display an error message
+
+	set path [cgi get path]
+
+	# Try to restrict to the source dir.
+	# No need to try too hard since this is only a demo
+	if {![string match "*source/*.page" $path]} {
+		return
+	}
+	set f [open $path]
+	set contents [read $f]
+	close $f
+
+	regsub -all \t $contents "    " contents
+
+	html str pre class=sh_page $contents
+
+	html str script language=javascript "sh_highlightDocument();"
+
+	cgi return done
+}

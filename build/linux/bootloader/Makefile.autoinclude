@@ -1,0 +1,7 @@
+PROOT:=/home/steven/Desktop/LINUX_SNES
+INSTANCE:=linux/bootloader
+-include /home/steven/Desktop/LINUX_SNES/build/linux/Makefile.export
+-include /home/steven/Desktop/LINUX_SNES/build/linux/bootloader/Makefile.export
+CONFIGFILE:=/home/steven/Desktop/LINUX_SNES/subsystems/linux/config
+dir_bootloader_y=/home/steven/Desktop/LINUX_SNES/components/bootloader/zynq_fsbl
+

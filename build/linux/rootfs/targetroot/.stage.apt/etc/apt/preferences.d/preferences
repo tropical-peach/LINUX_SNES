@@ -1,0 +1,7 @@
+Package: *
+Pin: release l=all
+Pin-Priority: 801
+
+Package: *
+Pin: release l=user
+Pin-Priority: 900

@@ -1,0 +1,9 @@
+#!/bin/sh
+
+mount -t tmpfs tmpfs /dev  -o size=64k,mode=0755
+mkdir /dev/pts /dev/shm
+mount -t devpts devpts /dev/pts
+if [ -e /proc/sys/kernel/hotplug ]; then
+	echo "/sbin/mdev" > /proc/sys/kernel/hotplug
+fi
+mdev -s

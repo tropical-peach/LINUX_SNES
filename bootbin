@@ -1,0 +1,1 @@
+petalinux-package --boot --fsbl images/linux/zynq_fsbl.elf --fpga subsystems/linux/hw-description/Interface_Master_BD_wrapper.bit --u-boot

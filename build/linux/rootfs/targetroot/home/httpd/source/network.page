@@ -1,0 +1,172 @@
+
+
+# Network configuration for the device
+#
+label "Network Settings"
+
+title "Network Settings"
+
+summary "Used to configure the network settings for this device"
+
+help {
+	This page allows the eth0 network interface to be configured in either DHCP client mode
+	or with static addressing.
+}
+
+storage none
+
+init {
+	package require network
+	package require petalinux
+	set network_modified 0
+
+	set INTERFACES [cgi configdir]/interfaces
+}
+
+display {
+	# Populate initial values
+	if {[cgi mode] == "std" && [file exists $INTERFACES]} {
+		set foundeth0 0
+		foreachline line $INTERFACES {
+			if {!$foundeth0} {
+				if {[regexp {^iface eth0 inet (.*)$} $line dummy type]} {
+					incr foundeth0
+					cgi set dhcp [expr {$type eq "dhcp"}]
+				}
+				continue
+			}
+			if {[string match "*address *" $line]} {
+				cgi set ipaddr [lindex $line 1]
+			} elseif {[string match "*netmask *" $line]} {
+				cgi set subnet [lindex $line 1]
+			} elseif {[string match "*gateway *" $line]} {
+				cgi set gateway [lindex $line 1]
+			}
+		}
+	}
+	# Show or hide the network fields depending upon whether dhcp is selected
+	html eval script type=text/javascript {
+		html puts {
+			function net_set_display(dhcp)
+			{
+				show_hide_elements(!dhcp, 'ipaddr', 'subnet', 'gateway');
+			}
+		}
+	}
+	# And our alternative to the standard success message
+	if {$network_modified} {
+		html eval div class=successmsg {
+			html str h2 Success
+			html eval p class=modified {
+				html eval a href=config {
+					html tag img src=/img/config-modified.png
+				}
+				html str span class=modified "Network configuration updated. If saved, they will take effect on boot."
+			}
+		}
+	}
+}
+
+bar "Network Settings"
+
+field dhcp {
+	label "DHCP Client Mode"
+	type boolean
+	editmode {onclick=javascript:net_set_display(document.forms['form'].dhcp.checked)}
+	help {If checked, acquires a lease via dhcp}
+	default 1
+}
+
+field ipaddr {
+	label "IP Address"
+	type ipaddr blank
+	help {If DHCP is disabled, specify the IP address of the device}
+	display {
+		show_empty_field $field
+	}
+}
+
+field subnet {
+	label Subnet
+	type subnet netmask
+	help {Specify the subnet or netmask for the network. The default of 24 (255.255.255.0) is usually a good choice}
+	default "24"
+}
+
+field gateway {
+	label "Default Gateway"
+	type ipaddr blank
+	help {If DHCP is disabled, specify the default gateway. This will be the IP address of your internet router}
+	display {
+		show_empty_field $field
+	}
+}
+
+button edit {
+	label Edit
+	editmode none
+	setmode edit
+}
+
+button submit {
+	label Submit
+	stdmode none
+	submit {
+		set ipaddr [cgi get ipaddr]
+		set subnet [cgi get subnet]
+
+		if {![cgi get dhcp]} {
+			if {$ipaddr eq "" } {
+				cgi error "An IP address is required" ipaddr
+				return
+			}
+			if {$subnet eq "" } {
+				cgi error "A subnet/netmask is required" subnet
+				return
+			}
+		}
+
+		# Has a subnet or netmask been given?
+		if {[catch {netmask $subnet} netmask]} {
+			# Must already be a netmask
+			set netmask $subnet
+			set subnet [subnet $netmask]
+		}
+
+		# Simply rewrite the whole file.
+		# Could update in place for systems where multiple interfaces
+		# are being managed
+		set f [open $INTERFACES w]
+		puts $f "auto lo"
+		puts $f "iface lo inet loopback\n"
+
+		puts $f "auto eth0"
+		puts $f "iface eth0 inet [lindex {static dhcp} [cgi get dhcp]]"
+		puts $f "\taddress $ipaddr"
+		puts $f "\tnetmask $netmask"
+		if {[cgi get gateway] ne ""} {
+			puts $f "\tgateway [cgi get gateway]"
+		}
+		close $f
+
+		# And mark the config as oodified
+		set_modified
+
+		set network_modified 1
+		#cgi success "Network configuration updated. Reboot Required"
+	}
+}
+
+# On initial display of the page, show or hide the static address fields
+text {
+	display {
+		html eval script type=text/javascript {
+			html puts "net_set_display([cgi get dhcp]);"
+		}
+	}
+}
+
+button cancel {
+	label Cancel
+	stdmode none
+}

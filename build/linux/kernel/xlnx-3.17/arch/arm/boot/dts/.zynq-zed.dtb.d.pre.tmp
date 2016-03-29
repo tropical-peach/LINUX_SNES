@@ -1,0 +1,2 @@
+zynq-zed.o: \
+ /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/arch/arm/boot/dts/zynq-zed.dts

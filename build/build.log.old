@@ -1,0 +1,2808 @@
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=device-tree-generator; 		sbuild=device-tree/device-tree-generator; 	else 		sinstance=device-tree; 		sbuild=device-tree; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] make[1]: Nothing to be done for `pre-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] if [ ! -z "kernel" ] && [ ! "kernel" == "none" ]; then 		sinstance=kernel; 		sbuild=kernel; 	elif [ "single" == "multi" ]; then 		sinstance=xlnx-3.17; 		sbuild=linux-kernel/xlnx-3.17; 	else 		sinstance=linux-kernel; 		sbuild=linux-kernel; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] make[1]: Nothing to be done for `pre-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=u-boot-plnx; 		sbuild=u-boot/u-boot-plnx; 	else 		sinstance=u-boot; 		sbuild=u-boot; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] make[1]: Nothing to be done for `pre-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=zynq_fsbl; 		sbuild=bootloader/zynq_fsbl; 	else 		sinstance=bootloader; 		sbuild=bootloader; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] make[1]: Nothing to be done for `pre-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=petalinux-rootfs; 		sbuild=rootfs/petalinux-rootfs; 	else 		sinstance=rootfs; 		sbuild=rootfs; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] if [ -z "10f8291b38027809d04d21a9e8d0875e" ]; then 		echo "ERROR: cannot calculate checksum of linux/rootfs config file."; 		echo "ERROR: Please run petalinux-config -c linux/rootfs first."; 		exit 255; 	elif [ -z "" ]; then 		echo "10f8291b38027809d04d21a9e8d0875e" > "config_checksum"; 	elif [ ! "10f8291b38027809d04d21a9e8d0875e" == "" ]; then 		echo "10f8291b38027809d04d21a9e8d0875e" > "config_checksum"; 		make INSTANCE=linux/rootfs clean; 	fi
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=plnx-repo; 		sbuild=packages-repo/plnx-repo; 	else 		sinstance=packages-repo; 		sbuild=packages-repo; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] make[2]: Nothing to be done for `pre-build'.
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=fwupgrade; 		sbuild=apps/fwupgrade; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[INFO ] pre-build linux/rootfs/fwupgrade
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=peekpoke; 		sbuild=apps/peekpoke; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[INFO ] pre-build linux/rootfs/peekpoke
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=uWeb; 		sbuild=apps/uWeb; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[INFO ] pre-build linux/rootfs/uWeb
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=device-tree-generator; 		sbuild=device-tree/device-tree-generator; 	else 		sinstance=device-tree; 		sbuild=device-tree; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[INFO ] build system.dtb
+[ALL  ] padding_size=$(grep "^CONFIG_SUBSYSTEM_DTB_PADDING_SIZE=" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/config" | cut -d "=" -f 2); 	dtc -O dtb -o "/home/steven/Desktop/LINUX_SNES/build/linux/device-tree/system.dtb" -b 0 -p $((${padding_size})) -I dts -i "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/device-tree" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/device-tree/system-top.dts" || exit 255
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] if [ ! -z "kernel" ] && [ ! "kernel" == "none" ]; then 		sinstance=kernel; 		sbuild=kernel; 	elif [ "single" == "multi" ]; then 		sinstance=xlnx-3.17; 		sbuild=linux-kernel/xlnx-3.17; 	else 		sinstance=linux-kernel; 		sbuild=linux-kernel; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] rsync /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/.config
+[ALL  ] initramfs_source_dir=$(dirname "/home/steven/Desktop/LINUX_SNES/images/linux/rootfs.cpio"); 	if [ ! -d "${initramfs_source_dir}" ]; then 		mkdir -p "${initramfs_source_dir}"; 	fi; 	touch "/home/steven/Desktop/LINUX_SNES/images/linux/rootfs.cpio"
+[ALL  ] rm -rf /home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot /home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/arch/arm/boot" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot"
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/usr" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr"
+[INFO ] build linux/kernel
+[ALL  ] make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- O=/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17 KCONFIG_CONFIG="/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/.config -j3 -C /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 all
+[ALL  ] make[2]: Entering directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17'
+[ALL  ]   GEN     ./Makefile
+[ALL  ] scripts/kconfig/conf --silentoldconfig Kconfig
+[ALL  ]   CHK     include/config/kernel.release
+[ALL  ]   UPD     include/config/kernel.release
+[ALL  ]   GEN     ./Makefile
+[ALL  ]   WRAP    arch/arm/include/generated/asm/auxvec.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/bitsperlong.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/cputime.h
+[ALL  ]   CHK     include/generated/uapi/linux/version.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/emergency-restart.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/current.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/errno.h
+[ALL  ]   UPD     include/generated/uapi/linux/version.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/exec.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/hash.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/ioctl.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/ipcbuf.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/irq_regs.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/kdebug.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/local.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/mcs_spinlock.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/local64.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/msgbuf.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/param.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/parport.h
+[ALL  ]   CHK     include/generated/utsrelease.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/poll.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/preempt.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/resource.h
+[ALL  ]   UPD     include/generated/utsrelease.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/rwsem.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/scatterlist.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/sections.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/segment.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/sembuf.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/serial.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/shmbuf.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/siginfo.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/simd.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/sizes.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/socket.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/sockios.h
+[ALL  ]   HOSTCC  scripts/basic/bin2c
+[ALL  ]   WRAP    arch/arm/include/generated/asm/termbits.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/termios.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/timex.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/trace_clock.h
+[ALL  ]   WRAP    arch/arm/include/generated/asm/unaligned.h
+[ALL  ]   Using /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 as source for kernel
+[ALL  ]   HOSTCC  scripts/dtc/checks.o
+[ALL  ]   HOSTCC  scripts/dtc/data.o
+[ALL  ]   SHIPPED scripts/dtc/dtc-lexer.lex.c
+[ALL  ]   SHIPPED scripts/dtc/dtc-parser.tab.h
+[ALL  ]   SHIPPED scripts/dtc/dtc-parser.tab.c
+[ALL  ]   HOSTCC  scripts/dtc/dtc.o
+[ALL  ]   HOSTCC  scripts/dtc/flattree.o
+[ALL  ]   HOSTCC  scripts/dtc/fstree.o
+[ALL  ]   HOSTCC  scripts/dtc/livetree.o
+[ALL  ]   HOSTCC  scripts/dtc/srcpos.o
+[ALL  ]   HOSTCC  scripts/dtc/treesource.o
+[ALL  ]   HOSTCC  scripts/dtc/util.o
+[ALL  ]   HOSTCC  scripts/dtc/dtc-lexer.lex.o
+[ALL  ]   HOSTCC  scripts/dtc/dtc-parser.tab.o
+[ALL  ]   HOSTCC  scripts/genksyms/genksyms.o
+[ALL  ]   HOSTLD  scripts/dtc/dtc
+[ALL  ]   CC      scripts/mod/empty.o
+[ALL  ]   HOSTCC  scripts/mod/mk_elfconfig
+[ALL  ]   CC      scripts/mod/devicetable-offsets.s
+[ALL  ]   MKELF   scripts/mod/elfconfig.h
+[ALL  ]   HOSTCC  scripts/mod/modpost.o
+[ALL  ]   HOSTCC  scripts/mod/sumversion.o
+[ALL  ]   SHIPPED scripts/genksyms/lex.lex.c
+[ALL  ]   SHIPPED scripts/genksyms/keywords.hash.c
+[ALL  ]   SHIPPED scripts/genksyms/parse.tab.h
+[ALL  ]   SHIPPED scripts/genksyms/parse.tab.c
+[ALL  ]   HOSTCC  scripts/genksyms/lex.lex.o
+[ALL  ]   GEN     scripts/mod/devicetable-offsets.h
+[ALL  ]   HOSTCC  scripts/mod/file2alias.o
+[ALL  ]   HOSTCC  scripts/genksyms/parse.tab.o
+[ALL  ]   HOSTLD  scripts/mod/modpost
+[ALL  ]   HOSTCC  scripts/kallsyms
+[ALL  ]   HOSTCC  scripts/conmakehash
+[ALL  ]   HOSTLD  scripts/genksyms/genksyms
+[ALL  ]   HOSTCC  scripts/sortextable
+[ALL  ]   Generating include/generated/mach-types.h
+[ALL  ]   CC      kernel/bounds.s
+[ALL  ]   GEN     include/generated/bounds.h
+[ALL  ]   CC      arch/arm/kernel/asm-offsets.s
+[ALL  ]   GEN     include/generated/asm-offsets.h
+[ALL  ]   CALL    /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/checksyscalls.sh
+[ALL  ]   HOSTCC  usr/gen_init_cpio
+[ALL  ]   CC      init/main.o
+[ALL  ]   CC      arch/arm/vfp/vfpmodule.o
+[ALL  ]   GEN     usr/initramfs_data.cpio.gz
+[ALL  ]   AS      usr/initramfs_data.o
+[ALL  ]   LD      usr/built-in.o
+[ALL  ]   AS      arch/arm/vfp/entry.o
+[ALL  ]   AS      arch/arm/vfp/vfphw.o
+[ALL  ]   CC      arch/arm/vfp/vfpsingle.o
+[ALL  ]   CC      arch/arm/vfp/vfpdouble.o
+[ALL  ]   CHK     include/generated/compile.h
+[ALL  ]   LD      arch/arm/vfp/vfp.o
+[ALL  ]   LD      arch/arm/vfp/built-in.o
+[ALL  ]   UPD     include/generated/compile.h
+[ALL  ]   CC      init/do_mounts.o
+[ALL  ]   CC      arch/arm/kernel/elf.o
+[ALL  ]   CC      init/do_mounts_rd.o
+[ALL  ]   AS      arch/arm/kernel/entry-common.o
+[ALL  ]   CC      arch/arm/kernel/irq.o
+[ALL  ]   CC      init/do_mounts_initrd.o
+[ALL  ]   CC      arch/arm/kernel/opcodes.o
+[ALL  ]   CC      init/initramfs.o
+[ALL  ]   CC      init/calibrate.o
+[ALL  ]   CC      arch/arm/kernel/process.o
+[ALL  ]   CC      init/init_task.o
+[ALL  ]   CC      init/version.o
+[ALL  ]   LD      init/mounts.o
+[ALL  ]   CC      arch/arm/kernel/ptrace.o
+[ALL  ]   CC      arch/arm/kernel/return_address.o
+[ALL  ]   LD      init/built-in.o
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/arch/arm/kernel/return_address.c:63:2: warning: #warning "TODO: return_address should use unwind tables" [-Wcpp]
+[ALL  ]  #warning "TODO: return_address should use unwind tables"
+[ALL  ]   ^
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/arch/arm/kernel/return_address.c:63:2: warning: #warning "TODO: return_address should use unwind tables" [-Wcpp]
+[ALL  ]  #warning "TODO: return_address should use unwind tables"
+[ALL  ]   ^
+[ALL  ]   CC      arch/arm/common/firmware.o
+[ALL  ]   CC      arch/arm/mm/dma-mapping.o
+[ALL  ]   CC      arch/arm/kernel/setup.o
+[ALL  ]   CC      arch/arm/common/icst.o
+[ALL  ]   CC      arch/arm/common/timer-sp.o
+[ALL  ]   LD      arch/arm/common/built-in.o
+[ALL  ]   CC      arch/arm/kernel/signal.o
+[ALL  ]   LD      arch/arm/net/built-in.o
+[ALL  ]   CC      arch/arm/mm/extable.o
+[ALL  ]   LD      arch/arm/crypto/built-in.o
+[ALL  ]   LD      arch/arm/firmware/built-in.o
+[ALL  ]   CC      arch/arm/mm/fault.o
+[ALL  ]   CC      arch/arm/mach-vexpress/v2m.o
+[ALL  ]   AS      arch/arm/kernel/sigreturn_codes.o
+[ALL  ]   CC      arch/arm/kernel/stacktrace.o
+[ALL  ]   CC      arch/arm/kernel/sys_arm.o
+[ALL  ]   CC      arch/arm/mm/init.o
+[ALL  ]   CC      arch/arm/mach-vexpress/platsmp.o
+[ALL  ]   CC      arch/arm/kernel/time.o
+[ALL  ]   CC      arch/arm/mach-vexpress/hotplug.o
+[ALL  ]   LD      arch/arm/mach-vexpress/built-in.o
+[ALL  ]   CC      arch/arm/mach-zynq/common.o
+[ALL  ]   CC      arch/arm/mm/iomap.o
+[ALL  ]   CC      arch/arm/kernel/traps.o
+[ALL  ]   CC      arch/arm/mach-zynq/slcr.o
+[ALL  ]   CC      arch/arm/mm/fault-armv.o
+[ALL  ]   CC      arch/arm/mm/flush.o
+[ALL  ]   CC      arch/arm/mach-zynq/zynq_ocm.o
+[ALL  ]   CC      arch/arm/kernel/atags_parse.o
+[ALL  ]   CC      arch/arm/mm/idmap.o
+[ALL  ]   CC      arch/arm/mach-zynq/pm.o
+[ALL  ]   AS      arch/arm/kernel/entry-armv.o
+[ALL  ]   CC      arch/arm/mm/ioremap.o
+[ALL  ]   CC      arch/arm/kernel/cpuidle.o
+[ALL  ]   CC      arch/arm/mach-zynq/xaxipcie-msi.o
+[ALL  ]   CC      arch/arm/kernel/armksyms.o
+[ALL  ]   AS      arch/arm/mach-zynq/headsmp.o
+[ALL  ]   CC      arch/arm/mach-zynq/platsmp.o
+[ALL  ]   CC      arch/arm/mm/mmap.o
+[ALL  ]   CC      arch/arm/kernel/module.o
+[ALL  ]   AS      arch/arm/mach-zynq/suspend.o
+[ALL  ]   CC      arch/arm/mm/pgd.o
+[ALL  ]   LD      arch/arm/mach-zynq/built-in.o
+[ALL  ]   CC      arch/arm/plat-versatile/sched-clock.o
+[ALL  ]   AS      arch/arm/plat-versatile/headsmp.o
+[ALL  ]   CC      arch/arm/plat-versatile/platsmp.o
+[ALL  ]   CC      arch/arm/kernel/bios32.o
+[ALL  ]   CC      arch/arm/mm/mmu.o
+[ALL  ]   LD      arch/arm/plat-versatile/built-in.o
+[ALL  ]   CC      arch/arm/kernel/isa.o
+[ALL  ]   CC      kernel/fork.o
+[ALL  ]   AS      arch/arm/kernel/sleep.o
+[ALL  ]   CC      arch/arm/kernel/suspend.o
+[ALL  ]   CC      arch/arm/mm/proc-syms.o
+[ALL  ]   CC      arch/arm/kernel/smp.o
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/arch/arm/kernel/smp.c:456:2: warning: initialization from incompatible pointer type [enabled by default]
+[ALL  ]   S(IPI_TIMER, "Timer broadcast interrupts", tick_receive_broadcast),
+[ALL  ]   ^
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/arch/arm/kernel/smp.c:456:2: warning: (near initialization for 'ipi_types[1].handler') [enabled by default]
+[ALL  ]   CC      arch/arm/mm/alignment.o
+[ALL  ]   CC      arch/arm/mm/highmem.o
+[ALL  ]   CC      arch/arm/kernel/smp_tlb.o
+[ALL  ]   CC      kernel/exec_domain.o
+[ALL  ]   AS      arch/arm/mm/abort-ev7.o
+[ALL  ]   AS      arch/arm/mm/pabort-v7.o
+[ALL  ]   AS      arch/arm/mm/cache-v7.o
+[ALL  ]   CC      arch/arm/mm/copypage-v6.o
+[ALL  ]   CC      arch/arm/mm/context.o
+[ALL  ]   CC      arch/arm/kernel/smp_scu.o
+[ALL  ]   CC      arch/arm/kernel/smp_twd.o
+[ALL  ]   CC      kernel/panic.o
+[ALL  ]   AS      arch/arm/mm/tlb-v7.o
+[ALL  ]   CC      arch/arm/kernel/unwind.o
+[ALL  ]   AS      arch/arm/mm/proc-v7.o
+[ALL  ]   CC      arch/arm/mm/l2c-common.o
+[ALL  ]   CC      arch/arm/mm/cache-l2x0.o
+[ALL  ]   CC      arch/arm/kernel/devtree.o
+[ALL  ]   CC      kernel/cpu.o
+[ALL  ]   CC      arch/arm/kernel/swp_emulate.o
+[ALL  ]   AS      arch/arm/mm/l2c-l2x0-resume.o
+[ALL  ]   LD      arch/arm/mm/built-in.o
+[ALL  ]   CC      arch/arm/kernel/hw_breakpoint.o
+[ALL  ]   CC      kernel/exit.o
+[ALL  ]   CC      mm/filemap.o
+[ALL  ]   CC      arch/arm/kernel/perf_regs.o
+[ALL  ]   CC      arch/arm/kernel/perf_event.o
+[ALL  ]   CC      kernel/softirq.o
+[ALL  ]   CC      arch/arm/kernel/perf_event_cpu.o
+[ALL  ]   CC      mm/mempool.o
+[ALL  ]   CC      kernel/resource.o
+[ALL  ]   CC      arch/arm/kernel/topology.o
+[ALL  ]   CC      mm/oom_kill.o
+[ALL  ]   CC      arch/arm/kernel/io.o
+[ALL  ]   AS      arch/arm/kernel/hyp-stub.o
+[ALL  ]   CC      kernel/sysctl.o
+[ALL  ]   AS      arch/arm/kernel/head.o
+[ALL  ]   LDS     arch/arm/kernel/vmlinux.lds
+[ALL  ]   LD      arch/arm/kernel/built-in.o
+[ALL  ]   CC      mm/fadvise.o
+[ALL  ]   CC      fs/open.o
+[ALL  ]   CC      mm/maccess.o
+[ALL  ]   CC      mm/page_alloc.o
+[ALL  ]   CC      kernel/sysctl_binary.o
+[ALL  ]   CC      fs/read_write.o
+[ALL  ]   CC      kernel/capability.o
+[ALL  ]   CC      kernel/ptrace.o
+[ALL  ]   CC      fs/file_table.o
+[ALL  ]   CC      mm/page-writeback.o
+[ALL  ]   CC      fs/super.o
+[ALL  ]   CC      kernel/user.o
+[ALL  ]   CC      kernel/signal.o
+[ALL  ]   CC      fs/char_dev.o
+[ALL  ]   CC      mm/readahead.o
+[ALL  ]   CC      fs/stat.o
+[ALL  ]   CC      mm/swap.o
+[ALL  ]   CC      kernel/sys.o
+[ALL  ]   CC      fs/exec.o
+[ALL  ]   CC      mm/truncate.o
+[ALL  ]   CC      kernel/kmod.o
+[ALL  ]   CC      fs/pipe.o
+[ALL  ]   CC      mm/vmscan.o
+[ALL  ]   CC      kernel/workqueue.o
+[ALL  ]   CC      mm/shmem.o
+[ALL  ]   CC      fs/namei.o
+[ALL  ]   CC      mm/util.o
+[ALL  ]   CC      fs/fcntl.o
+[ALL  ]   CC      kernel/pid.o
+[ALL  ]   CC      mm/mmzone.o
+[ALL  ]   CC      mm/vmstat.o
+[ALL  ]   CC      fs/ioctl.o
+[ALL  ]   CC      kernel/task_work.o
+[ALL  ]   CC      kernel/extable.o
+[ALL  ]   CC      mm/backing-dev.o
+[ALL  ]   CC      kernel/params.o
+[ALL  ]   CC      fs/readdir.o
+[ALL  ]   CC      kernel/kthread.o
+[ALL  ]   CC      mm/mm_init.o
+[ALL  ]   CC      fs/select.o
+[ALL  ]   CC      kernel/sys_ni.o
+[ALL  ]   CC      mm/mmu_context.o
+[ALL  ]   CC      kernel/nsproxy.o
+[ALL  ]   CC      mm/percpu.o
+[ALL  ]   CC      kernel/notifier.o
+[ALL  ]   CC      kernel/ksysfs.o
+[ALL  ]   CC      fs/dcache.o
+[ALL  ]   CC      kernel/cred.o
+[ALL  ]   CC      mm/slab_common.o
+[ALL  ]   CC      kernel/reboot.o
+[ALL  ]   CC      mm/compaction.o
+[ALL  ]   CC      kernel/async.o
+[ALL  ]   CC      kernel/range.o
+[ALL  ]   CC      fs/inode.o
+[ALL  ]   CC      mm/balloon_compaction.o
+[ALL  ]   CC      kernel/groups.o
+[ALL  ]   CC      mm/vmacache.o
+[ALL  ]   CC      kernel/smpboot.o
+[ALL  ]   CC      mm/interval_tree.o
+[ALL  ]   CC      fs/attr.o
+[ALL  ]   CC      kernel/bpf/core.o
+[ALL  ]   CC      mm/list_lru.o
+[ALL  ]   CC      mm/workingset.o
+[ALL  ]   CC      fs/bad_inode.o
+[ALL  ]   CC      mm/iov_iter.o
+[ALL  ]   CC      fs/file.o
+[ALL  ]   LD      kernel/bpf/built-in.o
+[ALL  ]   CC      kernel/events/core.o
+[ALL  ]   CC      mm/fremap.o
+[ALL  ]   CC      mm/gup.o
+[ALL  ]   CC      fs/filesystems.o
+[ALL  ]   CC      mm/highmem.o
+[ALL  ]   CC      fs/namespace.o
+[ALL  ]   CC      mm/madvise.o
+[ALL  ]   CC      mm/memory.o
+[ALL  ]   CC      kernel/events/ring_buffer.o
+[ALL  ]   CC      kernel/events/callchain.o
+[ALL  ]   CC      fs/seq_file.o
+[ALL  ]   CC      mm/mincore.o
+[ALL  ]   CC      kernel/events/hw_breakpoint.o
+[ALL  ]   CC      mm/mlock.o
+[ALL  ]   CC      fs/xattr.o
+[ALL  ]   LD      kernel/events/built-in.o
+[ALL  ]   CC      kernel/irq/irqdesc.o
+[ALL  ]   CC      mm/mmap.o
+[ALL  ]   CC      fs/libfs.o
+[ALL  ]   CC      kernel/irq/handle.o
+[ALL  ]   CC      kernel/irq/manage.o
+[ALL  ]   CC      fs/fs-writeback.o
+[ALL  ]   CC      mm/mprotect.o
+[ALL  ]   CC      kernel/irq/spurious.o
+[ALL  ]   CC      fs/pnode.o
+[ALL  ]   CC      kernel/irq/resend.o
+[ALL  ]   CC      mm/mremap.o
+[ALL  ]   CC      fs/splice.o
+[ALL  ]   CC      kernel/irq/chip.o
+[ALL  ]   CC      mm/msync.o
+[ALL  ]   CC      mm/rmap.o
+[ALL  ]   CC      kernel/irq/dummychip.o
+[ALL  ]   CC      fs/sync.o
+[ALL  ]   CC      kernel/irq/devres.o
+[ALL  ]   CC      kernel/irq/autoprobe.o
+[ALL  ]   CC      mm/vmalloc.o
+[ALL  ]   CC      fs/utimes.o
+[ALL  ]   CC      kernel/irq/irqdomain.o
+[ALL  ]   CC      fs/stack.o
+[ALL  ]   CC      fs/fs_struct.o
+[ALL  ]   CC      kernel/irq/proc.o
+[ALL  ]   CC      fs/statfs.o
+[ALL  ]   CC      mm/pagewalk.o
+[ALL  ]   CC      kernel/irq/pm.o
+[ALL  ]   CC      mm/pgtable-generic.o
+[ALL  ]   CC      fs/fs_pin.o
+[ALL  ]   LD      kernel/irq/built-in.o
+[ALL  ]   CC      mm/process_vm_access.o
+[ALL  ]   CC      kernel/locking/mutex.o
+[ALL  ]   CC      fs/buffer.o
+[ALL  ]   CC      mm/init-mm.o
+[ALL  ]   CC      mm/nobootmem.o
+[ALL  ]   CC      kernel/locking/semaphore.o
+[ALL  ]   CC      mm/memblock.o
+[ALL  ]   CC      kernel/locking/rwsem.o
+[ALL  ]   CC      mm/page_io.o
+[ALL  ]   CC      kernel/locking/mcs_spinlock.o
+[ALL  ]   CC      kernel/locking/spinlock.o
+[ALL  ]   CC      fs/block_dev.o
+[ALL  ]   CC      mm/swap_state.o
+[ALL  ]   CC      kernel/locking/lglock.o
+[ALL  ]   CC      mm/swapfile.o
+[ALL  ]   CC      kernel/locking/rtmutex.o
+[ALL  ]   CC      fs/direct-io.o
+[ALL  ]   CC      kernel/locking/rwsem-xadd.o
+[ALL  ]   LD      kernel/locking/built-in.o
+[ALL  ]   CC      kernel/power/qos.o
+[ALL  ]   CC      mm/dmapool.o
+[ALL  ]   CC      kernel/power/main.o
+[ALL  ]   CC      mm/slab.o
+[ALL  ]   CC      fs/mpage.o
+[ALL  ]   CC      kernel/power/console.o
+[ALL  ]   CC      fs/proc_namespace.o
+[ALL  ]   CC      kernel/power/process.o
+[ALL  ]   CC      mm/migrate.o
+[ALL  ]   LD      fs/configfs/built-in.o
+[ALL  ]   CC [M]  fs/configfs/inode.o
+[ALL  ]   CC      kernel/power/suspend.o
+[ALL  ]   CC [M]  fs/configfs/file.o
+[ALL  ]   CC [M]  fs/configfs/dir.o
+[ALL  ]   LD      kernel/power/built-in.o
+[ALL  ]   CC      kernel/printk/printk.o
+[ALL  ]   CC      mm/page_isolation.o
+[ALL  ]   CC      mm/cma.o
+[ALL  ]   CC [M]  fs/configfs/symlink.o
+[ALL  ]   LD      mm/built-in.o
+[ALL  ]   CC [M]  fs/configfs/mount.o
+[ALL  ]   CC      ipc/util.o
+[ALL  ]   CC [M]  fs/configfs/item.o
+[ALL  ]   LD      kernel/printk/built-in.o
+[ALL  ]   CC      ipc/msgutil.o
+[ALL  ]   CC      kernel/rcu/update.o
+[ALL  ]   LD [M]  fs/configfs/configfs.o
+[ALL  ]   CC      fs/devpts/inode.o
+[ALL  ]   CC      ipc/msg.o
+[ALL  ]   CC      kernel/rcu/srcu.o
+[ALL  ]   LD      fs/devpts/devpts.o
+[ALL  ]   LD      fs/devpts/built-in.o
+[ALL  ]   LD      fs/exofs/built-in.o
+[ALL  ]   CC      fs/exportfs/expfs.o
+[ALL  ]   CC      ipc/sem.o
+[ALL  ]   CC      kernel/rcu/tree.o
+[ALL  ]   LD      fs/exportfs/exportfs.o
+[ALL  ]   LD      fs/exportfs/built-in.o
+[ALL  ]   CC      fs/ext2/balloc.o
+[ALL  ]   CC      fs/ext2/dir.o
+[ALL  ]   CC      ipc/shm.o
+[ALL  ]   CC      fs/ext2/file.o
+[ALL  ]   CC      fs/ext2/ialloc.o
+[ALL  ]   CC      fs/ext2/inode.o
+[ALL  ]   LD      kernel/rcu/built-in.o
+[ALL  ]   CC      ipc/ipcns_notifier.o
+[ALL  ]   CC      kernel/sched/core.o
+[ALL  ]   CC      ipc/syscall.o
+[ALL  ]   CC      ipc/ipc_sysctl.o
+[ALL  ]   LD      ipc/built-in.o
+[ALL  ]   CC      security/commoncap.o
+[ALL  ]   CC      fs/ext2/ioctl.o
+[ALL  ]   CC      fs/ext2/namei.o
+[ALL  ]   CC      security/min_addr.o
+[ALL  ]   LD      security/built-in.o
+[ALL  ]   CC      fs/ext2/super.o
+[ALL  ]   CC      crypto/api.o
+[ALL  ]   CC      fs/ext2/symlink.o
+[ALL  ]   CC      crypto/cipher.o
+[ALL  ]   LD      fs/ext2/ext2.o
+[ALL  ]   LD      fs/ext2/built-in.o
+[ALL  ]   CC      fs/ext3/balloc.o
+[ALL  ]   CC      crypto/compress.o
+[ALL  ]   CC      crypto/memneq.o
+[ALL  ]   CC      kernel/sched/proc.o
+[ALL  ]   CC      crypto/algapi.o
+[ALL  ]   CC      fs/ext3/bitmap.o
+[ALL  ]   CC      kernel/sched/clock.o
+[ALL  ]   CC      kernel/sched/cputime.o
+[ALL  ]   CC      fs/ext3/dir.o
+[ALL  ]   CC      kernel/sched/idle_task.o
+[ALL  ]   CC      crypto/scatterwalk.o
+[ALL  ]   CC      kernel/sched/fair.o
+[ALL  ]   CC      fs/ext3/file.o
+[ALL  ]   CC      fs/ext3/fsync.o
+[ALL  ]   CC      crypto/proc.o
+[ALL  ]   CC      fs/ext3/ialloc.o
+[ALL  ]   CC      crypto/ahash.o
+[ALL  ]   CC      kernel/sched/rt.o
+[ALL  ]   CC      fs/ext3/inode.o
+[ALL  ]   CC      crypto/shash.o
+[ALL  ]   CC      kernel/sched/deadline.o
+[ALL  ]   CC      crypto/aes_generic.o
+[ALL  ]   CC      fs/ext3/ioctl.o
+[ALL  ]   CC      kernel/sched/stop_task.o
+[ALL  ]   CC      kernel/sched/wait.o
+[ALL  ]   CC      fs/ext3/namei.o
+[ALL  ]   CC      crypto/crc32c_generic.o
+[ALL  ]   CC      kernel/sched/completion.o
+[ALL  ]   CC [M]  crypto/rng.o
+[ALL  ]   CC      kernel/sched/idle.o
+[ALL  ]   CC      fs/ext3/super.o
+[ALL  ]   CC [M]  crypto/krng.o
+[ALL  ]   CC      kernel/sched/cpupri.o
+[ALL  ]   CC      kernel/sched/cpudeadline.o
+[ALL  ]   CC [M]  crypto/ansi_cprng.o
+[ALL  ]   LD      kernel/sched/built-in.o
+[ALL  ]   CC      fs/ext3/symlink.o
+[ALL  ]   HZFILE  kernel/time/hz.bc
+[ALL  ]   CC      kernel/time/timer.o
+[ALL  ]   CC      fs/ext3/hash.o
+[ALL  ]   LD      crypto/crypto.o
+[ALL  ]   LD      crypto/crypto_algapi.o
+[ALL  ]   LD      crypto/crypto_hash.o
+[ALL  ]   LD      crypto/built-in.o
+[ALL  ]   CC      block/bio.o
+[ALL  ]   CC      fs/ext3/resize.o
+[ALL  ]   CC      kernel/time/hrtimer.o
+[ALL  ]   CC      fs/ext3/ext3_jbd.o
+[ALL  ]   CC      block/elevator.o
+[ALL  ]   CC      kernel/time/itimer.o
+[ALL  ]   CC      fs/ext3/xattr.o
+[ALL  ]   CC      kernel/time/posix-timers.o
+[ALL  ]   CC      block/blk-core.o
+[ALL  ]   CC      fs/ext3/xattr_user.o
+[ALL  ]   CC      fs/ext3/xattr_trusted.o
+[ALL  ]   CC      kernel/time/posix-cpu-timers.o
+[ALL  ]   LD      fs/ext3/ext3.o
+[ALL  ]   LD      fs/ext3/built-in.o
+[ALL  ]   CC      fs/ext4/balloc.o
+[ALL  ]   CC      kernel/time/timekeeping.o
+[ALL  ]   CC      block/blk-tag.o
+[ALL  ]   CC      fs/ext4/bitmap.o
+[ALL  ]   CC      block/blk-sysfs.o
+[ALL  ]   CC      fs/ext4/dir.o
+[ALL  ]   CC      kernel/time/ntp.o
+[ALL  ]   CC      block/blk-flush.o
+[ALL  ]   CC      kernel/time/clocksource.o
+[ALL  ]   CC      fs/ext4/file.o
+[ALL  ]   CC      block/blk-settings.o
+[ALL  ]   CC      fs/ext4/fsync.o
+[ALL  ]   CC      kernel/time/jiffies.o
+[ALL  ]   CC      kernel/time/timer_list.o
+[ALL  ]   CC      block/blk-ioc.o
+[ALL  ]   CC      fs/ext4/ialloc.o
+[ALL  ]   CC      kernel/time/timeconv.o
+[ALL  ]   CC      kernel/time/posix-clock.o
+[ALL  ]   CC      block/blk-map.o
+[ALL  ]   CC      kernel/time/alarmtimer.o
+[ALL  ]   CC      fs/ext4/inode.o
+[ALL  ]   CC      block/blk-exec.o
+[ALL  ]   CC      kernel/time/clockevents.o
+[ALL  ]   CC      block/blk-merge.o
+[ALL  ]   CC      kernel/time/tick-common.o
+[ALL  ]   CC      kernel/time/tick-broadcast.o
+[ALL  ]   CC      block/blk-softirq.o
+[ALL  ]   CC      kernel/time/tick-broadcast-hrtimer.o
+[ALL  ]   CC      block/blk-timeout.o
+[ALL  ]   CC      kernel/time/sched_clock.o
+[ALL  ]   CC      fs/ext4/page-io.o
+[ALL  ]   CC      kernel/time/tick-oneshot.o
+[ALL  ]   CC      block/blk-iopoll.o
+[ALL  ]   CC      fs/ext4/ioctl.o
+[ALL  ]   CC      kernel/time/tick-sched.o
+[ALL  ]   CC      block/blk-lib.o
+[ALL  ]   CC      fs/ext4/namei.o
+[ALL  ]   CC      kernel/time/timer_stats.o
+[ALL  ]   CC      block/blk-mq.o
+[ALL  ]   BC      kernel/time/timeconst.h
+[ALL  ]   CC      kernel/time/time.o
+[ALL  ]   CC      fs/ext4/super.o
+[ALL  ]   LD      kernel/time/built-in.o
+[ALL  ]   CC      kernel/freezer.o
+[ALL  ]   CC      block/blk-mq-tag.o
+[ALL  ]   CC      kernel/futex.o
+[ALL  ]   CC      block/blk-mq-sysfs.o
+[ALL  ]   CC      kernel/smp.o
+[ALL  ]   CC      kernel/uid16.o
+[ALL  ]   CC      fs/ext4/symlink.o
+[ALL  ]   CC      block/blk-mq-cpu.o
+[ALL  ]   CC      block/blk-mq-cpumap.o
+[ALL  ]   CC      kernel/module.o
+[ALL  ]   CC      fs/ext4/hash.o
+[ALL  ]   CC      block/ioctl.o
+[ALL  ]   CC      fs/ext4/resize.o
+[ALL  ]   CC      block/genhd.o
+[ALL  ]   CC      fs/ext4/extents.o
+[ALL  ]   CC      kernel/kallsyms.o
+[ALL  ]   CC      kernel/cgroup.o
+[ALL  ]   CC      block/scsi_ioctl.o
+[ALL  ]   CC      block/partition-generic.o
+[ALL  ]   CC      fs/ext4/ext4_jbd2.o
+[ALL  ]   CC      block/ioprio.o
+[ALL  ]   CC      fs/ext4/migrate.o
+[ALL  ]   GZIP    kernel/config_data.gz
+[ALL  ]   CC      kernel/stop_machine.o
+[ALL  ]   CC      block/partitions/check.o
+[ALL  ]   CC      fs/ext4/mballoc.o
+[ALL  ]   CC      kernel/utsname_sysctl.o
+[ALL  ]   CC      block/partitions/msdos.o
+[ALL  ]   CC      kernel/elfcore.o
+[ALL  ]   CC      kernel/irq_work.o
+[ALL  ]   CC      block/partitions/efi.o
+[ALL  ]   CC      kernel/cpu_pm.o
+[ALL  ]   LD      block/partitions/built-in.o
+[ALL  ]   CC      block/bounce.o
+[ALL  ]   CHK     kernel/config_data.h
+[ALL  ]   UPD     kernel/config_data.h
+[ALL  ]   CC      kernel/configs.o
+[ALL  ]   LD      kernel/built-in.o
+[ALL  ]   CC      block/noop-iosched.o
+[ALL  ]   CC      block/deadline-iosched.o
+[ALL  ]   CC      block/cfq-iosched.o
+[ALL  ]   CC      fs/ext4/block_validity.o
+[ALL  ]   CC      fs/ext4/move_extent.o
+[ALL  ]   CC      fs/ext4/mmp.o
+[ALL  ]   CC      fs/ext4/indirect.o
+[ALL  ]   CC      fs/ext4/extents_status.o
+[ALL  ]   LD      block/built-in.o
+[ALL  ]   CC      drivers/amba/bus.o
+[ALL  ]   CC      fs/ext4/xattr.o
+[ALL  ]   CC      fs/ext4/xattr_user.o
+[ALL  ]   LD      drivers/amba/built-in.o
+[ALL  ]   LD      drivers/auxdisplay/built-in.o
+[ALL  ]   CC      fs/ext4/xattr_trusted.o
+[ALL  ]   CC      drivers/base/component.o
+[ALL  ]   CC      fs/ext4/inline.o
+[ALL  ]   CC      drivers/base/core.o
+[ALL  ]   CC      drivers/base/bus.o
+[ALL  ]   LD      fs/ext4/ext4.o
+[ALL  ]   LD      fs/ext4/built-in.o
+[ALL  ]   CC      fs/fat/cache.o
+[ALL  ]   CC      drivers/base/dd.o
+[ALL  ]   CC      fs/fat/dir.o
+[ALL  ]   CC      drivers/base/syscore.o
+[ALL  ]   CC      drivers/base/driver.o
+[ALL  ]   CC      drivers/base/class.o
+[ALL  ]   CC      drivers/base/platform.o
+[ALL  ]   CC      drivers/base/cpu.o
+[ALL  ]   CC      fs/fat/fatent.o
+[ALL  ]   CC      drivers/base/firmware.o
+[ALL  ]   CC      drivers/base/init.o
+[ALL  ]   CC      drivers/base/map.o
+[ALL  ]   CC      sound/sound_core.o
+[ALL  ]   CC      drivers/base/devres.o
+[ALL  ]   CC      fs/fat/file.o
+[ALL  ]   LD      sound/arm/built-in.o
+[ALL  ]   LD      sound/atmel/built-in.o
+[ALL  ]   CC      drivers/base/attribute_container.o
+[ALL  ]   CC      sound/core/compress_offload.o
+[ALL  ]   CC      fs/fat/inode.o
+[ALL  ]   CC      drivers/base/transport_class.o
+[ALL  ]   CC      sound/core/pcm_dmaengine.o
+[ALL  ]   CC      drivers/base/topology.o
+[ALL  ]   CC      drivers/base/container.o
+[ALL  ]   CC      drivers/base/devtmpfs.o
+[ALL  ]   CC      sound/core/pcm.o
+[ALL  ]   CC      fs/fat/misc.o
+[ALL  ]   CC      drivers/base/dma-contiguous.o
+[ALL  ]   CC      drivers/base/power/sysfs.o
+[ALL  ]   CC      fs/fat/nfs.o
+[ALL  ]   CC      sound/core/pcm_native.o
+[ALL  ]   CC      drivers/base/power/generic_ops.o
+[ALL  ]   CC      fs/fat/namei_msdos.o
+[ALL  ]   CC      drivers/base/power/common.o
+[ALL  ]   CC      fs/fat/namei_vfat.o
+[ALL  ]   CC      drivers/base/power/qos.o
+[ALL  ]   LD      fs/fat/fat.o
+[ALL  ]   LD      fs/fat/vfat.o
+[ALL  ]   LD      fs/fat/msdos.o
+[ALL  ]   LD      fs/fat/built-in.o
+[ALL  ]   CC      drivers/base/power/runtime.o
+[ALL  ]   CC      fs/jbd/transaction.o
+[ALL  ]   CC      sound/core/pcm_lib.o
+[ALL  ]   CC      drivers/base/power/main.o
+[ALL  ]   CC      fs/jbd/commit.o
+[ALL  ]   CC      fs/jbd/recovery.o
+[ALL  ]   CC      sound/core/pcm_timer.o
+[ALL  ]   CC      sound/core/pcm_misc.o
+[ALL  ]   CC      fs/jbd/checkpoint.o
+[ALL  ]   CC      drivers/base/power/wakeup.o
+[ALL  ]   CC      sound/core/pcm_memory.o
+[ALL  ]   CC      fs/jbd/revoke.o
+[ALL  ]   CC      drivers/base/power/opp.o
+[ALL  ]   CC      fs/jbd/journal.o
+[ALL  ]   CC      sound/core/memalloc.o
+[ALL  ]   CC      drivers/base/power/clock_ops.o
+[ALL  ]   CC      sound/core/timer.o
+[ALL  ]   LD      drivers/base/power/built-in.o
+[ALL  ]   CC      drivers/base/regmap/regmap.o
+[ALL  ]   LD      fs/jbd/jbd.o
+[ALL  ]   LD      fs/jbd/built-in.o
+[ALL  ]   CC      fs/jbd2/transaction.o
+[ALL  ]   CC      sound/core/sound.o
+[ALL  ]   CC      drivers/base/regmap/regcache.o
+[ALL  ]   CC      sound/core/init.o
+[ALL  ]   CC      drivers/base/regmap/regcache-rbtree.o
+[ALL  ]   CC      drivers/base/regmap/regcache-lzo.o
+[ALL  ]   CC      fs/jbd2/commit.o
+[ALL  ]   CC      drivers/base/regmap/regcache-flat.o
+[ALL  ]   CC      sound/core/memory.o
+[ALL  ]   CC      drivers/base/regmap/regmap-i2c.o
+[ALL  ]   CC      sound/core/info.o
+[ALL  ]   CC      fs/jbd2/recovery.o
+[ALL  ]   CC      drivers/base/regmap/regmap-spi.o
+[ALL  ]   CC      sound/core/control.o
+[ALL  ]   CC      fs/jbd2/checkpoint.o
+[ALL  ]   CC      drivers/base/regmap/regmap-mmio.o
+[ALL  ]   CC      fs/jbd2/revoke.o
+[ALL  ]   LD      drivers/base/regmap/built-in.o
+[ALL  ]   CC      drivers/base/dma-mapping.o
+[ALL  ]   CC      drivers/base/dma-coherent.o
+[ALL  ]   CC      sound/core/misc.o
+[ALL  ]   CC      fs/jbd2/journal.o
+[ALL  ]   CC      sound/core/device.o
+[ALL  ]   CC      drivers/base/firmware_class.o
+[ALL  ]   CC      sound/core/jack.o
+[ALL  ]   LD      sound/core/snd.o
+[ALL  ]   LD      sound/core/snd-timer.o
+[ALL  ]   LD      sound/core/snd-pcm.o
+[ALL  ]   LD      sound/core/snd-pcm-dmaengine.o
+[ALL  ]   CC      drivers/base/module.o
+[ALL  ]   LD      sound/core/snd-compress.o
+[ALL  ]   LD      sound/core/built-in.o
+[ALL  ]   LD      sound/drivers/mpu401/built-in.o
+[ALL  ]   LD      sound/drivers/opl3/built-in.o
+[ALL  ]   LD      sound/drivers/opl4/built-in.o
+[ALL  ]   LD      sound/drivers/pcsp/built-in.o
+[ALL  ]   LD      sound/drivers/vx/built-in.o
+[ALL  ]   LD      sound/drivers/built-in.o
+[ALL  ]   LD      sound/firewire/built-in.o
+[ALL  ]   CC      drivers/base/soc.o
+[ALL  ]   LD      sound/i2c/other/built-in.o
+[ALL  ]   LD      sound/i2c/built-in.o
+[ALL  ]   LD      sound/isa/ad1816a/built-in.o
+[ALL  ]   LD      sound/isa/ad1848/built-in.o
+[ALL  ]   LD      sound/isa/cs423x/built-in.o
+[ALL  ]   LD      drivers/base/built-in.o
+[ALL  ]   LD      sound/isa/es1688/built-in.o
+[ALL  ]   CC      drivers/block/brd.o
+[ALL  ]   LD      sound/isa/galaxy/built-in.o
+[ALL  ]   LD      fs/jbd2/jbd2.o
+[ALL  ]   LD      sound/isa/gus/built-in.o
+[ALL  ]   LD      sound/isa/msnd/built-in.o
+[ALL  ]   LD      fs/jbd2/built-in.o
+[ALL  ]   LD      sound/isa/opti9xx/built-in.o
+[ALL  ]   LD      sound/isa/sb/built-in.o
+[ALL  ]   LD      sound/isa/wavefront/built-in.o
+[ALL  ]   CC      fs/jffs2/compr.o
+[ALL  ]   LD      sound/isa/wss/built-in.o
+[ALL  ]   LD      sound/isa/built-in.o
+[ALL  ]   LD      sound/mips/built-in.o
+[ALL  ]   LD      sound/parisc/built-in.o
+[ALL  ]   LD      sound/pci/ac97/built-in.o
+[ALL  ]   LD      sound/pci/ali5451/built-in.o
+[ALL  ]   LD      sound/pci/asihpi/built-in.o
+[ALL  ]   LD      sound/pci/au88x0/built-in.o
+[ALL  ]   LD      sound/pci/aw2/built-in.o
+[ALL  ]   CC      fs/jffs2/dir.o
+[ALL  ]   LD      sound/pci/ca0106/built-in.o
+[ALL  ]   CC      drivers/block/loop.o
+[ALL  ]   LD      sound/pci/cs46xx/built-in.o
+[ALL  ]   LD      sound/pci/cs5535audio/built-in.o
+[ALL  ]   LD      sound/pci/ctxfi/built-in.o
+[ALL  ]   LD      sound/pci/echoaudio/built-in.o
+[ALL  ]   LD      sound/pci/emu10k1/built-in.o
+[ALL  ]   LD      sound/pci/hda/built-in.o
+[ALL  ]   CC      fs/jffs2/file.o
+[ALL  ]   LD      sound/pci/ice1712/built-in.o
+[ALL  ]   LD      sound/pci/korg1212/built-in.o
+[ALL  ]   LD      sound/pci/lola/built-in.o
+[ALL  ]   LD      sound/pci/lx6464es/built-in.o
+[ALL  ]   LD      sound/pci/mixart/built-in.o
+[ALL  ]   LD      sound/pci/nm256/built-in.o
+[ALL  ]   CC      fs/jffs2/ioctl.o
+[ALL  ]   LD      sound/pci/oxygen/built-in.o
+[ALL  ]   LD      sound/pci/pcxhr/built-in.o
+[ALL  ]   LD      sound/pci/riptide/built-in.o
+[ALL  ]   LD      sound/pci/rme9652/built-in.o
+[ALL  ]   CC      fs/jffs2/nodelist.o
+[ALL  ]   LD      sound/pci/trident/built-in.o
+[ALL  ]   LD      sound/pci/vx222/built-in.o
+[ALL  ]   LD      sound/pci/ymfpci/built-in.o
+[ALL  ]   LD      sound/pci/built-in.o
+[ALL  ]   LD      sound/pcmcia/pdaudiocf/built-in.o
+[ALL  ]   LD      sound/pcmcia/vx/built-in.o
+[ALL  ]   LD      sound/pcmcia/built-in.o
+[ALL  ]   LD      sound/ppc/built-in.o
+[ALL  ]   LD      sound/sh/built-in.o
+[ALL  ]   LD      drivers/block/built-in.o
+[ALL  ]   CC      drivers/bus/vexpress-config.o
+[ALL  ]   CC      fs/jffs2/malloc.o
+[ALL  ]   CC      sound/soc/soc-core.o
+[ALL  ]   LD      drivers/bus/built-in.o
+[ALL  ]   CC      fs/jffs2/read.o
+[ALL  ]   LD      drivers/cdrom/built-in.o
+[ALL  ]   CC      drivers/char/mem.o
+[ALL  ]   CC      fs/jffs2/nodemgmt.o
+[ALL  ]   CC      drivers/char/random.o
+[ALL  ]   CC      fs/jffs2/readinode.o
+[ALL  ]   CC      drivers/char/misc.o
+[ALL  ]   CC      fs/jffs2/write.o
+[ALL  ]   CC      sound/soc/soc-dapm.o
+[ALL  ]   CC      drivers/char/xilinx_devcfg.o
+[ALL  ]   CC      fs/jffs2/scan.o
+[ALL  ]   LD      drivers/char/agp/built-in.o
+[ALL  ]   LD      drivers/char/built-in.o
+[ALL  ]   CC      drivers/clk/clk-devres.o
+[ALL  ]   CC      fs/jffs2/gc.o
+[ALL  ]   CC      drivers/clk/clkdev.o
+[ALL  ]   CC      sound/soc/soc-jack.o
+[ALL  ]   CC      drivers/clk/clk.o
+[ALL  ]   CC      fs/jffs2/symlink.o
+[ALL  ]   CC      fs/jffs2/build.o
+[ALL  ]   CC      sound/soc/soc-cache.o
+[ALL  ]   CC      fs/jffs2/erase.o
+[ALL  ]   CC      fs/jffs2/background.o
+[ALL  ]   CC      fs/jffs2/fs.o
+[ALL  ]   CC      sound/soc/soc-utils.o
+[ALL  ]   CC      drivers/clk/clk-divider.o
+[ALL  ]   CC      fs/jffs2/writev.o
+[ALL  ]   CC      sound/soc/soc-pcm.o
+[ALL  ]   CC      fs/jffs2/super.o
+[ALL  ]   CC      drivers/clk/clk-fixed-factor.o
+[ALL  ]   CC      fs/jffs2/debug.o
+[ALL  ]   CC      drivers/clk/clk-fixed-rate.o
+[ALL  ]   CC      fs/jffs2/wbuf.o
+[ALL  ]   CC      drivers/clk/clk-gate.o
+[ALL  ]   CC      fs/jffs2/compr_rtime.o
+[ALL  ]   CC      drivers/clk/clk-mux.o
+[ALL  ]   CC      sound/soc/soc-compress.o
+[ALL  ]   CC      fs/jffs2/compr_zlib.o
+[ALL  ]   CC      drivers/clk/clk-composite.o
+[ALL  ]   CC      fs/jffs2/summary.o
+[ALL  ]   CC      sound/soc/soc-io.o
+[ALL  ]   CC      drivers/clk/clk-fractional-divider.o
+[ALL  ]   LD      fs/jffs2/jffs2.o
+[ALL  ]   LD      fs/jffs2/built-in.o
+[ALL  ]   CC      fs/kernfs/mount.o
+[ALL  ]   CC      drivers/clk/clk-conf.o
+[ALL  ]   CC      sound/soc/soc-devres.o
+[ALL  ]   CC      fs/kernfs/inode.o
+[ALL  ]   CC      drivers/clk/clk-si570.o
+[ALL  ]   CC      fs/kernfs/dir.o
+[ALL  ]   CC      drivers/clk/versatile/clk-icst.o
+[ALL  ]   CC      sound/soc/soc-generic-dmaengine-pcm.o
+[ALL  ]   CC      drivers/clk/versatile/clk-versatile.o
+[ALL  ]   CC      drivers/clk/versatile/clk-vexpress.o
+[ALL  ]   CC      sound/soc/adi/axi-i2s.o
+[ALL  ]   CC      drivers/clk/versatile/clk-sp810.o
+[ALL  ]   CC      fs/kernfs/file.o
+[ALL  ]   CC      drivers/clk/versatile/clk-vexpress-osc.o
+[ALL  ]   CC      sound/soc/adi/axi-spdif.o
+[ALL  ]   LD      drivers/clk/versatile/built-in.o
+[ALL  ]   CC      drivers/clk/zynq/clkc.o
+[ALL  ]   LD      sound/soc/adi/snd-soc-adi-axi-i2s.o
+[ALL  ]   LD      sound/soc/adi/snd-soc-adi-axi-spdif.o
+[ALL  ]   LD      sound/soc/adi/built-in.o
+[ALL  ]   CC      fs/kernfs/symlink.o
+[ALL  ]   LD      sound/soc/atmel/built-in.o
+[ALL  ]   LD      sound/soc/au1x/built-in.o
+[ALL  ]   LD      sound/soc/bcm/built-in.o
+[ALL  ]   LD      sound/soc/blackfin/built-in.o
+[ALL  ]   CC      drivers/clk/zynq/pll.o
+[ALL  ]   LD      sound/soc/cirrus/built-in.o
+[ALL  ]   LD      sound/soc/codecs/built-in.o
+[ALL  ]   LD      fs/kernfs/built-in.o
+[ALL  ]   LD      sound/soc/davinci/built-in.o
+[ALL  ]   LD      sound/soc/dwc/built-in.o
+[ALL  ]   LD      sound/soc/fsl/built-in.o
+[ALL  ]   LD      sound/soc/generic/built-in.o
+[ALL  ]   CC      fs/lockd/clntlock.o
+[ALL  ]   LD      sound/soc/intel/built-in.o
+[ALL  ]   LD      sound/soc/jz4740/built-in.o
+[ALL  ]   LD      sound/soc/kirkwood/built-in.o
+[ALL  ]   LD      drivers/clk/zynq/built-in.o
+[ALL  ]   LD      drivers/clk/built-in.o
+[ALL  ]   LD      sound/soc/mxs/built-in.o
+[ALL  ]   LD      sound/soc/nuc900/built-in.o
+[ALL  ]   CC      drivers/clocksource/clksrc-of.o
+[ALL  ]   LD      sound/soc/omap/built-in.o
+[ALL  ]   LD      sound/soc/pxa/built-in.o
+[ALL  ]   CC      drivers/clocksource/mmio.o
+[ALL  ]   LD      sound/soc/rockchip/built-in.o
+[ALL  ]   LD      sound/soc/s6000/built-in.o
+[ALL  ]   LD      sound/soc/samsung/built-in.o
+[ALL  ]   LD      sound/soc/sh/built-in.o
+[ALL  ]   LD      sound/soc/sirf/built-in.o
+[ALL  ]   CC      drivers/clocksource/cadence_ttc_timer.o
+[ALL  ]   LD      sound/soc/spear/built-in.o
+[ALL  ]   LD      sound/soc/tegra/built-in.o
+[ALL  ]   LD      sound/soc/txx9/built-in.o
+[ALL  ]   LD      sound/soc/ux500/built-in.o
+[ALL  ]   LD      sound/soc/snd-soc-core.o
+[ALL  ]   CC      drivers/clocksource/arm_global_timer.o
+[ALL  ]   LD      sound/soc/built-in.o
+[ALL  ]   CC      fs/lockd/clntproc.o
+[ALL  ]   LD      sound/sparc/built-in.o
+[ALL  ]   LD      sound/spi/built-in.o
+[ALL  ]   CC      drivers/clocksource/dummy_timer.o
+[ALL  ]   LD      sound/synth/built-in.o
+[ALL  ]   CC      drivers/clocksource/versatile.o
+[ALL  ]   LD      sound/usb/6fire/built-in.o
+[ALL  ]   LD      sound/usb/bcd2000/built-in.o
+[ALL  ]   LD      sound/usb/caiaq/built-in.o
+[ALL  ]   LD      sound/usb/hiface/built-in.o
+[ALL  ]   LD      sound/usb/misc/built-in.o
+[ALL  ]   LD      sound/usb/usx2y/built-in.o
+[ALL  ]   LD      drivers/clocksource/built-in.o
+[ALL  ]   LD      sound/usb/built-in.o
+[ALL  ]   CC      sound/last.o
+[ALL  ]   CC      drivers/connector/cn_queue.o
+[ALL  ]   LD      sound/soundcore.o
+[ALL  ]   LD      sound/built-in.o
+[ALL  ]   LD      firmware/built-in.o
+[ALL  ]   CC      net/socket.o
+[ALL  ]   CC      drivers/connector/connector.o
+[ALL  ]   CC      fs/lockd/clntxdr.o
+[ALL  ]   CC      fs/lockd/host.o
+[ALL  ]   CC      drivers/connector/cn_proc.o
+[ALL  ]   LD      drivers/connector/cn.o
+[ALL  ]   LD      drivers/connector/built-in.o
+[ALL  ]   CC      fs/lockd/svc.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq.o
+[ALL  ]   LD      net/802/built-in.o
+[ALL  ]   CC      net/8021q/vlan_core.o
+[ALL  ]   CC [M]  net/8021q/vlan.o
+[ALL  ]   CC      fs/lockd/svclock.o
+[ALL  ]   CC      drivers/cpufreq/freq_table.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq_opp.o
+[ALL  ]   CC      fs/lockd/svcshare.o
+[ALL  ]   CC [M]  net/8021q/vlan_dev.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq_stats.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq_performance.o
+[ALL  ]   CC      fs/lockd/svcproc.o
+[ALL  ]   CC [M]  net/8021q/vlan_netlink.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq_powersave.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq_userspace.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq_ondemand.o
+[ALL  ]   CC [M]  net/8021q/vlanproc.o
+[ALL  ]   CC      fs/lockd/svcsubs.o
+[ALL  ]   LD      net/8021q/built-in.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq_conservative.o
+[ALL  ]   LD [M]  net/8021q/8021q.o
+[ALL  ]   CC      net/can/bcm.o
+[ALL  ]   CC      fs/lockd/mon.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq_governor.o
+[ALL  ]   CC      fs/lockd/xdr.o
+[ALL  ]   CC      drivers/cpufreq/cpufreq-cpu0.o
+[ALL  ]   CC      net/can/gw.o
+[ALL  ]   LD      drivers/cpufreq/built-in.o
+[ALL  ]   CC      drivers/cpuidle/cpuidle.o
+[ALL  ]   CC      fs/lockd/grace.o
+[ALL  ]   CC      net/can/raw.o
+[ALL  ]   CC      fs/lockd/clnt4xdr.o
+[ALL  ]   CC      net/can/af_can.o
+[ALL  ]   CC      drivers/cpuidle/driver.o
+[ALL  ]   CC      fs/lockd/xdr4.o
+[ALL  ]   CC      drivers/cpuidle/governor.o
+[ALL  ]   CC      drivers/cpuidle/sysfs.o
+[ALL  ]   CC      fs/lockd/svc4proc.o
+[ALL  ]   CC      net/can/proc.o
+[ALL  ]   CC      drivers/cpuidle/governors/ladder.o
+[ALL  ]   LD      fs/lockd/lockd.o
+[ALL  ]   LD      fs/lockd/built-in.o
+[ALL  ]   CC      drivers/cpuidle/governors/menu.o
+[ALL  ]   CC      fs/nfs/client.o
+[ALL  ]   LD      drivers/cpuidle/governors/built-in.o
+[ALL  ]   CC      drivers/cpuidle/cpuidle-zynq.o
+[ALL  ]   LD      net/can/can.o
+[ALL  ]   LD      net/can/can-raw.o
+[ALL  ]   LD      net/can/can-bcm.o
+[ALL  ]   LD      net/can/can-gw.o
+[ALL  ]   LD      net/can/built-in.o
+[ALL  ]   LD      drivers/cpuidle/built-in.o
+[ALL  ]   LD      drivers/crypto/built-in.o
+[ALL  ]   CC      drivers/dma/dmaengine.o
+[ALL  ]   CC      net/core/sock.o
+[ALL  ]   CC      fs/nfs/dir.o
+[ALL  ]   CC      drivers/dma/of-dma.o
+[ALL  ]   CC      drivers/dma/pl330.o
+[ALL  ]   CC      net/core/request_sock.o
+[ALL  ]   CC      fs/nfs/file.o
+[ALL  ]   CC      drivers/dma/xilinx/xilinx_axidma.o
+[ALL  ]   CC      net/core/skbuff.o
+[ALL  ]   CC      drivers/dma/xilinx/xilinx_axicdma.o
+[ALL  ]   CC      fs/nfs/getroot.o
+[ALL  ]   LD      drivers/dma/xilinx/built-in.o
+[ALL  ]   LD      drivers/dma/built-in.o
+[ALL  ]   CC      drivers/dma-buf/dma-buf.o
+[ALL  ]   CC      fs/nfs/inode.o
+[ALL  ]   CC      drivers/dma-buf/fence.o
+[ALL  ]   CC      net/core/iovec.o
+[ALL  ]   CC      drivers/dma-buf/reservation.o
+[ALL  ]   CC      net/core/datagram.o
+[ALL  ]   CC      drivers/dma-buf/seqno-fence.o
+[ALL  ]   CC      fs/nfs/super.o
+[ALL  ]   LD      drivers/dma-buf/built-in.o
+[ALL  ]   CC      drivers/edac/edac_stub.o
+[ALL  ]   CC      drivers/edac/edac_mc.o
+[ALL  ]   CC      net/core/stream.o
+[ALL  ]   CC      drivers/edac/edac_device.o
+[ALL  ]   CC      fs/nfs/direct.o
+[ALL  ]   CC      net/core/scm.o
+[ALL  ]   CC      drivers/edac/edac_mc_sysfs.o
+[ALL  ]   CC      fs/nfs/pagelist.o
+[ALL  ]   CC      net/core/gen_stats.o
+[ALL  ]   CC      drivers/edac/edac_pci_sysfs.o
+[ALL  ]   CC      net/core/gen_estimator.o
+[ALL  ]   CC      drivers/edac/edac_module.o
+[ALL  ]   CC      fs/nfs/read.o
+[ALL  ]   CC      drivers/edac/edac_device_sysfs.o
+[ALL  ]   CC      net/core/net_namespace.o
+[ALL  ]   CC      drivers/edac/edac_pci.o
+[ALL  ]   CC      net/core/secure_seq.o
+[ALL  ]   CC      fs/nfs/symlink.o
+[ALL  ]   CC      drivers/edac/zynq_edac.o
+[ALL  ]   CC      net/core/flow_dissector.o
+[ALL  ]   LD      drivers/edac/edac_core.o
+[ALL  ]   LD      drivers/edac/built-in.o
+[ALL  ]   LD      drivers/firewire/built-in.o
+[ALL  ]   CC      fs/nfs/unlink.o
+[ALL  ]   LD      drivers/firmware/built-in.o
+[ALL  ]   CC      drivers/gpio/devres.o
+[ALL  ]   CC      net/core/sysctl_net_core.o
+[ALL  ]   CC      drivers/gpio/gpiolib.o
+[ALL  ]   CC      fs/nfs/write.o
+[ALL  ]   CC      net/core/dev.o
+[ALL  ]   CC      drivers/gpio/gpiolib-legacy.o
+[ALL  ]   CC      drivers/gpio/gpiolib-of.o
+[ALL  ]   CC      drivers/gpio/gpiolib-sysfs.o
+[ALL  ]   CC      fs/nfs/namespace.o
+[ALL  ]   CC      drivers/gpio/gpio-generic.o
+[ALL  ]   CC      drivers/gpio/gpio-xilinx.o
+[ALL  ]   CC      drivers/gpio/gpio-zynq.o
+[ALL  ]   CC      fs/nfs/mount_clnt.o
+[ALL  ]   LD      drivers/gpio/built-in.o
+[ALL  ]   CC      fs/nfs/nfstrace.o
+[ALL  ]   CC      drivers/gpu/drm/drm_auth.o
+[ALL  ]   CC      fs/nfs/nfsroot.o
+[ALL  ]   CC      drivers/gpu/drm/drm_buffer.o
+[ALL  ]   CC      net/core/ethtool.o
+[ALL  ]   CC      fs/nfs/sysctl.o
+[ALL  ]   CC      drivers/gpu/drm/drm_bufs.o
+[ALL  ]   CC      fs/nfs/nfs2super.o
+[ALL  ]   CC      fs/nfs/proc.o
+[ALL  ]   CC      net/core/dev_addr_lists.o
+[ALL  ]   CC      drivers/gpu/drm/drm_cache.o
+[ALL  ]   CC      fs/nfs/nfs2xdr.o
+[ALL  ]   CC      drivers/gpu/drm/drm_context.o
+[ALL  ]   CC      net/core/dst.o
+[ALL  ]   CC      fs/nfs/nfs3super.o
+[ALL  ]   CC      drivers/gpu/drm/drm_dma.o
+[ALL  ]   CC      fs/nfs/nfs3client.o
+[ALL  ]   CC      net/core/netevent.o
+[ALL  ]   CC      drivers/gpu/drm/drm_fops.o
+[ALL  ]   CC      fs/nfs/nfs3proc.o
+[ALL  ]   CC      net/core/neighbour.o
+[ALL  ]   CC      drivers/gpu/drm/drm_gem.o
+[ALL  ]   CC      fs/nfs/nfs3xdr.o
+[ALL  ]   LD      fs/nfs/nfs.o
+[ALL  ]   LD      fs/nfs/nfsv2.o
+[ALL  ]   LD      fs/nfs/nfsv3.o
+[ALL  ]   LD      fs/nfs/built-in.o
+[ALL  ]   LD      fs/nfs_common/built-in.o
+[ALL  ]   CC      drivers/gpu/drm/drm_ioctl.o
+[ALL  ]   CC      fs/nls/nls_base.o
+[ALL  ]   CC      fs/nls/nls_cp437.o
+[ALL  ]   CC      net/core/rtnetlink.o
+[ALL  ]   CC      fs/nls/nls_ascii.o
+[ALL  ]   CC      fs/nls/nls_iso8859-1.o
+[ALL  ]   CC      drivers/gpu/drm/drm_irq.o
+[ALL  ]   LD      fs/nls/built-in.o
+[ALL  ]   CC      fs/notify/fsnotify.o
+[ALL  ]   CC      fs/notify/notification.o
+[ALL  ]   CC      drivers/gpu/drm/drm_lock.o
+[ALL  ]   CC      fs/notify/group.o
+[ALL  ]   CC      fs/notify/inode_mark.o
+[ALL  ]   CC      net/core/utils.o
+[ALL  ]   CC      drivers/gpu/drm/drm_memory.o
+[ALL  ]   CC      fs/notify/mark.o
+[ALL  ]   CC      net/core/link_watch.o
+[ALL  ]   CC      fs/notify/vfsmount_mark.o
+[ALL  ]   CC      drivers/gpu/drm/drm_drv.o
+[ALL  ]   CC      fs/notify/fdinfo.o
+[ALL  ]   LD      fs/notify/dnotify/built-in.o
+[ALL  ]   LD      fs/notify/fanotify/built-in.o
+[ALL  ]   CC      fs/notify/inotify/inotify_fsnotify.o
+[ALL  ]   CC      fs/notify/inotify/inotify_user.o
+[ALL  ]   CC      net/core/filter.o
+[ALL  ]   CC      drivers/gpu/drm/drm_vm.o
+[ALL  ]   LD      fs/notify/inotify/built-in.o
+[ALL  ]   LD      fs/notify/built-in.o
+[ALL  ]   CC      fs/proc/task_mmu.o
+[ALL  ]   CC      drivers/gpu/drm/drm_agpsupport.o
+[ALL  ]   CC      drivers/gpu/drm/drm_scatter.o
+[ALL  ]   CC      net/core/sock_diag.o
+[ALL  ]   CC      fs/proc/inode.o
+[ALL  ]   CC      drivers/gpu/drm/drm_pci.o
+[ALL  ]   CC      fs/proc/root.o
+[ALL  ]   CC      net/core/dev_ioctl.o
+[ALL  ]   CC      fs/proc/base.o
+[ALL  ]   CC      drivers/gpu/drm/drm_platform.o
+[ALL  ]   CC      net/core/tso.o
+[ALL  ]   CC      drivers/gpu/drm/drm_sysfs.o
+[ALL  ]   CC      fs/proc/generic.o
+[ALL  ]   CC      net/core/flow.o
+[ALL  ]   CC      fs/proc/array.o
+[ALL  ]   CC      drivers/gpu/drm/drm_hashtab.o
+[ALL  ]   CC      fs/proc/fd.o
+[ALL  ]   CC      drivers/gpu/drm/drm_mm.o
+[ALL  ]   CC      net/core/net-sysfs.o
+[ALL  ]   CC      fs/proc/proc_tty.o
+[ALL  ]   CC      fs/proc/cmdline.o
+[ALL  ]   CC      fs/proc/consoles.o
+[ALL  ]   CC      drivers/gpu/drm/drm_crtc.o
+[ALL  ]   CC      fs/proc/cpuinfo.o
+[ALL  ]   CC      fs/proc/devices.o
+[ALL  ]   CC      net/core/net-procfs.o
+[ALL  ]   CC      fs/proc/interrupts.o
+[ALL  ]   CC      net/core/ptp_classifier.o
+[ALL  ]   CC      fs/proc/loadavg.o
+[ALL  ]   CC      fs/proc/meminfo.o
+[ALL  ]   LD      net/core/built-in.o
+[ALL  ]   CC      net/ethernet/eth.o
+[ALL  ]   CC      fs/proc/stat.o
+[ALL  ]   CC      fs/proc/uptime.o
+[ALL  ]   CC      fs/proc/version.o
+[ALL  ]   CC      fs/proc/softirqs.o
+[ALL  ]   CC      drivers/gpu/drm/drm_modes.o
+[ALL  ]   CC      fs/proc/namespaces.o
+[ALL  ]   LD      net/ethernet/built-in.o
+[ALL  ]   CC      fs/proc/self.o
+[ALL  ]   CC      net/ipv4/route.o
+[ALL  ]   CC      fs/proc/thread_self.o
+[ALL  ]   CC      drivers/gpu/drm/drm_edid.o
+[ALL  ]   CC      fs/proc/proc_sysctl.o
+[ALL  ]   CC      fs/proc/proc_net.o
+[ALL  ]   CC      net/ipv4/inetpeer.o
+[ALL  ]   CC      fs/proc/kmsg.o
+[ALL  ]   CC      fs/proc/page.o
+[ALL  ]   CC      drivers/gpu/drm/drm_info.o
+[ALL  ]   CC      net/ipv4/protocol.o
+[ALL  ]   LD      fs/proc/proc.o
+[ALL  ]   LD      fs/proc/built-in.o
+[ALL  ]   LD      fs/quota/built-in.o
+[ALL  ]   CC      fs/ramfs/inode.o
+[ALL  ]   CC      drivers/gpu/drm/drm_debugfs.o
+[ALL  ]   CC      fs/ramfs/file-mmu.o
+[ALL  ]   CC      drivers/gpu/drm/drm_encoder_slave.o
+[ALL  ]   CC      net/ipv4/ip_input.o
+[ALL  ]   LD      fs/ramfs/ramfs.o
+[ALL  ]   LD      fs/ramfs/built-in.o
+[ALL  ]   CC      fs/sysfs/file.o
+[ALL  ]   CC      drivers/gpu/drm/drm_trace_points.o
+[ALL  ]   CC      fs/sysfs/dir.o
+[ALL  ]   CC      fs/sysfs/symlink.o
+[ALL  ]   CC      drivers/gpu/drm/drm_global.o
+[ALL  ]   CC      drivers/gpu/drm/drm_prime.o
+[ALL  ]   CC      net/ipv4/ip_fragment.o
+[ALL  ]   CC      fs/sysfs/mount.o
+[ALL  ]   CC      fs/sysfs/group.o
+[ALL  ]   LD      fs/sysfs/built-in.o
+[ALL  ]   CC      fs/eventpoll.o
+[ALL  ]   CC      drivers/gpu/drm/drm_rect.o
+[ALL  ]   CC      net/ipv4/ip_forward.o
+[ALL  ]   CC      fs/anon_inodes.o
+[ALL  ]   CC      drivers/gpu/drm/drm_vma_manager.o
+[ALL  ]   CC      net/ipv4/ip_options.o
+[ALL  ]   CC      fs/signalfd.o
+[ALL  ]   CC      drivers/gpu/drm/drm_flip_work.o
+[ALL  ]   CC      fs/timerfd.o
+[ALL  ]   CC      net/ipv4/ip_output.o
+[ALL  ]   CC      drivers/gpu/drm/drm_modeset_lock.o
+[ALL  ]   CC      fs/eventfd.o
+[ALL  ]   CC      fs/aio.o
+[ALL  ]   CC      drivers/gpu/drm/drm_gem_cma_helper.o
+[ALL  ]   CC      net/ipv4/ip_sockglue.o
+[ALL  ]   CC      drivers/gpu/drm/ati_pcigart.o
+[ALL  ]   CC      fs/locks.o
+[ALL  ]   CC      drivers/gpu/drm/drm_of.o
+[ALL  ]   CC      net/ipv4/inet_hashtables.o
+[ALL  ]   CC      fs/binfmt_script.o
+[ALL  ]   CC      drivers/gpu/drm/drm_crtc_helper.o
+[ALL  ]   CC      fs/binfmt_elf.o
+[ALL  ]   CC      net/ipv4/inet_timewait_sock.o
+[ALL  ]   CC      drivers/gpu/drm/drm_dp_helper.o
+[ALL  ]   CC      fs/mbcache.o
+[ALL  ]   CC      net/ipv4/inet_connection_sock.o
+[ALL  ]   CC      drivers/gpu/drm/drm_probe_helper.o
+[ALL  ]   CC      fs/coredump.o
+[ALL  ]   CC      drivers/gpu/drm/drm_plane_helper.o
+[ALL  ]   CC      net/ipv4/tcp.o
+[ALL  ]   CC      fs/drop_caches.o
+[ALL  ]   CC      drivers/gpu/drm/drm_dp_mst_topology.o
+[ALL  ]   CC      fs/fhandle.o
+[ALL  ]   LD      fs/built-in.o
+[ALL  ]   LD      arch/arm/lib/built-in.o
+[ALL  ]   AS      arch/arm/lib/ashldi3.o
+[ALL  ]   AS      arch/arm/lib/ashrdi3.o
+[ALL  ]   AS      arch/arm/lib/backtrace.o
+[ALL  ]   AS      arch/arm/lib/bswapsdi2.o
+[ALL  ]   AS      arch/arm/lib/call_with_stack.o
+[ALL  ]   AS      arch/arm/lib/changebit.o
+[ALL  ]   AS      arch/arm/lib/clear_user.o
+[ALL  ]   AS      arch/arm/lib/clearbit.o
+[ALL  ]   AS      arch/arm/lib/copy_from_user.o
+[ALL  ]   AS      arch/arm/lib/copy_page.o
+[ALL  ]   AS      arch/arm/lib/copy_to_user.o
+[ALL  ]   AS      arch/arm/lib/csumipv6.o
+[ALL  ]   AS      arch/arm/lib/csumpartial.o
+[ALL  ]   AS      arch/arm/lib/csumpartialcopy.o
+[ALL  ]   AS      arch/arm/lib/csumpartialcopyuser.o
+[ALL  ]   AS      arch/arm/lib/delay-loop.o
+[ALL  ]   CC      arch/arm/lib/delay.o
+[ALL  ]   AS      arch/arm/lib/div64.o
+[ALL  ]   AS      arch/arm/lib/findbit.o
+[ALL  ]   AS      arch/arm/lib/getuser.o
+[ALL  ]   AS      arch/arm/lib/io-readsb.o
+[ALL  ]   CC      drivers/gpu/drm/drm_fb_helper.o
+[ALL  ]   AS      arch/arm/lib/io-readsl.o
+[ALL  ]   AS      arch/arm/lib/io-readsw-armv4.o
+[ALL  ]   AS      arch/arm/lib/io-writesb.o
+[ALL  ]   AS      arch/arm/lib/io-writesl.o
+[ALL  ]   AS      arch/arm/lib/io-writesw-armv4.o
+[ALL  ]   AS      arch/arm/lib/lib1funcs.o
+[ALL  ]   AS      arch/arm/lib/lshrdi3.o
+[ALL  ]   CC      net/ipv4/tcp_input.o
+[ALL  ]   AS      arch/arm/lib/memchr.o
+[ALL  ]   AS      arch/arm/lib/memcpy.o
+[ALL  ]   AS      arch/arm/lib/memmove.o
+[ALL  ]   AS      arch/arm/lib/memset.o
+[ALL  ]   AS      arch/arm/lib/memzero.o
+[ALL  ]   AS      arch/arm/lib/muldi3.o
+[ALL  ]   AS      arch/arm/lib/putuser.o
+[ALL  ]   AS      arch/arm/lib/setbit.o
+[ALL  ]   AS      arch/arm/lib/strchr.o
+[ALL  ]   AS      arch/arm/lib/strrchr.o
+[ALL  ]   AS      arch/arm/lib/testchangebit.o
+[ALL  ]   AS      arch/arm/lib/testclearbit.o
+[ALL  ]   AS      arch/arm/lib/testsetbit.o
+[ALL  ]   AS      arch/arm/lib/ucmpdi2.o
+[ALL  ]   AR      arch/arm/lib/lib.a
+[ALL  ]   CC      drivers/gpu/drm/drm_fb_cma_helper.o
+[ALL  ]   CC      lib/lockref.o
+[ALL  ]   LD      drivers/gpu/drm/bridge/built-in.o
+[ALL  ]   CC      lib/bcd.o
+[ALL  ]   CC      drivers/gpu/drm/i2c/adv7511_core.o
+[ALL  ]   CC      lib/div64.o
+[ALL  ]   CC      lib/sort.o
+[ALL  ]   CC      net/ipv4/tcp_output.o
+[ALL  ]   CC      lib/parser.o
+[ALL  ]   CC      lib/halfmd4.o
+[ALL  ]   CC      drivers/gpu/drm/i2c/adv7511_audio.o
+[ALL  ]   CC      lib/debug_locks.o
+[ALL  ]   LD      drivers/gpu/drm/i2c/adv7511.o
+[ALL  ]   LD      drivers/gpu/drm/i2c/built-in.o
+[ALL  ]   LD      drivers/gpu/drm/panel/built-in.o
+[ALL  ]   CC      lib/random32.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_drm_drv.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_drm_crtc.o
+[ALL  ]   CC      lib/bust_spinlocks.o
+[ALL  ]   CC      lib/hexdump.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_drm_plane.o
+[ALL  ]   CC      net/ipv4/tcp_timer.o
+[ALL  ]   CC      lib/kasprintf.o
+[ALL  ]   CC      lib/bitmap.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_drm_encoder.o
+[ALL  ]   CC      net/ipv4/tcp_ipv4.o
+[ALL  ]   CC      lib/scatterlist.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_drm_connector.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_cresample.o
+[ALL  ]   CC      lib/gcd.o
+[ALL  ]   CC      lib/lcm.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_rgb2yuv.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_osd.o
+[ALL  ]   CC      lib/list_sort.o
+[ALL  ]   CC      lib/uuid.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_vtc.o
+[ALL  ]   CC      net/ipv4/tcp_minisocks.o
+[ALL  ]   CC      lib/flex_array.o
+[ALL  ]   CC      drivers/gpu/drm/xilinx/xilinx_drm_dp.o
+[ALL  ]   CC      lib/iovec.o
+[ALL  ]   CC      lib/clz_ctz.o
+[ALL  ]   CC      lib/bsearch.o
+[ALL  ]   CC      lib/find_last_bit.o
+[ALL  ]   CC      lib/find_next_bit.o
+[ALL  ]   CC      net/ipv4/tcp_cong.o
+[ALL  ]   LD      drivers/gpu/drm/xilinx/xilinx_drm.o
+[ALL  ]   CC      lib/llist.o
+[ALL  ]   LD      drivers/gpu/drm/xilinx/built-in.o
+[ALL  ]   LD      drivers/gpu/drm/drm_kms_helper.o
+[ALL  ]   LD      drivers/gpu/drm/drm.o
+[ALL  ]   LD      drivers/gpu/drm/built-in.o
+[ALL  ]   CC      drivers/gpu/vga/vgaarb.o
+[ALL  ]   CC      lib/memweight.o
+[ALL  ]   CC      lib/kfifo.o
+[ALL  ]   CC      net/ipv4/tcp_metrics.o
+[ALL  ]   CC      lib/percpu-refcount.o
+[ALL  ]   LD      drivers/gpu/vga/built-in.o
+[ALL  ]   LD      drivers/gpu/built-in.o
+[ALL  ]   CC      drivers/hid/hid-core.o
+[ALL  ]   CC      lib/percpu_ida.o
+[ALL  ]   CC      lib/hash.o
+[ALL  ]   CC      lib/rhashtable.o
+[ALL  ]   CC      net/ipv4/tcp_fastopen.o
+[ALL  ]   CC      drivers/hid/hid-input.o
+[ALL  ]   CC      lib/string_helpers.o
+[ALL  ]   CC      net/ipv4/tcp_offload.o
+[ALL  ]   CC      lib/kstrtox.o
+[ALL  ]   CC      lib/pci_iomap.o
+[ALL  ]   CC      lib/iomap_copy.o
+[ALL  ]   CC      net/ipv4/datagram.o
+[ALL  ]   CC      drivers/hid/hid-generic.o
+[ALL  ]   CC      lib/devres.o
+[ALL  ]   CC      drivers/hid/hid-microsoft.o
+[ALL  ]   CC      lib/hweight.o
+[ALL  ]   CC      drivers/hid/usbhid/hid-core.o
+[ALL  ]   CC      lib/bitrev.o
+[ALL  ]   CC      net/ipv4/raw.o
+[ALL  ]   CC      lib/crc16.o
+[ALL  ]   HOSTCC  lib/gen_crc32table
+[ALL  ]   CC      lib/genalloc.o
+[ALL  ]   CC      drivers/hid/usbhid/hid-quirks.o
+[ALL  ]   CC      lib/fonts/fonts.o
+[ALL  ]   CC      net/ipv4/udp.o
+[ALL  ]   CC      lib/fonts/font_8x8.o
+[ALL  ]   LD      drivers/hid/usbhid/usbhid.o
+[ALL  ]   CC      lib/fonts/font_8x16.o
+[ALL  ]   LD      drivers/hid/usbhid/built-in.o
+[ALL  ]   LD      drivers/hid/hid.o
+[ALL  ]   LD      drivers/hid/built-in.o
+[ALL  ]   LD      drivers/hsi/clients/built-in.o
+[ALL  ]   LD      drivers/hsi/controllers/built-in.o
+[ALL  ]   LD      drivers/hsi/built-in.o
+[ALL  ]   LD      lib/fonts/font.o
+[ALL  ]   LD      lib/fonts/built-in.o
+[ALL  ]   CC      drivers/hwmon/hwmon.o
+[ALL  ]   CC      lib/lzo/lzo1x_compress.o
+[ALL  ]   CC      drivers/hwmon/pmbus/pmbus_core.o
+[ALL  ]   CC      lib/lzo/lzo1x_decompress_safe.o
+[ALL  ]   LD      lib/lzo/lzo_compress.o
+[ALL  ]   LD      lib/lzo/lzo_decompress.o
+[ALL  ]   LD      lib/lzo/built-in.o
+[ALL  ]   CC      lib/xz/xz_dec_syms.o
+[ALL  ]   CC      drivers/hwmon/pmbus/pmbus.o
+[ALL  ]   CC      lib/xz/xz_dec_stream.o
+[ALL  ]   CC      drivers/hwmon/pmbus/ucd9000.o
+[ALL  ]   CC      lib/xz/xz_dec_lzma2.o
+[ALL  ]   CC      net/ipv4/udplite.o
+[ALL  ]   CC      drivers/hwmon/pmbus/ucd9200.o
+[ALL  ]   LD      drivers/hwmon/pmbus/built-in.o
+[ALL  ]   LD      drivers/hwmon/built-in.o
+[ALL  ]   CC      drivers/i2c/i2c-boardinfo.o
+[ALL  ]   CC      lib/xz/xz_dec_bcj.o
+[ALL  ]   CC      net/ipv4/udp_offload.o
+[ALL  ]   CC      drivers/i2c/i2c-core.o
+[ALL  ]   LD      lib/xz/xz_dec.o
+[ALL  ]   LD      lib/xz/built-in.o
+[ALL  ]   CC      lib/zlib_deflate/deflate.o
+[ALL  ]   CC      net/ipv4/arp.o
+[ALL  ]   CC      lib/zlib_deflate/deftree.o
+[ALL  ]   CC      drivers/i2c/i2c-dev.o
+[ALL  ]   CC      lib/zlib_deflate/deflate_syms.o
+[ALL  ]   CC      drivers/i2c/i2c-mux.o
+[ALL  ]   LD      lib/zlib_deflate/zlib_deflate.o
+[ALL  ]   LD      lib/zlib_deflate/built-in.o
+[ALL  ]   CC      lib/zlib_inflate/inffast.o
+[ALL  ]   CC      lib/zlib_inflate/inflate.o
+[ALL  ]   CC      net/ipv4/icmp.o
+[ALL  ]   CC      drivers/i2c/algos/i2c-algo-bit.o
+[ALL  ]   CC      lib/zlib_inflate/infutil.o
+[ALL  ]   CC      lib/zlib_inflate/inftrees.o
+[ALL  ]   LD      drivers/i2c/algos/built-in.o
+[ALL  ]   CC      lib/zlib_inflate/inflate_syms.o
+[ALL  ]   CC      drivers/i2c/busses/i2c-cadence.o
+[ALL  ]   LD      lib/zlib_inflate/zlib_inflate.o
+[ALL  ]   LD      lib/zlib_inflate/built-in.o
+[ALL  ]   CC      lib/percpu_counter.o
+[ALL  ]   LD      drivers/i2c/busses/built-in.o
+[ALL  ]   CC      drivers/i2c/muxes/i2c-mux-pca954x.o
+[ALL  ]   CC      net/ipv4/devinet.o
+[ALL  ]   CC      lib/swiotlb.o
+[ALL  ]   LD      drivers/i2c/muxes/built-in.o
+[ALL  ]   LD      drivers/i2c/built-in.o
+[ALL  ]   LD      drivers/idle/built-in.o
+[ALL  ]   CC      drivers/iio/industrialio-core.o
+[ALL  ]   CC      lib/iommu-helper.o
+[ALL  ]   CC      lib/syscall.o
+[ALL  ]   CC      drivers/iio/industrialio-event.o
+[ALL  ]   CC      lib/nlattr.o
+[ALL  ]   CC      net/ipv4/af_inet.o
+[ALL  ]   CC      lib/cpu_rmap.o
+[ALL  ]   CC      drivers/iio/inkern.o
+[ALL  ]   CC      lib/dynamic_queue_limits.o
+[ALL  ]   CC      lib/strncpy_from_user.o
+[ALL  ]   CC      drivers/iio/industrialio-buffer.o
+[ALL  ]   CC      lib/strnlen_user.o
+[ALL  ]   CC      lib/net_utils.o
+[ALL  ]   CC      net/ipv4/igmp.o
+[ALL  ]   CC      drivers/iio/industrialio-trigger.o
+[ALL  ]   CC      lib/argv_split.o
+[ALL  ]   CC      lib/cmdline.o
+[ALL  ]   CC      drivers/iio/industrialio-triggered-buffer.o
+[ALL  ]   CC      lib/cpumask.o
+[ALL  ]   CC      lib/ctype.o
+[ALL  ]   CC      drivers/iio/kfifo_buf.o
+[ALL  ]   CC      lib/dec_and_lock.o
+[ALL  ]   CC      lib/decompress.o
+[ALL  ]   CC      net/ipv4/fib_frontend.o
+[ALL  ]   CC      lib/decompress_inflate.o
+[ALL  ]   CC      lib/decompress_unxz.o
+[ALL  ]   LD      drivers/iio/accel/built-in.o
+[ALL  ]   CC      drivers/iio/adc/xilinx-xadc-core.o
+[ALL  ]   CC      lib/dump_stack.o
+[ALL  ]   CC      drivers/iio/adc/xilinx-xadc-events.o
+[ALL  ]   CC      lib/earlycpio.o
+[ALL  ]   LD      drivers/iio/adc/xilinx-xadc.o
+[ALL  ]   LD      drivers/iio/adc/built-in.o
+[ALL  ]   LD      drivers/iio/amplifiers/built-in.o
+[ALL  ]   CC      lib/extable.o
+[ALL  ]   LD      drivers/iio/common/hid-sensors/built-in.o
+[ALL  ]   LD      drivers/iio/common/st_sensors/built-in.o
+[ALL  ]   LD      drivers/iio/common/built-in.o
+[ALL  ]   CC      lib/fdt.o
+[ALL  ]   LD      drivers/iio/dac/built-in.o
+[ALL  ]   LD      drivers/iio/frequency/built-in.o
+[ALL  ]   CC      net/ipv4/fib_semantics.o
+[ALL  ]   LD      drivers/iio/gyro/built-in.o
+[ALL  ]   LD      drivers/iio/humidity/built-in.o
+[ALL  ]   CC      lib/fdt_empty_tree.o
+[ALL  ]   LD      drivers/iio/imu/inv_mpu6050/built-in.o
+[ALL  ]   LD      drivers/iio/imu/built-in.o
+[ALL  ]   LD      drivers/iio/light/built-in.o
+[ALL  ]   CC      lib/fdt_ro.o
+[ALL  ]   LD      drivers/iio/magnetometer/built-in.o
+[ALL  ]   LD      drivers/iio/orientation/built-in.o
+[ALL  ]   LD      drivers/iio/pressure/built-in.o
+[ALL  ]   LD      drivers/iio/proximity/built-in.o
+[ALL  ]   LD      drivers/iio/temperature/built-in.o
+[ALL  ]   CC      lib/fdt_rw.o
+[ALL  ]   LD      drivers/iio/trigger/built-in.o
+[ALL  ]   LD      drivers/iio/industrialio.o
+[ALL  ]   LD      drivers/iio/built-in.o
+[ALL  ]   CC      lib/fdt_strerror.o
+[ALL  ]   CC      lib/fdt_sw.o
+[ALL  ]   CC      drivers/input/input.o
+[ALL  ]   CC      net/ipv4/fib_trie.o
+[ALL  ]   CC      lib/fdt_wip.o
+[ALL  ]   CC      lib/flex_proportions.o
+[ALL  ]   CC      lib/idr.o
+[ALL  ]   CC      drivers/input/input-compat.o
+[ALL  ]   CC      lib/int_sqrt.o
+[ALL  ]   CC      net/ipv4/inet_fragment.o
+[ALL  ]   CC      lib/ioremap.o
+[ALL  ]   CC      drivers/input/input-mt.o
+[ALL  ]   CC      lib/irq_regs.o
+[ALL  ]   CC      lib/is_single_threaded.o
+[ALL  ]   CC      lib/klist.o
+[ALL  ]   CC      drivers/input/ff-core.o
+[ALL  ]   CC      net/ipv4/ping.o
+[ALL  ]   CC      lib/kobject.o
+[ALL  ]   CC      drivers/input/sparse-keymap.o
+[ALL  ]   CC      lib/kobject_uevent.o
+[ALL  ]   CC      drivers/input/mousedev.o
+[ALL  ]   CC      net/ipv4/ip_tunnel_core.o
+[ALL  ]   CC      drivers/input/evdev.o
+[ALL  ]   CC      lib/md5.o
+[ALL  ]   CC      lib/plist.o
+[ALL  ]   CC      lib/prio_heap.o
+[ALL  ]   CC      lib/proportions.o
+[ALL  ]   CC      net/ipv4/gre_offload.o
+[ALL  ]   CC      lib/radix-tree.o
+[ALL  ]   CC      drivers/input/keyboard/atkbd.o
+[ALL  ]   CC      net/ipv4/sysctl_net_ipv4.o
+[ALL  ]   CC      lib/ratelimit.o
+[ALL  ]   CC      lib/rbtree.o
+[ALL  ]   LD      drivers/input/keyboard/built-in.o
+[ALL  ]   CC      drivers/input/mouse/psmouse-base.o
+[ALL  ]   CC      net/ipv4/proc.o
+[ALL  ]   CC      lib/reciprocal_div.o
+[ALL  ]   CC      lib/sha1.o
+[ALL  ]   CC      drivers/input/mouse/synaptics.o
+[ALL  ]   CC      lib/show_mem.o
+[ALL  ]   CC      net/ipv4/xfrm4_mode_beet.o
+[ALL  ]   CC      lib/string.o
+[ALL  ]   CC      drivers/input/mouse/alps.o
+[ALL  ]   CC      lib/timerqueue.o
+[ALL  ]   CC      net/ipv4/inet_lro.o
+[ALL  ]   CC      lib/vsprintf.o
+[ALL  ]   CC      drivers/input/mouse/logips2pp.o
+[ALL  ]   CC      net/ipv4/xfrm4_mode_transport.o
+[ALL  ]   CC      drivers/input/mouse/trackpoint.o
+[ALL  ]   CC      drivers/input/mouse/cypress_ps2.o
+[ALL  ]   GEN     lib/crc32table.h
+[ALL  ]   AR      lib/lib.a
+[ALL  ]   CC      net/ipv4/xfrm4_mode_tunnel.o
+[ALL  ]   CC      lib/crc32.o
+[ALL  ]   LD      drivers/input/mouse/psmouse.o
+[ALL  ]   LD      drivers/input/mouse/built-in.o
+[ALL  ]   LD      drivers/input/input-core.o
+[ALL  ]   LD      drivers/input/built-in.o
+[ALL  ]   CC      drivers/input/serio/serio.o
+[ALL  ]   CC      net/ipv4/ipconfig.o
+[ALL  ]   LD      lib/built-in.o
+[ALL  ]   DTC     arch/arm/boot/dts/vexpress-v2p-ca5s.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/vexpress-v2p-ca9.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/vexpress-v2p-ca15-tc1.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/vexpress-v2p-ca15_a7.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-afx-nand.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-afx-nor.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-cc108.dtb
+[ALL  ]   CC      drivers/input/serio/serport.o
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-parallella.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-zc702.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-zc706.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-zc770-xm010.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-zc770-xm011.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-zc770-xm012.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-zc770-xm013.dtb
+[ALL  ]   DTC     arch/arm/boot/dts/zynq-zed.dtb
+[ALL  ]   CC      drivers/input/serio/libps2.o
+[ALL  ]   CC      net/ipv4/inet_diag.o
+[ALL  ]   CC      net/ipv6/addrconf_core.o
+[ALL  ]   LD      drivers/input/serio/built-in.o
+[ALL  ]   CC      drivers/iommu/of_iommu.o
+[ALL  ]   CC      net/ipv6/exthdrs_core.o
+[ALL  ]   LD      drivers/iommu/built-in.o
+[ALL  ]   CC      drivers/irqchip/irqchip.o
+[ALL  ]   CC      drivers/irqchip/irq-gic.o
+[ALL  ]   CC      net/ipv4/tcp_diag.o
+[ALL  ]   CC      net/ipv6/ip6_checksum.o
+[ALL  ]   CC      net/ipv4/tcp_cubic.o
+[ALL  ]   CC      drivers/irqchip/irq-gic-common.o
+[ALL  ]   LD      drivers/irqchip/built-in.o
+[ALL  ]   CC      drivers/leds/led-core.o
+[ALL  ]   CC      net/ipv6/ip6_icmp.o
+[ALL  ]   CC      drivers/leds/led-class.o
+[ALL  ]   CC      net/ipv4/xfrm4_policy.o
+[ALL  ]   CC      drivers/leds/led-triggers.o
+[ALL  ]   CC      net/ipv6/output_core.o
+[ALL  ]   CC      net/ipv4/xfrm4_state.o
+[ALL  ]   CC      drivers/leds/leds-gpio.o
+[ALL  ]   CC      net/ipv4/xfrm4_input.o
+[ALL  ]   CC      net/ipv6/protocol.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-timer.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-oneshot.o
+[ALL  ]   CC      net/ipv4/xfrm4_output.o
+[ALL  ]   CC      net/ipv6/ip6_offload.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-heartbeat.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-backlight.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-gpio.o
+[ALL  ]   CC      net/ipv4/xfrm4_protocol.o
+[ALL  ]   CC      net/ipv6/tcpv6_offload.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-cpu.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-default-on.o
+[ALL  ]   CC      net/ipv6/udp_offload.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-transient.o
+[ALL  ]   CC [M]  net/ipv4/ip_tunnel.o
+[ALL  ]   CC      drivers/leds/trigger/ledtrig-camera.o
+[ALL  ]   CC      net/ipv6/exthdrs_offload.o
+[ALL  ]   LD      drivers/leds/trigger/built-in.o
+[ALL  ]   LD      drivers/leds/built-in.o
+[ALL  ]   LD      drivers/lguest/built-in.o
+[ALL  ]   LD      drivers/macintosh/built-in.o
+[ALL  ]   CC      net/ipv6/inet6_hashtables.o
+[ALL  ]   LD      drivers/media/common/b2c2/built-in.o
+[ALL  ]   LD      drivers/media/common/saa7146/built-in.o
+[ALL  ]   LD      drivers/media/common/siano/built-in.o
+[ALL  ]   LD      drivers/media/common/built-in.o
+[ALL  ]   LD      drivers/media/firewire/built-in.o
+[ALL  ]   LD      drivers/media/i2c/soc_camera/built-in.o
+[ALL  ]   CC      drivers/media/i2c/adv7604.o
+[ALL  ]   CC [M]  net/ipv4/ipip.o
+[ALL  ]   CC [M]  net/ipv6/af_inet6.o
+[ALL  ]   CC [M]  net/ipv4/tunnel4.o
+[ALL  ]   CC [M]  net/ipv6/anycast.o
+[ALL  ]   LD      drivers/media/i2c/built-in.o
+[ALL  ]   LD      drivers/media/mmc/siano/built-in.o
+[ALL  ]   LD      drivers/media/mmc/built-in.o
+[ALL  ]   LD      drivers/media/parport/built-in.o
+[ALL  ]   LD      net/ipv4/built-in.o
+[ALL  ]   CC      net/netlink/af_netlink.o
+[ALL  ]   LD      drivers/media/pci/b2c2/built-in.o
+[ALL  ]   LD      drivers/media/pci/ddbridge/built-in.o
+[ALL  ]   CC [M]  net/ipv6/ip6_output.o
+[ALL  ]   LD      drivers/media/pci/dm1105/built-in.o
+[ALL  ]   LD      drivers/media/pci/mantis/built-in.o
+[ALL  ]   LD      drivers/media/pci/ngene/built-in.o
+[ALL  ]   LD      drivers/media/pci/pluto2/built-in.o
+[ALL  ]   LD      drivers/media/pci/pt1/built-in.o
+[ALL  ]   LD      drivers/media/pci/saa7146/built-in.o
+[ALL  ]   LD      drivers/media/pci/ttpci/built-in.o
+[ALL  ]   LD      drivers/media/pci/built-in.o
+[ALL  ]   LD      drivers/media/platform/davinci/built-in.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-dma.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-vip.o
+[ALL  ]   CC      net/netlink/genetlink.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-vipp.o
+[ALL  ]   CC [M]  net/ipv6/ip6_input.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-cfa.o
+[ALL  ]   CC [M]  net/ipv6/addrconf.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-cresample.o
+[ALL  ]   LD      net/netlink/built-in.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-rgb2yuv.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-scaler.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-remapper.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-switch.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-tpg.o
+[ALL  ]   CC      drivers/media/platform/xilinx/xilinx-vtc.o
+[ALL  ]   LD      drivers/media/platform/xilinx/xilinx-axi-video.o
+[ALL  ]   CC      net/packet/af_packet.o
+[ALL  ]   LD      drivers/media/platform/xilinx/built-in.o
+[ALL  ]   LD      drivers/media/platform/built-in.o
+[ALL  ]   LD      drivers/media/radio/built-in.o
+[ALL  ]   LD      drivers/media/rc/keymaps/built-in.o
+[ALL  ]   LD      drivers/media/rc/built-in.o
+[ALL  ]   LD      drivers/media/tuners/built-in.o
+[ALL  ]   LD      drivers/media/usb/b2c2/built-in.o
+[ALL  ]   LD      drivers/media/usb/dvb-usb/built-in.o
+[ALL  ]   CC [M]  net/ipv6/addrlabel.o
+[ALL  ]   LD      drivers/media/usb/dvb-usb-v2/built-in.o
+[ALL  ]   LD      drivers/media/usb/s2255/built-in.o
+[ALL  ]   LD      drivers/media/usb/siano/built-in.o
+[ALL  ]   LD      drivers/media/usb/stkwebcam/built-in.o
+[ALL  ]   LD      drivers/media/usb/ttusb-budget/built-in.o
+[ALL  ]   LD      drivers/media/usb/ttusb-dec/built-in.o
+[ALL  ]   LD      drivers/media/usb/zr364xx/built-in.o
+[ALL  ]   LD      drivers/media/usb/built-in.o
+[ALL  ]   CC [M]  net/ipv6/route.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-dev.o
+[ALL  ]   LD      net/packet/built-in.o
+[ALL  ]   CC      net/sched/sch_generic.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-ioctl.o
+[ALL  ]   CC [M]  net/ipv6/ip6_fib.o
+[ALL  ]   CC      net/sched/sch_mq.o
+[ALL  ]   LD      net/sched/built-in.o
+[ALL  ]   CC      drivers/memory/pl353-smc.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-device.o
+[ALL  ]   CC [M]  net/ipv6/ipv6_sockglue.o
+[ALL  ]   LD      drivers/memory/built-in.o
+[ALL  ]   CC      drivers/media/media-device.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-fh.o
+[ALL  ]   CC      drivers/media/media-devnode.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-event.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-ctrls.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-subdev.o
+[ALL  ]   CC [M]  net/ipv6/ndisc.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-clk.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-async.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-of.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-common.o
+[ALL  ]   CC [M]  net/ipv6/udp.o
+[ALL  ]   CC      drivers/media/v4l2-core/v4l2-dv-timings.o
+[ALL  ]   CC      drivers/media/v4l2-core/videobuf2-core.o
+[ALL  ]   CC      drivers/media/v4l2-core/videobuf2-memops.o
+[ALL  ]   CC      drivers/media/v4l2-core/videobuf2-dma-contig.o
+[ALL  ]   CC [M]  net/ipv6/udplite.o
+[ALL  ]   LD      drivers/media/v4l2-core/videodev.o
+[ALL  ]   CC [M]  net/ipv6/raw.o
+[ALL  ]   CC [M]  net/ipv6/icmp.o
+[ALL  ]   LD      drivers/media/v4l2-core/built-in.o
+[ALL  ]   CC      drivers/media/media-entity.o
+[ALL  ]   CC [M]  net/ipv6/mcast.o
+[ALL  ]   LD      drivers/media/media.o
+[ALL  ]   LD      drivers/media/built-in.o
+[ALL  ]   CC      drivers/mfd/mfd-core.o
+[ALL  ]   CC      drivers/mfd/syscon.o
+[ALL  ]   CC      drivers/mfd/vexpress-sysreg.o
+[ALL  ]   CC      net/sunrpc/clnt.o
+[ALL  ]   LD      drivers/mfd/built-in.o
+[ALL  ]   LD      drivers/misc/carma/built-in.o
+[ALL  ]   LD      drivers/misc/cb710/built-in.o
+[ALL  ]   CC      drivers/misc/eeprom/at24.o
+[ALL  ]   CC      drivers/misc/eeprom/at25.o
+[ALL  ]   CC [M]  net/ipv6/reassembly.o
+[ALL  ]   CC      net/sunrpc/xprt.o
+[ALL  ]   LD      drivers/misc/eeprom/built-in.o
+[ALL  ]   LD      drivers/misc/lis3lv02d/built-in.o
+[ALL  ]   LD      drivers/misc/mic/built-in.o
+[ALL  ]   LD      drivers/misc/ti-st/built-in.o
+[ALL  ]   CC      drivers/misc/sram.o
+[ALL  ]   CC      drivers/misc/xilinx_trafgen.o
+[ALL  ]   CC [M]  net/ipv6/tcp_ipv6.o
+[ALL  ]   CC      net/sunrpc/socklib.o
+[ALL  ]   CC      drivers/misc/vexpress-syscfg.o
+[ALL  ]   LD      drivers/misc/built-in.o
+[ALL  ]   CC      drivers/mmc/card/block.o
+[ALL  ]   CC      net/sunrpc/xprtsock.o
+[ALL  ]   CC [M]  net/ipv6/ping.o
+[ALL  ]   CC      drivers/mmc/card/queue.o
+[ALL  ]   CC [M]  net/ipv6/exthdrs.o
+[ALL  ]   CC      net/sunrpc/sched.o
+[ALL  ]   LD      drivers/mmc/card/mmc_block.o
+[ALL  ]   LD      drivers/mmc/card/built-in.o
+[ALL  ]   CC      drivers/mmc/core/core.o
+[ALL  ]   CC [M]  net/ipv6/datagram.o
+[ALL  ]   CC      net/sunrpc/auth.o
+[ALL  ]   CC [M]  net/ipv6/ip6_flowlabel.o
+[ALL  ]   CC      net/sunrpc/auth_null.o
+[ALL  ]   CC      drivers/mmc/core/bus.o
+[ALL  ]   CC      net/sunrpc/auth_unix.o
+[ALL  ]   CC      drivers/mmc/core/host.o
+[ALL  ]   CC [M]  net/ipv6/inet6_connection_sock.o
+[ALL  ]   CC      net/sunrpc/auth_generic.o
+[ALL  ]   CC      drivers/mmc/core/mmc.o
+[ALL  ]   CC [M]  net/ipv6/sysctl_net_ipv6.o
+[ALL  ]   CC      net/sunrpc/svc.o
+[ALL  ]   CC      drivers/mmc/core/mmc_ops.o
+[ALL  ]   CC [M]  net/ipv6/xfrm6_policy.o
+[ALL  ]   CC      drivers/mmc/core/sd.o
+[ALL  ]   CC [M]  net/ipv6/xfrm6_state.o
+[ALL  ]   CC      net/sunrpc/svcsock.o
+[ALL  ]   CC      drivers/mmc/core/sd_ops.o
+[ALL  ]   CC [M]  net/ipv6/xfrm6_input.o
+[ALL  ]   CC      drivers/mmc/core/sdio.o
+[ALL  ]   CC [M]  net/ipv6/xfrm6_output.o
+[ALL  ]   CC      net/sunrpc/svcauth.o
+[ALL  ]   CC      drivers/mmc/core/sdio_ops.o
+[ALL  ]   CC      drivers/mmc/core/sdio_bus.o
+[ALL  ]   CC      net/sunrpc/svcauth_unix.o
+[ALL  ]   CC [M]  net/ipv6/xfrm6_protocol.o
+[ALL  ]   CC      drivers/mmc/core/sdio_cis.o
+[ALL  ]   CC      drivers/mmc/core/sdio_io.o
+[ALL  ]   CC [M]  net/ipv6/proc.o
+[ALL  ]   CC      net/sunrpc/addr.o
+[ALL  ]   CC [M]  net/ipv6/xfrm6_mode_transport.o
+[ALL  ]   CC      drivers/mmc/core/sdio_irq.o
+[ALL  ]   CC [M]  net/ipv6/xfrm6_mode_tunnel.o
+[ALL  ]   CC      drivers/mmc/core/quirks.o
+[ALL  ]   CC      net/sunrpc/rpcb_clnt.o
+[ALL  ]   CC      drivers/mmc/core/slot-gpio.o
+[ALL  ]   CC [M]  net/ipv6/xfrm6_mode_beet.o
+[ALL  ]   LD      drivers/mmc/core/mmc_core.o
+[ALL  ]   LD      drivers/mmc/core/built-in.o
+[ALL  ]   CC      drivers/mmc/host/sdhci.o
+[ALL  ]   CC      net/sunrpc/timer.o
+[ALL  ]   CC [M]  net/ipv6/sit.o
+[ALL  ]   CC      net/sunrpc/xdr.o
+[ALL  ]   LD      net/ipv6/built-in.o
+[ALL  ]   LD [M]  net/ipv6/ipv6.o
+[ALL  ]   CC      drivers/mmc/host/sdhci-pltfm.o
+[ALL  ]   CC      net/unix/af_unix.o
+[ALL  ]   CC      net/sunrpc/sunrpc_syms.o
+[ALL  ]   CC      drivers/mmc/host/sdhci-of-arasan.o
+[ALL  ]   LD      drivers/mmc/host/built-in.o
+[ALL  ]   LD      drivers/mmc/built-in.o
+[ALL  ]   CC      net/sunrpc/cache.o
+[ALL  ]   CC      drivers/mtd/mtdcore.o
+[ALL  ]   CC      net/unix/garbage.o
+[ALL  ]   CC      net/unix/sysctl_net_unix.o
+[ALL  ]   CC      drivers/mtd/mtdsuper.o
+[ALL  ]   LD      net/unix/unix.o
+[ALL  ]   LD      net/unix/built-in.o
+[ALL  ]   LD      net/wireless/built-in.o
+[ALL  ]   CC      net/xfrm/xfrm_policy.o
+[ALL  ]   CC      net/sunrpc/rpc_pipe.o
+[ALL  ]   CC      drivers/mtd/mtdconcat.o
+[ALL  ]   CC      drivers/mtd/mtdpart.o
+[ALL  ]   CC      net/sunrpc/svc_xprt.o
+[ALL  ]   CC      drivers/mtd/mtdchar.o
+[ALL  ]   CC      net/xfrm/xfrm_state.o
+[ALL  ]   CC      drivers/mtd/ofpart.o
+[ALL  ]   CC      drivers/mtd/cmdlinepart.o
+[ALL  ]   CC      net/sunrpc/stats.o
+[ALL  ]   CC      drivers/mtd/mtd_blkdevs.o
+[ALL  ]   CC      drivers/mtd/mtdblock.o
+[ALL  ]   CC      net/sunrpc/sysctl.o
+[ALL  ]   CC      drivers/mtd/chips/chipreg.o
+[ALL  ]   CC      net/xfrm/xfrm_hash.o
+[ALL  ]   CC      drivers/mtd/chips/cfi_probe.o
+[ALL  ]   LD      net/sunrpc/xprtrdma/built-in.o
+[ALL  ]   LD      net/sunrpc/sunrpc.o
+[ALL  ]   CC      net/xfrm/xfrm_input.o
+[ALL  ]   LD      net/sunrpc/built-in.o
+[ALL  ]   CC      net/sysctl_net.o
+[ALL  ]   CC      drivers/mtd/chips/cfi_util.o
+[ALL  ]   CC      drivers/mtd/chips/cfi_cmdset_0002.o
+[ALL  ]   CC      net/xfrm/xfrm_output.o
+[ALL  ]   CC      drivers/mtd/chips/gen_probe.o
+[ALL  ]   CC      drivers/mtd/devices/m25p80.o
+[ALL  ]   LD      drivers/mtd/devices/built-in.o
+[ALL  ]   LD      drivers/mtd/lpddr/built-in.o
+[ALL  ]   CC      drivers/net/mii.o
+[ALL  ]   CC      net/xfrm/xfrm_sysctl.o
+[ALL  ]   CC      net/xfrm/xfrm_replay.o
+[ALL  ]   CC      drivers/net/Space.o
+[ALL  ]   CC      drivers/net/loopback.o
+[ALL  ]   LD      drivers/mtd/chips/built-in.o
+[ALL  ]   CC      drivers/mtd/maps/physmap.o
+[ALL  ]   CC      drivers/net/can/dev.o
+[ALL  ]   CC      drivers/mtd/maps/physmap_of.o
+[ALL  ]   LD      net/xfrm/built-in.o
+[ALL  ]   LD      net/built-in.o
+[ALL  ]   LD      drivers/nfc/built-in.o
+[ALL  ]   CC      drivers/of/base.o
+[ALL  ]   LD      drivers/mtd/maps/built-in.o
+[ALL  ]   CC      drivers/mtd/nand/nand_base.o
+[ALL  ]   LD      drivers/net/can/softing/built-in.o
+[ALL  ]   LD      drivers/net/can/spi/built-in.o
+[ALL  ]   LD      drivers/net/can/usb/built-in.o
+[ALL  ]   CC      drivers/net/can/xilinx_can.o
+[ALL  ]   LD      drivers/net/can/can-dev.o
+[ALL  ]   LD      drivers/net/can/built-in.o
+[ALL  ]   CC      drivers/of/device.o
+[ALL  ]   CC      drivers/of/platform.o
+[ALL  ]   LD      drivers/net/ethernet/3com/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/adaptec/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/alteon/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/amd/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/arc/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/atheros/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/broadcom/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/brocade/built-in.o
+[ALL  ]   CC      drivers/mtd/nand/nand_bbt.o
+[ALL  ]   CC      drivers/net/ethernet/cadence/macb.o
+[ALL  ]   CC      drivers/of/fdt.o
+[ALL  ]   CC      drivers/mtd/nand/nand_timings.o
+[ALL  ]   CC      drivers/of/fdt_address.o
+[ALL  ]   CC      drivers/of/address.o
+[ALL  ]   CC      drivers/mtd/nand/nand_ecc.o
+[ALL  ]   LD      drivers/net/ethernet/cadence/built-in.o
+[ALL  ]   CC      drivers/mtd/nand/nand_ids.o
+[ALL  ]   LD      drivers/net/ethernet/chelsio/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/cisco/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/dec/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/dlink/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/emulex/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/hisilicon/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/hp/built-in.o
+[ALL  ]   CC      drivers/of/irq.o
+[ALL  ]   LD      drivers/net/ethernet/i825xx/built-in.o
+[ALL  ]   CC      drivers/mtd/nand/pl353_nand.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/82571.o
+[ALL  ]   CC      drivers/of/of_net.o
+[ALL  ]   LD      drivers/mtd/nand/nand.o
+[ALL  ]   LD      drivers/mtd/nand/built-in.o
+[ALL  ]   LD      drivers/mtd/onenand/built-in.o
+[ALL  ]   CC      drivers/mtd/spi-nor/spi-nor.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/ich8lan.o
+[ALL  ]   CC      drivers/of/of_mdio.o
+[ALL  ]   LD      drivers/mtd/spi-nor/built-in.o
+[ALL  ]   LD      drivers/mtd/tests/built-in.o
+[ALL  ]   LD      drivers/mtd/mtd.o
+[ALL  ]   LD      drivers/mtd/built-in.o
+[ALL  ]   CC      drivers/of/of_pci.o
+[ALL  ]   CC      drivers/pci/access.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/80003es2lan.o
+[ALL  ]   CC      drivers/of/of_pci_irq.o
+[ALL  ]   CC      drivers/pci/bus.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/mac.o
+[ALL  ]   CC      drivers/of/of_mtd.o
+[ALL  ]   CC      drivers/pci/probe.o
+[ALL  ]   CC      drivers/of/of_reserved_mem.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/manage.o
+[ALL  ]   LD      drivers/of/built-in.o
+[ALL  ]   LD      drivers/pinctrl/nomadik/built-in.o
+[ALL  ]   LD      drivers/pinctrl/built-in.o
+[ALL  ]   LD      drivers/platform/built-in.o
+[ALL  ]   CC      drivers/power/power_supply_core.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/nvm.o
+[ALL  ]   CC      drivers/power/power_supply_sysfs.o
+[ALL  ]   CC      drivers/pci/host-bridge.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/phy.o
+[ALL  ]   CC      drivers/power/power_supply_leds.o
+[ALL  ]   CC      drivers/pci/remove.o
+[ALL  ]   CC      drivers/power/reset/vexpress-poweroff.o
+[ALL  ]   LD      drivers/power/reset/built-in.o
+[ALL  ]   LD      drivers/power/power_supply.o
+[ALL  ]   CC      drivers/pci/pci.o
+[ALL  ]   LD      drivers/power/built-in.o
+[ALL  ]   CC      drivers/pps/pps.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/param.o
+[ALL  ]   CC      drivers/pps/kapi.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/ethtool.o
+[ALL  ]   CC      drivers/pps/sysfs.o
+[ALL  ]   LD      drivers/pps/clients/built-in.o
+[ALL  ]   LD      drivers/pps/generators/built-in.o
+[ALL  ]   LD      drivers/pps/pps_core.o
+[ALL  ]   LD      drivers/pps/built-in.o
+[ALL  ]   CC      drivers/ptp/ptp_clock.o
+[ALL  ]   CC      drivers/pci/pci-driver.o
+[ALL  ]   CC      drivers/ptp/ptp_chardev.o
+[ALL  ]   CC      drivers/ptp/ptp_sysfs.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/netdev.o
+[ALL  ]   CC      drivers/pci/search.o
+[ALL  ]   LD      drivers/ptp/ptp.o
+[ALL  ]   LD      drivers/ptp/built-in.o
+[ALL  ]   LD      drivers/pwm/built-in.o
+[ALL  ]   CC      drivers/pci/pci-sysfs.o
+[ALL  ]   CC      drivers/ras/ras.o
+[ALL  ]   CC      drivers/ras/debugfs.o
+[ALL  ]   LD      drivers/ras/built-in.o
+[ALL  ]   CC      drivers/net/ethernet/intel/e1000e/ptp.o
+[ALL  ]   CC      drivers/pci/rom.o
+[ALL  ]   LD      drivers/net/ethernet/mellanox/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/myricom/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/neterion/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/nvidia/built-in.o
+[ALL  ]   CC      drivers/pci/setup-res.o
+[ALL  ]   LD      drivers/net/ethernet/oki-semi/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/packetengines/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/qlogic/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/rdc/built-in.o
+[ALL  ]   CC      drivers/net/ethernet/realtek/r8169.o
+[ALL  ]   CC      drivers/pci/irq.o
+[ALL  ]   CC      drivers/pci/vpd.o
+[ALL  ]   LD      drivers/net/ethernet/intel/e1000e/e1000e.o
+[ALL  ]   LD      drivers/net/ethernet/intel/e1000e/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/intel/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/samsung/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/silan/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/sis/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/sun/built-in.o
+[ALL  ]   CC      drivers/pci/setup-bus.o
+[ALL  ]   CC      drivers/pci/vc.o
+[ALL  ]   CC      drivers/pci/proc.o
+[ALL  ]   CC      drivers/pci/slot.o
+[ALL  ]   CC      drivers/pci/quirks.o
+[ALL  ]   CC      drivers/pci/msi.o
+[ALL  ]   LD      drivers/net/ethernet/realtek/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/tehuti/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/ti/built-in.o
+[ALL  ]   CC      drivers/net/ethernet/xilinx/xilinx_emaclite.o
+[ALL  ]   CC      drivers/net/ethernet/xilinx/xilinx_emacps.o
+[ALL  ]   CC      drivers/pci/setup-irq.o
+[ALL  ]   CC      drivers/pci/syscall.o
+[ALL  ]   CC      drivers/pci/of.o
+[ALL  ]   LD      drivers/pci/host/built-in.o
+[ALL  ]   CC      drivers/net/phy/phy.o
+[ALL  ]   LD      drivers/pci/built-in.o
+[ALL  ]   CC      drivers/regulator/core.o
+[ALL  ]   CC      drivers/net/ethernet/xilinx/xilinx_axienet_main.o
+[ALL  ]   CC      drivers/net/phy/phy_device.o
+[ALL  ]   CC      drivers/net/ethernet/xilinx/xilinx_axienet_mdio.o
+[ALL  ]   CC      drivers/regulator/dummy.o
+[ALL  ]   LD      drivers/net/ethernet/xilinx/xilinx_emac.o
+[ALL  ]   LD      drivers/net/ethernet/xilinx/built-in.o
+[ALL  ]   LD      drivers/net/ethernet/built-in.o
+[ALL  ]   CC      drivers/net/phy/mdio_bus.o
+[ALL  ]   CC      drivers/regulator/fixed-helper.o
+[ALL  ]   LD      drivers/net/usb/built-in.o
+[ALL  ]   LD      drivers/net/wireless/built-in.o
+[ALL  ]   CC      drivers/regulator/helpers.o
+[ALL  ]   CC      drivers/regulator/devres.o
+[ALL  ]   CC      drivers/net/phy/marvell.o
+[ALL  ]   CC      drivers/regulator/of_regulator.o
+[ALL  ]   CC      drivers/regulator/fixed.o
+[ALL  ]   CC      drivers/net/phy/vitesse.o
+[ALL  ]   LD      drivers/regulator/built-in.o
+[ALL  ]   LD      drivers/remoteproc/built-in.o
+[ALL  ]   CC      drivers/net/phy/mdio-bitbang.o
+[ALL  ]   CC [M]  drivers/remoteproc/remoteproc_core.o
+[ALL  ]   LD      drivers/net/phy/libphy.o
+[ALL  ]   CC [M]  drivers/remoteproc/remoteproc_debugfs.o
+[ALL  ]   CC [M]  drivers/remoteproc/remoteproc_virtio.o
+[ALL  ]   LD      drivers/net/phy/built-in.o
+[ALL  ]   LD      drivers/net/built-in.o
+[ALL  ]   LD      drivers/rpmsg/built-in.o
+[ALL  ]   CC [M]  drivers/rpmsg/virtio_rpmsg_bus.o
+[ALL  ]   CC [M]  drivers/remoteproc/remoteproc_elf_loader.o
+[ALL  ]   CC [M]  drivers/remoteproc/zynq_remoteproc.o
+[ALL  ]   CC [M]  drivers/remoteproc/mb_remoteproc.o
+[ALL  ]   LD [M]  drivers/remoteproc/remoteproc.o
+[ALL  ]   CC      drivers/rtc/rtc-lib.o
+[ALL  ]   LD      drivers/soc/built-in.o
+[ALL  ]   CC      drivers/spi/spi.o
+[ALL  ]   CC      drivers/scsi/scsi.o
+[ALL  ]   CC      drivers/rtc/hctosys.o
+[ALL  ]   CC      drivers/rtc/systohc.o
+[ALL  ]   CC      drivers/rtc/class.o
+[ALL  ]   CC      drivers/scsi/hosts.o
+[ALL  ]   CC      drivers/spi/spi-bitbang.o
+[ALL  ]   CC      drivers/rtc/interface.o
+[ALL  ]   CC      drivers/scsi/scsi_ioctl.o
+[ALL  ]   CC      drivers/spi/spi-cadence.o
+[ALL  ]   CC      drivers/rtc/rtc-dev.o
+[ALL  ]   CC      drivers/spi/spi-xilinx.o
+[ALL  ]   CC      drivers/rtc/rtc-proc.o
+[ALL  ]   CC      drivers/rtc/rtc-sysfs.o
+[ALL  ]   CC      drivers/scsi/constants.o
+[ALL  ]   CC      drivers/spi/spi-zynq-qspi.o
+[ALL  ]   CC      drivers/rtc/rtc-pcf8563.o
+[ALL  ]   LD      drivers/spi/built-in.o
+[ALL  ]   CC      drivers/thermal/thermal_core.o
+[ALL  ]   CC      drivers/scsi/scsicam.o
+[ALL  ]   LD      drivers/rtc/rtc-core.o
+[ALL  ]   LD      drivers/rtc/built-in.o
+[ALL  ]   CC      drivers/tty/tty_io.o
+[ALL  ]   CC      drivers/scsi/scsi_error.o
+[ALL  ]   CC      drivers/thermal/thermal_hwmon.o
+[ALL  ]   CC      drivers/scsi/scsi_lib.o
+[ALL  ]   CC      drivers/thermal/of-thermal.o
+[ALL  ]   CC      drivers/tty/n_tty.o
+[ALL  ]   CC      drivers/thermal/step_wise.o
+[ALL  ]   CC      drivers/thermal/cpu_cooling.o
+[ALL  ]   LD      drivers/thermal/samsung/built-in.o
+[ALL  ]   LD      drivers/thermal/thermal_sys.o
+[ALL  ]   CC      drivers/scsi/scsi_lib_dma.o
+[ALL  ]   LD      drivers/thermal/built-in.o
+[ALL  ]   CC      drivers/uio/uio.o
+[ALL  ]   CC      drivers/tty/tty_ioctl.o
+[ALL  ]   CC      drivers/scsi/scsi_scan.o
+[ALL  ]   CC      drivers/uio/uio_pdrv_genirq.o
+[ALL  ]   CC      drivers/tty/tty_ldisc.o
+[ALL  ]   CC      drivers/uio/uio_xilinx_apm.o
+[ALL  ]   LD      drivers/uio/built-in.o
+[ALL  ]   CC      drivers/usb/common/usb-common.o
+[ALL  ]   CC      drivers/tty/tty_buffer.o
+[ALL  ]   CC      drivers/scsi/scsi_sysfs.o
+[ALL  ]   LD      drivers/usb/common/built-in.o
+[ALL  ]   CC      drivers/usb/core/usb.o
+[ALL  ]   CC      drivers/tty/tty_port.o
+[ALL  ]   CC      drivers/scsi/scsi_devinfo.o
+[ALL  ]   CC      drivers/tty/tty_mutex.o
+[ALL  ]   CC      drivers/usb/core/hub.o
+[ALL  ]   CC      drivers/tty/tty_ldsem.o
+[ALL  ]   CC      drivers/scsi/scsi_sysctl.o
+[ALL  ]   CC      drivers/tty/pty.o
+[ALL  ]   CC      drivers/scsi/scsi_proc.o
+[ALL  ]   LD      drivers/tty/ipwireless/built-in.o
+[ALL  ]   CC      drivers/tty/serial/serial_core.o
+[ALL  ]   CC      drivers/scsi/scsi_trace.o
+[ALL  ]   CC      drivers/scsi/scsi_pm.o
+[ALL  ]   CC      drivers/usb/core/hcd.o
+[ALL  ]   CC      drivers/tty/serial/xilinx_uartps.o
+[ALL  ]   CC      drivers/scsi/sd.o
+[ALL  ]   LD      drivers/tty/serial/built-in.o
+[ALL  ]   CC      drivers/tty/vt/vt_ioctl.o
+[ALL  ]   CC      drivers/usb/core/urb.o
+[ALL  ]   CC      drivers/tty/vt/vc_screen.o
+[ALL  ]   CC      drivers/usb/core/message.o
+[ALL  ]   LD      drivers/scsi/arm/built-in.o
+[ALL  ]   LD      drivers/scsi/sd_mod.o
+[ALL  ]   CC      drivers/scsi/sg.o
+[ALL  ]   CC      drivers/tty/vt/selection.o
+[ALL  ]   CC      drivers/tty/vt/keyboard.o
+[ALL  ]   CC      drivers/usb/core/driver.o
+[ALL  ]   LD      drivers/scsi/scsi_mod.o
+[ALL  ]   LD      drivers/scsi/built-in.o
+[ALL  ]   CC      drivers/usb/core/config.o
+[ALL  ]   CC      drivers/usb/core/file.o
+[ALL  ]   CC      drivers/usb/core/buffer.o
+[ALL  ]   CC      drivers/tty/vt/consolemap.o
+[ALL  ]   CC      drivers/usb/core/sysfs.o
+[ALL  ]   CC      drivers/usb/core/endpoint.o
+[ALL  ]   CC      drivers/usb/core/devio.o
+[ALL  ]   CONMK   drivers/tty/vt/consolemap_deftbl.c
+[ALL  ]   CC      drivers/tty/vt/vt.o
+[ALL  ]   CC      drivers/usb/core/notify.o
+[ALL  ]   CC      drivers/usb/core/generic.o
+[ALL  ]   CC      drivers/usb/core/quirks.o
+[ALL  ]   CC      drivers/usb/core/devices.o
+[ALL  ]   CC      drivers/usb/core/port.o
+[ALL  ]   CC      drivers/usb/core/hcd-pci.o
+[ALL  ]   SHIPPED drivers/tty/vt/defkeymap.c
+[ALL  ]   LD      drivers/usb/gadget/function/built-in.o
+[ALL  ]   CC [M]  drivers/usb/gadget/function/f_loopback.o
+[ALL  ]   CC      drivers/tty/vt/consolemap_deftbl.o
+[ALL  ]   CC      drivers/tty/vt/defkeymap.o
+[ALL  ]   CC [M]  drivers/usb/gadget/function/f_sourcesink.o
+[ALL  ]   LD      drivers/tty/vt/built-in.o
+[ALL  ]   LD      drivers/tty/built-in.o
+[ALL  ]   LD      drivers/usb/core/usbcore.o
+[ALL  ]   LD      drivers/usb/core/built-in.o
+[ALL  ]   CC      drivers/video/hdmi.o
+[ALL  ]   LD      drivers/video/backlight/built-in.o
+[ALL  ]   CC      drivers/video/console/dummycon.o
+[ALL  ]   CC      drivers/video/fbdev/core/fb_notify.o
+[ALL  ]   LD [M]  drivers/usb/gadget/function/usb_f_ss_lb.o
+[ALL  ]   LD      drivers/usb/gadget/legacy/built-in.o
+[ALL  ]   CC [M]  drivers/usb/gadget/legacy/zero.o
+[ALL  ]   CC      drivers/video/console/fbcon.o
+[ALL  ]   LD [M]  drivers/usb/gadget/legacy/g_zero.o
+[ALL  ]   CC      drivers/video/fbdev/core/fbmem.o
+[ALL  ]   CC      drivers/usb/gadget/udc/udc-core.o
+[ALL  ]   CC      drivers/usb/gadget/udc/xilinx_udc.o
+[ALL  ]   CC      drivers/video/fbdev/core/fbmon.o
+[ALL  ]   CC      drivers/video/fbdev/core/fbcmap.o
+[ALL  ]   CC      drivers/usb/gadget/udc/zynq_udc.o
+[ALL  ]   CC      drivers/video/console/bitblit.o
+[ALL  ]   CC      drivers/video/fbdev/core/fbsysfs.o
+[ALL  ]   CC      drivers/video/fbdev/core/modedb.o
+[ALL  ]   CC      drivers/video/console/softcursor.o
+[ALL  ]   LD      drivers/usb/gadget/udc/built-in.o
+[ALL  ]   CC [M]  drivers/usb/gadget/usbstring.o
+[ALL  ]   LD      drivers/video/console/built-in.o
+[ALL  ]   CC [M]  drivers/usb/gadget/config.o
+[ALL  ]   CC      drivers/video/fbdev/core/fbcvt.o
+[ALL  ]   CC      drivers/usb/host/pci-quirks.o
+[ALL  ]   CC [M]  drivers/usb/gadget/epautoconf.o
+[ALL  ]   CC      drivers/video/fbdev/core/sysfillrect.o
+[ALL  ]   CC [M]  drivers/usb/gadget/composite.o
+[ALL  ]   CC      drivers/usb/host/ehci-hcd.o
+[ALL  ]   CC      drivers/video/fbdev/core/syscopyarea.o
+[ALL  ]   CC      drivers/video/fbdev/core/sysimgblt.o
+[ALL  ]   LD      drivers/video/fbdev/core/fb.o
+[ALL  ]   LD      drivers/video/fbdev/core/built-in.o
+[ALL  ]   LD      drivers/video/fbdev/omap2/displays-new/built-in.o
+[ALL  ]   CC [M]  drivers/usb/gadget/functions.o
+[ALL  ]   LD      drivers/video/fbdev/omap2/dss/built-in.o
+[ALL  ]   LD      drivers/video/fbdev/omap2/built-in.o
+[ALL  ]   LD      drivers/video/fbdev/built-in.o
+[ALL  ]   LD      drivers/video/built-in.o
+[ALL  ]   CC [M]  drivers/usb/gadget/configfs.o
+[ALL  ]   LD      drivers/virtio/built-in.o
+[ALL  ]   CC [M]  drivers/virtio/virtio.o
+[ALL  ]   CC [M]  drivers/virtio/virtio_ring.o
+[ALL  ]   CC [M]  drivers/usb/gadget/u_f.o
+[ALL  ]   CC      drivers/usb/host/ehci-pci.o
+[ALL  ]   LD      drivers/usb/gadget/built-in.o
+[ALL  ]   LD [M]  drivers/usb/gadget/libcomposite.o
+[ALL  ]   LD      drivers/usb/misc/built-in.o
+[ALL  ]   CC      drivers/usb/phy/phy.o
+[ALL  ]   CC      drivers/usb/phy/of.o
+[ALL  ]   CC      drivers/usb/host/zynq-dr-of.o
+[ALL  ]   CC      drivers/usb/phy/phy-ulpi.o
+[ALL  ]   CC      drivers/usb/phy/phy-ulpi-viewport.o
+[ALL  ]   LD      drivers/usb/host/built-in.o
+[ALL  ]   CC      drivers/usb/storage/scsiglue.o
+[ALL  ]   CC      drivers/usb/storage/protocol.o
+[ALL  ]   LD      drivers/usb/phy/built-in.o
+[ALL  ]   CC      drivers/usb/storage/transport.o
+[ALL  ]   CC      drivers/usb/storage/usb.o
+[ALL  ]   CC      drivers/usb/storage/initializers.o
+[ALL  ]   CC      drivers/usb/storage/sierra_ms.o
+[ALL  ]   CC      drivers/usb/storage/option_ms.o
+[ALL  ]   CC      drivers/usb/storage/usual-tables.o
+[ALL  ]   CC      drivers/watchdog/watchdog_core.o
+[ALL  ]   CC      drivers/watchdog/watchdog_dev.o
+[ALL  ]   LD      drivers/usb/storage/usb-storage.o
+[ALL  ]   LD      drivers/usb/storage/built-in.o
+[ALL  ]   LD      drivers/usb/built-in.o
+[ALL  ]   CC      drivers/watchdog/cadence_wdt.o
+[ALL  ]   CC      drivers/watchdog/of_xilinx_wdt.o
+[ALL  ]   LD      drivers/watchdog/watchdog.o
+[ALL  ]   LD      drivers/watchdog/built-in.o
+[ALL  ]   LD      drivers/built-in.o
+[ALL  ]   LINK    vmlinux
+[ALL  ]   LD      vmlinux.o
+[ALL  ]   MODPOST vmlinux.o
+[ALL  ]   GEN     .version
+[ALL  ]   CHK     include/generated/compile.h
+[ALL  ]   UPD     include/generated/compile.h
+[ALL  ]   CC      init/version.o
+[ALL  ]   LD      init/built-in.o
+[ALL  ]   KSYM    .tmp_kallsyms1.o
+[ALL  ]   KSYM    .tmp_kallsyms2.o
+[ALL  ]   LD      vmlinux
+[ALL  ]   SORTEX  vmlinux
+[ALL  ]   SYSMAP  System.map
+[ALL  ]   OBJCOPY arch/arm/boot/Image
+[ALL  ]   Building modules, stage 2.
+[ALL  ]   Kernel: arch/arm/boot/Image is ready
+[ALL  ]   MODPOST 22 modules
+[ALL  ]   LDS     arch/arm/boot/compressed/vmlinux.lds
+[ALL  ]   AS      arch/arm/boot/compressed/head.o
+[ALL  ]   CC      crypto/ansi_cprng.mod.o
+[ALL  ]   GZIP    arch/arm/boot/compressed/piggy.gzip
+[ALL  ]   CC      arch/arm/boot/compressed/misc.o
+[ALL  ]   CC      arch/arm/boot/compressed/decompress.o
+[ALL  ]   CC      crypto/krng.mod.o
+[ALL  ]   CC      crypto/rng.mod.o
+[ALL  ]   CC      drivers/remoteproc/mb_remoteproc.mod.o
+[ALL  ]   CC      drivers/remoteproc/remoteproc.mod.o
+[ALL  ]   CC      arch/arm/boot/compressed/string.o
+[ALL  ]   CC      drivers/remoteproc/zynq_remoteproc.mod.o
+[ALL  ]   SHIPPED arch/arm/boot/compressed/hyp-stub.S
+[ALL  ]   SHIPPED arch/arm/boot/compressed/lib1funcs.S
+[ALL  ]   SHIPPED arch/arm/boot/compressed/ashldi3.S
+[ALL  ]   SHIPPED arch/arm/boot/compressed/bswapsdi2.S
+[ALL  ]   AS      arch/arm/boot/compressed/hyp-stub.o
+[ALL  ]   CC      drivers/rpmsg/virtio_rpmsg_bus.mod.o
+[ALL  ]   AS      arch/arm/boot/compressed/lib1funcs.o
+[ALL  ]   CC      drivers/usb/gadget/function/usb_f_ss_lb.mod.o
+[ALL  ]   CC      drivers/usb/gadget/legacy/g_zero.mod.o
+[ALL  ]   CC      drivers/usb/gadget/libcomposite.mod.o
+[ALL  ]   CC      drivers/virtio/virtio.mod.o
+[ALL  ]   CC      drivers/virtio/virtio_ring.mod.o
+[ALL  ]   CC      fs/configfs/configfs.mod.o
+[ALL  ]   AS      arch/arm/boot/compressed/ashldi3.o
+[ALL  ]   AS      arch/arm/boot/compressed/bswapsdi2.o
+[ALL  ]   CC      net/8021q/8021q.mod.o
+[ALL  ]   AS      arch/arm/boot/compressed/piggy.gzip.o
+[ALL  ]   CC      net/ipv4/ip_tunnel.mod.o
+[ALL  ]   LD      arch/arm/boot/compressed/vmlinux
+[ALL  ]   OBJCOPY arch/arm/boot/zImage
+[ALL  ]   Kernel: arch/arm/boot/zImage is ready
+[ALL  ]   CC      net/ipv4/ipip.mod.o
+[ALL  ]   CC      net/ipv4/tunnel4.mod.o
+[ALL  ]   CC      net/ipv6/ipv6.mod.o
+[ALL  ]   CC      net/ipv6/sit.mod.o
+[ALL  ]   CC      net/ipv6/xfrm6_mode_beet.mod.o
+[ALL  ]   CC      net/ipv6/xfrm6_mode_transport.mod.o
+[ALL  ]   CC      net/ipv6/xfrm6_mode_tunnel.mod.o
+[ALL  ]   LD [M]  crypto/ansi_cprng.ko
+[ALL  ]   LD [M]  crypto/krng.ko
+[ALL  ]   LD [M]  crypto/rng.ko
+[ALL  ]   LD [M]  drivers/remoteproc/mb_remoteproc.ko
+[ALL  ]   LD [M]  drivers/remoteproc/remoteproc.ko
+[ALL  ]   LD [M]  drivers/remoteproc/zynq_remoteproc.ko
+[ALL  ]   LD [M]  drivers/rpmsg/virtio_rpmsg_bus.ko
+[ALL  ]   LD [M]  drivers/usb/gadget/function/usb_f_ss_lb.ko
+[ALL  ]   LD [M]  drivers/usb/gadget/legacy/g_zero.ko
+[ALL  ]   LD [M]  drivers/usb/gadget/libcomposite.ko
+[ALL  ]   LD [M]  drivers/virtio/virtio.ko
+[ALL  ]   LD [M]  drivers/virtio/virtio_ring.ko
+[ALL  ]   LD [M]  fs/configfs/configfs.ko
+[ALL  ]   LD [M]  net/8021q/8021q.ko
+[ALL  ]   LD [M]  net/ipv4/ip_tunnel.ko
+[ALL  ]   LD [M]  net/ipv4/ipip.ko
+[ALL  ]   LD [M]  net/ipv4/tunnel4.ko
+[ALL  ]   LD [M]  net/ipv6/ipv6.ko
+[ALL  ]   LD [M]  net/ipv6/sit.ko
+[ALL  ]   LD [M]  net/ipv6/xfrm6_mode_beet.ko
+[ALL  ]   LD [M]  net/ipv6/xfrm6_mode_tunnel.ko
+[ALL  ]   LD [M]  net/ipv6/xfrm6_mode_transport.ko
+[ALL  ] make[2]: Leaving directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=u-boot-plnx; 		sbuild=u-boot/u-boot-plnx; 	else 		sinstance=u-boot; 		sbuild=u-boot; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] mkdir -p "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx"
+[INFO ] update linux/u-boot source
+[ALL  ] if [ ! -d "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx" ]; then 		mkdir -p "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"; 	fi; 	rsync -a --cvs-exclude --filter=':C .git/' "/opt/petalinux/petalinux-v2014.4-final/components/u-boot/u-boot-plnx"/ "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"/
+[ALL  ] chmod -R a+w "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"/include/configs
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/config.mk" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/config.mk"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq/config.mk"; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/platform-top.h" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot"/*.h "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs"/; 		mv "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs/platform-top.h"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs/zynq_zc70x.h"; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems//home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.c" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.c"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq"/; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems//home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.h" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.h"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq"/; 	fi
+[INFO ] generate linux/u-boot configuration files
+[ALL  ] make O=/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx -C /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx -j3 zynq_zc70x_config || exit 255
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[ALL  ]   GEN     /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/Makefile
+[ALL  ] Configuring for zynq_zc70x board...
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[INFO ] build linux/u-boot
+[ALL  ] make O=/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx -C /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx -j3 all
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[ALL  ]   GEN     include/autoconf.mk.dep
+[ALL  ]   GEN     include/autoconf.mk
+[ALL  ]   CHK     include/config/uboot.release
+[ALL  ]   GEN     /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/Makefile
+[ALL  ]   CHK     include/generated/timestamp_autogenerated.h
+[ALL  ]   UPD     include/config/uboot.release
+[ALL  ]   UPD     include/generated/timestamp_autogenerated.h
+[ALL  ]   HOSTCC  scripts/basic/fixdep
+[ALL  ]   Using /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx as source for u-boot
+[ALL  ]   CHK     include/generated/version_autogenerated.h
+[ALL  ]   UPD     include/generated/version_autogenerated.h
+[ALL  ]   CC      lib/asm-offsets.s
+[ALL  ]   CC      arch/arm/lib/asm-offsets.s
+[ALL  ]   GEN     include/generated/asm-offsets.h
+[ALL  ]   GEN     include/generated/generic-asm-offsets.h
+[ALL  ]   HOSTCC  tools/aisimage.o
+[ALL  ]   HOSTCC  tools/atmelimage.o
+[ALL  ]   LDS     u-boot.lds
+[ALL  ]   WRAP    tools/common/bootm.c
+[ALL  ]   WRAP    tools/common/env_embedded.c
+[ALL  ]   WRAP    tools/common/image-fit.c
+[ALL  ]   WRAP    tools/common/image.c
+[ALL  ]   HOSTCC  tools/default_image.o
+[ALL  ]   HOSTCC  tools/dumpimage.o
+[ALL  ]   HOSTCC  tools/envcrc.o
+[ALL  ]   HOSTCC  tools/fit_common.o
+[ALL  ]   HOSTCC  tools/fit_image.o
+[ALL  ]   HOSTCC  tools/gpimage-common.o
+[ALL  ]   HOSTCC  tools/gpimage.o
+[ALL  ]   HOSTCC  tools/image-host.o
+[ALL  ]   HOSTCC  tools/imagetool.o
+[ALL  ]   HOSTCC  tools/imximage.o
+[ALL  ]   HOSTCC  tools/kwbimage.o
+[ALL  ]   WRAP    tools/lib/crc32.c
+[ALL  ]   WRAP    tools/lib/fdtdec.c
+[ALL  ]   WRAP    tools/lib/fdtdec_common.c
+[ALL  ]   WRAP    tools/lib/libfdt/fdt.c
+[ALL  ]   WRAP    tools/lib/libfdt/fdt_ro.c
+[ALL  ]   WRAP    tools/lib/libfdt/fdt_rw.c
+[ALL  ]   WRAP    tools/lib/libfdt/fdt_strerror.c
+[ALL  ]   WRAP    tools/lib/libfdt/fdt_wip.c
+[ALL  ]   WRAP    tools/lib/md5.c
+[ALL  ]   WRAP    tools/lib/sha1.c
+[ALL  ]   WRAP    tools/lib/sha256.c
+[ALL  ]   HOSTCC  tools/mkenvimage.o
+[ALL  ]   HOSTCC  tools/mkimage.o
+[ALL  ]   HOSTCC  tools/mxsimage.o
+[ALL  ]   HOSTCC  tools/omapimage.o
+[ALL  ]   HOSTCC  tools/os_support.o
+[ALL  ]   HOSTCC  tools/pbl_crc32.o
+[ALL  ]   HOSTCC  tools/pblimage.o
+[ALL  ]   HOSTCC  tools/ublimage.o
+[ALL  ]   HOSTCC  tools/gen_eth_addr
+[ALL  ]   HOSTCC  tools/img2srec
+[ALL  ]   HOSTCC  tools/ncb
+[ALL  ]   HOSTCC  tools/proftool
+[ALL  ]   HOSTCC  tools/common/bootm.o
+[ALL  ]   HOSTCC  tools/common/env_embedded.o
+[ALL  ]   HOSTCC  tools/common/image-fit.o
+[ALL  ]   HOSTCC  tools/common/image.o
+[ALL  ]   HOSTCC  tools/lib/crc32.o
+[ALL  ]   HOSTCC  tools/lib/fdtdec.o
+[ALL  ]   HOSTCC  tools/lib/fdtdec_common.o
+[ALL  ]   HOSTCC  tools/lib/libfdt/fdt.o
+[ALL  ]   HOSTCC  tools/lib/libfdt/fdt_ro.o
+[ALL  ]   HOSTCC  tools/lib/libfdt/fdt_rw.o
+[ALL  ]   HOSTCC  tools/lib/libfdt/fdt_strerror.o
+[ALL  ]   HOSTCC  tools/lib/libfdt/fdt_wip.o
+[ALL  ]   HOSTCC  tools/lib/md5.o
+[ALL  ]   HOSTCC  tools/lib/sha1.o
+[ALL  ]   HOSTCC  tools/lib/sha256.o
+[ALL  ]   HOSTLD  tools/envcrc
+[ALL  ]   HOSTLD  tools/mkenvimage
+[ALL  ]   HOSTLD  tools/dumpimage
+[ALL  ]   HOSTLD  tools/mkimage
+[ALL  ]   LD      arch/arm/cpu/built-in.o
+[ALL  ]   CC      arch/arm/cpu/armv7/cache_v7.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/timer.o
+[ALL  ]   AS      arch/arm/lib/vectors.o
+[ALL  ]   AS      arch/arm/lib/crt0.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/cpu.o
+[ALL  ]   CC      arch/arm/cpu/armv7/cpu.o
+[ALL  ]   AS      arch/arm/lib/relocate.o
+[ALL  ]   CC      arch/arm/lib/bootm-fdt.o
+[ALL  ]   CC      arch/arm/cpu/armv7/syslib.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/ddrc.o
+[ALL  ]   AS      arch/arm/cpu/armv7/start.o
+[ALL  ]   CC      arch/arm/lib/bootm.o
+[ALL  ]   LD      arch/arm/cpu/armv7/built-in.o
+[ALL  ]   CC      board/xilinx/zynq/board.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/slcr.o
+[ALL  ]   CC      arch/arm/lib/sections.o
+[ALL  ]   LD      board/xilinx/zynq/built-in.o
+[ALL  ]   CC      arch/arm/lib/interrupts.o
+[ALL  ]   CC      arch/arm/lib/reset.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/clk.o
+[ALL  ]   CC      arch/arm/lib/cache.o
+[ALL  ]   CC      arch/arm/lib/cache-cp15.o
+[ALL  ]   AS      arch/arm/cpu/armv7/zynq/lowlevel_init.o
+[ALL  ]   LD      arch/arm/cpu/armv7/zynq/built-in.o
+[ALL  ]   AR      arch/arm/lib/lib.a
+[ALL  ]   CC      arch/arm/lib/eabi_compat.o
+[ALL  ]   LD      arch/arm/lib/built-in.o
+[ALL  ]   CC      disk/part.o
+[ALL  ]   CC      disk/part_dos.o
+[ALL  ]   LD      drivers/block/built-in.o
+[ALL  ]   CC      common/main.o
+[ALL  ]   LD      drivers/crypto/built-in.o
+[ALL  ]   LD      drivers/dfu/built-in.o
+[ALL  ]   CC      common/command.o
+[ALL  ]   CC      drivers/fpga/fpga.o
+[ALL  ]   LD      disk/built-in.o
+[ALL  ]   LD      drivers/dma/built-in.o
+[ALL  ]   CC      common/exports.o
+[ALL  ]   LD      drivers/gpio/built-in.o
+[ALL  ]   CC      drivers/fpga/zynqpl.o
+[ALL  ]   LD      drivers/i2c/built-in.o
+[ALL  ]   CC      drivers/input/input.o
+[ALL  ]   CC      common/hash.o
+[ALL  ]   CC      drivers/fpga/xilinx.o
+[ALL  ]   CC      common/cli_hush.o
+[ALL  ]   LD      drivers/input/built-in.o
+[ALL  ]   CC      drivers/mmc/mmc.o
+[ALL  ]   LD      drivers/fpga/built-in.o
+[ALL  ]   LD      drivers/hwmon/built-in.o
+[ALL  ]   LD      drivers/memory/built-in.o
+[ALL  ]   LD      drivers/misc/built-in.o
+[ALL  ]   CC      drivers/pcmcia/tqm8xx_pcmcia.o
+[ALL  ]   LD      drivers/pcmcia/built-in.o
+[ALL  ]   CC      drivers/rtc/date.o
+[ALL  ]   CC      common/cli_simple.o
+[ALL  ]   CC      drivers/mmc/sdhci.o
+[ALL  ]   LD      drivers/rtc/built-in.o
+[ALL  ]   LD      drivers/sound/built-in.o
+[ALL  ]   LD      drivers/tpm/built-in.o
+[ALL  ]   LD      drivers/twserial/built-in.o
+[ALL  ]   CC      common/cli.o
+[ALL  ]   LD      drivers/video/built-in.o
+[ALL  ]   LD      drivers/watchdog/built-in.o
+[ALL  ]   LD      drivers/built-in.o
+[ALL  ]   LD      drivers/mtd/built-in.o
+[ALL  ]   LD      drivers/mtd/onenand/built-in.o
+[ALL  ]   CC      drivers/mtd/spi/sf.o
+[ALL  ]   CC      drivers/mmc/zynq_sdhci.o
+[ALL  ]   CC      common/cli_readline.o
+[ALL  ]   CC      drivers/mtd/spi/sf_params.o
+[ALL  ]   CC      drivers/mmc/mmc_write.o
+[ALL  ]   CC      drivers/mtd/spi/sf_probe.o
+[ALL  ]   CC      common/s_record.o
+[ALL  ]   LD      drivers/mmc/built-in.o
+[ALL  ]   CC      drivers/mtd/spi/sf_ops.o
+[ALL  ]   CC      drivers/net/netconsole.o
+[ALL  ]   LD      drivers/mtd/spi/built-in.o
+[ALL  ]   CC      drivers/net/zynq_gem.o
+[ALL  ]   CC      common/xyzModem.o
+[ALL  ]   CC      common/cmd_disk.o
+[ALL  ]   CC      common/autoboot.o
+[ALL  ]   LD      drivers/net/built-in.o
+[ALL  ]   CC      common/board_f.o
+[ALL  ]   CC      common/board_r.o
+[ALL  ]   CC      drivers/net/phy/phy.o
+[ALL  ]   CC      drivers/net/phy/marvell.o
+[ALL  ]   CC      common/cmd_boot.o
+[ALL  ]   CC      common/cmd_bootm.o
+[ALL  ]   CC      common/bootm.o
+[ALL  ]   LD      drivers/net/phy/built-in.o
+[ALL  ]   LD      drivers/pci/built-in.o
+[ALL  ]   CC      common/bootm_os.o
+[ALL  ]   CC      common/cmd_help.o
+[ALL  ]   CC      common/cmd_version.o
+[ALL  ]   CC      common/env_attr.o
+[ALL  ]   CC      common/env_callback.o
+[ALL  ]   CC      common/env_flags.o
+[ALL  ]   CC      common/env_sf.o
+[ALL  ]   CC      common/cmd_source.o
+[ALL  ]   CC      common/cmd_bdinfo.o
+[ALL  ]   CC      common/cmd_cache.o
+[ALL  ]   CC      common/cmd_clk.o
+[ALL  ]   CC      common/cmd_console.o
+[ALL  ]   CC      common/cmd_echo.o
+[ALL  ]   CC      common/cmd_exit.o
+[ALL  ]   CC      common/cmd_ext2.o
+[ALL  ]   CC      common/cmd_fat.o
+[ALL  ]   CC      common/cmd_fdt.o
+[ALL  ]   CC      common/fdt_support.o
+[ALL  ]   CC      common/cmd_fpga.o
+[ALL  ]   CC      common/cmd_itest.o
+[ALL  ]   CC      common/cmd_load.o
+[ALL  ]   CC      common/cmd_mem.o
+[ALL  ]   CC      common/miiphyutil.o
+[ALL  ]   CC      common/cmd_misc.o
+[ALL  ]   CC      common/cmd_mmc.o
+[ALL  ]   CC      common/cmd_net.o
+[ALL  ]   CC      common/cmd_pcmcia.o
+[ALL  ]   CC      common/cmd_sf.o
+[ALL  ]   CC      common/cmd_spi.o
+[ALL  ]   CC      common/cmd_test.o
+[ALL  ]   CC      common/cmd_ximg.o
+[ALL  ]   CC      common/flash.o
+[ALL  ]   CC      common/splash.o
+[ALL  ]   CC      common/cmd_nvedit.o
+[ALL  ]   CC      common/env_common.o
+[ALL  ]   CC      common/console.o
+[ALL  ]   CC      common/dlmalloc.o
+[ALL  ]   CC      common/image.o
+[ALL  ]   CC      common/image-fdt.o
+[ALL  ]   CC      common/image-fit.o
+[ALL  ]   CC      common/memsize.o
+[ALL  ]   CC      common/stdio.o
+[ALL  ]   LD      drivers/power/built-in.o
+[ALL  ]   LD      drivers/power/battery/built-in.o
+[ALL  ]   LD      drivers/power/fuel_gauge/built-in.o
+[ALL  ]   LD      drivers/power/mfd/built-in.o
+[ALL  ]   LD      drivers/power/pmic/built-in.o
+[ALL  ]   CC      drivers/serial/serial.o
+[ALL  ]   CC      drivers/spi/spi.o
+[ALL  ]   LD      common/built-in.o
+[ALL  ]   LD      drivers/usb/eth/built-in.o
+[ALL  ]   CC      drivers/spi/zynq_qspi.o
+[ALL  ]   CC      drivers/serial/serial_zynq.o
+[ALL  ]   LD      drivers/usb/gadget/built-in.o
+[ALL  ]   LD      drivers/usb/host/built-in.o
+[ALL  ]   LD      drivers/serial/built-in.o
+[ALL  ]   LD      drivers/usb/musb/built-in.o
+[ALL  ]   LD      drivers/usb/phy/built-in.o
+[ALL  ]   LD      drivers/usb/ulpi/built-in.o
+[ALL  ]   LD      drivers/spi/built-in.o
+[ALL  ]   CC      fs/fs.o
+[ALL  ]   LD      drivers/usb/musb-new/built-in.o
+[ALL  ]   CC      lib/libfdt/fdt.o
+[ALL  ]   CC      lib/zlib/zlib.o
+[ALL  ]   CC      fs/ext4/ext4fs.o
+[ALL  ]   CC      lib/libfdt/fdt_ro.o
+[ALL  ]   CC      fs/ext4/ext4_common.o
+[ALL  ]   CC      lib/libfdt/fdt_rw.o
+[ALL  ]   CC      fs/ext4/dev.o
+[ALL  ]   LD      lib/zlib/built-in.o
+[ALL  ]   CC      lib/crc7.o
+[ALL  ]   CC      lib/crc8.o
+[ALL  ]   CC      lib/libfdt/fdt_strerror.o
+[ALL  ]   CC      lib/crc16.o
+[ALL  ]   LD      fs/ext4/built-in.o
+[ALL  ]   CC      lib/libfdt/fdt_sw.o
+[ALL  ]   CC      fs/fat/fat_write.o
+[ALL  ]   CC      lib/fdtdec_common.o
+[ALL  ]   CC      lib/gunzip.o
+[ALL  ]   CC      lib/libfdt/fdt_wip.o
+[ALL  ]   CC      lib/initcall.o
+[ALL  ]   CC      lib/libfdt/fdt_empty_tree.o
+[ALL  ]   CC      lib/lmb.o
+[ALL  ]   LD      lib/libfdt/built-in.o
+[ALL  ]   CC      net/arp.o
+[ALL  ]   CC      lib/ldiv.o
+[ALL  ]   CC      net/bootp.o
+[ALL  ]   CC      lib/md5.o
+[ALL  ]   CC      net/eth.o
+[ALL  ]   CC      lib/net_utils.o
+[ALL  ]   CC      lib/qsort.o
+[ALL  ]   CC      net/net.o
+[ALL  ]   CC      lib/sha1.o
+[ALL  ]   CC      fs/fat/file.o
+[ALL  ]   LD      fs/fat/built-in.o
+[ALL  ]   LD      fs/built-in.o
+[ALL  ]   LD      test/built-in.o
+[ALL  ]   CC      net/nfs.o
+[ALL  ]   LD      test/dm/built-in.o
+[ALL  ]   CC      net/ping.o
+[ALL  ]   CC      lib/sha256.o
+[ALL  ]   CC      net/tftp.o
+[ALL  ]   CC      lib/strmhz.o
+[ALL  ]   LD      net/built-in.o
+[ALL  ]   CC      lib/hashtable.o
+[ALL  ]   CC      lib/errno.o
+[ALL  ]   CC      lib/display_options.o
+[ALL  ]   CC      lib/crc32.o
+[ALL  ]   CC      lib/ctype.o
+[ALL  ]   CC      lib/div64.o
+[ALL  ]   CC      lib/hang.o
+[ALL  ]   CC      lib/linux_string.o
+[ALL  ]   CC      lib/string.o
+[ALL  ]   CC      lib/time.o
+[ALL  ]   CC      lib/vsprintf.o
+[ALL  ]   LD      lib/built-in.o
+[ALL  ]   CC      examples/standalone/stubs.o
+[ALL  ]   CC      examples/standalone/hello_world.o
+[ALL  ]   LD      examples/standalone/libstubs.o
+[ALL  ]   LD      examples/standalone/hello_world
+[ALL  ]   OBJCOPY examples/standalone/hello_world.srec
+[ALL  ]   OBJCOPY examples/standalone/hello_world.bin
+[ALL  ]   LD      u-boot
+[ALL  ]   OBJCOPY u-boot.srec
+[ALL  ]   OBJCOPY u-boot.bin
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=zynq_fsbl; 		sbuild=bootloader/zynq_fsbl; 	else 		sinstance=bootloader; 		sbuild=bootloader; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] rsync -a "/home/steven/Desktop/LINUX_SNES/components/bootloader/zynq_fsbl/" "/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/"
+[INFO ] build zynq_fsbl
+[ALL  ] make -C zynq_fsbl all || exit 255
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl'
+[ALL  ] make -C zynq_fsbl_bsp
+[ALL  ] make[3]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/devcfg_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_2/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_2/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/emacps_v2_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/emacps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/emacps_v2_2/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/emacps_v2_2/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/iicps_v2_3/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/iicps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/iicps_v2_3/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/iicps_v2_3/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/qspips_v3_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/qspips_v3_1/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/qspips_v3_1/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/scugic_v2_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/scugic_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scugic_v2_1/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scugic_v2_1/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_0/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/scutimer_v2_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_0/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_0/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_0/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/scuwdt_v2_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_0/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_0/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/sdps_v2_3/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/sdps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/sdps_v2_3/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/sdps_v2_3/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/standalone_v4_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/standalone_v4_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v4_2/src'
+[ALL  ] make[5]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v4_2/src/profile'
+[ALL  ] make[5]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v4_2/src/profile'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v4_2/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/uartps_v2_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/uartps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/uartps_v2_2/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/uartps_v2_2/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/usbps_v2_2/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/usbps_v2_2/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/xadcps_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_1/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_1/src'
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/xilffs_v2_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/xilffs_v2_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] Running Make include in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilrsa_v1_1/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilrsa_v1_1/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src'
+[ALL  ] Compiling AXIinterfacefor65816...
+[ALL  ] arm-xilinx-eabi-ar: creating ../../../lib/libxil.a
+[ALL  ] make[5]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src'
+[ALL  ] make[5]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/axiinterfacefor65816_v1_0/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src'
+[ALL  ] Compiling cpu_cortexa9
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_1/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/devcfg_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_2/src'
+[ALL  ] Compiling devcfg
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/devcfg_v3_2/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/dmaps_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+[ALL  ] Compiling dmaps
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/dmaps_v2_1/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/emacps_v2_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/emacps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/emacps_v2_2/src'
+[ALL  ] Compiling emacps
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/emacps_v2_2/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/iicps_v2_3/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/iicps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/iicps_v2_3/src'
+[ALL  ] Compiling iicps
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/iicps_v2_3/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/qspips_v3_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/qspips_v3_1/src'
+[ALL  ] Compiling qspips
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/qspips_v3_1/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/scugic_v2_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/scugic_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scugic_v2_1/src'
+[ALL  ] Compiling scugic
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scugic_v2_1/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_0/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/scutimer_v2_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_0/src'
+[ALL  ] Compiling scutimer
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scutimer_v2_0/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_0/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/scuwdt_v2_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_0/src'
+[ALL  ] Compiling scuwdt
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/scuwdt_v2_0/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/sdps_v2_3/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/sdps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/sdps_v2_3/src'
+[ALL  ] Compiling sdps
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/sdps_v2_3/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/standalone_v4_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/standalone_v4_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v4_2/src'
+[ALL  ] Compiling standalone
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/standalone_v4_2/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/uartps_v2_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/uartps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/uartps_v2_2/src'
+[ALL  ] Compiling uartps
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/uartps_v2_2/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/usbps_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/usbps_v2_2/src'
+[ALL  ] Compiling usbps
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/usbps_v2_2/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/xadcps_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_1/src'
+[ALL  ] Compiling xadcps
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xadcps_v2_1/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/xilffs_v2_2/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/xilffs_v2_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilffs_v2_2/src'
+[ALL  ] Compiling XilFFs Library
+[ALL  ] Creating archive libxilffs.a
+[ALL  ] make[5]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilffs_v2_2/src'
+[ALL  ] make[5]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilffs_v2_2/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilffs_v2_2/src'
+[ALL  ] Running Make libs in ps7_cortexa9_0/libsrc/xilrsa_v1_1/src
+[ALL  ] make -C ps7_cortexa9_0/libsrc/xilrsa_v1_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-xilinx-eabi-gcc" "ARCHIVER=arm-xilinx-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-g"
+[ALL  ] make[4]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilrsa_v1_1/src'
+[ALL  ] make[4]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp/ps7_cortexa9_0/libsrc/xilrsa_v1_1/src'
+[ALL  ] Finished building libraries
+[ALL  ] make[3]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/zynq_fsbl_bsp'
+[ALL  ] arm-xilinx-eabi-gcc   -c fsbl_hooks.c -o fsbl_hooks.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c image_mover.c -o image_mover.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c main.c -o main.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c md5.c -o md5.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c nand.c -o nand.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c nor.c -o nor.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c pcap.c -o pcap.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c ps7_init.c -o ps7_init.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c qspi.c -o qspi.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c rsa.c -o rsa.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c sd.c -o sd.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc   -c fsbl_handoff.S -o fsbl_handoff.o -Izynq_fsbl_bsp/ps7_cortexa9_0/include -I.
+[ALL  ] arm-xilinx-eabi-gcc -o executable.elf  fsbl_hooks.o  image_mover.o  main.o  md5.o  nand.o  nor.o  pcap.o  ps7_init.o  qspi.o  rsa.o  sd.o  fsbl_handoff.o    -lrsa -Wl,--start-group,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lxilffs,-lxil,-lgcc,-lc,--end-group -Wl,--start-group,-lrsa,-lxil,-lgcc,-lc,--end-group  -Wl,--gc-sections -Lzynq_fsbl_bsp/ps7_cortexa9_0/lib -L./ -Tlscript.ld
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl'
+[ALL  ] rsync -a zynq_fsbl/executable.elf /home/steven/Desktop/LINUX_SNES/images/linux/zynq_fsbl.elf
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=petalinux-rootfs; 		sbuild=rootfs/petalinux-rootfs; 	else 		sinstance=rootfs; 		sbuild=rootfs; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=plnx-repo; 		sbuild=packages-repo/plnx-repo; 	else 		sinstance=packages-repo; 		sbuild=packages-repo; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] ./scan-architecture.sh -march=armv7-a -mfpu=neon -mfloat-abi=softfp -mthumb-interwork -mtune=cortex-a9
+[ALL  ] armv7a-vfp-neon
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/preferences.d
+[ALL  ] cp /opt/petalinux/petalinux-v2014.4-final/components/packages-repo/config/apt.conf.template /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#ROOTFS#%/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#ROOTFS_CONF#%/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#HOSTFS#%/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#HOSTBIN#%/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#ARCH#%armv7a-vfp-neon%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] cp -f /opt/petalinux/petalinux-v2014.4-final/components/packages-repo/config/preferences.template /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/preferences.d/preferences
+[ALL  ] cp -f /opt/petalinux/petalinux-v2014.4-final/components/packages-repo/config/sources.list.template /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/sources.list
+[ALL  ] sed s%#CACHELOCAL#%/opt/petalinux/petalinux-v2014.4-final/components/packages-repo/plnx-repo%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/sources.list
+[INFO ] Setting up stage config
+[ALL  ] ./scan-architecture.sh -march=armv7-a -mfpu=neon -mfloat-abi=softfp -mthumb-interwork -mtune=cortex-a9
+[ALL  ] armv7a-vfp-neon
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/preferences.d
+[ALL  ] cp /opt/petalinux/petalinux-v2014.4-final/components/packages-repo/config/apt.conf.template /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#ROOTFS#%/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#ROOTFS_CONF#%/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#HOSTFS#%/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#HOSTBIN#%/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] sed s%#ARCH#%armv7a-vfp-neon%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d/apt.conf
+[ALL  ] cp -f /opt/petalinux/petalinux-v2014.4-final/components/packages-repo/config/preferences.template /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/preferences.d/preferences
+[ALL  ] cp -f /opt/petalinux/petalinux-v2014.4-final/components/packages-repo/config/sources.list.template /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/sources.list
+[ALL  ] sed s%#CACHELOCAL#%/opt/petalinux/petalinux-v2014.4-final/components/packages-repo/plnx-repo%g -i /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/sources.list
+[INFO ] Setting up rootfs config
+[INFO ] Updating for armv7a-vfp-neon
+[INFO ] Updating package manager
+[ALL  ] PATH=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/usr/bin:/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/usr/sbin:/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/bin:/usr/bin:/bin APT_CONFIG=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf LD_LIBRARY_PATH=/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/lib:/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/lib/libfakeroot D=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage OPKG_OFFLINE_ROOT=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage IPKG_OFFLINE_ROOT=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage /opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/bin/fakeroot apt-get update || exit 255
+[ALL  ] Ign file: default Release.gpg
+[ALL  ] Ign file:/opt/petalinux/petalinux-v2014.4-final/components/packages-repo/plnx-repo/ default/main Translation-en
+[ALL  ] Ign file:/opt/petalinux/petalinux-v2014.4-final/components/packages-repo/plnx-repo/ default/main Translation-en_US
+[ALL  ] Ign file: default Release
+[ALL  ] Ign file: default/main armv7a-vfp-neon Packages
+[ALL  ] Ign file: default/main armv7a-vfp-neon Packages
+[ALL  ] Reading package lists...
+[ALL  ] PATH=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/usr/bin:/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/usr/sbin:/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/bin:/usr/bin:/bin APT_CONFIG=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.targetroot.apt/etc/apt/apt.conf.d/apt.conf LD_LIBRARY_PATH=/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/lib:/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/lib/libfakeroot D=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot OPKG_OFFLINE_ROOT=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot IPKG_OFFLINE_ROOT=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot /opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/bin/fakeroot apt-get update || exit 255
+[ALL  ] Ign file: default Release.gpg
+[ALL  ] Ign file:/opt/petalinux/petalinux-v2014.4-final/components/packages-repo/plnx-repo/ default/main Translation-en
+[ALL  ] Ign file:/opt/petalinux/petalinux-v2014.4-final/components/packages-repo/plnx-repo/ default/main Translation-en_US
+[ALL  ] Ign file: default Release
+[ALL  ] Ign file: default/main armv7a-vfp-neon Packages
+[ALL  ] Ign file: default/main armv7a-vfp-neon Packages
+[ALL  ] Reading package lists...
+[INFO ] Expanding stagefs
+[ALL  ] echo "########PACKAGES_DEV=busybox-dev init-ifupdown-dev base-files-dev sysvinit-dev initscripts-dev netbase-dev libc6-dev modutils-initscripts-dev update-rc.d-dev mtd-utils-dev sysvinit-inittab-dev base-passwd-dev  busybox gdbserver init-ifupdown base-files initscripts-functions busybox-inetd sysvinit-pidof sysvinit libgcc-s1 initscripts busybox-mdev netbase busybox-udhcpc libc6 modutils-initscripts update-rc.d mtd-utils sysvinit-inittab update-alternatives-opkg base-passwd linux-libc-headers libgcc-s-dev libstdc++-dev"
+[ALL  ] ########PACKAGES_DEV=busybox-dev init-ifupdown-dev base-files-dev sysvinit-dev initscripts-dev netbase-dev libc6-dev modutils-initscripts-dev update-rc.d-dev mtd-utils-dev sysvinit-inittab-dev base-passwd-dev  busybox gdbserver init-ifupdown base-files initscripts-functions busybox-inetd sysvinit-pidof sysvinit libgcc-s1 initscripts busybox-mdev netbase busybox-udhcpc libc6 modutils-initscripts update-rc.d mtd-utils sysvinit-inittab update-alternatives-opkg base-passwd linux-libc-headers libgcc-s-dev libstdc++-dev
+[ALL  ] PATH=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/usr/bin:/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/usr/sbin:/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/bin:/usr/bin:/bin APT_CONFIG=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/.stage.apt/etc/apt/apt.conf.d/apt.conf LD_LIBRARY_PATH=/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/lib:/opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/lib/libfakeroot D=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage OPKG_OFFLINE_ROOT=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage IPKG_OFFLINE_ROOT=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage /opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/bin/fakeroot apt-get install busybox-dev init-ifupdown-dev base-files-dev sysvinit-dev initscripts-dev netbase-dev libc6-dev modutils-initscripts-dev update-rc.d-dev mtd-utils-dev sysvinit-inittab-dev base-passwd-dev  busybox gdbserver init-ifupdown base-files initscripts-functions busybox-inetd sysvinit-pidof sysvinit libgcc-s1 initscripts busybox-mdev netbase busybox-udhcpc libc6 modutils-initscripts update-rc.d mtd-utils sysvinit-inittab update-alternatives-opkg base-passwd linux-libc-headers libgcc-s-dev libstdc++-dev --force-yes --allow-unauthenticated || exit 255
+[ALL  ] Reading package lists...
+[ALL  ] Building dependency tree...
+[ALL  ] The following extra packages will be installed:
+[ALL  ]   glibc-extra-nss libcidn1 libstdc++6 libthread-db1
+[ALL  ] The following NEW packages will be installed:
+[ALL  ]   base-files base-files-dev base-passwd base-passwd-dev busybox busybox-dev
+[ALL  ]   busybox-inetd busybox-mdev busybox-udhcpc gdbserver glibc-extra-nss
+[ALL  ]   init-ifupdown init-ifupdown-dev initscripts initscripts-dev
+[ALL  ]   initscripts-functions libc6 libc6-dev libcidn1 libgcc-s-dev libgcc-s1
+[ALL  ]   libstdc++-dev libstdc++6 libthread-db1 linux-libc-headers
+[ALL  ]   modutils-initscripts modutils-initscripts-dev mtd-utils mtd-utils-dev
+[ALL  ]   netbase netbase-dev sysvinit sysvinit-dev sysvinit-inittab
+[ALL  ]   sysvinit-inittab-dev sysvinit-pidof update-alternatives-opkg update-rc.d
+[ALL  ]   update-rc.d-dev
+[ALL  ] 0 upgraded, 39 newly installed, 0 to remove and 0 not upgraded.
+[ALL  ] Need to get 0 B/6,053 kB of archives.
+[ALL  ] After this operation, 0 B of additional disk space will be used.
+[WARN ] WARNING: The following packages cannot be authenticated!
+[ALL  ]   base-files base-files-dev base-passwd base-passwd-dev
+[ALL  ]   update-alternatives-opkg libc6 busybox busybox-dev busybox-inetd
+[ALL  ]   busybox-mdev busybox-udhcpc libgcc-s1 gdbserver glibc-extra-nss netbase
+[ALL  ]   init-ifupdown init-ifupdown-dev initscripts-functions initscripts
+[ALL  ]   initscripts-dev libthread-db1 libcidn1 libc6-dev libgcc-s-dev libstdc++6
+[ALL  ]   libstdc++-dev linux-libc-headers modutils-initscripts
+[ALL  ]   modutils-initscripts-dev mtd-utils mtd-utils-dev netbase-dev sysvinit-pidof
+[ALL  ]   sysvinit-inittab sysvinit sysvinit-dev sysvinit-inittab-dev update-rc.d
+[ALL  ]   update-rc.d-dev
+[ALL  ] Authentication warning overridden.
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/bin/dpkg: error while loading shared libraries: libselinux.so.1: cannot open shared object file: No such file or directory
+[ERROR] E: Sub-process /opt/petalinux/petalinux-v2014.4-final/tools/packagemanager/bin/dpkg returned an error code (127)
+[ERROR] make[2]: *** [.pkg_stagefs] Error 255
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ERROR] make[1]: *** [sub_build_component_/none/packages-repo/single/plnx-repo] Error 2
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] make: *** [sub_build_component_/none/rootfs/single/petalinux-rootfs] Error 2
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'

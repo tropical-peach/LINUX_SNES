@@ -1,0 +1,147 @@
+#
+# This page is used to upgrade the firmware
+#
+label "Firmware Upgrade"
+
+title "Firmware Upgrade"
+
+summary {Upgrades system firmware}
+
+help {
+	This page allows the system firmware to be updated by uploading an
+	image file from your web browser.
+
+	Select the file to upgrade and press the <b>Upgrade</b> button.
+
+	This may take some time, and power should not be removed during this time.
+}
+
+# This page is in edit mode by default
+setmode edit
+storage none
+
+init {
+	package require petalinux
+	package require javascript
+
+	set PIDFILE [root]/var/run/upgrading.pid
+
+	# Is the upgrade process running?
+	set upgrading [pid_alive $PIDFILE]
+
+	proc disable_if_upgrading {} {
+		if {$::upgrading} {
+			cgi addattrs disabled
+		}
+	}
+}
+
+text firmware_intro {
+	str {<div class="infobox"><b>Warning:</b> Do not disconnect power while the upgrade is in progress</div>}
+}
+
+# Display the upgrading status
+text {
+	display {
+		if {$upgrading} {
+			html eval div class=warningmsg {
+				html str h2 id=upgradeheader Upgrading
+				html eval table id=upgrade {
+					html eval tr {
+						html str td id=done width=0% {}
+						html str td id=togo width=100% {}
+					}
+				}
+				html str p id=upgradestatus "Waiting for upgrade to begin"
+			}
+			javascript script {
+				var first = 0;
+				/* This device takes 20 seconds to reboot */
+				var reboottimeout = 20;
+
+				upgrade_get_status();
+			}
+		}
+	}
+}
+
+field systemversion {
+	label "System Version"
+	editmode readonly
+	display -tcl {
+		set version [readfile /etc/version ?]
+		# Clean it up a little
+		set version [join [lrange $version 1 2] ", "]
+		cgi set $field $version
+	}
+}
+
+field kernelversion {
+	label "Kernel Version"
+	editmode readonly
+	display -tcl {
+		set version [readfile /proc/version]
+		cgi set $field [lindex $version 2]
+	}
+}
+
+field webversion {
+	label "Web Version"
+	editmode readonly
+	default "[env VERSION unknown]"
+}
+
+upload file {
+	label "Firmware to upload"
+	help {Browse for the firmware image to use to upgrade}
+	display {
+		disable_if_upgrading
+	}
+}
+
+button upgrade {
+	label Upgrade
+	display {
+		disable_if_upgrading
+	}
+	submit {
+		set len [cgi file length file]
+		if {$len == 0} {
+			cgi error "Doesn't look like a valid image"
+			return
+		}
+
+		if {![string match *.tar.gz [cgi file name file]} {
+			cgi error "Image type not recognised"
+			return
+		}
+
+		cgi file save file /tmp/upgrade.tar.gz
+
+		# Any options needed for upgrade-firmware
+		set opts {}
+		lappend opts -tmp -web [cgi getenv SERVER_PORT]
+
+		# Now open a pipe and exec the firmware upgrade script
+		lassign [socket pipe] r w
+
+		set pid [exec /bin/upgrade-firmware {*}$opts /tmp/upgrade.tar.gz </dev/null 2>>/var/log/upgrade.log >@$w &]
+		writefile $PIDFILE $pid
+
+		# Must close $w after exec
+		$w close
+
+		# Now read the response. The first line will start with Usage:, Error: or Updating:
+		set buf "upgrade-firmware failed"
+		gets $r buf
+		if {[string match "Updating:*" $buf]} {
+			# If we can't provide progress or something goes wrong,
+			# at least do a page refresh when the firmware upgrade should be complete.
+			# About 45 seconds for the upgrade and 20 seconds for the reboot
+			cgi http header Refresh 70
+			set upgrading 1
+		} else {
+			cgi error $buf
+		}
+	}
+}

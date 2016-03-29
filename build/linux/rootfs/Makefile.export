@@ -1,0 +1,7 @@
+ROOTFS=linux/rootfs
+ROOTFS_CONFIG=$(PROOT)/subsystems/linux/configs/rootfs/config
+TARGETDIR=$(PROOT)/build/$(ROOTFS)/targetroot
+TARGETINST=$(PETALINUX)/components/rootfs/targetroot-inst.sh
+STAGEDIR=$(PROOT)/build/$(ROOTFS)/stage
+ROOTFS_CONFIG_CHANGED=$(PROOT)/build/$(ROOTFS)/config_checksum
+

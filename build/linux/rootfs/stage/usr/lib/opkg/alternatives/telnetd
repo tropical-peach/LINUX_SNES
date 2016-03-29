@@ -1,0 +1,2 @@
+/sbin/telnetd
+/bin/busybox.nosuid 50

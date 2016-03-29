@@ -1,0 +1,1 @@
+cmd_drivers/usb/gadget/legacy/g_zero.ko := arm-xilinx-linux-gnueabi-ld -EL -r  -T /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/module-common.lds --build-id  -o drivers/usb/gadget/legacy/g_zero.ko drivers/usb/gadget/legacy/g_zero.o drivers/usb/gadget/legacy/g_zero.mod.o

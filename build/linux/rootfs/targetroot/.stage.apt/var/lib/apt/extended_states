@@ -1,0 +1,16 @@
+Package: libstdc++6
+Architecture: armv7a-vfp-neon
+Auto-Installed: 1
+
+Package: libthread-db1
+Architecture: armv7a-vfp-neon
+Auto-Installed: 1
+
+Package: libcidn1
+Architecture: armv7a-vfp-neon
+Auto-Installed: 1
+
+Package: glibc-extra-nss
+Architecture: armv7a-vfp-neon
+Auto-Installed: 1
+

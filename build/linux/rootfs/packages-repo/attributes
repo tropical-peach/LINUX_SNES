@@ -1,0 +1,4 @@
+TYPE=packages-repo
+COMPONENT_FILE=Kconfig
+BUILD_FILE=Makefile scan-architecture.sh config Kconfig.defaults
+BUILD_ALL=build install

@@ -1,0 +1,23 @@
+
+config ROOTFS_ADVANCED_MODE
+	bool "Advanced Package Selection"
+	def_bool n
+	help
+	 Enable advanced package selection and management.
+
+config ROOTFS_BASE_SYSTEM_DEFAULT
+	bool "base-system-default"
+	select ROOTFS_PACKAGES_INIT_IFUPDOWN
+	select ROOTFS_PACKAGES_TINYLOGIN
+	select ROOTFS_PACKAGES_BUSYBOX
+	select ROOTFS_PACKAGES_MODUTILS_INITSCRIPTS
+	select ROOTFS_PACKAGES_INITSCRIPTS
+	select ROOTFS_PACKAGES_BUSYBOX_MDEV
+	select ROOTFS_PACKAGES_SYSVINIT
+	select ROOTFS_PACKAGES_NETBASE
+	select ROOTFS_PACKAGES_BASE_FILES
+	select ROOTFS_PACKAGES_BASE_PASSWD
+	select ROOTFS_PACKAGES_BUSYBOX_UDHCPC
+	default y
+	help
+	 Base System Image
