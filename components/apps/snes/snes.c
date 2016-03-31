@@ -63,6 +63,14 @@ int main(int argc, char *argv[])
 	reg_dbr 		= adress + 8 ;
 	
 	version_reg 	= adress + 31;
+	
+	*(adress + 11) =0xFFFFFFFF;
+		__asm__(
+				"nop;"
+				"nop;"
+			   );
+	printf("DATA READY SET HI\n");
+
 
 	*(adress + 8 ) =0x00000001;
 	*(adress + 8 ) =0x00000000; 

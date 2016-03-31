@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 30 19:15:46 2016" VIVADOVERSION="2014.4">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Mar 30 23:02:36 2016" VIVADOVERSION="2014.4">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo:part0:1.0" DEVICE="7z010" NAME="Interface_Master_BD_imp" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -25,6 +25,16 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef"/>
     <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef"/>
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef"/>
+    <PORT DIR="I" NAME="resetn" SIGIS="rst" SIGNAME="External_Ports_resetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="resetn"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="locked"/>
+      </CONNECTIONS>
+    </PORT>
   </EXTERNALPORTS>
 
   <MODULES>
@@ -222,7 +232,7 @@
         <PARAMETER NAME="C_CLKFB_IN_SIGNALING" VALUE="SINGLE"/>
         <PARAMETER NAME="C_USE_RESET" VALUE="1"/>
         <PARAMETER NAME="C_RESET_LOW" VALUE="1"/>
-        <PARAMETER NAME="C_USE_LOCKED" VALUE="0"/>
+        <PARAMETER NAME="C_USE_LOCKED" VALUE="1"/>
         <PARAMETER NAME="C_USE_INCLK_STOPPED" VALUE="0"/>
         <PARAMETER NAME="C_USE_CLKFB_STOPPED" VALUE="0"/>
         <PARAMETER NAME="C_USE_POWER_DOWN" VALUE="0"/>
@@ -291,7 +301,7 @@
         <PARAMETER NAME="C_CLKOUT6_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="C_CLKOUT7_DUTY_CYCLE" VALUE="50.000"/>
         <PARAMETER NAME="C_USE_SAFE_CLOCK_STARTUP" VALUE="1"/>
-        <PARAMETER NAME="C_USE_CLOCK_SEQUENCING" VALUE="0"/>
+        <PARAMETER NAME="C_USE_CLOCK_SEQUENCING" VALUE="1"/>
         <PARAMETER NAME="C_CLKOUT1_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="C_CLKOUT2_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="C_CLKOUT3_SEQUENCE_NUMBER" VALUE="1"/>
@@ -519,7 +529,7 @@
         <PARAMETER NAME="CLKFB_OUT_N_PORT" VALUE="clkfb_out_n"/>
         <PARAMETER NAME="PLATFORM" VALUE="UNKNOWN"/>
         <PARAMETER NAME="SUMMARY_STRINGS" VALUE="empty"/>
-        <PARAMETER NAME="USE_LOCKED" VALUE="false"/>
+        <PARAMETER NAME="USE_LOCKED" VALUE="true"/>
         <PARAMETER NAME="CALC_DONE" VALUE="empty"/>
         <PARAMETER NAME="USE_RESET" VALUE="true"/>
         <PARAMETER NAME="USE_POWER_DOWN" VALUE="false"/>
@@ -611,7 +621,7 @@
         <PARAMETER NAME="PLL_CLKOUT5_PHASE" VALUE="0.000"/>
         <PARAMETER NAME="RESET_TYPE" VALUE="ACTIVE_LOW"/>
         <PARAMETER NAME="USE_SAFE_CLOCK_STARTUP" VALUE="true"/>
-        <PARAMETER NAME="USE_CLOCK_SEQUENCING" VALUE="false"/>
+        <PARAMETER NAME="USE_CLOCK_SEQUENCING" VALUE="true"/>
         <PARAMETER NAME="CLKOUT1_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="CLKOUT2_SEQUENCE_NUMBER" VALUE="1"/>
         <PARAMETER NAME="CLKOUT3_SEQUENCE_NUMBER" VALUE="1"/>
@@ -664,9 +674,14 @@
             <CONNECTION INSTANCE="AXIinterfacefor65816_0" PORT="tru_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="resetn" SIGIS="rst" SIGNAME="rst_processing_system7_0_71M_peripheral_aresetn">
+        <PORT DIR="I" NAME="resetn" SIGIS="rst" SIGNAME="External_Ports_resetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="rst_processing_system7_0_71M" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="resetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="clk_wiz_0_locked">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="locked"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1458,11 +1473,10 @@
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" RIGHT="0" SIGIS="rst" SIGNAME="rst_processing_system7_0_71M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="clk_wiz_0" PORT="resetn"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ARESETN"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ARESETN"/>
-            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ARESETN"/>
             <CONNECTION INSTANCE="AXIinterfacefor65816_0" PORT="s00_axi_aresetn"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ARESETN"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ARESETN"/>
+            <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ARESETN"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -1497,11 +1511,11 @@
             <CONNECTION INSTANCE="clk_wiz_0" PORT="clk_in1"/>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ACLK"/>
             <CONNECTION INSTANCE="rst_processing_system7_0_71M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="AXIinterfacefor65816_0" PORT="s00_axi_aclk"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="S00_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="processing_system7_0_axi_periph" PORT="M01_ACLK"/>
-            <CONNECTION INSTANCE="AXIinterfacefor65816_0" PORT="s00_axi_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="150000000" DIR="O" NAME="FCLK1" SIGIS="CLK" SIGNAME="ps7_clockc_0_FCLK1">

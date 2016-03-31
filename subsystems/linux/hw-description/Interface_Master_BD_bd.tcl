@@ -148,13 +148,28 @@ proc create_root_design { parentCell } {
   set FIXED_IO [ create_bd_intf_port -mode Master -vlnv xilinx.com:display_processing_system7:fixedio_rtl:1.0 FIXED_IO ]
 
   # Create ports
+  set locked [ create_bd_port -dir O locked ]
+  set resetn [ create_bd_port -dir I -type rst resetn ]
 
   # Create instance: AXIinterfacefor65816_0, and set properties
   set AXIinterfacefor65816_0 [ create_bd_cell -type ip -vlnv rad-:user:AXIinterfacefor65816:2.5 AXIinterfacefor65816_0 ]
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.1 clk_wiz_0 ]
-  set_property -dict [ list CONFIG.CLKOUT1_DRIVES {BUFGCE} CONFIG.CLKOUT1_JITTER {245.835} CONFIG.CLKOUT1_PHASE_ERROR {242.683} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {71.6} CONFIG.CLKOUT2_DRIVES {BUFGCE} CONFIG.CLKOUT2_JITTER {392.994} CONFIG.CLKOUT2_PHASE_ERROR {242.683} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {7.16} CONFIG.CLKOUT2_USED {true} CONFIG.JITTER_SEL {Min_O_Jitter} CONFIG.NUM_OUT_CLKS {2} CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.USE_LOCKED {false} CONFIG.USE_SAFE_CLOCK_STARTUP {true}  ] $clk_wiz_0
+  set_property -dict [ list CONFIG.CLKIN1_JITTER_PS {100.0} \
+CONFIG.CLKOUT1_DRIVES {BUFGCE} CONFIG.CLKOUT1_JITTER {245.835} \
+CONFIG.CLKOUT1_PHASE_ERROR {242.683} CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {71.6} \
+CONFIG.CLKOUT2_DRIVES {BUFGCE} CONFIG.CLKOUT2_JITTER {392.994} \
+CONFIG.CLKOUT2_PHASE_ERROR {242.683} CONFIG.CLKOUT2_REQUESTED_OUT_FREQ {7.16} \
+CONFIG.CLKOUT2_USED {true} CONFIG.CLKOUT3_DRIVES {BUFGCE} \
+CONFIG.CLKOUT4_DRIVES {BUFGCE} CONFIG.CLKOUT5_DRIVES {BUFGCE} \
+CONFIG.CLKOUT6_DRIVES {BUFGCE} CONFIG.CLKOUT7_DRIVES {BUFGCE} \
+CONFIG.CLK_IN1_BOARD_INTERFACE {Custom} CONFIG.JITTER_SEL {Min_O_Jitter} \
+CONFIG.MMCM_CLKFBOUT_MULT_F {36.875} CONFIG.MMCM_CLKIN1_PERIOD {10.0} \
+CONFIG.MMCM_DIVCLK_DIVIDE {4} CONFIG.NUM_OUT_CLKS {2} \
+CONFIG.RESET_TYPE {ACTIVE_LOW} CONFIG.USE_CLOCK_SEQUENCING {true} \
+CONFIG.USE_LOCKED {true} CONFIG.USE_SAFE_CLOCK_STARTUP {true} \
+ ] $clk_wiz_0
 
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
@@ -420,10 +435,12 @@ CONFIG.PCW_WDT_PERIPHERAL_DIVISOR0 {1} CONFIG.PCW_WDT_PERIPHERAL_ENABLE {0} \
   # Create port connections
   connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins AXIinterfacefor65816_0/clk] [get_bd_pins clk_wiz_0/clk_out1]
   connect_bd_net -net clk_wiz_0_clk_out2 [get_bd_pins AXIinterfacefor65816_0/tru_clk] [get_bd_pins clk_wiz_0/clk_out2]
+  connect_bd_net -net clk_wiz_0_locked [get_bd_ports locked] [get_bd_pins clk_wiz_0/locked]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins AXIinterfacefor65816_0/s00_axi_aclk] [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0_axi_periph/ACLK] [get_bd_pins processing_system7_0_axi_periph/M00_ACLK] [get_bd_pins processing_system7_0_axi_periph/M01_ACLK] [get_bd_pins processing_system7_0_axi_periph/S00_ACLK] [get_bd_pins rst_processing_system7_0_71M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_processing_system7_0_71M/ext_reset_in]
+  connect_bd_net -net resetn_1 [get_bd_ports resetn] [get_bd_pins clk_wiz_0/resetn]
   connect_bd_net -net rst_processing_system7_0_71M_interconnect_aresetn [get_bd_pins processing_system7_0_axi_periph/ARESETN] [get_bd_pins rst_processing_system7_0_71M/interconnect_aresetn]
-  connect_bd_net -net rst_processing_system7_0_71M_peripheral_aresetn [get_bd_pins AXIinterfacefor65816_0/s00_axi_aresetn] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_71M/peripheral_aresetn]
+  connect_bd_net -net rst_processing_system7_0_71M_peripheral_aresetn [get_bd_pins AXIinterfacefor65816_0/s00_axi_aresetn] [get_bd_pins processing_system7_0_axi_periph/M00_ARESETN] [get_bd_pins processing_system7_0_axi_periph/M01_ARESETN] [get_bd_pins processing_system7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_processing_system7_0_71M/peripheral_aresetn]
 
   # Create address segments
   create_bd_addr_seg -range 0x10000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs AXIinterfacefor65816_0/S00_AXI/S00_AXI_reg] SEG_AXIinterfacefor65816_0_S00_AXI_reg

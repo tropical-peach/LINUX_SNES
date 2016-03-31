@@ -1,0 +1,3 @@
+petalinux-build -v -c rootfs/snes
+petalinux-build -v -c rootfs/snes -x install
+petalinux-build -v 
