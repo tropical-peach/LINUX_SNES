@@ -369,6 +369,7 @@ file /bin/upgrade-firmware /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/ta
 file /bin/busybox.nosuid /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/busybox.nosuid 755 0 0
 file /bin/busybox.suid /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/busybox.suid 4755 0 0
 file /bin/poke /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/poke 775 0 0
+file /bin/snes /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/bin/snes 775 0 0
 file /lib/libpthread-2.18.so /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/libpthread-2.18.so 755 0 0
 file /lib/modules/3.17.0-xilinx/modules.dep.bin /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.dep.bin 644 0 0
 file /lib/modules/3.17.0-xilinx/modules.builtin.bin /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/lib/modules/3.17.0-xilinx/modules.builtin.bin 644 0 0

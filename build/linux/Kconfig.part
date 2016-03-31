@@ -30,7 +30,7 @@ config SUBSYSTEM_AUTOCONFIG_U__BOOT
 
 endmenu
 
-source /home/steven/Desktop/LINUX_SNES/build/linux/Kconfig.syshw
+source ./Kconfig.syshw
 
 if !SUBSYSTEM_HARDWARE_AUTO
 choice
