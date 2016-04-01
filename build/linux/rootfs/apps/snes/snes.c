@@ -45,15 +45,13 @@ int main(int argc, char *argv[])
 	adress = mmap(0, getpagesize(), PROT_READ|PROT_WRITE, MAP_SHARED, file_des, base);
 	//	mmap to get the new address of the system in the hardawre
 
-	volatile unsigned int* reset_cntrl, d_bus, data_ready, addr_bus, em_and_ready, reg_a, reg_x, reg_y, reg_sp, reg_pc, reg_proc, reg_dbr, vpb, version_reg;
+	volatile unsigned int* reset_cntrl, d_bus, data_ready, addr_bus, emulation_sel, ready, reg_a, reg_x, reg_y, reg_sp, reg_pc, reg_proc, reg_dbr, vpb, version_reg, state_machine;
 
 	unsigned int ready_high = 0xFFFFFFFF;
+	unsigned int check_rdy = 0x00000002;
 
-	reset_cntrl 	= adress + 9 ;    
-	d_bus 			= adress + 10;
-	data_ready 		= adress + 11;
 	addr_bus 		= adress + 0 ;
-	em_and_ready  	= adress + 1 ;
+	emulation_sel  	= adress + 1 ;
 	reg_a 			= adress + 2 ;
 	reg_x			= adress + 3 ;
 	reg_y 			= adress + 4 ;
@@ -61,10 +59,16 @@ int main(int argc, char *argv[])
 	reg_pc 			= adress + 6 ;
 	reg_proc 		= adress + 7 ;	
 	reg_dbr 		= adress + 8 ;
+	state_machine 	= adress + 9 ;    
+	ready 			= adress + 10;
+	d_bus 			= adress + 11;
+	data_ready 		= adress + 12;
+
 	
 	version_reg 	= adress + 31;
 	
-	*(adress + 11) =0xFFFFFFFF;
+
+	*(adress + 12) =ready_high;
 		__asm__(
 				"nop;"
 				"nop;"
@@ -72,14 +76,6 @@ int main(int argc, char *argv[])
 	printf("DATA READY SET HI\n");
 
 
-	*(adress + 8 ) =0x00000001;
-	*(adress + 8 ) =0x00000000; 
-
-	*(adress + 9 ) =0x00000001;
-    *(adress + 9 ) =0x00000000; 
-	
-	*(adress + 10 ) =0x00000001;
-	*(adress + 10 ) =0x00000000;
 
 	for (i = 0 ; i < 32 ; i++)
 	{
@@ -92,11 +88,12 @@ int main(int argc, char *argv[])
 				"nop;"
 				"nop;"
 			   );
-		printf("Chcking bitwise for ready... D_BUS \tResult: %x\n", (*(adress + 10) & ready_high));
-		printf("Chcking bitwise for ready... REG_DBR \tResult: %x\n", (*(adress + 8) & ready_high));
-		printf("Chcking bitwise for ready... RESET_CNTRL \tResult: %x\n", (*(adress + 9) & ready_high));
+		printf("STATE MACHINE : %i\n", state_machine);
+		printf("Chcking bitwise for ready... 'ready' \tResult: %x\n", (*(adress + 10) & ready_high));
+		printf("Chcking bitwise for ready... 'reg_dbr' \tResult: %x\n", (*(adress + 8) & ready_high));
+		printf("Chcking bitwise for ready...  'state_machine' \tResult: %x\n", (*(adress + 9) & ready_high));
 		sleep(10);
-	}while(em_and_ready && 0x00000002);
+	}while(*(adress + 10) & check_rdy);
 
 	printf("VERSION REGISTER : %x \n", (version_reg));
 

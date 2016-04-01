@@ -49539,8 +49539,8 @@
 40649fcc t __irf_start
 40649fcc T __security_initcall_end
 40649fcc T __security_initcall_start
-4099c3c3 t __irf_end
-4099c3c8 T __initramfs_size
+4099c2cc t __irf_end
+4099c2d0 T __initramfs_size
 4099d000 D __per_cpu_load
 4099d000 D __per_cpu_start
 4099d000 d cpu_loops_per_jiffy
