@@ -1,8 +1,33 @@
 /*
- * Placeholder PetaLinux user application.
+ *		
+ *	  ████████ ████     ██ ████████  ████████
+ *	 ██░░░░░░ ░██░██   ░██░██░░░░░  ██░░░░░░ 
+ *	░██       ░██░░██  ░██░██      ░██       
+ *	░█████████░██ ░░██ ░██░███████ ░█████████
+ *	░░░░░░░░██░██  ░░██░██░██░░░░  ░░░░░░░░██
+ *		   ░██░██   ░░████░██             ░██
+ *	 ████████ ░██    ░░███░████████ ████████ 
+ *	░░░░░░░░  ░░      ░░░ ░░░░░░░░ ░░░░░░░░  
  *
- * Replace this with your application code
+ *
+ *
+ *
+ *	 ███████   ███████   ██ ██      ██ ████████ ███████  
+ *	░██░░░░██ ░██░░░░██ ░██░██     ░██░██░░░░░ ░██░░░░██ 
+ *	░██    ░██░██   ░██ ░██░██     ░██░██      ░██   ░██ 
+ *	░██    ░██░███████  ░██░░██    ██ ░███████ ░███████  
+ *	░██    ░██░██░░░██  ░██ ░░██  ██  ░██░░░░  ░██░░░██  
+ *	░██    ██ ░██  ░░██ ░██  ░░████   ░██      ░██  ░░██ 
+ *	░███████  ░██   ░░██░██   ░░██    ░████████░██   ░░██
+ *	░░░░░░░   ░░     ░░ ░░     ░░     ░░░░░░░░ ░░     ░░ 
+ * 
  */
+ 
+ 
+ 
+ 
+ 
+ 
 #include <stdint.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -17,9 +42,51 @@
 
 
 #define base 0x43C00000 
+#define BUF_SIZE 32
 
+#define addr_bus 		(adress + 0 ) 
+#define emulation_sel	(adress + 1 )
+#define reg_a 			(adress + 2 )
+#define reg_x			(adress + 3 )
+#define reg_y 			(adress + 4 )
+#define reg_sp 			(adress + 5 )
+#define reg_pc 			(adress + 6 )
+#define reg_proc 		(adress + 7 )
+#define reg_dbr 		(adress + 8 )
+#define state_machine	(adress + 9 )
+#define ready 			(adress + 10)
+#define d_bus 			(adress + 11)
+#define data_ready 		(adress + 12)
+#define version_reg 	(adress + 31)             
+                                    
+                         
+//
+// ███████         ██             ██   ██   ██                         
+//░██░░░░██       ░░             ░░   ░██  ░░                          
+//░██   ░██ ██████ ██ ██████████  ██ ██████ ██ ██    ██  █████   ██████
+//░███████ ░░██░░█░██░░██░░██░░██░██░░░██░ ░██░██   ░██ ██░░░██ ██░░░░ 
+//░██░░░░   ░██ ░ ░██ ░██ ░██ ░██░██  ░██  ░██░░██ ░██ ░███████░░█████ 
+//░██       ░██   ░██ ░██ ░██ ░██░██  ░██  ░██ ░░████  ░██░░░░  ░░░░░██
+//░██      ░███   ░██ ███ ░██ ░██░██  ░░██ ░██  ░░██   ░░██████ ██████ 
+//░░       ░░░    ░░ ░░░  ░░  ░░ ░░    ░░  ░░    ░░     ░░░░░░ ░░░░░░  
+//
 void say_hi();
-unsigned int* read_from_all(volatile unsigned int *adr);
+void read_from_all(volatile unsigned int *adr);
+static char* binrep (unsigned int val, char *buff, int buffer_size); 
+
+
+
+
+//   ████████   ██          ██                 ██        
+//  ██░░░░░░██ ░██         ░██                ░██        
+// ██      ░░  ░██  ██████ ░██       ██████   ░██  ██████
+//░██          ░██ ██░░░░██░██████  ░░░░░░██  ░██ ██░░░░ 
+//░██    █████ ░██░██   ░██░██░░░██  ███████  ░██░░█████ 
+//░░██  ░░░░██ ░██░██   ░██░██  ░██ ██░░░░██  ░██ ░░░░░██
+// ░░████████  ███░░██████ ░██████ ░░████████ ███ ██████ 
+//  ░░░░░░░░  ░░░  ░░░░░░  ░░░░░    ░░░░░░░░ ░░░ ░░░░░░  
+//
+char binary_buffer[BUF_SIZE + 1];
 
 
 int main(int argc, char *argv[])
@@ -30,7 +97,6 @@ int main(int argc, char *argv[])
 	 *  kernel */
 
 
-	unsigned int *register_values;
 	int i;
 	int file_des = open("/dev/mem", O_RDWR|O_SYNC);
 	if (file_des < 0)  
@@ -45,30 +111,14 @@ int main(int argc, char *argv[])
 	adress = mmap(0, getpagesize(), PROT_READ|PROT_WRITE, MAP_SHARED, file_des, base);
 	//	mmap to get the new address of the system in the hardawre
 
-	volatile unsigned int* reset_cntrl, d_bus, data_ready, addr_bus, emulation_sel, ready, reg_a, reg_x, reg_y, reg_sp, reg_pc, reg_proc, reg_dbr, vpb, version_reg, state_machine;
 
 	unsigned int ready_high = 0xFFFFFFFF;
 	unsigned int check_rdy = 0x00000002;
 
-	addr_bus 		= adress + 0 ;
-	emulation_sel  	= adress + 1 ;
-	reg_a 			= adress + 2 ;
-	reg_x			= adress + 3 ;
-	reg_y 			= adress + 4 ;
-	reg_sp 			= adress + 5 ;
-	reg_pc 			= adress + 6 ;
-	reg_proc 		= adress + 7 ;	
-	reg_dbr 		= adress + 8 ;
-	state_machine 	= adress + 9 ;    
-	ready 			= adress + 10;
-	d_bus 			= adress + 11;
-	data_ready 		= adress + 12;
-
 	
-	version_reg 	= adress + 31;
-	
+	printf("VERSION REGISTER : %x \n", *(version_reg));
 
-	*(adress + 12) =ready_high;
+	*(data_ready) =ready_high;
 		__asm__(
 				"nop;"
 				"nop;"
@@ -88,44 +138,79 @@ int main(int argc, char *argv[])
 				"nop;"
 				"nop;"
 			   );
-		printf("STATE MACHINE : %i\n", state_machine);
-		printf("Chcking bitwise for ready... 'ready' \tResult: %x\n", (*(adress + 10) & ready_high));
-		printf("Chcking bitwise for ready... 'reg_dbr' \tResult: %x\n", (*(adress + 8) & ready_high));
-		printf("Chcking bitwise for ready...  'state_machine' \tResult: %x\n", (*(adress + 9) & ready_high));
-		sleep(10);
-	}while(*(adress + 10) & check_rdy);
+		printf("STATE MACHINE : %s\n", binrep(*(state_machine),binary_buffer, BUF_SIZE));
+		read_from_all(adress);
+		sleep(7);
+	}while( 1 );
 
-	printf("VERSION REGISTER : %x \n", (version_reg));
 
-	register_values = read_from_all(adress);
-
-	for (i = 0 ; i < 32 ; i++)
-	{
-		printf("REGISTER %i = %x \n",i, *(register_values+i));
-	}
-
-	
 	return 0;
 }
 
 
-/*	@ read_from_all
+/*	@ read_from_all:
  *		The purpose of this function is to 
  *		loop through all the registers
  *		and return an array of values that contains
  *		register contents at the time they were read
+ *
+ *	Input : Base Address of register set
+ *
+ *	Return :	N/A 
  */
-unsigned int* read_from_all(volatile unsigned int *adr) 
+void read_from_all(volatile unsigned int *adr) 
 {
 	unsigned int i;
-	static unsigned int read_values[32];
 	for (i = 0 ; i < 32 ; i++)
 	{
-		read_values[i] = *(adr + i);
+		printf("REGISTER %i = %s \n", i,\
+				binrep(*(adr + i), binary_buffer, BUF_SIZE));
+	}
+	
+	return;
+}
+
+
+/* 	@binrep:
+ *  Create a string of binary digits based on the input value.
+ *	Input: 
+ *		val:  value to convert.
+ *		buff: buffer to write to must be >= buffer_size+1 chars.
+ *		buffer_size:   size of buffer.
+ *	Returns : 
+ *		Address of string or NULL if not enough space provided.
+ */
+static char* binrep (unsigned int val, char *buff, int buffer_size) 
+{
+	char *pbuff = buff;
+
+	/* Must be able to store one character at least. */
+	if (buffer_size < 1) 
+		return NULL;
+
+	/* Special case for zero to ensure some output. */
+	if (val == 0) 
+	{
+		*pbuff++ = '0';
+		*pbuff = '\0';
+		return buff;
 	}
 
-	return (read_values);
+	/* Work from the end of the buffer back. */
+	pbuff += buffer_size;
+	*pbuff-- = '\0';
 
+	/* For each bit (going backwards) store character. */
+	while (val != 0) 
+	{
+		if (buffer_size-- == 0) return NULL;
+		*pbuff-- = ((val & 1) == 1) ? '1' : '0';
+
+		/* Get next bit. */
+		val >>= 1;
+	}
+
+	return pbuff+1;
 }
 
 
