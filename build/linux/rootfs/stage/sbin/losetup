@@ -1,1 +1,1 @@
-/bin/busybox.nosuid
+/sbin/losetup.util-linux

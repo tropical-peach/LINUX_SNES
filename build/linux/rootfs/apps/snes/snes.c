@@ -76,7 +76,6 @@ static char* binrep (unsigned int val, char *buff, int buffer_size);
 
 
 
-
 //   ████████   ██          ██                 ██        
 //  ██░░░░░░██ ░██         ░██                ░██        
 // ██      ░░  ░██  ██████ ░██       ██████   ░██  ██████
@@ -141,6 +140,11 @@ int main(int argc, char *argv[])
 		printf("STATE MACHINE : %s\n", binrep(*(state_machine),binary_buffer, BUF_SIZE));
 		read_from_all(adress);
 		sleep(7);
+
+	    puts( "\033[2J" );
+
+		sleep(5);
+
 	}while( 1 );
 
 

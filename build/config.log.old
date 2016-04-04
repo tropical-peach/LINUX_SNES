@@ -189,7 +189,7 @@ Copy final images to tftpboot (SUBSYSTEM_COPY_TO_TFTPBOOT) [Y/n/?]
 *
 Host name (SUBSYSTEM_HOSTNAME) [LINUX_SNES] 
 Product name (SUBSYSTEM_PRODUCT) [LINUX_SNES] 
-Firmware Version (SUBSYSTEM_FW_VERSION) [1.00] 
+Firmware Version (SUBSYSTEM_FW_VERSION) [1.5] 
 #
 # configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/config
 #
@@ -383,47 +383,10 @@ Copy final images to tftpboot (SUBSYSTEM_COPY_TO_TFTPBOOT) [Y/n/?]
 *
 Host name (SUBSYSTEM_HOSTNAME) [LINUX_SNES] 
 Product name (SUBSYSTEM_PRODUCT) [LINUX_SNES] 
-Firmware Version (SUBSYSTEM_FW_VERSION) [1.00] 
+Firmware Version (SUBSYSTEM_FW_VERSION) [1.5] 
 #
 # configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/config
 #
-[INFO ] generate DTS to /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/device-tree
-INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
-
-****** hsi v
-  **** SW Build 1071353 on Tue Nov 18 16:37:08 MST 2014
-    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
-
-INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
-source /opt/petalinux/petalinux-v2014.4-final/etc/hsm/scripts/petalinux_hsm_bridge.tcl -notrace
-WARNING: ps7_ethernet_0: No reset found
-WARNING: ps7_i2c_0: No reset found
-WARNING: ps7_usb_0: No reset found
-INFO: [Common 17-206] Exiting hsi at Thu Mar 31 00:26:48 2016...
-[INFO ] generate linux/u-boot board header files
-INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
-
-****** hsi v
-  **** SW Build 1071353 on Tue Nov 18 16:37:08 MST 2014
-    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
-
-INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
-source /opt/petalinux/petalinux-v2014.4-final/etc/hsm/scripts/petalinux_hsm_bridge.tcl -notrace
-INFO: [Common 17-206] Exiting hsi at Thu Mar 31 00:28:50 2016...
-[INFO ] generate BSP for zynq_fsbl
-INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
-
-****** hsi v
-  **** SW Build 1071353 on Tue Nov 18 16:37:08 MST 2014
-    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
-
-INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
-source /opt/petalinux/petalinux-v2014.4-final/etc/hsm/scripts/petalinux_hsm_bridge.tcl -notrace
-CRITICAL WARNING: [Hsi 55-1564] TCL file /home/steven/Desktop/65816_Interface_System/65816_Interface_System.ipdefs/Vivado_Custom_IP_Repo/AXIinterfacefor65816_1.0/drivers/AXIinterfacefor65816_v1_0/data/axiinterfacefor65816.tcl doesn't exist for driver axiinterfacefor65816
-CRITICAL WARNING: [Hsi 55-1564] TCL file /home/steven/Desktop/65816_Interface_System/65816_Interface_System.ipdefs/Vivado_Custom_IP_Repo/AXIinterfacefor65816_1.0/drivers/AXIinterfacefor65816_v1_0/data/axiinterfacefor65816.tcl doesn't exist for driver axiinterfacefor65816
-CRITICAL WARNING: [Hsi 55-1564] TCL file /home/steven/Desktop/65816_Interface_System/65816_Interface_System.ipdefs/Vivado_Custom_IP_Repo/AXIinterfacefor65816_1.0/drivers/AXIinterfacefor65816_v1_0/data/axiinterfacefor65816.tcl doesn't exist for driver axiinterfacefor65816
-CRITICAL WARNING: [Hsi 55-1564] TCL file /home/steven/Desktop/65816_Interface_System/65816_Interface_System.ipdefs/Vivado_Custom_IP_Repo/AXIinterfacefor65816_1.0/drivers/AXIinterfacefor65816_v1_0/data/axiinterfacefor65816.tcl doesn't exist for driver axiinterfacefor65816
-INFO: [Common 17-206] Exiting hsi at Thu Mar 31 00:30:54 2016...
 [INFO ] oldconfig linux/kernel
 #
 # configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config
@@ -492,7 +455,7 @@ libgcc-s1 (ROOTFS_PACKAGES_LIBGCC_S1) [Y/?] y
 libmemusage (ROOTFS_PACKAGES_LIBMEMUSAGE) [N/y/?] 
 libsegfault (ROOTFS_PACKAGES_LIBSEGFAULT) [N/y/?] 
 libsotruss (ROOTFS_PACKAGES_LIBSOTRUSS) [N/y/?] 
-libstdc++6 (ROOTFS_PACKAGES_LIBSTDCPLUSPLUS6) [N/y/?] 
+libstdc++6 (ROOTFS_PACKAGES_LIBSTDCPLUSPLUS6) [Y/?] y
 libthread-db1 (ROOTFS_PACKAGES_LIBTHREAD_DB1) [N/y/?] 
 linux-libc-headers (ROOTFS_PACKAGES_LINUX_LIBC_HEADERS) [N/y/?] 
 nscd (ROOTFS_PACKAGES_NSCD) [N/y/?] 
@@ -526,7 +489,7 @@ iptables (ROOTFS_PACKAGES_IPTABLES) [N/y/?]
 *
 kmod (ROOTFS_PACKAGES_KMOD) [N/y/?] 
 kmod-bash-completion (ROOTFS_PACKAGES_KMOD_BASH_COMPLETION) [N/y/?] 
-libkmod2 (ROOTFS_PACKAGES_LIBKMOD2) [N/y/?] 
+libkmod2 (ROOTFS_PACKAGES_LIBKMOD2) [Y/?] y
 *
 * libaio
 *
@@ -534,7 +497,7 @@ libaio1 (ROOTFS_PACKAGES_LIBAIO1) [N/y/?]
 *
 * libffi
 *
-libffi6 (ROOTFS_PACKAGES_LIBFFI6) [N/y/?] 
+libffi6 (ROOTFS_PACKAGES_LIBFFI6) [Y/?] y
 *
 * m4
 *
@@ -602,10 +565,10 @@ usbutils-ids (ROOTFS_PACKAGES_USBUTILS_IDS) [N/y/?]
 *
 * util-linux
 *
-libblkid1 (ROOTFS_PACKAGES_LIBBLKID1) [N/y/?] 
-libmount1 (ROOTFS_PACKAGES_LIBMOUNT1) [N/y/?] 
-libuuid1 (ROOTFS_PACKAGES_LIBUUID1) [N/y/?] 
-util-linux (ROOTFS_PACKAGES_UTIL_LINUX) [N/y/?] 
+libblkid1 (ROOTFS_PACKAGES_LIBBLKID1) [Y/?] y
+libmount1 (ROOTFS_PACKAGES_LIBMOUNT1) [Y/?] y
+libuuid1 (ROOTFS_PACKAGES_LIBUUID1) [Y/?] y
+util-linux (ROOTFS_PACKAGES_UTIL_LINUX) [Y/n/?] 
 util-linux-agetty (ROOTFS_PACKAGES_UTIL_LINUX_AGETTY) [N/y/?] 
 util-linux-bash-completion (ROOTFS_PACKAGES_UTIL_LINUX_BASH_COMPLETION) [N/y/?] 
 util-linux-blkid (ROOTFS_PACKAGES_UTIL_LINUX_BLKID) [N/y/?] 
@@ -616,7 +579,7 @@ util-linux-fsck (ROOTFS_PACKAGES_UTIL_LINUX_FSCK) [N/y/?]
 util-linux-fsck.cramfs (ROOTFS_PACKAGES_UTIL_LINUX_FSCK_CRAMFS) [N/y/?] 
 util-linux-fstrim (ROOTFS_PACKAGES_UTIL_LINUX_FSTRIM) [N/y/?] 
 util-linux-hwclock (ROOTFS_PACKAGES_UTIL_LINUX_HWCLOCK) [N/y/?] 
-util-linux-losetup (ROOTFS_PACKAGES_UTIL_LINUX_LOSETUP) [N/y/?] 
+util-linux-losetup (ROOTFS_PACKAGES_UTIL_LINUX_LOSETUP) [Y/?] y
 util-linux-lscpu (ROOTFS_PACKAGES_UTIL_LINUX_LSCPU) [N/y/?] 
 util-linux-mcookie (ROOTFS_PACKAGES_UTIL_LINUX_MCOOKIE) [N/y/?] 
 util-linux-mkfs (ROOTFS_PACKAGES_UTIL_LINUX_MKFS) [N/y/?] 
@@ -626,8 +589,8 @@ util-linux-partx (ROOTFS_PACKAGES_UTIL_LINUX_PARTX) [N/y/?]
 util-linux-readprofile (ROOTFS_PACKAGES_UTIL_LINUX_READPROFILE) [N/y/?] 
 util-linux-reset (ROOTFS_PACKAGES_UTIL_LINUX_RESET) [N/y/?] 
 util-linux-sfdisk (ROOTFS_PACKAGES_UTIL_LINUX_SFDISK) [N/y/?] 
-util-linux-swaponoff (ROOTFS_PACKAGES_UTIL_LINUX_SWAPONOFF) [N/y/?] 
-util-linux-umount (ROOTFS_PACKAGES_UTIL_LINUX_UMOUNT) [N/y/?] 
+util-linux-swaponoff (ROOTFS_PACKAGES_UTIL_LINUX_SWAPONOFF) [Y/?] y
+util-linux-umount (ROOTFS_PACKAGES_UTIL_LINUX_UMOUNT) [Y/?] y
 util-linux-uuidd (ROOTFS_PACKAGES_UTIL_LINUX_UUIDD) [N/y/?] 
 util-linux-uuidgen (ROOTFS_PACKAGES_UTIL_LINUX_UUIDGEN) [N/y/?] 
 *
@@ -636,7 +599,7 @@ util-linux-uuidgen (ROOTFS_PACKAGES_UTIL_LINUX_UUIDGEN) [N/y/?]
 *
 * bash
 *
-bash (ROOTFS_PACKAGES_BASH) [N/y/?] 
+bash (ROOTFS_PACKAGES_BASH) [Y/n/?] 
 *
 * console/network
 *
@@ -687,9 +650,9 @@ libbz2-0 (ROOTFS_PACKAGES_LIBBZ2_0) [N/y/?]
 *
 * pciutils
 *
-libpci3 (ROOTFS_PACKAGES_LIBPCI3) [N/y/?] 
-pciutils (ROOTFS_PACKAGES_PCIUTILS) [N/y/?] 
-pciutils-ids (ROOTFS_PACKAGES_PCIUTILS_IDS) [N/y/?] 
+libpci3 (ROOTFS_PACKAGES_LIBPCI3) [Y/?] y
+pciutils (ROOTFS_PACKAGES_PCIUTILS) [Y/n/?] 
+pciutils-ids (ROOTFS_PACKAGES_PCIUTILS_IDS) [Y/?] y
 *
 * strace
 *
@@ -1357,7 +1320,7 @@ mtd-utils-doc (ROOTFS_PACKAGES_MTD_UTILS_DOC) [N/y/?]
 *
 * ncurses
 *
-ncurses-doc (ROOTFS_PACKAGES_NCURSES_DOC) [N/y/?] 
+ncurses-doc (ROOTFS_PACKAGES_NCURSES_DOC) [Y/n/?] 
 *
 * net-tools
 *
@@ -1435,35 +1398,35 @@ libz-doc (ROOTFS_PACKAGES_LIBZ_DOC) [N/y/?]
 *
 * db
 *
-db (ROOTFS_PACKAGES_DB) [N/y/?] 
-db-bin (ROOTFS_PACKAGES_DB_BIN) [N/y/?] 
-db-cxx (ROOTFS_PACKAGES_DB_CXX) [N/y/?] 
+db (ROOTFS_PACKAGES_DB) [Y/?] y
+db-bin (ROOTFS_PACKAGES_DB_BIN) [Y/n/?] 
+db-cxx (ROOTFS_PACKAGES_DB_CXX) [Y/n/?] 
 *
 * expat
 *
-libexpat-bin (ROOTFS_PACKAGES_LIBEXPAT_BIN) [N/y/?] 
-libexpat1 (ROOTFS_PACKAGES_LIBEXPAT1) [N/y/?] 
+libexpat-bin (ROOTFS_PACKAGES_LIBEXPAT_BIN) [Y/n/?] 
+libexpat1 (ROOTFS_PACKAGES_LIBEXPAT1) [Y/?] y
 *
 * gdbm
 *
-libgdbm-bin (ROOTFS_PACKAGES_LIBGDBM_BIN) [N/y/?] 
-libgdbm-compat4 (ROOTFS_PACKAGES_LIBGDBM_COMPAT4) [N/y/?] 
-libgdbm4 (ROOTFS_PACKAGES_LIBGDBM4) [N/y/?] 
+libgdbm-bin (ROOTFS_PACKAGES_LIBGDBM_BIN) [Y/n/?] 
+libgdbm-compat4 (ROOTFS_PACKAGES_LIBGDBM_COMPAT4) [Y/n/?] 
+libgdbm4 (ROOTFS_PACKAGES_LIBGDBM4) [Y/?] y
 *
 * gettext
 *
-gettext (ROOTFS_PACKAGES_GETTEXT) [N/y/?] 
-gettext-runtime (ROOTFS_PACKAGES_GETTEXT_RUNTIME) [N/y/?] 
-gettext-runtime-doc (ROOTFS_PACKAGES_GETTEXT_RUNTIME_DOC) [N/y/?] 
-libgettextlib (ROOTFS_PACKAGES_LIBGETTEXTLIB) [N/y/?] 
-libgettextsrc (ROOTFS_PACKAGES_LIBGETTEXTSRC) [N/y/?] 
+gettext (ROOTFS_PACKAGES_GETTEXT) [Y/n/?] 
+gettext-runtime (ROOTFS_PACKAGES_GETTEXT_RUNTIME) [Y/n/?] 
+gettext-runtime-doc (ROOTFS_PACKAGES_GETTEXT_RUNTIME_DOC) [Y/n/?] 
+libgettextlib (ROOTFS_PACKAGES_LIBGETTEXTLIB) [Y/?] y
+libgettextsrc (ROOTFS_PACKAGES_LIBGETTEXTSRC) [Y/?] y
 *
 * glib-2.0
 *
-libglib-2.0-0 (ROOTFS_PACKAGES_LIBGLIB_2_0_0) [N/y/?] 
-libglib-2.0-bash-completion (ROOTFS_PACKAGES_LIBGLIB_2_0_BASH_COMPLETION) [N/y/?] 
-libglib-2.0-codegen (ROOTFS_PACKAGES_LIBGLIB_2_0_CODEGEN) [N/y/?] 
-libglib-2.0-utils (ROOTFS_PACKAGES_LIBGLIB_2_0_UTILS) [N/y/?] 
+libglib-2.0-0 (ROOTFS_PACKAGES_LIBGLIB_2_0_0) [Y/?] y
+libglib-2.0-bash-completion (ROOTFS_PACKAGES_LIBGLIB_2_0_BASH_COMPLETION) [Y/n/?] 
+libglib-2.0-codegen (ROOTFS_PACKAGES_LIBGLIB_2_0_CODEGEN) [Y/n/?] 
+libglib-2.0-utils (ROOTFS_PACKAGES_LIBGLIB_2_0_UTILS) [Y/n/?] 
 *
 * libnet
 *
@@ -1471,62 +1434,62 @@ libnet9 (ROOTFS_PACKAGES_LIBNET9) [N/y/?]
 *
 * libpng
 *
-libpng16-16 (ROOTFS_PACKAGES_LIBPNG16_16) [N/y/?] 
-libpng16-tools (ROOTFS_PACKAGES_LIBPNG16_TOOLS) [N/y/?] 
+libpng16-16 (ROOTFS_PACKAGES_LIBPNG16_16) [Y/?] y
+libpng16-tools (ROOTFS_PACKAGES_LIBPNG16_TOOLS) [Y/n/?] 
 *
 * libusb-compat
 *
-libusb-0.1-4 (ROOTFS_PACKAGES_LIBUSB_0_1_4) [N/y/?] 
+libusb-0.1-4 (ROOTFS_PACKAGES_LIBUSB_0_1_4) [Y/n/?] 
 *
 * libusb1
 *
-libusb-1.0-0 (ROOTFS_PACKAGES_LIBUSB_1_0_0) [N/y/?] 
+libusb-1.0-0 (ROOTFS_PACKAGES_LIBUSB_1_0_0) [Y/?] y
 *
 * lzo
 *
-liblzo2-2 (ROOTFS_PACKAGES_LIBLZO2_2) [N/y/?] 
+liblzo2-2 (ROOTFS_PACKAGES_LIBLZO2_2) [Y/n/?] 
 *
 * ncurses
 *
-libform5 (ROOTFS_PACKAGES_LIBFORM5) [N/y/?] 
-libformw5 (ROOTFS_PACKAGES_LIBFORMW5) [N/y/?] 
-libmenu5 (ROOTFS_PACKAGES_LIBMENU5) [N/y/?] 
-libmenuw5 (ROOTFS_PACKAGES_LIBMENUW5) [N/y/?] 
-libncurses5 (ROOTFS_PACKAGES_LIBNCURSES5) [N/y/?] 
-libncursesw5 (ROOTFS_PACKAGES_LIBNCURSESW5) [N/y/?] 
-libpanel5 (ROOTFS_PACKAGES_LIBPANEL5) [N/y/?] 
-libpanelw5 (ROOTFS_PACKAGES_LIBPANELW5) [N/y/?] 
-libtic5 (ROOTFS_PACKAGES_LIBTIC5) [N/y/?] 
-libticw5 (ROOTFS_PACKAGES_LIBTICW5) [N/y/?] 
-libtinfo5 (ROOTFS_PACKAGES_LIBTINFO5) [N/y/?] 
-ncurses (ROOTFS_PACKAGES_NCURSES) [N/y/?] 
-ncurses-terminfo (ROOTFS_PACKAGES_NCURSES_TERMINFO) [N/y/?] 
-ncurses-terminfo-base (ROOTFS_PACKAGES_NCURSES_TERMINFO_BASE) [N/y/?] 
-ncurses-tools (ROOTFS_PACKAGES_NCURSES_TOOLS) [N/y/?] 
+libform5 (ROOTFS_PACKAGES_LIBFORM5) [Y/n/?] 
+libformw5 (ROOTFS_PACKAGES_LIBFORMW5) [Y/n/?] 
+libmenu5 (ROOTFS_PACKAGES_LIBMENU5) [Y/n/?] 
+libmenuw5 (ROOTFS_PACKAGES_LIBMENUW5) [Y/n/?] 
+libncurses5 (ROOTFS_PACKAGES_LIBNCURSES5) [Y/?] y
+libncursesw5 (ROOTFS_PACKAGES_LIBNCURSESW5) [Y/?] y
+libpanel5 (ROOTFS_PACKAGES_LIBPANEL5) [Y/n/?] 
+libpanelw5 (ROOTFS_PACKAGES_LIBPANELW5) [Y/n/?] 
+libtic5 (ROOTFS_PACKAGES_LIBTIC5) [Y/?] y
+libticw5 (ROOTFS_PACKAGES_LIBTICW5) [Y/n/?] 
+libtinfo5 (ROOTFS_PACKAGES_LIBTINFO5) [Y/?] y
+ncurses (ROOTFS_PACKAGES_NCURSES) [Y/?] y
+ncurses-terminfo (ROOTFS_PACKAGES_NCURSES_TERMINFO) [Y/n/?] 
+ncurses-terminfo-base (ROOTFS_PACKAGES_NCURSES_TERMINFO_BASE) [Y/?] y
+ncurses-tools (ROOTFS_PACKAGES_NCURSES_TOOLS) [Y/n/?] 
 *
 * popt
 *
-libpopt0 (ROOTFS_PACKAGES_LIBPOPT0) [N/y/?] 
+libpopt0 (ROOTFS_PACKAGES_LIBPOPT0) [Y/n/?] 
 *
 * zlib
 *
-libz1 (ROOTFS_PACKAGES_LIBZ1) [N/y/?] 
+libz1 (ROOTFS_PACKAGES_LIBZ1) [Y/?] y
 *
 * libs/network
 *
 *
 * libnl
 *
-libnl-3-200 (ROOTFS_PACKAGES_LIBNL_3_200) [N/y/?] 
-libnl-3-cli (ROOTFS_PACKAGES_LIBNL_3_CLI) [N/y/?] 
-libnl-3-genl (ROOTFS_PACKAGES_LIBNL_3_GENL) [N/y/?] 
-libnl-idiag-3-200 (ROOTFS_PACKAGES_LIBNL_IDIAG_3_200) [N/y/?] 
-libnl-nf-3-200 (ROOTFS_PACKAGES_LIBNL_NF_3_200) [N/y/?] 
-libnl-route-3-200 (ROOTFS_PACKAGES_LIBNL_ROUTE_3_200) [N/y/?] 
+libnl-3-200 (ROOTFS_PACKAGES_LIBNL_3_200) [Y/?] y
+libnl-3-cli (ROOTFS_PACKAGES_LIBNL_3_CLI) [Y/?] y
+libnl-3-genl (ROOTFS_PACKAGES_LIBNL_3_GENL) [Y/n/?] 
+libnl-idiag-3-200 (ROOTFS_PACKAGES_LIBNL_IDIAG_3_200) [Y/?] y
+libnl-nf-3-200 (ROOTFS_PACKAGES_LIBNL_NF_3_200) [Y/?] y
+libnl-route-3-200 (ROOTFS_PACKAGES_LIBNL_ROUTE_3_200) [Y/?] y
 *
 * libpcap
 *
-libpcap1 (ROOTFS_PACKAGES_LIBPCAP1) [N/y/?] 
+libpcap1 (ROOTFS_PACKAGES_LIBPCAP1) [Y/n/?] 
 *
 * openssl
 *

@@ -18,6 +18,79 @@ OE: busybox
 PackageArch: armv7a-vfp-neon
 Homepage: http://www.busybox.net
 
+Package: libnl-3-200
+Status: install ok unpacked
+Priority: optional
+Section: libs/network
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1:3.2.25-r0
+Replaces: libnl2
+Provides: libnl
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Conflicts: libnl2
+Description: A library for applications dealing with netlink sockets
+ A library for applications dealing with netlink sockets.
+OE: libnl
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.infradead.org/~tgr/libnl/
+
+Package: libffi6
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.1-r0
+Provides: libffi
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: A portable foreign function interface library
+ The `libffi' library provides a portable, high level programming
+ interface to various calling conventions.  This allows a programmer to
+ call any function specified by a call interface description at run time.
+ FFI stands for Foreign Function Interface.  A foreign function interface
+ is the popular name for the interface that allows code written in one
+ language to call code written in another language.  The `libffi' library
+ really only provides the lowest, machine dependent layer of a fully
+ featured foreign function interface.  A layer must exist above `libffi'
+ that handles type conversions for values passed between the two
+ languages.
+OE: libffi
+PackageArch: armv7a-vfp-neon
+
+Package: libuuid1
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.24.2-r1
+Provides: util-linux-libuuid
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: A suite of basic system administration utilities
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.
+OE: util-linux
+PackageArch: armv7a-vfp-neon
+
+Package: libpci3
+Status: install ok unpacked
+Priority: optional
+Section: console/utils
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.2.1-r0
+Provides: libpci
+Depends: libz1 (>= 1.2.8), libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: PCI utilities
+ The PCI Utilities package contains a library for portable access to PCI
+ bus configuration space and several utilities based on this library.
+OE: pciutils
+PackageArch: armv7a-vfp-neon
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+
 Package: libc6-dev
 Status: install ok unpacked
 Priority: optional
@@ -32,6 +105,51 @@ Description: External Xilinx toolchain - Development files
  files, and related items necessary for software development.
 OE: external-xilinx-toolchain
 PackageArch: armv7a-vfp-neon
+
+Package: pciutils
+Status: install ok unpacked
+Priority: optional
+Section: console/utils
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.2.1-r0
+Depends: libz1 (>= 1.2.8), libpci3 (>= 3.2.1), pciutils-ids, libc6 (>= 2.18), libkmod2 (>= 18+git0+ae58de0fcb), libgcc-s1 (>= 4.8.3)
+Description: PCI utilities
+ The PCI Utilities package contains a library for portable access to PCI
+ bus configuration space and several utilities based on this library.
+OE: pciutils
+PackageArch: armv7a-vfp-neon
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+
+Package: libnl-3-cli
+Status: install ok unpacked
+Priority: optional
+Section: libs/network
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1:3.2.25-r0
+Provides: libnl-cli
+Depends: libnl-idiag-3-200 (>= 3.2.25), libnl-route-3-200 (>= 3.2.25), libnl-3-200 (>= 3.2.25), libnl-3-genl (>= 3.2.25), libc6 (>= 2.18), libnl-nf-3-200 (>= 3.2.25), libgcc-s1 (>= 4.8.3)
+Description: A library for applications dealing with netlink sockets
+ A library for applications dealing with netlink sockets.
+OE: libnl
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.infradead.org/~tgr/libnl/
+
+Package: libnl-idiag-3-200
+Status: install ok unpacked
+Priority: optional
+Section: libs/network
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1:3.2.25-r0
+Provides: libnl-idiag
+Depends: libnl-3-200 (>= 3.2.25), libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: A library for applications dealing with netlink sockets
+ A library for applications dealing with netlink sockets.
+OE: libnl
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.infradead.org/~tgr/libnl/
 
 Package: netbase
 Status: install ok unpacked
@@ -72,6 +190,40 @@ OE: busybox
 PackageArch: armv7a-vfp-neon
 Homepage: http://www.busybox.net
 
+Package: libkmod2
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 18+git0+ae58de0fcb-r0
+Provides: libkmod
+Depends: libz1 (>= 1.2.8), libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: Tools for managing Linux kernel modules
+ kmod is a set of tools to handle common tasks with Linux kernel modules
+ like                insert, remove, list, check properties, resolve
+ dependencies and aliases.
+OE: kmod
+PackageArch: armv7a-vfp-neon
+Homepage: http://packages.profusion.mobi/kmod/
+
+Package: libmount1
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.24.2-r1
+Provides: util-linux-libmount
+Depends: libblkid1 (>= 2.24.2), libuuid1 (>= 2.24.2), libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: A suite of basic system administration utilities
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.
+OE: util-linux
+PackageArch: armv7a-vfp-neon
+
 Package: base-files
 Status: install ok unpacked
 Priority: optional
@@ -88,6 +240,23 @@ Description: Miscellaneous files for the base system
  provides a small set of key configuration files for the system.
 OE: base-files
 PackageArch: armv7a-vfp-neon
+
+Package: bash-dev
+Status: install ok unpacked
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 4.3-r0
+Depends: bash (= 4.3-r0)
+Recommends: libgcc-s-dev, ncurses-libtinfo-dev, ncurses-dev, base-files-dev, libc6-dev, update-alternatives-opkg-dev
+Description: An sh-compatible command language interpreter - Development files
+ An sh-compatible command language interpreter.  This package contains
+ symbolic links, header files, and related items necessary for software
+ development.
+OE: bash
+PackageArch: armv7a-vfp-neon
+Homepage: http://tiswww.case.edu/php/chet/bash/bashtop.html
 
 Package: update-alternatives-opkg
 Status: install ok unpacked
@@ -122,6 +291,24 @@ OE: mtd-utils
 PackageArch: armv7a-vfp-neon
 Homepage: http://www.linux-mtd.infradead.org/
 
+Package: ncurses-doc
+Status: install ok unpacked
+Priority: optional
+Section: doc
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 5.9-r15.1
+Description: The New Curses library - Documentation files
+ SVr4 and XSI-Curses compatible curses library and terminfo tools
+ including tic, infocmp, captoinfo. Supports color, multiple highlights,
+ forms-drawing characters, and automatic recognition of keypad and
+ function-key sequences. Extensions include resizable windows and mouse
+ support on both xterm and Linux console using the gpm library.  This
+ package contains documentation.
+OE: ncurses
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.gnu.org/software/ncurses/ncurses.html
+
 Package: libthread-db1
 Status: install ok unpacked
 Priority: optional
@@ -148,6 +335,22 @@ Depends: libc6 (>= 2.18)
 Description: External Xilinx toolchain
  External Xilinx toolchain.
 OE: external-xilinx-toolchain
+PackageArch: armv7a-vfp-neon
+
+Package: util-linux-losetup
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.24.2-r1
+Depends: update-alternatives-opkg, libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: A suite of basic system administration utilities
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.
+OE: util-linux
 PackageArch: armv7a-vfp-neon
 
 Package: mtd-utils
@@ -192,6 +395,26 @@ Conffiles:
 Description: Inittab configuration for SysVinit
  Inittab configuration for SysVinit.
 OE: sysvinit-inittab
+PackageArch: armv7a-vfp-neon
+
+Package: util-linux-dev
+Status: install ok unpacked
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.24.2-r1
+Provides: util-linux-libuuid-dev, util-linux-libblkid-dev, util-linux-libmount-dev
+Depends: libmount1, util-linux (= 2.24.2-r1), libuuid1, libblkid1
+Recommends: libgcc-s-dev, util-linux-swaponoff-dev, util-linux-libuuid-dev, util-linux-libmount-dev, util-linux-umount-dev, ncurses-libncursesw-dev, libz-dev, libc6-dev, update-alternatives-opkg-dev, util-linux-libblkid-dev, ncurses-dev, util-linux-losetup-dev, ncurses-libtinfo-dev
+Description: A suite of basic system administration utilities - Development files
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.  This package contains symbolic
+ links, header files, and related items necessary for software
+ development.
+OE: util-linux
 PackageArch: armv7a-vfp-neon
 
 Package: base-passwd
@@ -293,6 +516,21 @@ OE: sysvinit
 PackageArch: armv7a-vfp-neon
 Homepage: http://savannah.nongnu.org/projects/sysvinit/
 
+Package: libnl-route-3-200
+Status: install ok unpacked
+Priority: optional
+Section: libs/network
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1:3.2.25-r0
+Provides: libnl-route
+Depends: libnl-3-200 (>= 3.2.25), libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: A library for applications dealing with netlink sockets
+ A library for applications dealing with netlink sockets.
+OE: libnl
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.infradead.org/~tgr/libnl/
+
 Package: sysvinit
 Status: install ok unpacked
 Priority: optional
@@ -344,6 +582,23 @@ Description: SysV init scripts
 OE: initscripts
 PackageArch: armv7a-vfp-neon
 
+Package: libblkid1
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.24.2-r1
+Provides: util-linux-libblkid
+Depends: libuuid1 (>= 2.24.2), libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: A suite of basic system administration utilities
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.
+OE: util-linux
+PackageArch: armv7a-vfp-neon
+
 Package: init-ifupdown
 Status: install ok unpacked
 Priority: optional
@@ -362,6 +617,52 @@ OE: init-ifupdown
 PackageArch: armv7a-vfp-neon
 Homepage: http://packages.debian.org/ifupdown
 
+Package: util-linux-swaponoff
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.24.2-r1
+Depends: libmount1 (>= 2.24.2), libc6 (>= 2.18), update-alternatives-opkg, libblkid1 (>= 2.24.2), libuuid1 (>= 2.24.2), libgcc-s1 (>= 4.8.3)
+Description: A suite of basic system administration utilities
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.
+OE: util-linux
+PackageArch: armv7a-vfp-neon
+
+Package: libnl-nf-3-200
+Status: install ok unpacked
+Priority: optional
+Section: libs/network
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1:3.2.25-r0
+Provides: libnl-nf
+Depends: libc6 (>= 2.18), libnl-3-200 (>= 3.2.25), libgcc-s1 (>= 4.8.3), libnl-route-3-200 (>= 3.2.25)
+Description: A library for applications dealing with netlink sockets
+ A library for applications dealing with netlink sockets.
+OE: libnl
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.infradead.org/~tgr/libnl/
+
+Package: libncursesw5
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 5.9-r15.1
+Provides: ncurses-libncursesw
+Depends: libtinfo5 (>= 5.9), libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: ncurses ncursesw library
+ ncurses ncursesw library
+OE: ncurses
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.gnu.org/software/ncurses/ncurses.html
+
 Package: sysvinit-inittab-dev
 Status: install ok unpacked
 Priority: optional
@@ -376,6 +677,22 @@ Description: Inittab configuration for SysVinit - Development files
  development.
 OE: sysvinit-inittab
 PackageArch: armv7a-vfp-neon
+
+Package: libz1
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.2.8-r0
+Provides: zlib
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: Zlib Compression Library
+ Zlib is a general-purpose, patent-free, lossless data compression library
+ which is used by many different programs.
+OE: zlib
+PackageArch: armv7a-vfp-neon
+Homepage: http://zlib.net/
 
 Package: base-files-dev
 Status: install ok unpacked
@@ -393,6 +710,24 @@ Description: Miscellaneous files for the base system - Development files
 OE: base-files
 PackageArch: armv7a-vfp-neon
 
+Package: pciutils-dev
+Status: install ok unpacked
+Priority: optional
+Section: devel
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.2.1-r0
+Depends: pciutils (= 3.2.1-r0)
+Recommends: libgcc-s-dev, libz-dev, libc6-dev, pciutils-ids-dev, kmod-dev, libkmod-dev, libpci-dev
+Description: PCI utilities - Development files
+ The PCI Utilities package contains a library for portable access to PCI
+ bus configuration space and several utilities based on this library.
+ This package contains symbolic links, header files, and related items
+ necessary for software development.
+OE: pciutils
+PackageArch: armv7a-vfp-neon
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+
 Package: gdbserver
 Status: install ok unpacked
 Priority: optional
@@ -405,6 +740,23 @@ Description: External Xilinx toolchain
  External Xilinx toolchain.
 OE: external-xilinx-toolchain
 PackageArch: armv7a-vfp-neon
+
+Package: libtinfo5
+Status: install ok unpacked
+Priority: optional
+Section: libs
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 5.9-r15.1
+Provides: ncurses-libtinfo
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Recommends: ncurses-terminfo-base
+Suggests: ncurses-terminfo
+Description: ncurses tinfo library
+ ncurses tinfo library
+OE: ncurses
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.gnu.org/software/ncurses/ncurses.html
 
 Package: update-rc.d
 Status: install ok unpacked
@@ -468,6 +820,40 @@ Description: External Xilinx toolchain
 OE: external-xilinx-toolchain
 PackageArch: armv7a-vfp-neon
 
+Package: libpcap1
+Status: install ok unpacked
+Priority: optional
+Section: libs/network
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1.6.1-r0
+Provides: libpcap
+Depends: libgcc-s1 (>= 4.8.3), libc6 (>= 2.18)
+Description: Interface for user-level network packet capture
+ Libpcap provides a portable framework for low-level network monitoring.
+ Libpcap can provide network statistics collection, security monitoring
+ and network debugging.
+OE: libpcap
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.tcpdump.org/
+
+Package: libnl-3-genl
+Status: install ok unpacked
+Priority: optional
+Section: libs/network
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 1:3.2.25-r0
+Replaces: libnl-genl2, libnl-genl-3-200
+Provides: libnl-genl
+Depends: libnl-idiag-3-200 (>= 3.2.25), libnl-route-3-200 (>= 3.2.25), libnl-3-cli (>= 3.2.25), libnl-3-200 (>= 3.2.25), libc6 (>= 2.18), libnl-nf-3-200 (>= 3.2.25), libgcc-s1 (>= 4.8.3)
+Conflicts: libnl-genl2, libnl-genl-3-200
+Description: A library for applications dealing with netlink sockets
+ A library for applications dealing with netlink sockets.
+OE: libnl
+PackageArch: armv7a-vfp-neon
+Homepage: http://www.infradead.org/~tgr/libnl/
+
 Package: initscripts-dev
 Status: install ok unpacked
 Priority: optional
@@ -486,6 +872,66 @@ Description: SysV init scripts - Development files
  symbolic links, header files, and related items necessary for software
  development.
 OE: initscripts
+PackageArch: armv7a-vfp-neon
+
+Package: util-linux-umount
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.24.2-r1
+Depends: libmount1 (>= 2.24.2), libc6 (>= 2.18), update-alternatives-opkg, libblkid1 (>= 2.24.2), libuuid1 (>= 2.24.2), libgcc-s1 (>= 4.8.3)
+Description: A suite of basic system administration utilities
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.
+OE: util-linux
+PackageArch: armv7a-vfp-neon
+
+Package: pciutils-ids
+Status: install ok unpacked
+Priority: optional
+Section: console/utils
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 3.2.1-r0
+Description: PCI utilities - device ID database
+ Package providing the PCI device ID database for pciutils.
+OE: pciutils
+PackageArch: armv7a-vfp-neon
+Homepage: http://atrey.karlin.mff.cuni.cz/~mj/pciutils.shtml
+
+Package: bash
+Status: install ok unpacked
+Priority: optional
+Section: base/shell
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 4.3-r0
+Depends: update-alternatives-opkg, libc6 (>= 2.18), libtinfo5 (>= 5.9), libgcc-s1 (>= 4.8.3), base-files
+Description: An sh-compatible command language interpreter
+ An sh-compatible command language interpreter.
+OE: bash
+PackageArch: armv7a-vfp-neon
+Homepage: http://tiswww.case.edu/php/chet/bash/bashtop.html
+
+Package: util-linux
+Status: install ok unpacked
+Priority: optional
+Section: base
+Maintainer: OE-Core Developers <openembedded-core@lists.openembedded.org>
+Architecture: armv7a-vfp-neon
+Version: 2.24.2-r1
+Depends: libncursesw5 (>= 5.9), libtinfo5 (>= 5.9), util-linux-swaponoff, libuuid1 (>= 2.24.2), libmount1 (>= 2.24.2), libc6 (>= 2.18), update-alternatives-opkg, libblkid1 (>= 2.24.2), util-linux-umount, util-linux-losetup, libgcc-s1 (>= 4.8.3)
+Recommends: util-linux-sfdisk, util-linux-cfdisk, util-linux-mount, util-linux-fdisk, util-linux-mkfs, util-linux-readprofile
+Description: A suite of basic system administration utilities
+ Util-linux includes a suite of basic system administration utilities
+ commonly found on most Linux systems.  Some of the more important
+ utilities include disk partitioning, kernel message management,
+ filesystem creation, and system login.
+OE: util-linux
 PackageArch: armv7a-vfp-neon
 
 Package: busybox-inetd

@@ -1,1 +1,1 @@
-/bin/busybox.nosuid
+/sbin/pivot_root.util-linux
