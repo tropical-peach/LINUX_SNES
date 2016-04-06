@@ -1,0 +1,8 @@
+/.
+/usr
+/usr/bin
+/usr/sbin
+/usr/sbin/update-pciids
+/usr/sbin/setpci
+/usr/sbin/lspci
+/usr/bin/lspci

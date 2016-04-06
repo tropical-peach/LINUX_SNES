@@ -1,0 +1,940 @@
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=device-tree-generator; 		sbuild=device-tree/device-tree-generator; 	else 		sinstance=device-tree; 		sbuild=device-tree; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] make[1]: Nothing to be done for `pre-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] if [ ! -z "kernel" ] && [ ! "kernel" == "none" ]; then 		sinstance=kernel; 		sbuild=kernel; 	elif [ "single" == "multi" ]; then 		sinstance=xlnx-3.17; 		sbuild=linux-kernel/xlnx-3.17; 	else 		sinstance=linux-kernel; 		sbuild=linux-kernel; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] make[1]: Nothing to be done for `pre-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=u-boot-plnx; 		sbuild=u-boot/u-boot-plnx; 	else 		sinstance=u-boot; 		sbuild=u-boot; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] make[1]: Nothing to be done for `pre-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=zynq_fsbl; 		sbuild=bootloader/zynq_fsbl; 	else 		sinstance=bootloader; 		sbuild=bootloader; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] make[1]: Nothing to be done for `pre-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=petalinux-rootfs; 		sbuild=rootfs/petalinux-rootfs; 	else 		sinstance=rootfs; 		sbuild=rootfs; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] if [ -z "f204a72cff8ef1063b23a16a05763b7b" ]; then 		echo "ERROR: cannot calculate checksum of linux/rootfs config file."; 		echo "ERROR: Please run petalinux-config -c linux/rootfs first."; 		exit 255; 	elif [ -z "f204a72cff8ef1063b23a16a05763b7b" ]; then 		echo "f204a72cff8ef1063b23a16a05763b7b" > "config_checksum"; 	elif [ ! "f204a72cff8ef1063b23a16a05763b7b" == "f204a72cff8ef1063b23a16a05763b7b" ]; then 		echo "f204a72cff8ef1063b23a16a05763b7b" > "config_checksum"; 		make INSTANCE=linux/rootfs clean; 	fi
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=plnx-repo; 		sbuild=packages-repo/plnx-repo; 	else 		sinstance=packages-repo; 		sbuild=packages-repo; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] make[2]: Nothing to be done for `pre-build'.
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=fwupgrade; 		sbuild=apps/fwupgrade; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[INFO ] pre-build linux/rootfs/fwupgrade
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=peekpoke; 		sbuild=apps/peekpoke; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[INFO ] pre-build linux/rootfs/peekpoke
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=snes; 		sbuild=apps/snes; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[INFO ] pre-build linux/rootfs/snes
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=uWeb; 		sbuild=apps/uWeb; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[INFO ] pre-build linux/rootfs/uWeb
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=device-tree-generator; 		sbuild=device-tree/device-tree-generator; 	else 		sinstance=device-tree; 		sbuild=device-tree; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] make[1]: Nothing to be done for `build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] if [ ! -z "kernel" ] && [ ! "kernel" == "none" ]; then 		sinstance=kernel; 		sbuild=kernel; 	elif [ "single" == "multi" ]; then 		sinstance=xlnx-3.17; 		sbuild=linux-kernel/xlnx-3.17; 	else 		sinstance=linux-kernel; 		sbuild=linux-kernel; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] rsync /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/.config
+[ALL  ] rm -rf /home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot /home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/arch/arm/boot" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot"
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/usr" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr"
+[INFO ] build linux/kernel
+[ALL  ] make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- O=/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17 KCONFIG_CONFIG="/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/.config -j3 -C /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 all
+[ALL  ] make[2]: Entering directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17'
+[ALL  ]   GEN     ./Makefile
+[ALL  ] scripts/kconfig/conf --silentoldconfig Kconfig
+[ALL  ]   CHK     include/config/kernel.release
+[ALL  ]   GEN     ./Makefile
+[ALL  ]   CHK     include/generated/uapi/linux/version.h
+[ALL  ]   CHK     include/generated/utsrelease.h
+[ALL  ]   Using /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 as source for kernel
+[ALL  ] make[4]: `include/generated/mach-types.h' is up to date.
+[ALL  ]   CALL    /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/checksyscalls.sh
+[ALL  ]   CHK     include/generated/compile.h
+[ALL  ]   GZIP    kernel/config_data.gz
+[ALL  ]   CHK     kernel/config_data.h
+[ALL  ]   Kernel: arch/arm/boot/Image is ready
+[ALL  ]   Building modules, stage 2.
+[ALL  ]   Kernel: arch/arm/boot/zImage is ready
+[ALL  ]   MODPOST 22 modules
+[ALL  ] make[2]: Leaving directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=u-boot-plnx; 		sbuild=u-boot/u-boot-plnx; 	else 		sinstance=u-boot; 		sbuild=u-boot; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[INFO ] update linux/u-boot source
+[ALL  ] if [ ! -d "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx" ]; then 		mkdir -p "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"; 	fi; 	rsync -a --cvs-exclude --filter=':C .git/' "/opt/petalinux/petalinux-v2014.4-final/components/u-boot/u-boot-plnx"/ "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"/
+[ALL  ] chmod -R a+w "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"/include/configs
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/config.mk" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/config.mk"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq/config.mk"; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/platform-top.h" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot"/*.h "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs"/; 		mv "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs/platform-top.h"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs/zynq_zc70x.h"; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems//home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.c" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.c"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq"/; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems//home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.h" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.h"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq"/; 	fi
+[INFO ] generate linux/u-boot configuration files
+[ALL  ] make O=/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx -C /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx -j3 zynq_zc70x_config || exit 255
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[ALL  ]   GEN     /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/Makefile
+[ALL  ] Configuring for zynq_zc70x board...
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[INFO ] build linux/u-boot
+[ALL  ] make O=/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx -C /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx -j3 all
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[ALL  ]   GEN     include/autoconf.mk.dep
+[ALL  ]   GEN     include/autoconf.mk
+[ALL  ]   CHK     include/config/uboot.release
+[ALL  ]   CHK     include/generated/timestamp_autogenerated.h
+[ALL  ]   GEN     /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/Makefile
+[ALL  ]   UPD     include/generated/timestamp_autogenerated.h
+[ALL  ]   Using /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx as source for u-boot
+[ALL  ]   CHK     include/generated/version_autogenerated.h
+[ALL  ]   CC      lib/asm-offsets.s
+[ALL  ]   CC      arch/arm/lib/asm-offsets.s
+[ALL  ]   GEN     include/generated/generic-asm-offsets.h
+[ALL  ]   GEN     include/generated/asm-offsets.h
+[ALL  ]   HOSTCC  tools/common/env_embedded.o
+[ALL  ]   HOSTCC  tools/dumpimage.o
+[ALL  ]   HOSTCC  tools/envcrc.o
+[ALL  ]   HOSTCC  tools/image-host.o
+[ALL  ]   HOSTCC  tools/mkenvimage.o
+[ALL  ]   HOSTCC  tools/mkimage.o
+[ALL  ]   HOSTLD  tools/mkenvimage
+[ALL  ]   HOSTLD  tools/envcrc
+[ALL  ]   HOSTLD  tools/dumpimage
+[ALL  ]   HOSTLD  tools/mkimage
+[ALL  ]   CC      arch/arm/cpu/armv7/cache_v7.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/timer.o
+[ALL  ]   AS      arch/arm/lib/crt0.o
+[ALL  ]   CC      arch/arm/lib/bootm-fdt.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/cpu.o
+[ALL  ]   CC      arch/arm/lib/bootm.o
+[ALL  ]   CC      arch/arm/cpu/armv7/cpu.o
+[ALL  ]   CC      arch/arm/cpu/armv7/syslib.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/ddrc.o
+[ALL  ]   CC      arch/arm/lib/interrupts.o
+[ALL  ]   AS      arch/arm/cpu/armv7/start.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/slcr.o
+[ALL  ]   LD      arch/arm/cpu/armv7/built-in.o
+[ALL  ]   CC      arch/arm/lib/reset.o
+[ALL  ]   CC      board/xilinx/zynq/board.o
+[ALL  ]   CC      arch/arm/lib/cache.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/clk.o
+[ALL  ]   LD      board/xilinx/zynq/built-in.o
+[ALL  ]   CC      arch/arm/lib/cache-cp15.o
+[ALL  ]   CC      arch/arm/lib/eabi_compat.o
+[ALL  ]   AS      arch/arm/cpu/armv7/zynq/lowlevel_init.o
+[ALL  ]   LD      arch/arm/cpu/armv7/zynq/built-in.o
+[ALL  ]   LD      arch/arm/lib/built-in.o
+[ALL  ]   CC      disk/part.o
+[ALL  ]   CC      drivers/fpga/fpga.o
+[ALL  ]   CC      disk/part_dos.o
+[ALL  ]   CC      common/main.o
+[ALL  ]   LD      disk/built-in.o
+[ALL  ]   CC      drivers/fpga/zynqpl.o
+[ALL  ]   CC      common/command.o
+[ALL  ]   CC      drivers/fpga/xilinx.o
+[ALL  ]   CC      common/exports.o
+[ALL  ]   CC      common/hash.o
+[ALL  ]   LD      drivers/fpga/built-in.o
+[ALL  ]   CC      common/cli_hush.o
+[ALL  ]   CC      drivers/pcmcia/tqm8xx_pcmcia.o
+[ALL  ]   CC      common/cli_simple.o
+[ALL  ]   LD      drivers/pcmcia/built-in.o
+[ALL  ]   CC      drivers/rtc/date.o
+[ALL  ]   LD      drivers/rtc/built-in.o
+[ALL  ]   CC      common/cli.o
+[ALL  ]   LD      drivers/built-in.o
+[ALL  ]   CC      common/cli_readline.o
+[ALL  ]   CC      drivers/input/input.o
+[ALL  ]   CC      common/s_record.o
+[ALL  ]   CC      common/xyzModem.o
+[ALL  ]   CC      common/cmd_disk.o
+[ALL  ]   LD      drivers/input/built-in.o
+[ALL  ]   CC      common/autoboot.o
+[ALL  ]   CC      drivers/mmc/mmc.o
+[ALL  ]   CC      common/board_f.o
+[ALL  ]   CC      common/board_r.o
+[ALL  ]   CC      common/cmd_boot.o
+[ALL  ]   CC      common/cmd_bootm.o
+[ALL  ]   CC      common/bootm.o
+[ALL  ]   CC      common/bootm_os.o
+[ALL  ]   CC      common/cmd_help.o
+[ALL  ]   CC      drivers/mmc/sdhci.o
+[ALL  ]   CC      common/cmd_version.o
+[ALL  ]   CC      common/env_attr.o
+[ALL  ]   CC      common/env_callback.o
+[ALL  ]   CC      common/env_flags.o
+[ALL  ]   CC      common/env_sf.o
+[ALL  ]   CC      drivers/mmc/zynq_sdhci.o
+[ALL  ]   CC      common/cmd_source.o
+[ALL  ]   CC      common/cmd_bdinfo.o
+[ALL  ]   CC      drivers/mmc/mmc_write.o
+[ALL  ]   CC      common/cmd_cache.o
+[ALL  ]   CC      drivers/mtd/spi/sf.o
+[ALL  ]   LD      drivers/mmc/built-in.o
+[ALL  ]   CC      common/cmd_clk.o
+[ALL  ]   CC      drivers/mtd/spi/sf_params.o
+[ALL  ]   CC      drivers/net/netconsole.o
+[ALL  ]   CC      common/cmd_console.o
+[ALL  ]   CC      drivers/mtd/spi/sf_probe.o
+[ALL  ]   CC      common/cmd_echo.o
+[ALL  ]   CC      drivers/net/zynq_gem.o
+[ALL  ]   CC      drivers/mtd/spi/sf_ops.o
+[ALL  ]   CC      common/cmd_exit.o
+[ALL  ]   CC      common/cmd_ext2.o
+[ALL  ]   LD      drivers/net/built-in.o
+[ALL  ]   LD      drivers/mtd/spi/built-in.o
+[ALL  ]   CC      drivers/net/phy/phy.o
+[ALL  ]   CC      common/cmd_fat.o
+[ALL  ]   CC      common/cmd_fdt.o
+[ALL  ]   CC      common/fdt_support.o
+[ALL  ]   CC      drivers/net/phy/marvell.o
+[ALL  ]   CC      drivers/serial/serial.o
+[ALL  ]   LD      drivers/net/phy/built-in.o
+[ALL  ]   CC      drivers/spi/spi.o
+[ALL  ]   CC      common/cmd_fpga.o
+[ALL  ]   CC      drivers/serial/serial_zynq.o
+[ALL  ]   CC      drivers/spi/zynq_qspi.o
+[ALL  ]   CC      common/cmd_itest.o
+[ALL  ]   LD      drivers/serial/built-in.o
+[ALL  ]   CC      common/cmd_load.o
+[ALL  ]   LD      drivers/spi/built-in.o
+[ALL  ]   CC      common/cmd_mem.o
+[ALL  ]   CC      fs/fs.o
+[ALL  ]   CC      common/miiphyutil.o
+[ALL  ]   CC      common/cmd_misc.o
+[ALL  ]   CC      common/cmd_mmc.o
+[ALL  ]   CC      common/cmd_net.o
+[ALL  ]   CC      fs/ext4/ext4fs.o
+[ALL  ]   CC      common/cmd_pcmcia.o
+[ALL  ]   CC      common/cmd_sf.o
+[ALL  ]   CC      fs/ext4/ext4_common.o
+[ALL  ]   CC      common/cmd_spi.o
+[ALL  ]   CC      common/cmd_test.o
+[ALL  ]   CC      common/cmd_ximg.o
+[ALL  ]   CC      fs/ext4/dev.o
+[ALL  ]   CC      lib/zlib/zlib.o
+[ALL  ]   CC      common/flash.o
+[ALL  ]   LD      fs/ext4/built-in.o
+[ALL  ]   CC      common/splash.o
+[ALL  ]   CC      fs/fat/fat_write.o
+[ALL  ]   CC      common/cmd_nvedit.o
+[ALL  ]   CC      common/env_common.o
+[ALL  ]   LD      lib/zlib/built-in.o
+[ALL  ]   CC      lib/fdtdec_common.o
+[ALL  ]   CC      common/console.o
+[ALL  ]   CC      lib/gunzip.o
+[ALL  ]   CC      lib/initcall.o
+[ALL  ]   CC      common/dlmalloc.o
+[ALL  ]   CC      fs/fat/file.o
+[ALL  ]   CC      lib/lmb.o
+[ALL  ]   LD      fs/fat/built-in.o
+[ALL  ]   LD      fs/built-in.o
+[ALL  ]   CC      lib/md5.o
+[ALL  ]   CC      lib/libfdt/fdt.o
+[ALL  ]   CC      common/image.o
+[ALL  ]   CC      lib/net_utils.o
+[ALL  ]   CC      lib/qsort.o
+[ALL  ]   CC      lib/libfdt/fdt_ro.o
+[ALL  ]   CC      lib/sha1.o
+[ALL  ]   CC      lib/libfdt/fdt_rw.o
+[ALL  ]   CC      common/image-fdt.o
+[ALL  ]   CC      lib/sha256.o
+[ALL  ]   CC      lib/libfdt/fdt_strerror.o
+[ALL  ]   CC      common/image-fit.o
+[ALL  ]   CC      lib/libfdt/fdt_sw.o
+[ALL  ]   CC      lib/libfdt/fdt_wip.o
+[ALL  ]   CC      lib/libfdt/fdt_empty_tree.o
+[ALL  ]   CC      common/memsize.o
+[ALL  ]   LD      lib/libfdt/built-in.o
+[ALL  ]   CC      net/arp.o
+[ALL  ]   CC      lib/strmhz.o
+[ALL  ]   CC      common/stdio.o
+[ALL  ]   CC      lib/hashtable.o
+[ALL  ]   LD      common/built-in.o
+[ALL  ]   CC      net/bootp.o
+[ALL  ]   CC      net/eth.o
+[ALL  ]   CC      lib/display_options.o
+[ALL  ]   CC      net/net.o
+[ALL  ]   CC      net/nfs.o
+[ALL  ]   CC      lib/crc32.o
+[ALL  ]   CC      lib/hang.o
+[ALL  ]   CC      lib/linux_string.o
+[ALL  ]   CC      lib/string.o
+[ALL  ]   CC      net/ping.o
+[ALL  ]   CC      net/tftp.o
+[ALL  ]   CC      lib/time.o
+[ALL  ]   CC      lib/vsprintf.o
+[ALL  ]   LD      net/built-in.o
+[ALL  ]   LD      lib/built-in.o
+[ALL  ]   CC      examples/standalone/hello_world.o
+[ALL  ]   CC      examples/standalone/stubs.o
+[ALL  ]   LD      examples/standalone/libstubs.o
+[ALL  ]   LD      examples/standalone/hello_world
+[ALL  ]   OBJCOPY examples/standalone/hello_world.bin
+[ALL  ]   OBJCOPY examples/standalone/hello_world.srec
+[ALL  ]   LD      u-boot
+[ALL  ]   OBJCOPY u-boot.srec
+[ALL  ]   OBJCOPY u-boot.bin
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=zynq_fsbl; 		sbuild=bootloader/zynq_fsbl; 	else 		sinstance=bootloader; 		sbuild=bootloader; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] rsync -a "/home/steven/Desktop/LINUX_SNES/components/bootloader/zynq_fsbl/" "/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl/"
+[INFO ] build zynq_fsbl
+[ALL  ] make -C zynq_fsbl all || exit 255
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl'
+[ALL  ] make[2]: Nothing to be done for `all'.
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader/zynq_fsbl'
+[ALL  ] rsync -a zynq_fsbl/executable.elf /home/steven/Desktop/LINUX_SNES/images/linux/zynq_fsbl.elf
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=petalinux-rootfs; 		sbuild=rootfs/petalinux-rootfs; 	else 		sinstance=rootfs; 		sbuild=rootfs; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=plnx-repo; 		sbuild=packages-repo/plnx-repo; 	else 		sinstance=packages-repo; 		sbuild=packages-repo; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] make[2]: Nothing to be done for `build'.
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=fwupgrade; 		sbuild=apps/fwupgrade; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[INFO ] build linux/rootfs/fwupgrade
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=peekpoke; 		sbuild=apps/peekpoke; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[INFO ] build linux/rootfs/peekpoke
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=snes; 		sbuild=apps/snes; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[INFO ] build linux/rootfs/snes
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=uWeb; 		sbuild=apps/uWeb; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[INFO ] build linux/rootfs/uWeb
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[ALL  ] if [ ! -f "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/link-to-kernel-build/Module.symvers" ]; then 		level=; if [ -z "${level}" ]; then level=0; fi; echo "Not going to build kernel modules since kernel hasn't been built." | log_progress INFO ${level}; 		exit 0; 	fi; 	level=; if [ -z "${level}" ]; then level=0; fi; echo "build kernel in-tree modules" | log_progress INFO ${level}; 	make INSTANCE=linux/kernel -C /home/steven/Desktop/LINUX_SNES/build/linux/kernel modules_only
+[INFO ] build kernel in-tree modules
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] rsync /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/.config
+[ALL  ] rm -rf /home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot /home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/arch/arm/boot" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot"
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/usr" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr"
+[INFO ] modules linux/kernel
+[ALL  ] make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- O=/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17 KCONFIG_CONFIG="/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/.config -j3 -C /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 modules 
+[ALL  ] make[3]: Entering directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17'
+[ALL  ]   GEN     ./Makefile
+[ALL  ] scripts/kconfig/conf --silentoldconfig Kconfig
+[ALL  ]   CHK     include/config/kernel.release
+[ALL  ]   GEN     ./Makefile
+[ALL  ]   CHK     include/generated/uapi/linux/version.h
+[ALL  ]   CHK     include/generated/utsrelease.h
+[ALL  ]   Using /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 as source for kernel
+[ALL  ] make[5]: `include/generated/mach-types.h' is up to date.
+[ALL  ]   CALL    /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/checksyscalls.sh
+[ALL  ]   Building modules, stage 2.
+[ALL  ]   MODPOST 22 modules
+[ALL  ] make[3]: Leaving directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=device-tree-generator; 		sbuild=device-tree/device-tree-generator; 	else 		sinstance=device-tree; 		sbuild=device-tree; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] make[1]: Nothing to be done for `post-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] if [ ! -z "kernel" ] && [ ! "kernel" == "none" ]; then 		sinstance=kernel; 		sbuild=kernel; 	elif [ "single" == "multi" ]; then 		sinstance=xlnx-3.17; 		sbuild=linux-kernel/xlnx-3.17; 	else 		sinstance=linux-kernel; 		sbuild=linux-kernel; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] make[1]: Nothing to be done for `post-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=u-boot-plnx; 		sbuild=u-boot/u-boot-plnx; 	else 		sinstance=u-boot; 		sbuild=u-boot; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] make[1]: Nothing to be done for `post-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=zynq_fsbl; 		sbuild=bootloader/zynq_fsbl; 	else 		sinstance=bootloader; 		sbuild=bootloader; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] make[1]: Nothing to be done for `post-build'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=petalinux-rootfs; 		sbuild=rootfs/petalinux-rootfs; 	else 		sinstance=rootfs; 		sbuild=rootfs; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=plnx-repo; 		sbuild=packages-repo/plnx-repo; 	else 		sinstance=packages-repo; 		sbuild=packages-repo; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] make[2]: Nothing to be done for `post-build'.
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=fwupgrade; 		sbuild=apps/fwupgrade; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[INFO ] post-build linux/rootfs/fwupgrade
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=peekpoke; 		sbuild=apps/peekpoke; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[INFO ] post-build linux/rootfs/peekpoke
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=snes; 		sbuild=apps/snes; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[INFO ] post-build linux/rootfs/snes
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=uWeb; 		sbuild=apps/uWeb; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-build
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[INFO ] post-build linux/rootfs/uWeb
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=device-tree-generator; 		sbuild=device-tree/device-tree-generator; 	else 		sinstance=device-tree; 		sbuild=device-tree; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] make[1]: Nothing to be done for `pre-install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] if [ ! -z "kernel" ] && [ ! "kernel" == "none" ]; then 		sinstance=kernel; 		sbuild=kernel; 	elif [ "single" == "multi" ]; then 		sinstance=xlnx-3.17; 		sbuild=linux-kernel/xlnx-3.17; 	else 		sinstance=linux-kernel; 		sbuild=linux-kernel; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] make[1]: Nothing to be done for `pre-install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=u-boot-plnx; 		sbuild=u-boot/u-boot-plnx; 	else 		sinstance=u-boot; 		sbuild=u-boot; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] make[1]: Nothing to be done for `pre-install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=zynq_fsbl; 		sbuild=bootloader/zynq_fsbl; 	else 		sinstance=bootloader; 		sbuild=bootloader; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] make[1]: Nothing to be done for `pre-install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=petalinux-rootfs; 		sbuild=rootfs/petalinux-rootfs; 	else 		sinstance=rootfs; 		sbuild=rootfs; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=plnx-repo; 		sbuild=packages-repo/plnx-repo; 	else 		sinstance=packages-repo; 		sbuild=packages-repo; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] make[2]: Nothing to be done for `pre-install'.
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=fwupgrade; 		sbuild=apps/fwupgrade; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[INFO ] pre-install linux/rootfs/fwupgrade
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=peekpoke; 		sbuild=apps/peekpoke; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[INFO ] pre-install linux/rootfs/peekpoke
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=snes; 		sbuild=apps/snes; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[INFO ] pre-install linux/rootfs/snes
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=uWeb; 		sbuild=apps/uWeb; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} pre-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[INFO ] pre-install linux/rootfs/uWeb
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=device-tree-generator; 		sbuild=device-tree/device-tree-generator; 	else 		sinstance=device-tree; 		sbuild=device-tree; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[INFO ] install system.dtb
+[ALL  ] rsync system.dtb "/home/steven/Desktop/LINUX_SNES/images/linux"/
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] if [ ! -z "kernel" ] && [ ! "kernel" == "none" ]; then 		sinstance=kernel; 		sbuild=kernel; 	elif [ "single" == "multi" ]; then 		sinstance=xlnx-3.17; 		sbuild=linux-kernel/xlnx-3.17; 	else 		sinstance=linux-kernel; 		sbuild=linux-kernel; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[INFO ] install linux/kernel
+[ALL  ] if [ ! -f /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/vmlinux ]; then 		echo "ERROR: /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/vmlinux is not found. Please build linux first!"; 		exit 255; 	fi
+[ALL  ] cp "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/vmlinux "/home/steven/Desktop/LINUX_SNES/images/linux"/
+[ALL  ] cp "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/System.map "/home/steven/Desktop/LINUX_SNES/images/linux"/System.map.linux
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=u-boot-plnx; 		sbuild=u-boot/u-boot-plnx; 	else 		sinstance=u-boot; 		sbuild=u-boot; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[INFO ] update linux/u-boot source
+[ALL  ] if [ ! -d "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx" ]; then 		mkdir -p "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"; 	fi; 	rsync -a --cvs-exclude --filter=':C .git/' "/opt/petalinux/petalinux-v2014.4-final/components/u-boot/u-boot-plnx"/ "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"/
+[ALL  ] chmod -R a+w "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx"/include/configs
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/config.mk" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/config.mk"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq/config.mk"; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot/platform-top.h" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/u-boot"/*.h "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs"/; 		mv "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs/platform-top.h"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/include/configs/zynq_zc70x.h"; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems//home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.c" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.c"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq"/; 	fi
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/subsystems//home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.h" ]; then 		rsync "/home/steven/Desktop/LINUX_SNES/subsystems/linux/hw-description/ps7_init.h"  "/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx/board/xilinx/zynq"/; 	fi
+[INFO ] generate linux/u-boot configuration files
+[ALL  ] make O=/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx -C /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx -j3 zynq_zc70x_config || exit 255
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[ALL  ]   GEN     /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/Makefile
+[ALL  ] Configuring for zynq_zc70x board...
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[INFO ] build linux/u-boot
+[ALL  ] make O=/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx -C /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx -j3 all
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[ALL  ]   GEN     include/autoconf.mk.dep
+[ALL  ]   GEN     include/autoconf.mk
+[ALL  ]   CHK     include/config/uboot.release
+[ALL  ]   GEN     /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/Makefile
+[ALL  ]   CHK     include/generated/timestamp_autogenerated.h
+[ALL  ]   UPD     include/generated/timestamp_autogenerated.h
+[ALL  ]   Using /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx as source for u-boot
+[ALL  ]   CHK     include/generated/version_autogenerated.h
+[ALL  ]   CC      lib/asm-offsets.s
+[ALL  ]   CC      arch/arm/lib/asm-offsets.s
+[ALL  ]   GEN     include/generated/generic-asm-offsets.h
+[ALL  ]   GEN     include/generated/asm-offsets.h
+[ALL  ]   HOSTCC  tools/common/env_embedded.o
+[ALL  ]   HOSTCC  tools/dumpimage.o
+[ALL  ]   HOSTCC  tools/envcrc.o
+[ALL  ]   HOSTCC  tools/image-host.o
+[ALL  ]   HOSTCC  tools/mkenvimage.o
+[ALL  ]   HOSTCC  tools/mkimage.o
+[ALL  ]   HOSTLD  tools/envcrc
+[ALL  ]   HOSTLD  tools/mkenvimage
+[ALL  ]   HOSTLD  tools/dumpimage
+[ALL  ]   HOSTLD  tools/mkimage
+[ALL  ]   CC      arch/arm/cpu/armv7/cache_v7.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/timer.o
+[ALL  ]   AS      arch/arm/lib/crt0.o
+[ALL  ]   CC      arch/arm/lib/bootm-fdt.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/cpu.o
+[ALL  ]   CC      arch/arm/cpu/armv7/cpu.o
+[ALL  ]   CC      arch/arm/lib/bootm.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/ddrc.o
+[ALL  ]   CC      arch/arm/cpu/armv7/syslib.o
+[ALL  ]   CC      arch/arm/lib/interrupts.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/slcr.o
+[ALL  ]   AS      arch/arm/cpu/armv7/start.o
+[ALL  ]   LD      arch/arm/cpu/armv7/built-in.o
+[ALL  ]   CC      arch/arm/lib/reset.o
+[ALL  ]   CC      board/xilinx/zynq/board.o
+[ALL  ]   CC      arch/arm/cpu/armv7/zynq/clk.o
+[ALL  ]   CC      arch/arm/lib/cache.o
+[ALL  ]   LD      board/xilinx/zynq/built-in.o
+[ALL  ]   CC      arch/arm/lib/cache-cp15.o
+[ALL  ]   CC      arch/arm/lib/eabi_compat.o
+[ALL  ]   AS      arch/arm/cpu/armv7/zynq/lowlevel_init.o
+[ALL  ]   LD      arch/arm/cpu/armv7/zynq/built-in.o
+[ALL  ]   LD      arch/arm/lib/built-in.o
+[ALL  ]   CC      disk/part.o
+[ALL  ]   CC      drivers/fpga/fpga.o
+[ALL  ]   CC      common/main.o
+[ALL  ]   CC      disk/part_dos.o
+[ALL  ]   CC      common/command.o
+[ALL  ]   CC      drivers/fpga/zynqpl.o
+[ALL  ]   CC      common/exports.o
+[ALL  ]   LD      disk/built-in.o
+[ALL  ]   CC      drivers/pcmcia/tqm8xx_pcmcia.o
+[ALL  ]   CC      drivers/fpga/xilinx.o
+[ALL  ]   CC      common/hash.o
+[ALL  ]   LD      drivers/pcmcia/built-in.o
+[ALL  ]   CC      drivers/rtc/date.o
+[ALL  ]   CC      common/cli_hush.o
+[ALL  ]   LD      drivers/fpga/built-in.o
+[ALL  ]   LD      drivers/rtc/built-in.o
+[ALL  ]   LD      drivers/built-in.o
+[ALL  ]   CC      common/cli_simple.o
+[ALL  ]   CC      drivers/input/input.o
+[ALL  ]   CC      common/cli.o
+[ALL  ]   LD      drivers/input/built-in.o
+[ALL  ]   CC      drivers/mmc/mmc.o
+[ALL  ]   CC      common/cli_readline.o
+[ALL  ]   CC      drivers/mmc/sdhci.o
+[ALL  ]   CC      common/s_record.o
+[ALL  ]   CC      common/xyzModem.o
+[ALL  ]   CC      drivers/mmc/zynq_sdhci.o
+[ALL  ]   CC      drivers/mmc/mmc_write.o
+[ALL  ]   LD      drivers/mmc/built-in.o
+[ALL  ]   CC      drivers/net/netconsole.o
+[ALL  ]   CC      drivers/mtd/spi/sf.o
+[ALL  ]   CC      common/cmd_disk.o
+[ALL  ]   CC      drivers/mtd/spi/sf_params.o
+[ALL  ]   CC      common/autoboot.o
+[ALL  ]   CC      drivers/net/zynq_gem.o
+[ALL  ]   CC      drivers/mtd/spi/sf_probe.o
+[ALL  ]   CC      common/board_f.o
+[ALL  ]   LD      drivers/net/built-in.o
+[ALL  ]   CC      drivers/mtd/spi/sf_ops.o
+[ALL  ]   CC      common/board_r.o
+[ALL  ]   CC      drivers/net/phy/phy.o
+[ALL  ]   CC      common/cmd_boot.o
+[ALL  ]   LD      drivers/mtd/spi/built-in.o
+[ALL  ]   CC      drivers/net/phy/marvell.o
+[ALL  ]   CC      common/cmd_bootm.o
+[ALL  ]   CC      common/bootm.o
+[ALL  ]   CC      common/bootm_os.o
+[ALL  ]   LD      drivers/net/phy/built-in.o
+[ALL  ]   CC      common/cmd_help.o
+[ALL  ]   CC      common/cmd_version.o
+[ALL  ]   CC      drivers/serial/serial.o
+[ALL  ]   CC      common/env_attr.o
+[ALL  ]   CC      drivers/spi/spi.o
+[ALL  ]   CC      drivers/spi/zynq_qspi.o
+[ALL  ]   CC      drivers/serial/serial_zynq.o
+[ALL  ]   CC      common/env_callback.o
+[ALL  ]   LD      drivers/serial/built-in.o
+[ALL  ]   CC      common/env_flags.o
+[ALL  ]   CC      common/env_sf.o
+[ALL  ]   LD      drivers/spi/built-in.o
+[ALL  ]   CC      common/cmd_source.o
+[ALL  ]   CC      common/cmd_bdinfo.o
+[ALL  ]   CC      common/cmd_cache.o
+[ALL  ]   CC      common/cmd_clk.o
+[ALL  ]   CC      common/cmd_console.o
+[ALL  ]   CC      common/cmd_echo.o
+[ALL  ]   CC      common/cmd_exit.o
+[ALL  ]   CC      common/cmd_ext2.o
+[ALL  ]   CC      common/cmd_fat.o
+[ALL  ]   CC      common/cmd_fdt.o
+[ALL  ]   CC      common/fdt_support.o
+[ALL  ]   CC      common/cmd_fpga.o
+[ALL  ]   CC      common/cmd_itest.o
+[ALL  ]   CC      common/cmd_load.o
+[ALL  ]   CC      common/cmd_mem.o
+[ALL  ]   CC      common/miiphyutil.o
+[ALL  ]   CC      common/cmd_misc.o
+[ALL  ]   CC      common/cmd_mmc.o
+[ALL  ]   CC      common/cmd_net.o
+[ALL  ]   CC      common/cmd_pcmcia.o
+[ALL  ]   CC      common/cmd_sf.o
+[ALL  ]   CC      fs/fs.o
+[ALL  ]   CC      common/cmd_spi.o
+[ALL  ]   CC      lib/zlib/zlib.o
+[ALL  ]   CC      fs/ext4/ext4fs.o
+[ALL  ]   CC      common/cmd_test.o
+[ALL  ]   CC      fs/ext4/ext4_common.o
+[ALL  ]   CC      common/cmd_ximg.o
+[ALL  ]   CC      common/flash.o
+[ALL  ]   CC      common/splash.o
+[ALL  ]   CC      fs/ext4/dev.o
+[ALL  ]   CC      common/cmd_nvedit.o
+[ALL  ]   LD      fs/ext4/built-in.o
+[ALL  ]   CC      fs/fat/fat_write.o
+[ALL  ]   LD      lib/zlib/built-in.o
+[ALL  ]   CC      lib/fdtdec_common.o
+[ALL  ]   CC      lib/gunzip.o
+[ALL  ]   CC      common/env_common.o
+[ALL  ]   CC      lib/initcall.o
+[ALL  ]   CC      common/console.o
+[ALL  ]   CC      lib/lmb.o
+[ALL  ]   CC      common/dlmalloc.o
+[ALL  ]   CC      lib/md5.o
+[ALL  ]   CC      fs/fat/file.o
+[ALL  ]   LD      fs/fat/built-in.o
+[ALL  ]   LD      fs/built-in.o
+[ALL  ]   CC      lib/net_utils.o
+[ALL  ]   CC      common/image.o
+[ALL  ]   CC      lib/libfdt/fdt.o
+[ALL  ]   CC      lib/qsort.o
+[ALL  ]   CC      lib/libfdt/fdt_ro.o
+[ALL  ]   CC      lib/sha1.o
+[ALL  ]   CC      common/image-fdt.o
+[ALL  ]   CC      lib/sha256.o
+[ALL  ]   CC      lib/libfdt/fdt_rw.o
+[ALL  ]   CC      common/image-fit.o
+[ALL  ]   CC      lib/libfdt/fdt_strerror.o
+[ALL  ]   CC      lib/libfdt/fdt_sw.o
+[ALL  ]   CC      lib/strmhz.o
+[ALL  ]   CC      common/memsize.o
+[ALL  ]   CC      lib/hashtable.o
+[ALL  ]   CC      lib/libfdt/fdt_wip.o
+[ALL  ]   CC      common/stdio.o
+[ALL  ]   CC      lib/libfdt/fdt_empty_tree.o
+[ALL  ]   LD      lib/libfdt/built-in.o
+[ALL  ]   LD      common/built-in.o
+[ALL  ]   CC      lib/display_options.o
+[ALL  ]   CC      net/arp.o
+[ALL  ]   CC      lib/crc32.o
+[ALL  ]   CC      lib/hang.o
+[ALL  ]   CC      net/bootp.o
+[ALL  ]   CC      lib/linux_string.o
+[ALL  ]   CC      lib/string.o
+[ALL  ]   CC      lib/time.o
+[ALL  ]   CC      lib/vsprintf.o
+[ALL  ]   CC      net/eth.o
+[ALL  ]   CC      net/net.o
+[ALL  ]   CC      net/nfs.o
+[ALL  ]   LD      lib/built-in.o
+[ALL  ]   CC      net/ping.o
+[ALL  ]   CC      net/tftp.o
+[ALL  ]   LD      net/built-in.o
+[ALL  ]   CC      examples/standalone/hello_world.o
+[ALL  ]   CC      examples/standalone/stubs.o
+[ALL  ]   LD      examples/standalone/libstubs.o
+[ALL  ]   LD      examples/standalone/hello_world
+[ALL  ]   OBJCOPY examples/standalone/hello_world.srec
+[ALL  ]   OBJCOPY examples/standalone/hello_world.bin
+[ALL  ]   LD      u-boot
+[ALL  ]   OBJCOPY u-boot.srec
+[ALL  ]   OBJCOPY u-boot.bin
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot/src/u-boot-plnx'
+[INFO ] install linux/u-boot
+[ALL  ] cp /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/u-boot.srec /home/steven/Desktop/LINUX_SNES/images/linux; 	cp /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/u-boot.bin /home/steven/Desktop/LINUX_SNES/images/linux; 	cp /home/steven/Desktop/LINUX_SNES/build/linux/u-boot/u-boot-plnx/u-boot /home/steven/Desktop/LINUX_SNES/images/linux/u-boot.elf
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=zynq_fsbl; 		sbuild=bootloader/zynq_fsbl; 	else 		sinstance=bootloader; 		sbuild=bootloader; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] make[1]: Nothing to be done for `install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=petalinux-rootfs; 		sbuild=rootfs/petalinux-rootfs; 	else 		sinstance=rootfs; 		sbuild=rootfs; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=plnx-repo; 		sbuild=packages-repo/plnx-repo; 	else 		sinstance=packages-repo; 		sbuild=packages-repo; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] # strip all the extracted packages in target root
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[INFO ] install sys_init
+[ALL  ] make INSTANCE=linux/rootfs/sys_init SUBSYSTEM=linux -C /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/sys_init install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/sys_init'
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot
+[ALL  ] # HACK: remove ttyPS0 and default tty1
+[ALL  ] sed -i "/ttyPS0/d" /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/inittab
+[ALL  ] sed -i "/respawn:/sbin/getty/d" /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/inittab
+[ALL  ] ttydev=$(grep -e "^TTYFILE=" hw_info_file | cut -d "=" -f 2); 	baudrate=$(grep -e "^TTY_BAUDRATE=" hw_info_file | cut -d "=" -f 2); 	consolestr="console=${ttydev},${baudrate}"; 	for i in `echo ${consolestr} | sed 's:"::g'`; do GetTTY=$(echo ${i##*console=} | cut -d "," -f 1) ; BuadRate=$(echo $i | awk -F "," '{print $2}' | tr -d [:space:]) ; if echo "$GetTTY" | grep "tty" > /dev/null ; then TTY_ID=$(echo $GetTTY | sed 's:tty::g'); if [ -n "$BuadRate" ]; then /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -a "$TTY_ID:2345:respawn:/sbin/getty -L $BuadRate $GetTTY vt100" /etc/inittab ; else /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -a "$TTY_ID:2345:askfirst:-/bin/login" /etc/inittab ; fi; fi ; done
+[ALL  ] # set hostname if configured
+[ALL  ] if [ -e /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/hostname ]; then 		echo "LINUX_SNES" > /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/hostname; 	fi
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/network
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh data/etc/network/interfaces-dhcp /etc/network/interfaces
+[ALL  ] # Remove any existing root password
+[ALL  ] sed -i -e "/^root:/d" /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/passwd
+[ALL  ] if [ ! -z ""root"" ]; then 		/opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -A "^root:" -a "root:MRkRMjA.yLGdM:0:0::/home/root:/bin/sh" /etc/passwd; 	else 		/opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -A "^root:" -a "root::0:0::/home/root:/bin/sh" /etc/passwd; 	fi
+[ALL  ] # TELNET server
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -a "telnet      stream  tcp     nowait  root    telnetd telnetd -i" /etc/inetd.conf
+[ALL  ] # FTP server
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -a "ftp    stream  tcp     nowait  root    ftpd    ftpd -w /var/ftp/" /etc/inetd.conf
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/var/ftp/
+[ALL  ] # create /etc/version
+[ALL  ] echo ""1.5" Tue, 05 Apr 2016 20:35:09 -0600" > /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/version
+[ALL  ] # and /etc/product
+[ALL  ] echo ""LINUX_SNES"" > /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/product
+[ALL  ] # Append to /etc/issue and /etc/issue.net
+[ALL  ] sed -ri -e 's/PetaLinux.+(/Built with PetaLinux v2014.4 (/g' -e '/text|PetaLinux/!d' /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/issue
+[ALL  ] sed -ri -e 's/PetaLinux.+(/Built with PetaLinux v2014.4 (/g' -e '/text|PetaLinux/!d' /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/issue.net
+[ALL  ] # Add flashdev script to create /dev/flash/* nodes
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -d -p 0755 data/etc/init.d/flashdev /etc/init.d/
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -s /etc/init.d/flashdev /etc/rcS.d/S10flashdev
+[ALL  ] if [ -f "/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/mdev" ]; then 		sed -i "s%^[[:space:]]*mount[[:space:]][[:space:]]*-t[[:space:]][[:space:]]*tmpfs[[:space:]].*[[:space:]]/dev[[:space:]].*%mount -t devtmpfs devtmpfs /dev -o size=64k,mode=755%g" "/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/init.d/mdev"; 	fi
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/sys_init'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=fwupgrade; 		sbuild=apps/fwupgrade; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[ALL  ] arm-xilinx-linux-gnueabi-strip fwupgrade
+[INFO ] install linux/rootfs/fwupgrade
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -p 755 -d data/upgrade-firmware /bin/upgrade-firmware
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -d fwupgrade /bin/fwupgrade
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=peekpoke; 		sbuild=apps/peekpoke; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[ALL  ] arm-xilinx-linux-gnueabi-strip peek
+[INFO ] install linux/rootfs/peekpoke
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -d peek /bin/peek
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -d poke /bin/poke
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=snes; 		sbuild=apps/snes; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[INFO ] install linux/rootfs/snes
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -d snes /bin/snes
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh program /home/root 
+[ALL  ] rm: cannot remove ‘/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/root’: Is a directory
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=uWeb; 		sbuild=apps/uWeb; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[ALL  ] tar -C /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot -xzf petalinux-demo-1.4.3/petalinux-web-demo-common-1.4.3.tar.gz
+[ALL  ] tar -C /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot -xzf petalinux-demo-1.4.3/petalinux-web-demo-petalinux-el-arm-1.4.3.tar.gz
+[INFO ] install linux/rootfs/uWeb
+[ALL  ] # Delete any existing inetd service binding to the http port
+[ALL  ] sed -i -e '/^<http>/d' /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/inetd.conf
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -d -p 0755 etc/init.d/uWeb /etc/init.d/uWeb
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -s /etc/init.d/uWeb /etc/rcS.d/S90uWeb
+[ALL  ] # Handle the case where flatfsd is not used
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/etc/config
+[ALL  ] # symlink /etc/config/interfaces to /etc/network/interfaces
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -s /etc/network/interfaces /etc/config/interfaces
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[ALL  ] if [ ! -f "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/link-to-kernel-build/Module.symvers" ]; then 		level=; if [ -z "${level}" ]; then level=0; fi; echo "Not going to install kernel modules since kernel hasn't been built." | log_progress INFO ${level}; 		exit 0; 	fi; 	level=; if [ -z "${level}" ]; then level=0; fi; echo "install kernel in-tree modules" | log_progress INFO ${level}; 	make INSTANCE=linux/kernel INSTALL_MOD_PATH=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot -C /home/steven/Desktop/LINUX_SNES/build/linux/kernel modules_install_only
+[INFO ] install kernel in-tree modules
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] rsync /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/.config
+[ALL  ] rm -rf /home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot /home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/arch/arm/boot" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot"
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/usr" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr"
+[INFO ] modules_install linux/kernel
+[ALL  ] make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- O=/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17 KCONFIG_CONFIG="/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/.config -j3 -C /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 modules_install 
+[ALL  ] make[3]: Entering directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17'
+[ALL  ]   GEN     ./Makefile
+[ALL  ] scripts/kconfig/conf --silentoldconfig Kconfig
+[ALL  ]   INSTALL crypto/ansi_cprng.ko
+[ALL  ]   INSTALL crypto/krng.ko
+[ALL  ]   INSTALL crypto/rng.ko
+[ALL  ]   INSTALL drivers/remoteproc/mb_remoteproc.ko
+[ALL  ]   INSTALL drivers/remoteproc/remoteproc.ko
+[ALL  ]   INSTALL drivers/remoteproc/zynq_remoteproc.ko
+[ALL  ]   INSTALL drivers/rpmsg/virtio_rpmsg_bus.ko
+[ALL  ]   INSTALL drivers/usb/gadget/function/usb_f_ss_lb.ko
+[ALL  ]   INSTALL drivers/usb/gadget/legacy/g_zero.ko
+[ALL  ]   INSTALL drivers/usb/gadget/libcomposite.ko
+[ALL  ]   INSTALL drivers/virtio/virtio.ko
+[ALL  ]   INSTALL drivers/virtio/virtio_ring.ko
+[ALL  ]   INSTALL fs/configfs/configfs.ko
+[ALL  ]   INSTALL net/8021q/8021q.ko
+[ALL  ]   INSTALL net/ipv4/ip_tunnel.ko
+[ALL  ]   INSTALL net/ipv4/ipip.ko
+[ALL  ]   INSTALL net/ipv4/tunnel4.ko
+[ALL  ]   INSTALL net/ipv6/ipv6.ko
+[ALL  ]   INSTALL net/ipv6/sit.ko
+[ALL  ]   INSTALL net/ipv6/xfrm6_mode_beet.ko
+[ALL  ]   INSTALL net/ipv6/xfrm6_mode_transport.ko
+[ALL  ]   INSTALL net/ipv6/xfrm6_mode_tunnel.ko
+[ALL  ]   DEPMOD  3.17.0-xilinx
+[ALL  ] make[3]: Leaving directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] # Mount point for devpts filesystem
+[ALL  ] mkdir -p /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/dev/pts
+[ALL  ] env TARGETDIR=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -s /var/tmp /tmp
+[ALL  ] for i in console,c,5,1; do 		touch /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/dev/@$i; 	done
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=device-tree-generator; 		sbuild=device-tree/device-tree-generator; 	else 		sinstance=device-tree; 		sbuild=device-tree; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] make[1]: Nothing to be done for `post-install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/device-tree'
+[ALL  ] if [ ! -z "kernel" ] && [ ! "kernel" == "none" ]; then 		sinstance=kernel; 		sbuild=kernel; 	elif [ "single" == "multi" ]; then 		sinstance=xlnx-3.17; 		sbuild=linux-kernel/xlnx-3.17; 	else 		sinstance=linux-kernel; 		sbuild=linux-kernel; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] make[1]: Nothing to be done for `post-install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=u-boot-plnx; 		sbuild=u-boot/u-boot-plnx; 	else 		sinstance=u-boot; 		sbuild=u-boot; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] make[1]: Nothing to be done for `post-install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/u-boot'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=zynq_fsbl; 		sbuild=bootloader/zynq_fsbl; 	else 		sinstance=bootloader; 		sbuild=bootloader; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] make[1]: Nothing to be done for `post-install'.
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/bootloader'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=petalinux-rootfs; 		sbuild=rootfs/petalinux-rootfs; 	else 		sinstance=rootfs; 		sbuild=rootfs; 	fi; 	make INSTANCE=linux/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "single" == "multi" ]; then 		sinstance=plnx-repo; 		sbuild=packages-repo/plnx-repo; 	else 		sinstance=packages-repo; 		sbuild=packages-repo; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] make[2]: Nothing to be done for `post-install'.
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=fwupgrade; 		sbuild=apps/fwupgrade; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[INFO ] post-install linux/rootfs/fwupgrade
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/fwupgrade'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=peekpoke; 		sbuild=apps/peekpoke; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[INFO ] post-install linux/rootfs/peekpoke
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/peekpoke'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=snes; 		sbuild=apps/snes; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[INFO ] post-install linux/rootfs/snes
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
+[ALL  ] if [ ! -z "none" ] && [ ! "none" == "none" ]; then 		sinstance=none; 		sbuild=none; 	elif [ "multi" == "multi" ]; then 		sinstance=uWeb; 		sbuild=apps/uWeb; 	else 		sinstance=apps; 		sbuild=apps; 	fi; 	make INSTANCE=linux/rootfs/${sinstance} -C ${sbuild} post-install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[INFO ] post-install linux/rootfs/uWeb
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/uWeb'
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs'
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make INSTANCE=linux SUBSYSTEM=linux -f Makefile.package package-subsystem
+[INFO ] package rootfs.cpio to /home/steven/Desktop/LINUX_SNES/images/linux
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] petalinux-gen-initrd -d /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot -o "/home/steven/Desktop/LINUX_SNES/images/linux/rootfs.cpio" --linux-build "/home/steven/Desktop/LINUX_SNES/build/linux/kernel" --initcpio "/home/steven/Desktop/LINUX_SNES/build/linux/rootfs_init_cpio_file" || exit 255
+[ALL  ] Generating filesystem description file for gen_init_cpio...
+[ALL  ] Creating /init symlink if required...ln: failed to create symbolic link ‘/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/init’: File exists
+[ALL  ] Done.
+[ALL  ] directories...files...symlinks...device nodes...done.
+[ALL  ] Generating CPIO archive /home/steven/Desktop/LINUX_SNES/images/linux/rootfs.cpio ...done.
+[ALL  ] gzip -c "/home/steven/Desktop/LINUX_SNES/images/linux/rootfs.cpio" > "/home/steven/Desktop/LINUX_SNES/images/linux/rootfs.cpio.gz" || exit 255
+[ALL  ] mkimage -A arm -T ramdisk -O linux -C gzip -d "/home/steven/Desktop/LINUX_SNES/images/linux/rootfs.cpio.gz" "/home/steven/Desktop/LINUX_SNES/images/linux/urootfs.cpio.gz" || exit 255
+[ALL  ] Image Name:   
+[ALL  ] Created:      Tue Apr  5 20:35:20 2016
+[INFO ] Update and install vmlinux image
+[ALL  ] Image Type:   ARM Linux RAMDisk Image (gzip compressed)
+[ALL  ] Data Size:    6066878 Bytes = 5924.69 kB = 5.79 MB
+[ALL  ] Load Address: 00000000
+[ALL  ] Entry Point:  00000000
+[ALL  ] make INSTANCE=linux/kernel -C /home/steven/Desktop/LINUX_SNES/build/linux/kernel vmlinux_only install || exit 255
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] rsync /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/.config
+[ALL  ] rm -rf /home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot /home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/arch/arm/boot" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot"
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/usr" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr"
+[INFO ] vmlinux linux/kernel
+[ALL  ] make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- O=/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17 KCONFIG_CONFIG="/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/.config -j3 -C /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 vmlinux 
+[ALL  ] make[3]: Entering directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17'
+[ALL  ]   GEN     ./Makefile
+[ALL  ] scripts/kconfig/conf --silentoldconfig Kconfig
+[ALL  ]   CHK     include/config/kernel.release
+[ALL  ]   GEN     ./Makefile
+[ALL  ]   CHK     include/generated/uapi/linux/version.h
+[ALL  ]   CHK     include/generated/utsrelease.h
+[ALL  ]   Using /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 as source for kernel
+[ALL  ] make[5]: `include/generated/mach-types.h' is up to date.
+[ALL  ]   CALL    /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/checksyscalls.sh
+[ALL  ]   GEN     usr/initramfs_data.cpio.gz
+[ALL  ]   CHK     include/generated/compile.h
+[ALL  ]   GZIP    kernel/config_data.gz
+[ALL  ]   CHK     kernel/config_data.h
+[ALL  ]   AS      usr/initramfs_data.o
+[ALL  ]   LD      usr/built-in.o
+[ALL  ]   LINK    vmlinux
+[ALL  ]   LD      vmlinux.o
+[ALL  ]   MODPOST vmlinux.o
+[ALL  ]   GEN     .version
+[ALL  ]   CHK     include/generated/compile.h
+[ALL  ]   UPD     include/generated/compile.h
+[ALL  ]   CC      init/version.o
+[ALL  ]   LD      init/built-in.o
+[ALL  ]   KSYM    .tmp_kallsyms1.o
+[ALL  ]   KSYM    .tmp_kallsyms2.o
+[ALL  ]   LD      vmlinux
+[ALL  ]   SORTEX  vmlinux
+[ALL  ]   SYSMAP  System.map
+[ALL  ] make[3]: Leaving directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[INFO ] install linux/kernel
+[ALL  ] if [ ! -f /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/vmlinux ]; then 		echo "ERROR: /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/vmlinux is not found. Please build linux first!"; 		exit 255; 	fi
+[ALL  ] cp "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/vmlinux "/home/steven/Desktop/LINUX_SNES/images/linux"/
+[ALL  ] cp "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/System.map "/home/steven/Desktop/LINUX_SNES/images/linux"/System.map.linux
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] arm-xilinx-linux-gnueabi-strip -K microblaze_start -K arm_start -K _end -K __log_buf -K _fdt_start /home/steven/Desktop/LINUX_SNES/images/linux/vmlinux -o /home/steven/Desktop/LINUX_SNES/images/linux/image.elf
+[INFO ] package zImage
+[ALL  ] make INSTANCE=linux/kernel -C /home/steven/Desktop/LINUX_SNES/build/linux/kernel zImage_only install
+[ALL  ] make[2]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] rsync /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/.config
+[ALL  ] rm -rf /home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot /home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/arch/arm/boot" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot"
+[ALL  ] ln -s "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/usr" "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/usr"
+[INFO ] zImage linux/kernel
+[ALL  ] make ARCH=arm CROSS_COMPILE=arm-xilinx-linux-gnueabi- O=/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17 KCONFIG_CONFIG="/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/.config -j3 -C /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 zImage 
+[ALL  ] make[3]: Entering directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[ALL  ] make[1]: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17'
+[ALL  ]   GEN     ./Makefile
+[ALL  ] scripts/kconfig/conf --silentoldconfig Kconfig
+[ALL  ]   CHK     include/config/kernel.release
+[ALL  ]   GEN     ./Makefile
+[ALL  ]   CHK     include/generated/uapi/linux/version.h
+[ALL  ]   CHK     include/generated/utsrelease.h
+[ALL  ]   Using /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17 as source for kernel
+[ALL  ] make[5]: `include/generated/mach-types.h' is up to date.
+[ALL  ]   CALL    /opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17/scripts/checksyscalls.sh
+[ALL  ]   CHK     include/generated/compile.h
+[ALL  ]   GZIP    kernel/config_data.gz
+[ALL  ]   CHK     kernel/config_data.h
+[ALL  ]   OBJCOPY arch/arm/boot/Image
+[ALL  ]   Kernel: arch/arm/boot/Image is ready
+[ALL  ]   GZIP    arch/arm/boot/compressed/piggy.gzip
+[ALL  ]   AS      arch/arm/boot/compressed/piggy.gzip.o
+[ALL  ]   LD      arch/arm/boot/compressed/vmlinux
+[ALL  ]   OBJCOPY arch/arm/boot/zImage
+[ALL  ]   Kernel: arch/arm/boot/zImage is ready
+[ALL  ] make[3]: Leaving directory `/opt/petalinux/petalinux-v2014.4-final/components/linux-kernel/xlnx-3.17'
+[INFO ] install linux/kernel
+[ALL  ] if [ ! -f /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/vmlinux ]; then 		echo "ERROR: /home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17/vmlinux is not found. Please build linux first!"; 		exit 255; 	fi
+[ALL  ] cp "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/vmlinux "/home/steven/Desktop/LINUX_SNES/images/linux"/
+[ALL  ] cp "/home/steven/Desktop/LINUX_SNES/build/linux/kernel/xlnx-3.17"/System.map "/home/steven/Desktop/LINUX_SNES/images/linux"/System.map.linux
+[ALL  ] make[2]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/kernel'
+[ALL  ] if [ -f /home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot/zImage ]; then 		cp /home/steven/Desktop/LINUX_SNES/build/linux/kernel/boot/zImage /home/steven/Desktop/LINUX_SNES/images/linux/; 	fi
+[ALL  ] kernel_loadaddr=$(grep -e "^CONFIG_SUBSYSTEM_MEMORY_.*_KERNEL_BASEADDR=" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/config" | head -n1 | cut -d "=" -f 2 ); 	[ ! -z "${kernel_loadaddr}" ] && kernel_loadaddr="--kernel_loadaddr ${kernel_loadaddr}"; 	uimage=$(grep -e "^CONFIG_SUBSYSTEM_UIMAGE_NAME=" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/config" | awk -F "=" '{print $2}' | tr -d '"'); 	if [ -z "${uimage}" ]; then 		uimage=image.ub; 	fi; 	kernel_compression=$(grep -e "^CONFIG_SUBSYSTEM_COMPRESS_IMAGE=y" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/config"); 	if [ ! -z "${kernel_compression}" ]; then 		kernel_compression="gzip"; 	else 		kernel_compression="none"; 	fi; 	kern_hash=$(grep -e "^CONFIG_SUBSYSTEM_UIMAGE_HASH_.*=y" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/config" | awk -F "=" '{print $1}' | sed "s/CONFIG_SUBSYSTEM_UIMAGE_HASH_//g" | tr '[:upper:]' '[:lower:]'); 	ramdisk=$(grep -e "^CONFIG_SUBSYSTEM_RAMDISK_IMAGE=" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/config" | cut -d "=" -f 2 ); 	if [ ! -z "${ramdisk}" ]; then 		ramdisk=$(eval echo "${ramdisk}"); 		ramdisk="--ramdisk "${ramdisk}""; 	fi; 	ramdisk_loadaddr=$(grep -e "^CONFIG_SUBSYSTEM_INITRD_RAMDISK_LOADADDR=" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/config" | head -n1 | cut -d "=" -f 2 ); 	if [ ! -z "${ramdisk_loadaddr}" ]; then 		ramdisk_loadaddr="--ramdisk_loadaddr ${ramdisk_loadaddr}"; 	fi; 	eval petalinux-gen-fitimage --kernel /home/steven/Desktop/LINUX_SNES/images/linux/vmlinux --dtb "/home/steven/Desktop/LINUX_SNES//build/linux/device-tree/system.dtb" ${kernel_loadaddr} --output /home/steven/Desktop/LINUX_SNES/images/linux/${uimage} --kernel_compression ${kernel_compression} --kernel_hash ${kern_hash} ${ramdisk} ${ramdisk_loadaddr} --kernelconfig "/home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config"
+[ALL  ] FIT format handling
+[ALL  ] Trying to execute "dtc -I dts -O dtb -p 500 /tmp/tmp.o418tofPtF/kernel_fdt.its > /home/steven/Desktop/LINUX_SNES/images/linux/image.ub.tmp"
+[ALL  ] Added timestamp successfully
+[ALL  ] petalinux-reloc-blob -l 0 -i /home/steven/Desktop/LINUX_SNES/images/linux/u-boot.elf -o /home/steven/Desktop/LINUX_SNES/images/linux/u-boot-s
+[ALL  ] INFO: Payload load address:0x1fc00000
+[ALL  ] INFO: Payload size: 274304
+[ALL  ] INFO: Jump offset:0x00000000
+[ALL  ] tftpboot=$(grep -e "^CONFIG_SUBSYSTEM_TFTPBOOT_DIR=" "/home/steven/Desktop/LINUX_SNES/subsystems/linux/config" | awk -F "=" '{print $2}' | tr -d '"'); 	if [ "${TFTPDIR_DISABLE}" != "TRUE" ]; then 		rsync -a "/home/steven/Desktop/LINUX_SNES/images/linux"/* "${tftpboot}/"; 		if [ ! $? -eq 0 ]; then 			level=; if [ -z "${level}" ]; then level=0; fi; echo "Failed to copy images to TFTPBOOT ${tftpboot}" | log_progress INFO ${level}; 		fi; 	fi
+[ALL  ] rsync: mkdir "/tftpboot" failed: Permission denied (13)
+[ALL  ] rsync error: error in file IO (code 11) at main.c(674) [Receiver=3.1.0]
+[INFO ] Failed to copy images to TFTPBOOT /tftpboot
+[ALL  ] make[1]: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'
+[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux'

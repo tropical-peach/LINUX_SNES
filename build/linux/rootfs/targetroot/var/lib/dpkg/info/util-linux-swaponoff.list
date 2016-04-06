@@ -1,0 +1,4 @@
+/.
+/sbin
+/sbin/swapoff.util-linux
+/sbin/swapon.util-linux

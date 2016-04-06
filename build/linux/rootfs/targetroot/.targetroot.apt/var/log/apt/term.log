@@ -1,0 +1,509 @@
+
+Log started: 2016-04-04  01:51:39
+dpkg: warning: 'ldconfig' not found in PATH or not executable
+dpkg: warning: 'start-stop-daemon' not found in PATH or not executable
+dpkg: warning: overriding problem because --force enabled:
+ 2 expected programs not found in PATH or not executable
+Note: root's PATH should usually contain /usr/local/sbin, /usr/sbin and /sbin
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package base-files.
+(Reading database ... (Reading database ... 100%(Reading database ... 0 files and directories currently installed.)
+Unpacking base-files (from .../base-files_3.0.14-r89_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package base-passwd.
+Unpacking base-passwd (from .../base-passwd_3.5.29-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package update-alternatives-opkg.
+Unpacking update-alternatives-opkg (from .../update-alternatives-opkg_0.1.8+git0+eae0d8fa44-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libc6.
+Unpacking libc6 (from .../libc6_2.18-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libgcc-s1.
+Unpacking libgcc-s1 (from .../libgcc-s1_4.8.3-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libtinfo5.
+Unpacking libtinfo5 (from .../libtinfo5_5.9-r15.1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package bash.
+Unpacking bash (from .../bash_4.3-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package busybox.
+Unpacking busybox (from .../busybox_1.22.1-r32_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package busybox-inetd.
+Unpacking busybox-inetd (from .../busybox-inetd_1.22.1-r32_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package busybox-mdev.
+Unpacking busybox-mdev (from .../busybox-mdev_1.22.1-r32_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package busybox-udhcpc.
+Unpacking busybox-udhcpc (from .../busybox-udhcpc_1.22.1-r32_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package gdbserver.
+Unpacking gdbserver (from .../gdbserver_7.7.50.20140217-cvs-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package netbase.
+Unpacking netbase (from .../netbase_1:5.2-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package init-ifupdown.
+Unpacking init-ifupdown (from .../init-ifupdown_1.0-r7_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package initscripts-functions.
+Unpacking initscripts-functions (from .../initscripts-functions_1.0-r155_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package initscripts.
+Unpacking initscripts (from .../initscripts_1.0-r155_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libuuid1.
+Unpacking libuuid1 (from .../libuuid1_2.24.2-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libblkid1.
+Unpacking libblkid1 (from .../libblkid1_2.24.2-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libffi6.
+Unpacking libffi6 (from .../libffi6_3.1-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libz1.
+Unpacking libz1 (from .../libz1_1.2.8-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libkmod2.
+Unpacking libkmod2 (from .../libkmod2_18+git0+ae58de0fcb-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libmount1.
+Unpacking libmount1 (from .../libmount1_2.24.2-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libncursesw5.
+Unpacking libncursesw5 (from .../libncursesw5_5.9-r15.1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libnl-3-200.
+Unpacking libnl-3-200 (from .../libnl-3-200_1:3.2.25-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libnl-idiag-3-200.
+Unpacking libnl-idiag-3-200 (from .../libnl-idiag-3-200_1:3.2.25-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libnl-route-3-200.
+Unpacking libnl-route-3-200 (from .../libnl-route-3-200_1:3.2.25-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libnl-nf-3-200.
+Unpacking libnl-nf-3-200 (from .../libnl-nf-3-200_1:3.2.25-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libnl-3-genl.
+Unpacking libnl-3-genl (from .../libnl-3-genl_1:3.2.25-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libnl-3-cli.
+Unpacking libnl-3-cli (from .../libnl-3-cli_1:3.2.25-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libpcap1.
+Unpacking libpcap1 (from .../libpcap1_1.6.1-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libpci3.
+Unpacking libpci3 (from .../libpci3_3.2.1-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package libstdc++6.
+Unpacking libstdc++6 (from .../libstdc++6_4.8.3-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package modutils-initscripts.
+Unpacking modutils-initscripts (from .../modutils-initscripts_1.0-r7_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package mtd-utils.
+Unpacking mtd-utils (from .../mtd-utils_1.5.1+git0+9f107132a6-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package ncurses-doc.
+Unpacking ncurses-doc (from .../ncurses-doc_5.9-r15.1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package pciutils-ids.
+Unpacking pciutils-ids (from .../pciutils-ids_3.2.1-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package pciutils.
+Unpacking pciutils (from .../pciutils_3.2.1-r0_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package sysvinit-pidof.
+Unpacking sysvinit-pidof (from .../sysvinit-pidof_2.88dsf-r14_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package sysvinit-inittab.
+Unpacking sysvinit-inittab (from .../sysvinit-inittab_2.88dsf-r10_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package sysvinit.
+Unpacking sysvinit (from .../sysvinit_2.88dsf-r14_armv7a-vfp-neon.deb) ...
+Selecting previously unselected package update-rc.d.
+Unpacking update-rc.d (from .../update-rc.d_0.7-r5_all.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package util-linux-swaponoff.
+Unpacking util-linux-swaponoff (from .../util-linux-swaponoff_2.24.2-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package util-linux-umount.
+Unpacking util-linux-umount (from .../util-linux-umount_2.24.2-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package util-linux-losetup.
+Unpacking util-linux-losetup (from .../util-linux-losetup_2.24.2-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ package architecture (armv7a-vfp-neon) does not match system (i386)
+Selecting previously unselected package util-linux.
+Unpacking util-linux (from .../util-linux_2.24.2-r1_armv7a-vfp-neon.deb) ...
+dpkg: warning: overriding problem because --force enabled:
+ trying to overwrite '/usr/bin/lastb', which is also in package sysvinit 2.88dsf-r14
+dpkg: warning: 'ldconfig' not found in PATH or not executable
+dpkg: warning: 'start-stop-daemon' not found in PATH or not executable
+dpkg: warning: overriding problem because --force enabled:
+ 2 expected programs not found in PATH or not executable
+Note: root's PATH should usually contain /usr/local/sbin, /usr/sbin and /sbin
+Setting up base-files (3.0.14-r89) ...
+
+Configuration file `/etc/fstab', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file `/etc/hostname', does not exist on system.
+Installing new config file as you requested.
+
+Configuration file `/etc/shells', does not exist on system.
+Installing new config file as you requested.
+Setting up base-passwd (3.5.29-r0) ...
+Setting up update-alternatives-opkg (0.1.8+git0+eae0d8fa44-r0) ...
+Setting up libc6 (2.18-r1) ...
+Setting up libgcc-s1 (4.8.3-r1) ...
+Setting up libtinfo5 (5.9-r15.1) ...
+Setting up bash (4.3-r0) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sh to /bin/bash
+Setting up busybox (1.22.1-r32) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ar to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/gunzip to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/zcat to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/cpio to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/gzip to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/tar to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/unzip to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/date to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/groups to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/id to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/touch to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/users to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/who to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/awk to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/cmp to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/diff to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/patch to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sed to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/vi to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/find to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/grep to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/egrep to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/fgrep to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/xargs to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/halt to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/poweroff to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/reboot to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/depmod to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/insmod to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/lsmod to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/modprobe to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/rmmod to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ash to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sh to /bin/bash
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/fstrim to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/mdev to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/[ to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/[[ to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/addgroup to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/adduser to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/basename to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/cat to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/chattr to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/chgrp to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/chmod to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/chown to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/chroot to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/chvt to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/clear to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/cp to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/cut to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/dc to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/dd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/deallocvt to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/delgroup to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/deluser to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/devmem to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/df to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/dirname to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/dmesg to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/dnsdomainname to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/du to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/dumpkmap to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/dumpleases to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/echo to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/env to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/expr to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/false to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/fbset to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/fdisk to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/flock to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/free to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/fsck to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/ftpd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ftpget to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ftpput to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/fuser to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/getopt to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/getty to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/hd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/head to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/hexdump to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/hostname to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/httpd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/hwclock to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/ifconfig to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/ifdown to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/ifup to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/inetd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/ip to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/kill to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/killall to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/klogd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/less to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ln to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/loadfont to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/loadkmap to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/logger to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/logname to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/logread to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/losetup to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ls to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/md5sum to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/microcom to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/mkdir to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/mkdosfs to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/mkfifo to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/mkfs.vfat to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/mknod to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/mkswap to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/mktemp to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/more to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/mount to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/mv to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/netstat to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/nice to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/nohup to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/nslookup to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/od to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/openvt to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/pidof to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/pivot_root to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/printf to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ps to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/pwd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/rdate to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/readlink to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/realpath to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/renice to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/reset to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/rm to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/rmdir to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/route to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/run-parts to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/seq to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/setconsole to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sha1sum to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sha3sum to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sha256sum to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sha512sum to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sleep to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sort to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/start-stop-daemon to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/stat to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/strings to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/stty to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/sulogin to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/swapoff to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/swapon to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/switch_root to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/sync to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/sysctl to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/syslogd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/tail to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/tee to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/telnet to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/telnetd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/test to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/tftp to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/time to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/top to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/tr to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/true to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/tty to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/udhcpc to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/udhcpd to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/umount to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/uname to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/uniq to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/uptime to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/usleep to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/watch to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/watchdog to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/wc to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/wget to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/which to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/whoami to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/yes to /bin/busybox.nosuid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ping to /bin/busybox.suid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/ping6 to /bin/busybox.suid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/login to /bin/busybox.suid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/passwd to /bin/busybox.suid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/su to /bin/busybox.suid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/traceroute to /bin/busybox.suid
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/vlock to /bin/busybox.suid
+Setting up busybox-inetd (1.22.1-r32) ...
+
+Configuration file `/etc/inetd.conf', does not exist on system.
+Installing new config file as you requested.
+ Adding system startup for /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot/etc/init.d/inetd.busybox.
+Setting up busybox-mdev (1.22.1-r32) ...
+
+Configuration file `/etc/mdev.conf', does not exist on system.
+Installing new config file as you requested.
+ Adding system startup for /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot/etc/init.d/mdev.
+Setting up busybox-udhcpc (1.22.1-r32) ...
+Setting up gdbserver (7.7.50.20140217-cvs-r1) ...
+Setting up netbase (1:5.2-r0) ...
+
+Configuration file `/etc/hosts', does not exist on system.
+Installing new config file as you requested.
+Setting up init-ifupdown (1.0-r7) ...
+
+Configuration file `/etc/network/interfaces', does not exist on system.
+Installing new config file as you requested.
+ Adding system startup for /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot/etc/init.d/networking.
+Setting up initscripts-functions (1.0-r155) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//etc/init.d/functions to /etc/init.d/functions.initscripts
+Setting up initscripts (1.0-r155) ...
+Setting up libuuid1 (2.24.2-r1) ...
+Setting up libblkid1 (2.24.2-r1) ...
+Setting up libffi6 (3.1-r0) ...
+Setting up libz1 (1.2.8-r0) ...
+Setting up libkmod2 (18+git0+ae58de0fcb-r0) ...
+Setting up libmount1 (2.24.2-r1) ...
+Setting up libncursesw5 (5.9-r15.1) ...
+Setting up libnl-3-200 (1:3.2.25-r0) ...
+Setting up libnl-idiag-3-200 (1:3.2.25-r0) ...
+Setting up libnl-route-3-200 (1:3.2.25-r0) ...
+Setting up libnl-nf-3-200 (1:3.2.25-r0) ...
+Setting up libpcap1 (1.6.1-r0) ...
+Setting up libpci3 (3.2.1-r0) ...
+Setting up libstdc++6 (4.8.3-r1) ...
+Setting up modutils-initscripts (1.0-r7) ...
+ Adding system startup for /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot/etc/init.d/modutils.sh.
+Setting up mtd-utils (1.5.1+git0+9f107132a6-r0) ...
+Setting up ncurses-doc (5.9-r15.1) ...
+Setting up pciutils-ids (3.2.1-r0) ...
+Setting up pciutils (3.2.1-r0) ...
+Setting up sysvinit-pidof (2.88dsf-r14) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/pidof to /bin/pidof.sysvinit
+Setting up sysvinit-inittab (2.88dsf-r10) ...
+
+Configuration file `/etc/inittab', does not exist on system.
+Installing new config file as you requested.
+Setting up sysvinit (2.88dsf-r14) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/init to /sbin/init.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/mountpoint to /bin/mountpoint.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/halt to /sbin/halt.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/reboot to /sbin/reboot.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/runlevel to /sbin/runlevel.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/shutdown to /sbin/shutdown.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/poweroff to /sbin/poweroff.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/last to /usr/bin/last.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/mesg to /usr/bin/mesg.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/utmpdump to /usr/bin/utmpdump.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/wall to /usr/bin/wall.sysvinit
+Setting up update-rc.d (0.7-r5) ...
+Setting up util-linux-swaponoff (2.24.2-r1) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/swapoff to /sbin/swapoff.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/swapon to /sbin/swapon.util-linux
+Setting up util-linux-umount (2.24.2-r1) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/umount to /bin/umount.util-linux
+Setting up util-linux-losetup (2.24.2-r1) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/losetup to /sbin/losetup.util-linux
+Setting up util-linux (2.24.2-r1) ...
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/dmesg to /bin/dmesg.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/kill to /bin/kill.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/more to /bin/more.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/mkswap to /sbin/mkswap.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/blockdev to /sbin/blockdev.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/pivot_root to /sbin/pivot_root.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/mkfs.minix to /sbin/mkfs.minix.util-linux
+update-alternatives: Error: cannot register alternative hexdump to /usr/bin/hexdump since it is already registered to /bin/hexdump
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/last to /usr/bin/last.sysvinit
+update-alternatives: Error: cannot register alternative logger to /usr/bin/logger since it is already registered to /bin/logger
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/mesg to /usr/bin/mesg.sysvinit
+update-alternatives: Error: cannot register alternative renice to /usr/bin/renice since it is already registered to /bin/renice
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/wall to /usr/bin/wall.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/setsid to /usr/bin/setsid.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/chrt to /usr/bin/chrt.util-linux
+update-alternatives: Error: cannot register alternative flock to /usr/bin/flock since it is already registered to /bin/flock
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/utmpdump to /usr/bin/utmpdump.sysvinit
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//usr/bin/eject to /usr/bin/eject.util-linux
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//bin/getopt to /usr/bin/getopt
+update-alternatives: Linking /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot//sbin/sulogin to /sbin/sulogin.util-linux
+Setting up libnl-3-genl (1:3.2.25-r0) ...
+Setting up libnl-3-cli (1:3.2.25-r0) ...
+Log ended: 2016-04-04  01:51:50
+
+Log started: 2016-04-04  01:51:51
+dpkg: warning: 'ldconfig' not found in PATH or not executable
+dpkg: warning: 'start-stop-daemon' not found in PATH or not executable
+dpkg: warning: overriding problem because --force enabled:
+ 2 expected programs not found in PATH or not executable
+Note: root's PATH should usually contain /usr/local/sbin, /usr/sbin and /sbin
+Selecting previously unselected package run-postinsts.
+(Reading database ... (Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 1233 files and directories currently installed.)
+Unpacking run-postinsts (from .../run-postinsts_1.0-r9_all.deb) ...
+ Removing any system startup links for run-postinsts ...
+dpkg: warning: 'ldconfig' not found in PATH or not executable
+dpkg: warning: 'start-stop-daemon' not found in PATH or not executable
+dpkg: warning: overriding problem because --force enabled:
+ 2 expected programs not found in PATH or not executable
+Note: root's PATH should usually contain /usr/local/sbin, /usr/sbin and /sbin
+Setting up run-postinsts (1.0-r9) ...
+ Adding system startup for /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/packages-repo/targetroot/etc/init.d/run-postinsts.
+Log ended: 2016-04-04  01:51:51

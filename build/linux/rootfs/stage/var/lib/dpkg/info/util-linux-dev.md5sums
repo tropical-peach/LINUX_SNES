@@ -1,0 +1,9 @@
+35a97c82d22737936a4ba8fb6924bcd4  usr/include/uuid/uuid.h
+8ab5ddb005bfaf21b9189bcfd09a8fa3  usr/include/libmount/libmount.h
+6bbf27d136fe3648e9094ad6ee128362  usr/include/blkid/blkid.h
+68d77d97cf78b410ed30a2a3e483a295  usr/lib/libuuid.la
+369fcf4ea29fa805420a72c52d3c358e  usr/lib/libblkid.la
+c7521442b44b8eee8872a7f8b19e82ef  usr/lib/libmount.la
+fbadfdf4974ecfd3cc45dbf4fa9881b9  usr/lib/pkgconfig/uuid.pc
+c57c88c95acf312efb83b461df184c25  usr/lib/pkgconfig/mount.pc
+7785062583e33feb1a5d2e9d063e5d84  usr/lib/pkgconfig/blkid.pc

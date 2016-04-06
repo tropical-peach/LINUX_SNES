@@ -1,0 +1,1553 @@
+[INFO ] oldconfig linux
+*
+* linux System Configuration
+*
+*
+* linux Components Selection
+*
+First Stage Bootloader (SUBSYSTEM_COMPONENT_BOOTLOADER_AUTO_FSBL) [Y/n/?] 
+  Auto update ps7_init (SUBSYSTEM_COMPONENT_BOOTLOADER_AUTO_PS_INIT) [Y/n/?] 
+u-boot
+> 1. u-boot-plnx (SUBSYSTEM_COMPONENT_U__BOOT_NAME_U__BOOT__PLNX)
+  2. remote (SUBSYSTEM_COMPONENT_U__BOOT_NAME_REMOTE)
+  3. none (SUBSYSTEM_COMPONENT_U__BOOT_NAME_NONE)
+choice[1-3]: kernel
+> 1. xlnx-3.17 (SUBSYSTEM_COMPONENT_LINUX__KERNEL_INSTANCE_KERNEL_NAME_XLNX__3___17)
+  2. remote (SUBSYSTEM_COMPONENT_LINUX__KERNEL_INSTANCE_KERNEL_NAME_REMOTE)
+choice[1-2]: rootfs
+> 1. petalinux-rootfs (SUBSYSTEM_COMPONENT_ROOTFS_NAME_PETALINUX__ROOTFS)
+choice[1]: 1
+*
+* Generic Components
+*
+*
+* Auto Config Settings
+*
+Device tree autoconfig (SUBSYSTEM_AUTOCONFIG_DEVICE__TREE) [Y/n/?] 
+kernel autoconfig (SUBSYSTEM_AUTOCONFIG_KERNEL) [Y/n/?] 
+rootfs autoconfig (SUBSYSTEM_AUTOCONFIG_ROOTFS) [Y/n/?] 
+u-boot autoconfig (SUBSYSTEM_AUTOCONFIG_U__BOOT) [Y/n/?] 
+*
+* Subsystem AUTO Hardware Settings
+*
+Subsystem AUTO Hardware Settings (SUBSYSTEM_HARDWARE_AUTO) [Y/?] y
+  System Processor
+  > 1. ps7_cortexa9_0 (SUBSYSTEM_PROCESSOR_PS7_CORTEXA9_0_SELECT)
+  choice[1]: 1
+  *
+  * Memory Settings
+  *
+  Primary Memory
+  > 1. ps7_ddr_0 (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_SELECT)
+    2. simple (SUBSYSTEM_MEMORY_SIMPLE_SELECT)
+    3. manual (SUBSYSTEM_MEMORY_MANUAL_SELECT)
+  choice[1-3?]:   System memory base address (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_BASEADDR) [0x0] 
+  System memory size (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_SIZE) [0x20000000] 
+  kernel base address (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_KERNEL_BASEADDR) [0x0] 
+  u-boot text base address offset to memory high address (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_U__BOOT_TEXTBASE_OFFSET) [0x400000] 
+  *
+  * Serial Settings
+  *
+  Primary stdin/stdout
+  > 1. ps7_uart_1 (SUBSYSTEM_SERIAL_PS7_UART_1_SELECT)
+    2. manual (SUBSYSTEM_SERIAL_MANUAL_SELECT)
+  choice[1-2?]:   System stdin/stdout baudrate
+    1. 9600 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_9600)
+    2. 19200 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_19200)
+    3. 38400 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_38400)
+    4. 57600 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_57600)
+  > 5. 115200 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_115200)
+    6. 230400 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_230400)
+  choice[1-6]:   *
+  * Ethernet Settings
+  *
+  Primary Ethernet
+  > 1. ps7_ethernet_0 (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_SELECT)
+    2. manual (SUBSYSTEM_ETHERNET_MANUAL_SELECT)
+  choice[1-2?]:   Randomise MAC address (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_MAC_AUTO) [N/y/?] 
+    Ethernet MAC address (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_MAC) [00:0a:35:00:b7:0a] 
+  Obtain IP address automatically (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_USE_DHCP) [Y/n/?] 
+  *
+  * Flash Settings
+  *
+  Primary Flash
+  > 1. ps7_qspi_0 (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_SELECT)
+    2. manual (SUBSYSTEM_FLASH_MANUAL_SELECT)
+  choice[1-2?]:   Advanced Flash Auto Configuration (SUBSYSTEM_FLASH__ADVANCED_AUTOCONFIG) [N/y/?] 
+  *
+  * partition 0
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART0_NAME) [boot] 
+  size (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART0_SIZE) [0x500000] 
+  *
+  * partition 1
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART1_NAME) [bootenv] 
+  size (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART1_SIZE) [0x20000] 
+  *
+  * partition 2
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART2_NAME) [kernel] 
+  size (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART2_SIZE) [0xA80000] 
+  *
+  * partition 3
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART3_NAME) [spare] 
+  size (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART3_SIZE) [0x0] 
+  *
+  * partition 4
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART4_NAME) [] 
+  *
+  * SD/SDIO Settings
+  *
+  Primary SD/SDIO
+  > 1. ps7_sd_0 (SUBSYSTEM_SD_PS7_SD_0_SELECT)
+    2. manual (SUBSYSTEM_SD_MANUAL_SELECT)
+  choice[1-2?]:   *
+  * Advanced bootable images storage Settings
+  *
+  Advanced bootable images storage Settings (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG) [Y/n/?] 
+    *
+    * boot image settings
+    *
+    image storage media
+      1. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOT_MEDIA_FLASH_SELECT)
+    > 2. primary sd (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOT_MEDIA_SD_SELECT)
+      3. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOT_MEDIA_MANUAL_SELECT)
+    choice[1-3]:     image name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOT_IMAGE_NAME) [BOOT.BIN] 
+    *
+    * u-boot env partition settings
+    *
+    image storage media
+    > 1. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOTENV_MEDIA_FLASH_SELECT)
+      2. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOTENV_MEDIA_MANUAL_SELECT)
+    choice[1-2]:     flash partition name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOTENV_PART_NAME) [bootenv] 
+    *
+    * kernel image settings
+    *
+    image storage media
+      1. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_MEDIA_FLASH_SELECT)
+    > 2. primary sd (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_MEDIA_SD_SELECT)
+      3. ethernet (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_MEDIA_ETHERNET_SELECT)
+      4. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_MEDIA_MANUAL_SELECT)
+    choice[1-4]:     image name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_IMAGE_NAME) [image.ub] 
+    *
+    * jffs2 rootfs image settings
+    *
+    image storage media
+    > 1. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_JFFS2_MEDIA_FLASH_SELECT)
+      2. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_JFFS2_MEDIA_MANUAL_SELECT)
+    choice[1-2]:     flash partition name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_JFFS2_PART_NAME) [jffs2] 
+    image name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_JFFS2_IMAGE_NAME) [rootfs.jffs2] 
+    *
+    * dtb image settings
+    *
+    image storage media
+    > 1. from boot image (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_BOOTIMAGE_SELECT)
+      2. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_FLASH_SELECT)
+      3. primary sd (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_SD_SELECT)
+      4. ethernet (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_ETHERNET_SELECT)
+      5. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_MANUAL_SELECT)
+    choice[1-5]:     image name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_IMAGE_NAME) [system.dtb] 
+*
+* Kernel Bootargs
+*
+generate boot args automatically (SUBSYSTEM_BOOTARGS_AUTO) [Y/n] 
+enable kernel earlyprintk (SUBSYSTEM_BOOTARGS_EARLYPRINTK) [Y/n/?] 
+Auto generated bootargs (NO EDIT!) (SUBSYSTEM_BOOTARGS_GENERATED) [console=ttyPS0,115200 earlyprintk] 
+*
+* u-boot Configuration
+*
+U-boot config
+> 1. PetaLinux u-boot config (SUBSYSTEM_UBOOT_CONFIG_PETALINUX)
+  2. other (SUBSYSTEM_UBOOT_CONFIG_OTHER)
+choice[1-2]: netboot offset (SUBSYSTEM_NETBOOT_OFFSET) [0x1000000] 
+TFTP Server IP address (SUBSYSTEM_U__BOOT_TFTPSERVER_IP) [AUTO] 
+*
+* Image Packaging Configuration
+*
+Root filesystem type
+> 1. INITRAMFS (SUBSYSTEM_ROOTFS_INITRAMFS)
+  2. INITRD (SUBSYSTEM_ROOTFS_INITRD)
+  3. JFFS2 (SUBSYSTEM_ROOTFS_JFFS2)
+  4. NFS (SUBSYSTEM_ROOTFS_NFS)
+  5. SD card (SUBSYSTEM_ROOTFS_SD)
+  6. other (SUBSYSTEM_ROOTFS_OTHER)
+choice[1-6]: name for bootable kernel image (SUBSYSTEM_UIMAGE_NAME) [image.ub] 
+Kernel image HASH checking
+  1. none (SUBSYSTEM_UIMAGE_HASH_NONE)
+> 2. crc32 (SUBSYSTEM_UIMAGE_HASH_CRC32)
+  3. sha1 (SUBSYSTEM_UIMAGE_HASH_SHA1)
+  4. both (SUBSYSTEM_UIMAGE_HASH_BOTH)
+choice[1-4]: Compress kernel image (SUBSYSTEM_COMPRESS_IMAGE) [Y/n/?] 
+DTB padding size (SUBSYSTEM_DTB_PADDING_SIZE) [0x1000] 
+Copy final images to tftpboot (SUBSYSTEM_COPY_TO_TFTPBOOT) [Y/n/?] 
+  tftpboot directory (SUBSYSTEM_TFTPBOOT_DIR) [/tftpboot] 
+*
+* Firmware Version Configuration
+*
+Host name (SUBSYSTEM_HOSTNAME) [LINUX_SNES] 
+Product name (SUBSYSTEM_PRODUCT) [LINUX_SNES] 
+Firmware Version (SUBSYSTEM_FW_VERSION) [1.5] 
+#
+# configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/config
+#
+*
+* linux System Configuration
+*
+*
+* linux Components Selection
+*
+First Stage Bootloader (SUBSYSTEM_COMPONENT_BOOTLOADER_AUTO_FSBL) [Y/n/?] 
+  Auto update ps7_init (SUBSYSTEM_COMPONENT_BOOTLOADER_AUTO_PS_INIT) [Y/n/?] 
+u-boot
+> 1. u-boot-plnx (SUBSYSTEM_COMPONENT_U__BOOT_NAME_U__BOOT__PLNX)
+  2. remote (SUBSYSTEM_COMPONENT_U__BOOT_NAME_REMOTE)
+  3. none (SUBSYSTEM_COMPONENT_U__BOOT_NAME_NONE)
+choice[1-3]: kernel
+> 1. xlnx-3.17 (SUBSYSTEM_COMPONENT_LINUX__KERNEL_INSTANCE_KERNEL_NAME_XLNX__3___17)
+  2. remote (SUBSYSTEM_COMPONENT_LINUX__KERNEL_INSTANCE_KERNEL_NAME_REMOTE)
+choice[1-2]: rootfs
+> 1. petalinux-rootfs (SUBSYSTEM_COMPONENT_ROOTFS_NAME_PETALINUX__ROOTFS)
+choice[1]: 1
+*
+* Generic Components
+*
+*
+* Auto Config Settings
+*
+Device tree autoconfig (SUBSYSTEM_AUTOCONFIG_DEVICE__TREE) [Y/n/?] 
+kernel autoconfig (SUBSYSTEM_AUTOCONFIG_KERNEL) [Y/n/?] 
+rootfs autoconfig (SUBSYSTEM_AUTOCONFIG_ROOTFS) [Y/n/?] 
+u-boot autoconfig (SUBSYSTEM_AUTOCONFIG_U__BOOT) [Y/n/?] 
+*
+* Subsystem AUTO Hardware Settings
+*
+Subsystem AUTO Hardware Settings (SUBSYSTEM_HARDWARE_AUTO) [Y/?] y
+  System Processor
+  > 1. ps7_cortexa9_0 (SUBSYSTEM_PROCESSOR_PS7_CORTEXA9_0_SELECT)
+  choice[1]: 1
+  *
+  * Memory Settings
+  *
+  Primary Memory
+  > 1. ps7_ddr_0 (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_SELECT)
+    2. simple (SUBSYSTEM_MEMORY_SIMPLE_SELECT)
+    3. manual (SUBSYSTEM_MEMORY_MANUAL_SELECT)
+  choice[1-3?]:   System memory base address (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_BASEADDR) [0x0] 
+  System memory size (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_SIZE) [0x20000000] 
+  kernel base address (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_KERNEL_BASEADDR) [0x0] 
+  u-boot text base address offset to memory high address (SUBSYSTEM_MEMORY_PS7_DDR_0_BANKLESS_U__BOOT_TEXTBASE_OFFSET) [0x400000] 
+  *
+  * Serial Settings
+  *
+  Primary stdin/stdout
+  > 1. ps7_uart_1 (SUBSYSTEM_SERIAL_PS7_UART_1_SELECT)
+    2. manual (SUBSYSTEM_SERIAL_MANUAL_SELECT)
+  choice[1-2?]:   System stdin/stdout baudrate
+    1. 9600 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_9600)
+    2. 19200 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_19200)
+    3. 38400 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_38400)
+    4. 57600 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_57600)
+  > 5. 115200 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_115200)
+    6. 230400 (SUBSYSTEM_SERIAL_PS7_UART_1_BAUDRATE_230400)
+  choice[1-6]:   *
+  * Ethernet Settings
+  *
+  Primary Ethernet
+  > 1. ps7_ethernet_0 (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_SELECT)
+    2. manual (SUBSYSTEM_ETHERNET_MANUAL_SELECT)
+  choice[1-2?]:   Randomise MAC address (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_MAC_AUTO) [N/y/?] 
+    Ethernet MAC address (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_MAC) [00:0a:35:00:b7:0a] 
+  Obtain IP address automatically (SUBSYSTEM_ETHERNET_PS7_ETHERNET_0_USE_DHCP) [Y/n/?] 
+  *
+  * Flash Settings
+  *
+  Primary Flash
+  > 1. ps7_qspi_0 (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_SELECT)
+    2. manual (SUBSYSTEM_FLASH_MANUAL_SELECT)
+  choice[1-2?]:   Advanced Flash Auto Configuration (SUBSYSTEM_FLASH__ADVANCED_AUTOCONFIG) [N/y/?] 
+  *
+  * partition 0
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART0_NAME) [boot] 
+  size (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART0_SIZE) [0x500000] 
+  *
+  * partition 1
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART1_NAME) [bootenv] 
+  size (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART1_SIZE) [0x20000] 
+  *
+  * partition 2
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART2_NAME) [kernel] 
+  size (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART2_SIZE) [0xA80000] 
+  *
+  * partition 3
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART3_NAME) [spare] 
+  size (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART3_SIZE) [0x0] 
+  *
+  * partition 4
+  *
+  name (SUBSYSTEM_FLASH_PS7_QSPI_0_BANKLESS_PART4_NAME) [] 
+  *
+  * SD/SDIO Settings
+  *
+  Primary SD/SDIO
+  > 1. ps7_sd_0 (SUBSYSTEM_SD_PS7_SD_0_SELECT)
+    2. manual (SUBSYSTEM_SD_MANUAL_SELECT)
+  choice[1-2?]:   *
+  * Advanced bootable images storage Settings
+  *
+  Advanced bootable images storage Settings (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG) [Y/n/?] 
+    *
+    * boot image settings
+    *
+    image storage media
+      1. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOT_MEDIA_FLASH_SELECT)
+    > 2. primary sd (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOT_MEDIA_SD_SELECT)
+      3. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOT_MEDIA_MANUAL_SELECT)
+    choice[1-3]:     image name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOT_IMAGE_NAME) [BOOT.BIN] 
+    *
+    * u-boot env partition settings
+    *
+    image storage media
+    > 1. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOTENV_MEDIA_FLASH_SELECT)
+      2. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOTENV_MEDIA_MANUAL_SELECT)
+    choice[1-2]:     flash partition name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_BOOTENV_PART_NAME) [bootenv] 
+    *
+    * kernel image settings
+    *
+    image storage media
+      1. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_MEDIA_FLASH_SELECT)
+    > 2. primary sd (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_MEDIA_SD_SELECT)
+      3. ethernet (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_MEDIA_ETHERNET_SELECT)
+      4. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_MEDIA_MANUAL_SELECT)
+    choice[1-4]:     image name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_KERNEL_IMAGE_NAME) [image.ub] 
+    *
+    * jffs2 rootfs image settings
+    *
+    image storage media
+    > 1. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_JFFS2_MEDIA_FLASH_SELECT)
+      2. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_JFFS2_MEDIA_MANUAL_SELECT)
+    choice[1-2]:     flash partition name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_JFFS2_PART_NAME) [jffs2] 
+    image name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_JFFS2_IMAGE_NAME) [rootfs.jffs2] 
+    *
+    * dtb image settings
+    *
+    image storage media
+    > 1. from boot image (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_BOOTIMAGE_SELECT)
+      2. primary flash (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_FLASH_SELECT)
+      3. primary sd (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_SD_SELECT)
+      4. ethernet (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_ETHERNET_SELECT)
+      5. manual (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_MEDIA_MANUAL_SELECT)
+    choice[1-5]:     image name (SUBSYSTEM_IMAGES_ADVANCED_AUTOCONFIG_DTB_IMAGE_NAME) [system.dtb] 
+*
+* Kernel Bootargs
+*
+generate boot args automatically (SUBSYSTEM_BOOTARGS_AUTO) [Y/n] 
+enable kernel earlyprintk (SUBSYSTEM_BOOTARGS_EARLYPRINTK) [Y/n/?] 
+Auto generated bootargs (NO EDIT!) (SUBSYSTEM_BOOTARGS_GENERATED) [console=ttyPS0,115200 earlyprintk] 
+*
+* u-boot Configuration
+*
+U-boot config
+> 1. PetaLinux u-boot config (SUBSYSTEM_UBOOT_CONFIG_PETALINUX)
+  2. other (SUBSYSTEM_UBOOT_CONFIG_OTHER)
+choice[1-2]: netboot offset (SUBSYSTEM_NETBOOT_OFFSET) [0x1000000] 
+TFTP Server IP address (SUBSYSTEM_U__BOOT_TFTPSERVER_IP) [AUTO] 
+*
+* Image Packaging Configuration
+*
+Root filesystem type
+> 1. INITRAMFS (SUBSYSTEM_ROOTFS_INITRAMFS)
+  2. INITRD (SUBSYSTEM_ROOTFS_INITRD)
+  3. JFFS2 (SUBSYSTEM_ROOTFS_JFFS2)
+  4. NFS (SUBSYSTEM_ROOTFS_NFS)
+  5. SD card (SUBSYSTEM_ROOTFS_SD)
+  6. other (SUBSYSTEM_ROOTFS_OTHER)
+choice[1-6]: name for bootable kernel image (SUBSYSTEM_UIMAGE_NAME) [image.ub] 
+Kernel image HASH checking
+  1. none (SUBSYSTEM_UIMAGE_HASH_NONE)
+> 2. crc32 (SUBSYSTEM_UIMAGE_HASH_CRC32)
+  3. sha1 (SUBSYSTEM_UIMAGE_HASH_SHA1)
+  4. both (SUBSYSTEM_UIMAGE_HASH_BOTH)
+choice[1-4]: Compress kernel image (SUBSYSTEM_COMPRESS_IMAGE) [Y/n/?] 
+DTB padding size (SUBSYSTEM_DTB_PADDING_SIZE) [0x1000] 
+Copy final images to tftpboot (SUBSYSTEM_COPY_TO_TFTPBOOT) [Y/n/?] 
+  tftpboot directory (SUBSYSTEM_TFTPBOOT_DIR) [/tftpboot] 
+*
+* Firmware Version Configuration
+*
+Host name (SUBSYSTEM_HOSTNAME) [LINUX_SNES] 
+Product name (SUBSYSTEM_PRODUCT) [LINUX_SNES] 
+Firmware Version (SUBSYSTEM_FW_VERSION) [1.5] 
+#
+# configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/config
+#
+[INFO ] oldconfig linux/kernel
+#
+# configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config
+#
+[INFO ] oldconfig linux/rootfs
+*
+* linux/rootfs Configuration
+*
+*
+* Filesystem Packages
+*
+Advanced Package Selection (ROOTFS_ADVANCED_MODE) [N/y/?] 
+base-system-default (ROOTFS_BASE_SYSTEM_DEFAULT) [Y/n/?] 
+*
+* base
+*
+*
+* base-files
+*
+base-files (ROOTFS_PACKAGES_BASE_FILES) [Y/?] y
+*
+* base-passwd
+*
+base-passwd (ROOTFS_PACKAGES_BASE_PASSWD) [Y/?] y
+base-passwd-update (ROOTFS_PACKAGES_BASE_PASSWD_UPDATE) [N/y/?] 
+*
+* busybox
+*
+busybox (ROOTFS_PACKAGES_BUSYBOX) [Y/?] y
+busybox-httpd (ROOTFS_PACKAGES_BUSYBOX_HTTPD) [N/y/?] 
+busybox-hwclock (ROOTFS_PACKAGES_BUSYBOX_HWCLOCK) [N/y/?] 
+busybox-inetd (ROOTFS_PACKAGES_BUSYBOX_INETD) [Y/?] y
+busybox-mdev (ROOTFS_PACKAGES_BUSYBOX_MDEV) [Y/?] y
+busybox-syslog (ROOTFS_PACKAGES_BUSYBOX_SYSLOG) [N/y/?] 
+busybox-udhcpc (ROOTFS_PACKAGES_BUSYBOX_UDHCPC) [Y/?] y
+busybox-udhcpd (ROOTFS_PACKAGES_BUSYBOX_UDHCPD) [N/y/?] 
+*
+* cryptodev-linux
+*
+cryptodev-linux (ROOTFS_PACKAGES_CRYPTODEV_LINUX) [N/y/?] 
+*
+* e2fsprogs
+*
+e2fsprogs (ROOTFS_PACKAGES_E2FSPROGS) [N/y/?] 
+e2fsprogs-badblocks (ROOTFS_PACKAGES_E2FSPROGS_BADBLOCKS) [N/y/?] 
+e2fsprogs-e2fsck (ROOTFS_PACKAGES_E2FSPROGS_E2FSCK) [N/y/?] 
+e2fsprogs-mke2fs (ROOTFS_PACKAGES_E2FSPROGS_MKE2FS) [N/y/?] 
+e2fsprogs-tune2fs (ROOTFS_PACKAGES_E2FSPROGS_TUNE2FS) [N/y/?] 
+libcom-err2 (ROOTFS_PACKAGES_LIBCOM_ERR2) [N/y/?] 
+libe2p2 (ROOTFS_PACKAGES_LIBE2P2) [N/y/?] 
+libext2fs2 (ROOTFS_PACKAGES_LIBEXT2FS2) [N/y/?] 
+libss2 (ROOTFS_PACKAGES_LIBSS2) [N/y/?] 
+*
+* external-xilinx-toolchain
+*
+catchsegv (ROOTFS_PACKAGES_CATCHSEGV) [N/y/?] 
+gdbserver (ROOTFS_PACKAGES_GDBSERVER) [Y/n/?] 
+glibc-extra-nss (ROOTFS_PACKAGES_GLIBC_EXTRA_NSS) [N/y/?] 
+ldd (ROOTFS_PACKAGES_LDD) [N/y/?] 
+libatomic1 (ROOTFS_PACKAGES_LIBATOMIC1) [N/y/?] 
+libc6 (ROOTFS_PACKAGES_LIBC6) [Y/?] y
+libc6-pcprofile (ROOTFS_PACKAGES_LIBC6_PCPROFILE) [N/y/?] 
+libc6-utils (ROOTFS_PACKAGES_LIBC6_UTILS) [N/y/?] 
+libcidn1 (ROOTFS_PACKAGES_LIBCIDN1) [N/y/?] 
+libgcc-s1 (ROOTFS_PACKAGES_LIBGCC_S1) [Y/?] y
+libmemusage (ROOTFS_PACKAGES_LIBMEMUSAGE) [N/y/?] 
+libsegfault (ROOTFS_PACKAGES_LIBSEGFAULT) [N/y/?] 
+libsotruss (ROOTFS_PACKAGES_LIBSOTRUSS) [N/y/?] 
+libstdc++6 (ROOTFS_PACKAGES_LIBSTDCPLUSPLUS6) [Y/n/?] 
+libthread-db1 (ROOTFS_PACKAGES_LIBTHREAD_DB1) [N/y/?] 
+linux-libc-headers (ROOTFS_PACKAGES_LINUX_LIBC_HEADERS) [N/y/?] 
+nscd (ROOTFS_PACKAGES_NSCD) [N/y/?] 
+sln (ROOTFS_PACKAGES_SLN) [N/y/?] 
+tzcode (ROOTFS_PACKAGES_TZCODE) [N/y/?] 
+*
+* i2c-tools
+*
+i2c-tools (ROOTFS_PACKAGES_I2C_TOOLS) [N/y/?] 
+i2c-tools-misc (ROOTFS_PACKAGES_I2C_TOOLS_MISC) [N/y/?] 
+*
+* init-ifupdown
+*
+init-ifupdown (ROOTFS_PACKAGES_INIT_IFUPDOWN) [Y/?] y
+*
+* initscripts
+*
+initscripts (ROOTFS_PACKAGES_INITSCRIPTS) [Y/?] y
+initscripts-functions (ROOTFS_PACKAGES_INITSCRIPTS_FUNCTIONS) [Y/?] y
+*
+* iproute2
+*
+iproute2 (ROOTFS_PACKAGES_IPROUTE2) [N/y/?] 
+iproute2-tc (ROOTFS_PACKAGES_IPROUTE2_TC) [N/y/?] 
+*
+* iptables
+*
+iptables (ROOTFS_PACKAGES_IPTABLES) [N/y/?] 
+*
+* kmod
+*
+kmod (ROOTFS_PACKAGES_KMOD) [N/y/?] 
+kmod-bash-completion (ROOTFS_PACKAGES_KMOD_BASH_COMPLETION) [N/y/?] 
+libkmod2 (ROOTFS_PACKAGES_LIBKMOD2) [Y/?] y
+*
+* libaio
+*
+libaio1 (ROOTFS_PACKAGES_LIBAIO1) [N/y/?] 
+*
+* libffi
+*
+libffi6 (ROOTFS_PACKAGES_LIBFFI6) [Y/n/?] 
+*
+* m4
+*
+m4 (ROOTFS_PACKAGES_M4) [N/y/?] 
+*
+* modutils-initscripts
+*
+modutils-initscripts (ROOTFS_PACKAGES_MODUTILS_INITSCRIPTS) [Y/?] y
+*
+* mtd-utils
+*
+mtd-utils (ROOTFS_PACKAGES_MTD_UTILS) [Y/n/?] 
+mtd-utils-jffs2 (ROOTFS_PACKAGES_MTD_UTILS_JFFS2) [N/y/?] 
+mtd-utils-misc (ROOTFS_PACKAGES_MTD_UTILS_MISC) [N/y/?] 
+mtd-utils-ubifs (ROOTFS_PACKAGES_MTD_UTILS_UBIFS) [N/y/?] 
+*
+* net-snmp
+*
+libnetsnmp30 (ROOTFS_PACKAGES_LIBNETSNMP30) [N/y/?] 
+net-snmp-client (ROOTFS_PACKAGES_NET_SNMP_CLIENT) [N/y/?] 
+net-snmp-mibs (ROOTFS_PACKAGES_NET_SNMP_MIBS) [N/y/?] 
+net-snmp-server (ROOTFS_PACKAGES_NET_SNMP_SERVER) [N/y/?] 
+net-snmp-server-snmpd (ROOTFS_PACKAGES_NET_SNMP_SERVER_SNMPD) [N/y/?] 
+net-snmp-server-snmptrapd (ROOTFS_PACKAGES_NET_SNMP_SERVER_SNMPTRAPD) [N/y/?] 
+*
+* net-tools
+*
+net-tools (ROOTFS_PACKAGES_NET_TOOLS) [N/y/?] 
+*
+* netbase
+*
+netbase (ROOTFS_PACKAGES_NETBASE) [Y/?] y
+*
+* opkg-utils
+*
+update-alternatives-opkg (ROOTFS_PACKAGES_UPDATE_ALTERNATIVES_OPKG) [Y/?] y
+*
+* sysfsutils
+*
+libsysfs2 (ROOTFS_PACKAGES_LIBSYSFS2) [N/y/?] 
+sysfsutils (ROOTFS_PACKAGES_SYSFSUTILS) [N/y/?] 
+*
+* sysvinit
+*
+sysvinit (ROOTFS_PACKAGES_SYSVINIT) [Y/?] y
+sysvinit-pidof (ROOTFS_PACKAGES_SYSVINIT_PIDOF) [Y/?] y
+sysvinit-sulogin (ROOTFS_PACKAGES_SYSVINIT_SULOGIN) [N/y/?] 
+*
+* sysvinit-inittab
+*
+sysvinit-inittab (ROOTFS_PACKAGES_SYSVINIT_INITTAB) [Y/?] y
+*
+* tcf-agent
+*
+tcf-agent (ROOTFS_PACKAGES_TCF_AGENT) [N/y/?] 
+*
+* update-rc.d
+*
+update-rc.d (ROOTFS_PACKAGES_UPDATE_RC_D) [Y/n/?] 
+*
+* usbutils
+*
+usbutils (ROOTFS_PACKAGES_USBUTILS) [N/y/?] 
+usbutils-ids (ROOTFS_PACKAGES_USBUTILS_IDS) [N/y/?] 
+*
+* util-linux
+*
+libblkid1 (ROOTFS_PACKAGES_LIBBLKID1) [Y/?] y
+libmount1 (ROOTFS_PACKAGES_LIBMOUNT1) [Y/?] y
+libuuid1 (ROOTFS_PACKAGES_LIBUUID1) [Y/?] y
+util-linux (ROOTFS_PACKAGES_UTIL_LINUX) [Y/n/?] 
+util-linux-agetty (ROOTFS_PACKAGES_UTIL_LINUX_AGETTY) [N/y/?] 
+util-linux-bash-completion (ROOTFS_PACKAGES_UTIL_LINUX_BASH_COMPLETION) [N/y/?] 
+util-linux-blkid (ROOTFS_PACKAGES_UTIL_LINUX_BLKID) [N/y/?] 
+util-linux-cfdisk (ROOTFS_PACKAGES_UTIL_LINUX_CFDISK) [N/y/?] 
+util-linux-fdisk (ROOTFS_PACKAGES_UTIL_LINUX_FDISK) [N/y/?] 
+util-linux-findfs (ROOTFS_PACKAGES_UTIL_LINUX_FINDFS) [N/y/?] 
+util-linux-fsck (ROOTFS_PACKAGES_UTIL_LINUX_FSCK) [N/y/?] 
+util-linux-fsck.cramfs (ROOTFS_PACKAGES_UTIL_LINUX_FSCK_CRAMFS) [N/y/?] 
+util-linux-fstrim (ROOTFS_PACKAGES_UTIL_LINUX_FSTRIM) [N/y/?] 
+util-linux-hwclock (ROOTFS_PACKAGES_UTIL_LINUX_HWCLOCK) [N/y/?] 
+util-linux-losetup (ROOTFS_PACKAGES_UTIL_LINUX_LOSETUP) [Y/?] y
+util-linux-lscpu (ROOTFS_PACKAGES_UTIL_LINUX_LSCPU) [N/y/?] 
+util-linux-mcookie (ROOTFS_PACKAGES_UTIL_LINUX_MCOOKIE) [N/y/?] 
+util-linux-mkfs (ROOTFS_PACKAGES_UTIL_LINUX_MKFS) [N/y/?] 
+util-linux-mkfs.cramfs (ROOTFS_PACKAGES_UTIL_LINUX_MKFS_CRAMFS) [N/y/?] 
+util-linux-mount (ROOTFS_PACKAGES_UTIL_LINUX_MOUNT) [N/y/?] 
+util-linux-partx (ROOTFS_PACKAGES_UTIL_LINUX_PARTX) [N/y/?] 
+util-linux-readprofile (ROOTFS_PACKAGES_UTIL_LINUX_READPROFILE) [N/y/?] 
+util-linux-reset (ROOTFS_PACKAGES_UTIL_LINUX_RESET) [N/y/?] 
+util-linux-sfdisk (ROOTFS_PACKAGES_UTIL_LINUX_SFDISK) [N/y/?] 
+util-linux-swaponoff (ROOTFS_PACKAGES_UTIL_LINUX_SWAPONOFF) [Y/?] y
+util-linux-umount (ROOTFS_PACKAGES_UTIL_LINUX_UMOUNT) [Y/?] y
+util-linux-uuidd (ROOTFS_PACKAGES_UTIL_LINUX_UUIDD) [N/y/?] 
+util-linux-uuidgen (ROOTFS_PACKAGES_UTIL_LINUX_UUIDGEN) [N/y/?] 
+*
+* base/shell
+*
+*
+* bash
+*
+bash (ROOTFS_PACKAGES_BASH) [Y/n/?] 
+*
+* console/network
+*
+*
+* bridge-utils
+*
+bridge-utils (ROOTFS_PACKAGES_BRIDGE_UTILS) [N/y/?] 
+*
+* dropbear
+*
+dropbear (ROOTFS_PACKAGES_DROPBEAR) [N/y/?] 
+dropbear-openssh-sftp-server (ROOTFS_PACKAGES_DROPBEAR_OPENSSH_SFTP_SERVER) [N/y/?] 
+*
+* ethtool
+*
+ethtool (ROOTFS_PACKAGES_ETHTOOL) [N/y/?] 
+*
+* netcat
+*
+netcat (ROOTFS_PACKAGES_NETCAT) [N/y/?] 
+*
+* openssh
+*
+openssh-sftp-server (ROOTFS_PACKAGES_OPENSSH_SFTP_SERVER) [N/y/?] 
+*
+* portmap
+*
+portmap (ROOTFS_PACKAGES_PORTMAP) [N/y/?] 
+portmap-utils (ROOTFS_PACKAGES_PORTMAP_UTILS) [N/y/?] 
+*
+* tcp-wrappers
+*
+libwrap-doc (ROOTFS_PACKAGES_LIBWRAP_DOC) [N/y/?] 
+libwrap0 (ROOTFS_PACKAGES_LIBWRAP0) [N/y/?] 
+tcp-wrappers (ROOTFS_PACKAGES_TCP_WRAPPERS) [N/y/?] 
+*
+* tcpdump
+*
+tcpdump (ROOTFS_PACKAGES_TCPDUMP) [N/y/?] 
+*
+* console/utils
+*
+*
+* bzip2
+*
+bzip2 (ROOTFS_PACKAGES_BZIP2) [N/y/?] 
+libbz2-0 (ROOTFS_PACKAGES_LIBBZ2_0) [N/y/?] 
+*
+* pciutils
+*
+libpci3 (ROOTFS_PACKAGES_LIBPCI3) [Y/?] y
+pciutils (ROOTFS_PACKAGES_PCIUTILS) [Y/n/?] 
+pciutils-ids (ROOTFS_PACKAGES_PCIUTILS_IDS) [Y/?] y
+*
+* strace
+*
+strace (ROOTFS_PACKAGES_STRACE) [N/y/?] 
+*
+* unzip
+*
+unzip (ROOTFS_PACKAGES_UNZIP) [N/y/?] 
+*
+* devel
+*
+*
+* flex
+*
+flex (ROOTFS_PACKAGES_FLEX) [N/y/?] 
+*
+* gmp
+*
+libgmp10 (ROOTFS_PACKAGES_LIBGMP10) [N/y/?] 
+libgmpxx4 (ROOTFS_PACKAGES_LIBGMPXX4) [N/y/?] 
+*
+* libpcre
+*
+libpcre1 (ROOTFS_PACKAGES_LIBPCRE1) [N/y/?] 
+libpcrecpp0 (ROOTFS_PACKAGES_LIBPCRECPP0) [N/y/?] 
+libpcreposix0 (ROOTFS_PACKAGES_LIBPCREPOSIX0) [N/y/?] 
+pcregrep (ROOTFS_PACKAGES_PCREGREP) [N/y/?] 
+pcregrep-doc (ROOTFS_PACKAGES_PCREGREP_DOC) [N/y/?] 
+pcretest (ROOTFS_PACKAGES_PCRETEST) [N/y/?] 
+pcretest-doc (ROOTFS_PACKAGES_PCRETEST_DOC) [N/y/?] 
+*
+* oprofile
+*
+*
+* perl
+*
+libperl5 (ROOTFS_PACKAGES_LIBPERL5) [N/y/?] 
+perl (ROOTFS_PACKAGES_PERL) [N/y/?] 
+perl-misc (ROOTFS_PACKAGES_PERL_MISC) [N/y/?] 
+perl-module--charnames (ROOTFS_PACKAGES_PERL_MODULE__CHARNAMES) [N/y/?] 
+perl-module-anydbm-file (ROOTFS_PACKAGES_PERL_MODULE_ANYDBM_FILE) [N/y/?] 
+perl-module-app-cpan (ROOTFS_PACKAGES_PERL_MODULE_APP_CPAN) [N/y/?] 
+perl-module-app-prove (ROOTFS_PACKAGES_PERL_MODULE_APP_PROVE) [N/y/?] 
+perl-module-app-prove-state (ROOTFS_PACKAGES_PERL_MODULE_APP_PROVE_STATE) [N/y/?] 
+perl-module-app-prove-state-result (ROOTFS_PACKAGES_PERL_MODULE_APP_PROVE_STATE_RESULT) [N/y/?] 
+perl-module-app-prove-state-result-test (ROOTFS_PACKAGES_PERL_MODULE_APP_PROVE_STATE_RESULT_TEST) [N/y/?] 
+perl-module-archive-tar (ROOTFS_PACKAGES_PERL_MODULE_ARCHIVE_TAR) [N/y/?] 
+perl-module-archive-tar-constant (ROOTFS_PACKAGES_PERL_MODULE_ARCHIVE_TAR_CONSTANT) [N/y/?] 
+perl-module-archive-tar-file (ROOTFS_PACKAGES_PERL_MODULE_ARCHIVE_TAR_FILE) [N/y/?] 
+perl-module-arybase (ROOTFS_PACKAGES_PERL_MODULE_ARYBASE) [N/y/?] 
+perl-module-attribute-handlers (ROOTFS_PACKAGES_PERL_MODULE_ATTRIBUTE_HANDLERS) [N/y/?] 
+perl-module-attributes (ROOTFS_PACKAGES_PERL_MODULE_ATTRIBUTES) [N/y/?] 
+perl-module-autodie (ROOTFS_PACKAGES_PERL_MODULE_AUTODIE) [N/y/?] 
+perl-module-autodie-exception (ROOTFS_PACKAGES_PERL_MODULE_AUTODIE_EXCEPTION) [N/y/?] 
+perl-module-autodie-exception-system (ROOTFS_PACKAGES_PERL_MODULE_AUTODIE_EXCEPTION_SYSTEM) [N/y/?] 
+perl-module-autodie-hints (ROOTFS_PACKAGES_PERL_MODULE_AUTODIE_HINTS) [N/y/?] 
+perl-module-autodie-skip (ROOTFS_PACKAGES_PERL_MODULE_AUTODIE_SKIP) [N/y/?] 
+perl-module-autoloader (ROOTFS_PACKAGES_PERL_MODULE_AUTOLOADER) [N/y/?] 
+perl-module-autosplit (ROOTFS_PACKAGES_PERL_MODULE_AUTOSPLIT) [N/y/?] 
+perl-module-autouse (ROOTFS_PACKAGES_PERL_MODULE_AUTOUSE) [N/y/?] 
+perl-module-b (ROOTFS_PACKAGES_PERL_MODULE_B) [N/y/?] 
+perl-module-b-concise (ROOTFS_PACKAGES_PERL_MODULE_B_CONCISE) [N/y/?] 
+perl-module-b-debug (ROOTFS_PACKAGES_PERL_MODULE_B_DEBUG) [N/y/?] 
+perl-module-b-deparse (ROOTFS_PACKAGES_PERL_MODULE_B_DEPARSE) [N/y/?] 
+perl-module-b-showlex (ROOTFS_PACKAGES_PERL_MODULE_B_SHOWLEX) [N/y/?] 
+perl-module-b-terse (ROOTFS_PACKAGES_PERL_MODULE_B_TERSE) [N/y/?] 
+perl-module-b-xref (ROOTFS_PACKAGES_PERL_MODULE_B_XREF) [N/y/?] 
+perl-module-base (ROOTFS_PACKAGES_PERL_MODULE_BASE) [N/y/?] 
+perl-module-benchmark (ROOTFS_PACKAGES_PERL_MODULE_BENCHMARK) [N/y/?] 
+perl-module-bigint (ROOTFS_PACKAGES_PERL_MODULE_BIGINT) [N/y/?] 
+perl-module-bignum (ROOTFS_PACKAGES_PERL_MODULE_BIGNUM) [N/y/?] 
+perl-module-bigrat (ROOTFS_PACKAGES_PERL_MODULE_BIGRAT) [N/y/?] 
+perl-module-blib (ROOTFS_PACKAGES_PERL_MODULE_BLIB) [N/y/?] 
+perl-module-build (ROOTFS_PACKAGES_PERL_MODULE_BUILD) [N/y/?] 
+perl-module-bytes (ROOTFS_PACKAGES_PERL_MODULE_BYTES) [N/y/?] 
+perl-module-bytes-heavy (ROOTFS_PACKAGES_PERL_MODULE_BYTES_HEAVY) [N/y/?] 
+perl-module-carp (ROOTFS_PACKAGES_PERL_MODULE_CARP) [N/y/?] 
+perl-module-carp-heavy (ROOTFS_PACKAGES_PERL_MODULE_CARP_HEAVY) [N/y/?] 
+perl-module-cgi (ROOTFS_PACKAGES_PERL_MODULE_CGI) [N/y/?] 
+perl-module-cgi-apache (ROOTFS_PACKAGES_PERL_MODULE_CGI_APACHE) [N/y/?] 
+perl-module-cgi-carp (ROOTFS_PACKAGES_PERL_MODULE_CGI_CARP) [N/y/?] 
+perl-module-cgi-cookie (ROOTFS_PACKAGES_PERL_MODULE_CGI_COOKIE) [N/y/?] 
+perl-module-cgi-fast (ROOTFS_PACKAGES_PERL_MODULE_CGI_FAST) [N/y/?] 
+perl-module-cgi-pretty (ROOTFS_PACKAGES_PERL_MODULE_CGI_PRETTY) [N/y/?] 
+perl-module-cgi-push (ROOTFS_PACKAGES_PERL_MODULE_CGI_PUSH) [N/y/?] 
+perl-module-cgi-switch (ROOTFS_PACKAGES_PERL_MODULE_CGI_SWITCH) [N/y/?] 
+perl-module-cgi-util (ROOTFS_PACKAGES_PERL_MODULE_CGI_UTIL) [N/y/?] 
+perl-module-charnames (ROOTFS_PACKAGES_PERL_MODULE_CHARNAMES) [N/y/?] 
+perl-module-class-struct (ROOTFS_PACKAGES_PERL_MODULE_CLASS_STRUCT) [N/y/?] 
+perl-module-compress-raw-bzip2 (ROOTFS_PACKAGES_PERL_MODULE_COMPRESS_RAW_BZIP2) [N/y/?] 
+perl-module-compress-raw-zlib (ROOTFS_PACKAGES_PERL_MODULE_COMPRESS_RAW_ZLIB) [N/y/?] 
+perl-module-compress-zlib (ROOTFS_PACKAGES_PERL_MODULE_COMPRESS_ZLIB) [N/y/?] 
+perl-module-config-extensions (ROOTFS_PACKAGES_PERL_MODULE_CONFIG_EXTENSIONS) [N/y/?] 
+perl-module-config-git (ROOTFS_PACKAGES_PERL_MODULE_CONFIG_GIT) [N/y/?] 
+perl-module-config-perl-v (ROOTFS_PACKAGES_PERL_MODULE_CONFIG_PERL_V) [N/y/?] 
+perl-module-constant (ROOTFS_PACKAGES_PERL_MODULE_CONSTANT) [N/y/?] 
+perl-module-corelist (ROOTFS_PACKAGES_PERL_MODULE_CORELIST) [N/y/?] 
+perl-module-cpan (ROOTFS_PACKAGES_PERL_MODULE_CPAN) [N/y/?] 
+perl-module-cwd (ROOTFS_PACKAGES_PERL_MODULE_CWD) [N/y/?] 
+perl-module-data-dumper (ROOTFS_PACKAGES_PERL_MODULE_DATA_DUMPER) [N/y/?] 
+perl-module-db (ROOTFS_PACKAGES_PERL_MODULE_DB) [N/y/?] 
+perl-module-dbm-filter (ROOTFS_PACKAGES_PERL_MODULE_DBM_FILTER) [N/y/?] 
+perl-module-dbm-filter-compress (ROOTFS_PACKAGES_PERL_MODULE_DBM_FILTER_COMPRESS) [N/y/?] 
+perl-module-dbm-filter-encode (ROOTFS_PACKAGES_PERL_MODULE_DBM_FILTER_ENCODE) [N/y/?] 
+perl-module-dbm-filter-int32 (ROOTFS_PACKAGES_PERL_MODULE_DBM_FILTER_INT32) [N/y/?] 
+perl-module-dbm-filter-null (ROOTFS_PACKAGES_PERL_MODULE_DBM_FILTER_NULL) [N/y/?] 
+perl-module-dbm-filter-utf8 (ROOTFS_PACKAGES_PERL_MODULE_DBM_FILTER_UTF8) [N/y/?] 
+perl-module-deprecate (ROOTFS_PACKAGES_PERL_MODULE_DEPRECATE) [N/y/?] 
+perl-module-diagnostics (ROOTFS_PACKAGES_PERL_MODULE_DIAGNOSTICS) [N/y/?] 
+perl-module-digest (ROOTFS_PACKAGES_PERL_MODULE_DIGEST) [N/y/?] 
+perl-module-digest-base (ROOTFS_PACKAGES_PERL_MODULE_DIGEST_BASE) [N/y/?] 
+perl-module-digest-file (ROOTFS_PACKAGES_PERL_MODULE_DIGEST_FILE) [N/y/?] 
+perl-module-digest-md5 (ROOTFS_PACKAGES_PERL_MODULE_DIGEST_MD5) [N/y/?] 
+perl-module-digest-sha (ROOTFS_PACKAGES_PERL_MODULE_DIGEST_SHA) [N/y/?] 
+perl-module-dirhandle (ROOTFS_PACKAGES_PERL_MODULE_DIRHANDLE) [N/y/?] 
+perl-module-dumpvalue (ROOTFS_PACKAGES_PERL_MODULE_DUMPVALUE) [N/y/?] 
+perl-module-dumpvar (ROOTFS_PACKAGES_PERL_MODULE_DUMPVAR) [N/y/?] 
+perl-module-dynaloader (ROOTFS_PACKAGES_PERL_MODULE_DYNALOADER) [N/y/?] 
+perl-module-encode (ROOTFS_PACKAGES_PERL_MODULE_ENCODE) [N/y/?] 
+perl-module-encode--pm (ROOTFS_PACKAGES_PERL_MODULE_ENCODE__PM) [N/y/?] 
+perl-module-encode--t (ROOTFS_PACKAGES_PERL_MODULE_ENCODE__T) [N/y/?] 
+perl-module-encode-alias (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_ALIAS) [N/y/?] 
+perl-module-encode-byte (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_BYTE) [N/y/?] 
+perl-module-encode-changes (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_CHANGES) [N/y/?] 
+perl-module-encode-cjkconstants (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_CJKCONSTANTS) [N/y/?] 
+perl-module-encode-cn (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_CN) [N/y/?] 
+perl-module-encode-cn-hz (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_CN_HZ) [N/y/?] 
+perl-module-encode-config (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_CONFIG) [N/y/?] 
+perl-module-encode-configlocal-pm (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_CONFIGLOCAL_PM) [N/y/?] 
+perl-module-encode-ebcdic (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_EBCDIC) [N/y/?] 
+perl-module-encode-encoder (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_ENCODER) [N/y/?] 
+perl-module-encode-encoding (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_ENCODING) [N/y/?] 
+perl-module-encode-gsm0338 (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_GSM0338) [N/y/?] 
+perl-module-encode-guess (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_GUESS) [N/y/?] 
+perl-module-encode-jp (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_JP) [N/y/?] 
+perl-module-encode-jp-h2z (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_JP_H2Z) [N/y/?] 
+perl-module-encode-jp-jis7 (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_JP_JIS7) [N/y/?] 
+perl-module-encode-kr (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_KR) [N/y/?] 
+perl-module-encode-kr-2022-kr (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_KR_2022_KR) [N/y/?] 
+perl-module-encode-makefile-pl (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_MAKEFILE_PL) [N/y/?] 
+perl-module-encode-mime-header (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_MIME_HEADER) [N/y/?] 
+perl-module-encode-mime-header-iso-2022-jp (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_MIME_HEADER_ISO_2022_JP) [N/y/?] 
+perl-module-encode-mime-name (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_MIME_NAME) [N/y/?] 
+perl-module-encode-readme (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_README) [N/y/?] 
+perl-module-encode-symbol (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_SYMBOL) [N/y/?] 
+perl-module-encode-tw (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_TW) [N/y/?] 
+perl-module-encode-unicode (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_UNICODE) [N/y/?] 
+perl-module-encode-unicode-utf7 (ROOTFS_PACKAGES_PERL_MODULE_ENCODE_UNICODE_UTF7) [N/y/?] 
+perl-module-encoding (ROOTFS_PACKAGES_PERL_MODULE_ENCODING) [N/y/?] 
+perl-module-encoding-warnings (ROOTFS_PACKAGES_PERL_MODULE_ENCODING_WARNINGS) [N/y/?] 
+perl-module-english (ROOTFS_PACKAGES_PERL_MODULE_ENGLISH) [N/y/?] 
+perl-module-env (ROOTFS_PACKAGES_PERL_MODULE_ENV) [N/y/?] 
+perl-module-errno (ROOTFS_PACKAGES_PERL_MODULE_ERRNO) [N/y/?] 
+perl-module-experimental (ROOTFS_PACKAGES_PERL_MODULE_EXPERIMENTAL) [N/y/?] 
+perl-module-exporter (ROOTFS_PACKAGES_PERL_MODULE_EXPORTER) [N/y/?] 
+perl-module-exporter-heavy (ROOTFS_PACKAGES_PERL_MODULE_EXPORTER_HEAVY) [N/y/?] 
+perl-module-extutils-cbuilder (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER) [N/y/?] 
+perl-module-extutils-cbuilder-base (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_BASE) [N/y/?] 
+perl-module-extutils-cbuilder-platform-aix (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_AIX) [N/y/?] 
+perl-module-extutils-cbuilder-platform-android (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_ANDROID) [N/y/?] 
+perl-module-extutils-cbuilder-platform-cygwin (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_CYGWIN) [N/y/?] 
+perl-module-extutils-cbuilder-platform-darwin (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_DARWIN) [N/y/?] 
+perl-module-extutils-cbuilder-platform-dec-osf (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_DEC_OSF) [N/y/?] 
+perl-module-extutils-cbuilder-platform-os2 (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_OS2) [N/y/?] 
+perl-module-extutils-cbuilder-platform-unix (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_UNIX) [N/y/?] 
+perl-module-extutils-cbuilder-platform-vms (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_VMS) [N/y/?] 
+perl-module-extutils-cbuilder-platform-windows (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_WINDOWS) [N/y/?] 
+perl-module-extutils-cbuilder-platform-windows-bcc (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_WINDOWS_BCC) [N/y/?] 
+perl-module-extutils-cbuilder-platform-windows-gcc (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_WINDOWS_GCC) [N/y/?] 
+perl-module-extutils-cbuilder-platform-windows-msvc (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CBUILDER_PLATFORM_WINDOWS_MSVC) [N/y/?] 
+perl-module-extutils-command (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_COMMAND) [N/y/?] 
+perl-module-extutils-command-mm (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_COMMAND_MM) [N/y/?] 
+perl-module-extutils-constant (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CONSTANT) [N/y/?] 
+perl-module-extutils-constant-base (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CONSTANT_BASE) [N/y/?] 
+perl-module-extutils-constant-proxysubs (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CONSTANT_PROXYSUBS) [N/y/?] 
+perl-module-extutils-constant-utils (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CONSTANT_UTILS) [N/y/?] 
+perl-module-extutils-constant-xs (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_CONSTANT_XS) [N/y/?] 
+perl-module-extutils-embed (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_EMBED) [N/y/?] 
+perl-module-extutils-install (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_INSTALL) [N/y/?] 
+perl-module-extutils-installed (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_INSTALLED) [N/y/?] 
+perl-module-extutils-liblist (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_LIBLIST) [N/y/?] 
+perl-module-extutils-liblist-kid (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_LIBLIST_KID) [N/y/?] 
+perl-module-extutils-makemaker (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MAKEMAKER) [N/y/?] 
+perl-module-extutils-makemaker-config (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MAKEMAKER_CONFIG) [N/y/?] 
+perl-module-extutils-manifest (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MANIFEST) [N/y/?] 
+perl-module-extutils-miniperl (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MINIPERL) [N/y/?] 
+perl-module-extutils-mkbootstrap (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MKBOOTSTRAP) [N/y/?] 
+perl-module-extutils-mksymlists (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MKSYMLISTS) [N/y/?] 
+perl-module-extutils-mm (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM) [N/y/?] 
+perl-module-extutils-mm-aix (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_AIX) [N/y/?] 
+perl-module-extutils-mm-any (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_ANY) [N/y/?] 
+perl-module-extutils-mm-beos (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_BEOS) [N/y/?] 
+perl-module-extutils-mm-cygwin (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_CYGWIN) [N/y/?] 
+perl-module-extutils-mm-darwin (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_DARWIN) [N/y/?] 
+perl-module-extutils-mm-dos (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_DOS) [N/y/?] 
+perl-module-extutils-mm-macos (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_MACOS) [N/y/?] 
+perl-module-extutils-mm-nw5 (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_NW5) [N/y/?] 
+perl-module-extutils-mm-os2 (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_OS2) [N/y/?] 
+perl-module-extutils-mm-qnx (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_QNX) [N/y/?] 
+perl-module-extutils-mm-unix (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_UNIX) [N/y/?] 
+perl-module-extutils-mm-uwin (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_UWIN) [N/y/?] 
+perl-module-extutils-mm-vms (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_VMS) [N/y/?] 
+perl-module-extutils-mm-vos (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_VOS) [N/y/?] 
+perl-module-extutils-mm-win32 (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_WIN32) [N/y/?] 
+perl-module-extutils-mm-win95 (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MM_WIN95) [N/y/?] 
+perl-module-extutils-my (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_MY) [N/y/?] 
+perl-module-extutils-packlist (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_PACKLIST) [N/y/?] 
+perl-module-extutils-parsexs (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_PARSEXS) [N/y/?] 
+perl-module-extutils-parsexs-constants (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_PARSEXS_CONSTANTS) [N/y/?] 
+perl-module-extutils-parsexs-countlines (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_PARSEXS_COUNTLINES) [N/y/?] 
+perl-module-extutils-parsexs-eval (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_PARSEXS_EVAL) [N/y/?] 
+perl-module-extutils-parsexs-utilities (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_PARSEXS_UTILITIES) [N/y/?] 
+perl-module-extutils-testlib (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_TESTLIB) [N/y/?] 
+perl-module-extutils-typemaps (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_TYPEMAPS) [N/y/?] 
+perl-module-extutils-typemaps-cmd (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_TYPEMAPS_CMD) [N/y/?] 
+perl-module-extutils-typemaps-inputmap (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_TYPEMAPS_INPUTMAP) [N/y/?] 
+perl-module-extutils-typemaps-outputmap (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_TYPEMAPS_OUTPUTMAP) [N/y/?] 
+perl-module-extutils-typemaps-type (ROOTFS_PACKAGES_PERL_MODULE_EXTUTILS_TYPEMAPS_TYPE) [N/y/?] 
+perl-module-fatal (ROOTFS_PACKAGES_PERL_MODULE_FATAL) [N/y/?] 
+perl-module-fcntl (ROOTFS_PACKAGES_PERL_MODULE_FCNTL) [N/y/?] 
+perl-module-feature (ROOTFS_PACKAGES_PERL_MODULE_FEATURE) [N/y/?] 
+perl-module-fields (ROOTFS_PACKAGES_PERL_MODULE_FIELDS) [N/y/?] 
+perl-module-file-basename (ROOTFS_PACKAGES_PERL_MODULE_FILE_BASENAME) [N/y/?] 
+perl-module-file-compare (ROOTFS_PACKAGES_PERL_MODULE_FILE_COMPARE) [N/y/?] 
+perl-module-file-copy (ROOTFS_PACKAGES_PERL_MODULE_FILE_COPY) [N/y/?] 
+perl-module-file-dosglob (ROOTFS_PACKAGES_PERL_MODULE_FILE_DOSGLOB) [N/y/?] 
+perl-module-file-fetch (ROOTFS_PACKAGES_PERL_MODULE_FILE_FETCH) [N/y/?] 
+perl-module-file-find (ROOTFS_PACKAGES_PERL_MODULE_FILE_FIND) [N/y/?] 
+perl-module-file-glob (ROOTFS_PACKAGES_PERL_MODULE_FILE_GLOB) [N/y/?] 
+perl-module-file-globmapper (ROOTFS_PACKAGES_PERL_MODULE_FILE_GLOBMAPPER) [N/y/?] 
+perl-module-file-path (ROOTFS_PACKAGES_PERL_MODULE_FILE_PATH) [N/y/?] 
+perl-module-file-spec (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC) [N/y/?] 
+perl-module-file-spec-cygwin (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC_CYGWIN) [N/y/?] 
+perl-module-file-spec-epoc (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC_EPOC) [N/y/?] 
+perl-module-file-spec-functions (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC_FUNCTIONS) [N/y/?] 
+perl-module-file-spec-mac (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC_MAC) [N/y/?] 
+perl-module-file-spec-os2 (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC_OS2) [N/y/?] 
+perl-module-file-spec-unix (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC_UNIX) [N/y/?] 
+perl-module-file-spec-vms (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC_VMS) [N/y/?] 
+perl-module-file-spec-win32 (ROOTFS_PACKAGES_PERL_MODULE_FILE_SPEC_WIN32) [N/y/?] 
+perl-module-file-stat (ROOTFS_PACKAGES_PERL_MODULE_FILE_STAT) [N/y/?] 
+perl-module-file-temp (ROOTFS_PACKAGES_PERL_MODULE_FILE_TEMP) [N/y/?] 
+perl-module-filecache (ROOTFS_PACKAGES_PERL_MODULE_FILECACHE) [N/y/?] 
+perl-module-filehandle (ROOTFS_PACKAGES_PERL_MODULE_FILEHANDLE) [N/y/?] 
+perl-module-filetest (ROOTFS_PACKAGES_PERL_MODULE_FILETEST) [N/y/?] 
+perl-module-filter-simple (ROOTFS_PACKAGES_PERL_MODULE_FILTER_SIMPLE) [N/y/?] 
+perl-module-filter-util-call (ROOTFS_PACKAGES_PERL_MODULE_FILTER_UTIL_CALL) [N/y/?] 
+perl-module-findbin (ROOTFS_PACKAGES_PERL_MODULE_FINDBIN) [N/y/?] 
+perl-module-getopt-long (ROOTFS_PACKAGES_PERL_MODULE_GETOPT_LONG) [N/y/?] 
+perl-module-getopt-std (ROOTFS_PACKAGES_PERL_MODULE_GETOPT_STD) [N/y/?] 
+perl-module-hash-util (ROOTFS_PACKAGES_PERL_MODULE_HASH_UTIL) [N/y/?] 
+perl-module-hash-util-fieldhash (ROOTFS_PACKAGES_PERL_MODULE_HASH_UTIL_FIELDHASH) [N/y/?] 
+perl-module-http-tiny (ROOTFS_PACKAGES_PERL_MODULE_HTTP_TINY) [N/y/?] 
+perl-module-i18n-collate (ROOTFS_PACKAGES_PERL_MODULE_I18N_COLLATE) [N/y/?] 
+perl-module-i18n-langinfo (ROOTFS_PACKAGES_PERL_MODULE_I18N_LANGINFO) [N/y/?] 
+perl-module-i18n-langtags (ROOTFS_PACKAGES_PERL_MODULE_I18N_LANGTAGS) [N/y/?] 
+perl-module-i18n-langtags-detect (ROOTFS_PACKAGES_PERL_MODULE_I18N_LANGTAGS_DETECT) [N/y/?] 
+perl-module-i18n-langtags-list (ROOTFS_PACKAGES_PERL_MODULE_I18N_LANGTAGS_LIST) [N/y/?] 
+perl-module-if (ROOTFS_PACKAGES_PERL_MODULE_IF) [N/y/?] 
+perl-module-inc-latest (ROOTFS_PACKAGES_PERL_MODULE_INC_LATEST) [N/y/?] 
+perl-module-inc-latest-private (ROOTFS_PACKAGES_PERL_MODULE_INC_LATEST_PRIVATE) [N/y/?] 
+perl-module-integer (ROOTFS_PACKAGES_PERL_MODULE_INTEGER) [N/y/?] 
+perl-module-io (ROOTFS_PACKAGES_PERL_MODULE_IO) [N/y/?] 
+perl-module-io-compress-adapter-bzip2 (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_ADAPTER_BZIP2) [N/y/?] 
+perl-module-io-compress-adapter-deflate (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_ADAPTER_DEFLATE) [N/y/?] 
+perl-module-io-compress-adapter-identity (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_ADAPTER_IDENTITY) [N/y/?] 
+perl-module-io-compress-base (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_BASE) [N/y/?] 
+perl-module-io-compress-base-common (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_BASE_COMMON) [N/y/?] 
+perl-module-io-compress-bzip2 (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_BZIP2) [N/y/?] 
+perl-module-io-compress-deflate (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_DEFLATE) [N/y/?] 
+perl-module-io-compress-gzip (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_GZIP) [N/y/?] 
+perl-module-io-compress-gzip-constants (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_GZIP_CONSTANTS) [N/y/?] 
+perl-module-io-compress-rawdeflate (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_RAWDEFLATE) [N/y/?] 
+perl-module-io-compress-zip (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_ZIP) [N/y/?] 
+perl-module-io-compress-zip-constants (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_ZIP_CONSTANTS) [N/y/?] 
+perl-module-io-compress-zlib-constants (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_ZLIB_CONSTANTS) [N/y/?] 
+perl-module-io-compress-zlib-extra (ROOTFS_PACKAGES_PERL_MODULE_IO_COMPRESS_ZLIB_EXTRA) [N/y/?] 
+perl-module-io-dir (ROOTFS_PACKAGES_PERL_MODULE_IO_DIR) [N/y/?] 
+perl-module-io-file (ROOTFS_PACKAGES_PERL_MODULE_IO_FILE) [N/y/?] 
+perl-module-io-handle (ROOTFS_PACKAGES_PERL_MODULE_IO_HANDLE) [N/y/?] 
+perl-module-io-pipe (ROOTFS_PACKAGES_PERL_MODULE_IO_PIPE) [N/y/?] 
+perl-module-io-poll (ROOTFS_PACKAGES_PERL_MODULE_IO_POLL) [N/y/?] 
+perl-module-io-seekable (ROOTFS_PACKAGES_PERL_MODULE_IO_SEEKABLE) [N/y/?] 
+perl-module-io-select (ROOTFS_PACKAGES_PERL_MODULE_IO_SELECT) [N/y/?] 
+perl-module-io-socket (ROOTFS_PACKAGES_PERL_MODULE_IO_SOCKET) [N/y/?] 
+perl-module-io-socket-inet (ROOTFS_PACKAGES_PERL_MODULE_IO_SOCKET_INET) [N/y/?] 
+perl-module-io-socket-ip (ROOTFS_PACKAGES_PERL_MODULE_IO_SOCKET_IP) [N/y/?] 
+perl-module-io-socket-unix (ROOTFS_PACKAGES_PERL_MODULE_IO_SOCKET_UNIX) [N/y/?] 
+perl-module-io-uncompress-adapter-bunzip2 (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_ADAPTER_BUNZIP2) [N/y/?] 
+perl-module-io-uncompress-adapter-identity (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_ADAPTER_IDENTITY) [N/y/?] 
+perl-module-io-uncompress-adapter-inflate (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_ADAPTER_INFLATE) [N/y/?] 
+perl-module-io-uncompress-anyinflate (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_ANYINFLATE) [N/y/?] 
+perl-module-io-uncompress-anyuncompress (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_ANYUNCOMPRESS) [N/y/?] 
+perl-module-io-uncompress-base (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_BASE) [N/y/?] 
+perl-module-io-uncompress-bunzip2 (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_BUNZIP2) [N/y/?] 
+perl-module-io-uncompress-gunzip (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_GUNZIP) [N/y/?] 
+perl-module-io-uncompress-inflate (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_INFLATE) [N/y/?] 
+perl-module-io-uncompress-rawinflate (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_RAWINFLATE) [N/y/?] 
+perl-module-io-uncompress-unzip (ROOTFS_PACKAGES_PERL_MODULE_IO_UNCOMPRESS_UNZIP) [N/y/?] 
+perl-module-io-zlib (ROOTFS_PACKAGES_PERL_MODULE_IO_ZLIB) [N/y/?] 
+perl-module-ipc-cmd (ROOTFS_PACKAGES_PERL_MODULE_IPC_CMD) [N/y/?] 
+perl-module-ipc-msg (ROOTFS_PACKAGES_PERL_MODULE_IPC_MSG) [N/y/?] 
+perl-module-ipc-open2 (ROOTFS_PACKAGES_PERL_MODULE_IPC_OPEN2) [N/y/?] 
+perl-module-ipc-open3 (ROOTFS_PACKAGES_PERL_MODULE_IPC_OPEN3) [N/y/?] 
+perl-module-ipc-semaphore (ROOTFS_PACKAGES_PERL_MODULE_IPC_SEMAPHORE) [N/y/?] 
+perl-module-ipc-sharedmem (ROOTFS_PACKAGES_PERL_MODULE_IPC_SHAREDMEM) [N/y/?] 
+perl-module-ipc-sysv (ROOTFS_PACKAGES_PERL_MODULE_IPC_SYSV) [N/y/?] 
+perl-module-json-pp (ROOTFS_PACKAGES_PERL_MODULE_JSON_PP) [N/y/?] 
+perl-module-json-pp-boolean (ROOTFS_PACKAGES_PERL_MODULE_JSON_PP_BOOLEAN) [N/y/?] 
+perl-module-less (ROOTFS_PACKAGES_PERL_MODULE_LESS) [N/y/?] 
+perl-module-lib (ROOTFS_PACKAGES_PERL_MODULE_LIB) [N/y/?] 
+perl-module-list-util (ROOTFS_PACKAGES_PERL_MODULE_LIST_UTIL) [N/y/?] 
+perl-module-list-util-xs (ROOTFS_PACKAGES_PERL_MODULE_LIST_UTIL_XS) [N/y/?] 
+perl-module-load (ROOTFS_PACKAGES_PERL_MODULE_LOAD) [N/y/?] 
+perl-module-loaded (ROOTFS_PACKAGES_PERL_MODULE_LOADED) [N/y/?] 
+perl-module-math-bigfloat (ROOTFS_PACKAGES_PERL_MODULE_MATH_BIGFLOAT) [N/y/?] 
+perl-module-math-bigfloat-trace (ROOTFS_PACKAGES_PERL_MODULE_MATH_BIGFLOAT_TRACE) [N/y/?] 
+perl-module-math-bigint (ROOTFS_PACKAGES_PERL_MODULE_MATH_BIGINT) [N/y/?] 
+perl-module-math-bigint-calc (ROOTFS_PACKAGES_PERL_MODULE_MATH_BIGINT_CALC) [N/y/?] 
+perl-module-math-bigint-calcemu (ROOTFS_PACKAGES_PERL_MODULE_MATH_BIGINT_CALCEMU) [N/y/?] 
+perl-module-math-bigint-fastcalc (ROOTFS_PACKAGES_PERL_MODULE_MATH_BIGINT_FASTCALC) [N/y/?] 
+perl-module-math-bigint-trace (ROOTFS_PACKAGES_PERL_MODULE_MATH_BIGINT_TRACE) [N/y/?] 
+perl-module-math-bigrat (ROOTFS_PACKAGES_PERL_MODULE_MATH_BIGRAT) [N/y/?] 
+perl-module-math-complex (ROOTFS_PACKAGES_PERL_MODULE_MATH_COMPLEX) [N/y/?] 
+perl-module-math-trig (ROOTFS_PACKAGES_PERL_MODULE_MATH_TRIG) [N/y/?] 
+perl-module-memoize (ROOTFS_PACKAGES_PERL_MODULE_MEMOIZE) [N/y/?] 
+perl-module-memoize-anydbm-file (ROOTFS_PACKAGES_PERL_MODULE_MEMOIZE_ANYDBM_FILE) [N/y/?] 
+perl-module-memoize-expire (ROOTFS_PACKAGES_PERL_MODULE_MEMOIZE_EXPIRE) [N/y/?] 
+perl-module-memoize-expirefile (ROOTFS_PACKAGES_PERL_MODULE_MEMOIZE_EXPIREFILE) [N/y/?] 
+perl-module-memoize-expiretest (ROOTFS_PACKAGES_PERL_MODULE_MEMOIZE_EXPIRETEST) [N/y/?] 
+perl-module-memoize-ndbm-file (ROOTFS_PACKAGES_PERL_MODULE_MEMOIZE_NDBM_FILE) [N/y/?] 
+perl-module-memoize-sdbm-file (ROOTFS_PACKAGES_PERL_MODULE_MEMOIZE_SDBM_FILE) [N/y/?] 
+perl-module-memoize-storable (ROOTFS_PACKAGES_PERL_MODULE_MEMOIZE_STORABLE) [N/y/?] 
+perl-module-metadata (ROOTFS_PACKAGES_PERL_MODULE_METADATA) [N/y/?] 
+perl-module-mime-base64 (ROOTFS_PACKAGES_PERL_MODULE_MIME_BASE64) [N/y/?] 
+perl-module-mime-quotedprint (ROOTFS_PACKAGES_PERL_MODULE_MIME_QUOTEDPRINT) [N/y/?] 
+perl-module-mro (ROOTFS_PACKAGES_PERL_MODULE_MRO) [N/y/?] 
+perl-module-net-cmd (ROOTFS_PACKAGES_PERL_MODULE_NET_CMD) [N/y/?] 
+perl-module-net-config (ROOTFS_PACKAGES_PERL_MODULE_NET_CONFIG) [N/y/?] 
+perl-module-net-domain (ROOTFS_PACKAGES_PERL_MODULE_NET_DOMAIN) [N/y/?] 
+perl-module-net-ftp (ROOTFS_PACKAGES_PERL_MODULE_NET_FTP) [N/y/?] 
+perl-module-net-ftp-a (ROOTFS_PACKAGES_PERL_MODULE_NET_FTP_A) [N/y/?] 
+perl-module-net-ftp-dataconn (ROOTFS_PACKAGES_PERL_MODULE_NET_FTP_DATACONN) [N/y/?] 
+perl-module-net-ftp-e (ROOTFS_PACKAGES_PERL_MODULE_NET_FTP_E) [N/y/?] 
+perl-module-net-ftp-i (ROOTFS_PACKAGES_PERL_MODULE_NET_FTP_I) [N/y/?] 
+perl-module-net-ftp-l (ROOTFS_PACKAGES_PERL_MODULE_NET_FTP_L) [N/y/?] 
+perl-module-net-hostent (ROOTFS_PACKAGES_PERL_MODULE_NET_HOSTENT) [N/y/?] 
+perl-module-net-netent (ROOTFS_PACKAGES_PERL_MODULE_NET_NETENT) [N/y/?] 
+perl-module-net-netrc (ROOTFS_PACKAGES_PERL_MODULE_NET_NETRC) [N/y/?] 
+perl-module-net-nntp (ROOTFS_PACKAGES_PERL_MODULE_NET_NNTP) [N/y/?] 
+perl-module-net-ping (ROOTFS_PACKAGES_PERL_MODULE_NET_PING) [N/y/?] 
+perl-module-net-pop3 (ROOTFS_PACKAGES_PERL_MODULE_NET_POP3) [N/y/?] 
+perl-module-net-protoent (ROOTFS_PACKAGES_PERL_MODULE_NET_PROTOENT) [N/y/?] 
+perl-module-net-servent (ROOTFS_PACKAGES_PERL_MODULE_NET_SERVENT) [N/y/?] 
+perl-module-net-smtp (ROOTFS_PACKAGES_PERL_MODULE_NET_SMTP) [N/y/?] 
+perl-module-net-time (ROOTFS_PACKAGES_PERL_MODULE_NET_TIME) [N/y/?] 
+perl-module-next (ROOTFS_PACKAGES_PERL_MODULE_NEXT) [N/y/?] 
+perl-module-o (ROOTFS_PACKAGES_PERL_MODULE_O) [N/y/?] 
+perl-module-opcode (ROOTFS_PACKAGES_PERL_MODULE_OPCODE) [N/y/?] 
+perl-module-open (ROOTFS_PACKAGES_PERL_MODULE_OPEN) [N/y/?] 
+perl-module-ops (ROOTFS_PACKAGES_PERL_MODULE_OPS) [N/y/?] 
+perl-module-overload (ROOTFS_PACKAGES_PERL_MODULE_OVERLOAD) [N/y/?] 
+perl-module-overload-numbers (ROOTFS_PACKAGES_PERL_MODULE_OVERLOAD_NUMBERS) [N/y/?] 
+perl-module-overloading (ROOTFS_PACKAGES_PERL_MODULE_OVERLOADING) [N/y/?] 
+perl-module-package-constants (ROOTFS_PACKAGES_PERL_MODULE_PACKAGE_CONSTANTS) [N/y/?] 
+perl-module-params-check (ROOTFS_PACKAGES_PERL_MODULE_PARAMS_CHECK) [N/y/?] 
+perl-module-parent (ROOTFS_PACKAGES_PERL_MODULE_PARENT) [N/y/?] 
+perl-module-parse-cpan-meta (ROOTFS_PACKAGES_PERL_MODULE_PARSE_CPAN_META) [N/y/?] 
+perl-module-perl-ostype (ROOTFS_PACKAGES_PERL_MODULE_PERL_OSTYPE) [N/y/?] 
+perl-module-perl5db (ROOTFS_PACKAGES_PERL_MODULE_PERL5DB) [N/y/?] 
+perl-module-perlfaq (ROOTFS_PACKAGES_PERL_MODULE_PERLFAQ) [N/y/?] 
+perl-module-perlio (ROOTFS_PACKAGES_PERL_MODULE_PERLIO) [N/y/?] 
+perl-module-perlio-encoding (ROOTFS_PACKAGES_PERL_MODULE_PERLIO_ENCODING) [N/y/?] 
+perl-module-perlio-mmap (ROOTFS_PACKAGES_PERL_MODULE_PERLIO_MMAP) [N/y/?] 
+perl-module-perlio-scalar (ROOTFS_PACKAGES_PERL_MODULE_PERLIO_SCALAR) [N/y/?] 
+perl-module-perlio-via (ROOTFS_PACKAGES_PERL_MODULE_PERLIO_VIA) [N/y/?] 
+perl-module-perlio-via-quotedprint (ROOTFS_PACKAGES_PERL_MODULE_PERLIO_VIA_QUOTEDPRINT) [N/y/?] 
+perl-module-pod-checker (ROOTFS_PACKAGES_PERL_MODULE_POD_CHECKER) [N/y/?] 
+perl-module-pod-escapes (ROOTFS_PACKAGES_PERL_MODULE_POD_ESCAPES) [N/y/?] 
+perl-module-pod-find (ROOTFS_PACKAGES_PERL_MODULE_POD_FIND) [N/y/?] 
+perl-module-pod-functions (ROOTFS_PACKAGES_PERL_MODULE_POD_FUNCTIONS) [N/y/?] 
+perl-module-pod-html (ROOTFS_PACKAGES_PERL_MODULE_POD_HTML) [N/y/?] 
+perl-module-pod-inputobjects (ROOTFS_PACKAGES_PERL_MODULE_POD_INPUTOBJECTS) [N/y/?] 
+perl-module-pod-man (ROOTFS_PACKAGES_PERL_MODULE_POD_MAN) [N/y/?] 
+perl-module-pod-parselink (ROOTFS_PACKAGES_PERL_MODULE_POD_PARSELINK) [N/y/?] 
+perl-module-pod-parser (ROOTFS_PACKAGES_PERL_MODULE_POD_PARSER) [N/y/?] 
+perl-module-pod-parseutils (ROOTFS_PACKAGES_PERL_MODULE_POD_PARSEUTILS) [N/y/?] 
+perl-module-pod-perldoc (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC) [N/y/?] 
+perl-module-pod-perldoc-baseto (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_BASETO) [N/y/?] 
+perl-module-pod-perldoc-getoptsoo (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_GETOPTSOO) [N/y/?] 
+perl-module-pod-perldoc-toansi (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TOANSI) [N/y/?] 
+perl-module-pod-perldoc-tochecker (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TOCHECKER) [N/y/?] 
+perl-module-pod-perldoc-toman (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TOMAN) [N/y/?] 
+perl-module-pod-perldoc-tonroff (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TONROFF) [N/y/?] 
+perl-module-pod-perldoc-topod (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TOPOD) [N/y/?] 
+perl-module-pod-perldoc-tortf (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TORTF) [N/y/?] 
+perl-module-pod-perldoc-toterm (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TOTERM) [N/y/?] 
+perl-module-pod-perldoc-totext (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TOTEXT) [N/y/?] 
+perl-module-pod-perldoc-totk (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TOTK) [N/y/?] 
+perl-module-pod-perldoc-toxml (ROOTFS_PACKAGES_PERL_MODULE_POD_PERLDOC_TOXML) [N/y/?] 
+perl-module-pod-plaintext (ROOTFS_PACKAGES_PERL_MODULE_POD_PLAINTEXT) [N/y/?] 
+perl-module-pod-select (ROOTFS_PACKAGES_PERL_MODULE_POD_SELECT) [N/y/?] 
+perl-module-pod-simple (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE) [N/y/?] 
+perl-module-pod-simple-blackbox (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_BLACKBOX) [N/y/?] 
+perl-module-pod-simple-checker (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_CHECKER) [N/y/?] 
+perl-module-pod-simple-debug (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_DEBUG) [N/y/?] 
+perl-module-pod-simple-dumpastext (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_DUMPASTEXT) [N/y/?] 
+perl-module-pod-simple-dumpasxml (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_DUMPASXML) [N/y/?] 
+perl-module-pod-simple-html (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_HTML) [N/y/?] 
+perl-module-pod-simple-htmlbatch (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_HTMLBATCH) [N/y/?] 
+perl-module-pod-simple-htmllegacy (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_HTMLLEGACY) [N/y/?] 
+perl-module-pod-simple-linksection (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_LINKSECTION) [N/y/?] 
+perl-module-pod-simple-methody (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_METHODY) [N/y/?] 
+perl-module-pod-simple-progress (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_PROGRESS) [N/y/?] 
+perl-module-pod-simple-pullparser (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_PULLPARSER) [N/y/?] 
+perl-module-pod-simple-pullparserendtoken (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_PULLPARSERENDTOKEN) [N/y/?] 
+perl-module-pod-simple-pullparserstarttoken (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_PULLPARSERSTARTTOKEN) [N/y/?] 
+perl-module-pod-simple-pullparsertexttoken (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_PULLPARSERTEXTTOKEN) [N/y/?] 
+perl-module-pod-simple-pullparsertoken (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_PULLPARSERTOKEN) [N/y/?] 
+perl-module-pod-simple-rtf (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_RTF) [N/y/?] 
+perl-module-pod-simple-search (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_SEARCH) [N/y/?] 
+perl-module-pod-simple-simpletree (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_SIMPLETREE) [N/y/?] 
+perl-module-pod-simple-text (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_TEXT) [N/y/?] 
+perl-module-pod-simple-textcontent (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_TEXTCONTENT) [N/y/?] 
+perl-module-pod-simple-tiedoutfh (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_TIEDOUTFH) [N/y/?] 
+perl-module-pod-simple-transcode (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_TRANSCODE) [N/y/?] 
+perl-module-pod-simple-transcodedumb (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_TRANSCODEDUMB) [N/y/?] 
+perl-module-pod-simple-transcodesmart (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_TRANSCODESMART) [N/y/?] 
+perl-module-pod-simple-xhtml (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_XHTML) [N/y/?] 
+perl-module-pod-simple-xmloutstream (ROOTFS_PACKAGES_PERL_MODULE_POD_SIMPLE_XMLOUTSTREAM) [N/y/?] 
+perl-module-pod-text (ROOTFS_PACKAGES_PERL_MODULE_POD_TEXT) [N/y/?] 
+perl-module-pod-text-color (ROOTFS_PACKAGES_PERL_MODULE_POD_TEXT_COLOR) [N/y/?] 
+perl-module-pod-text-overstrike (ROOTFS_PACKAGES_PERL_MODULE_POD_TEXT_OVERSTRIKE) [N/y/?] 
+perl-module-pod-text-termcap (ROOTFS_PACKAGES_PERL_MODULE_POD_TEXT_TERMCAP) [N/y/?] 
+perl-module-pod-usage (ROOTFS_PACKAGES_PERL_MODULE_POD_USAGE) [N/y/?] 
+perl-module-posix (ROOTFS_PACKAGES_PERL_MODULE_POSIX) [N/y/?] 
+perl-module-re (ROOTFS_PACKAGES_PERL_MODULE_RE) [N/y/?] 
+perl-module-safe (ROOTFS_PACKAGES_PERL_MODULE_SAFE) [N/y/?] 
+perl-module-scalar-util (ROOTFS_PACKAGES_PERL_MODULE_SCALAR_UTIL) [N/y/?] 
+perl-module-sdbm (ROOTFS_PACKAGES_PERL_MODULE_SDBM) [N/y/?] 
+perl-module-sdbm-file (ROOTFS_PACKAGES_PERL_MODULE_SDBM_FILE) [N/y/?] 
+perl-module-search-dict (ROOTFS_PACKAGES_PERL_MODULE_SEARCH_DICT) [N/y/?] 
+perl-module-selectsaver (ROOTFS_PACKAGES_PERL_MODULE_SELECTSAVER) [N/y/?] 
+perl-module-selfloader (ROOTFS_PACKAGES_PERL_MODULE_SELFLOADER) [N/y/?] 
+perl-module-sigtrap (ROOTFS_PACKAGES_PERL_MODULE_SIGTRAP) [N/y/?] 
+perl-module-socket (ROOTFS_PACKAGES_PERL_MODULE_SOCKET) [N/y/?] 
+perl-module-sort (ROOTFS_PACKAGES_PERL_MODULE_SORT) [N/y/?] 
+perl-module-storable (ROOTFS_PACKAGES_PERL_MODULE_STORABLE) [N/y/?] 
+perl-module-subs (ROOTFS_PACKAGES_PERL_MODULE_SUBS) [N/y/?] 
+perl-module-symbol (ROOTFS_PACKAGES_PERL_MODULE_SYMBOL) [N/y/?] 
+perl-module-sys-hostname (ROOTFS_PACKAGES_PERL_MODULE_SYS_HOSTNAME) [N/y/?] 
+perl-module-sys-syslog (ROOTFS_PACKAGES_PERL_MODULE_SYS_SYSLOG) [N/y/?] 
+perl-module-tap-base (ROOTFS_PACKAGES_PERL_MODULE_TAP_BASE) [N/y/?] 
+perl-module-tap-formatter-base (ROOTFS_PACKAGES_PERL_MODULE_TAP_FORMATTER_BASE) [N/y/?] 
+perl-module-tap-formatter-color (ROOTFS_PACKAGES_PERL_MODULE_TAP_FORMATTER_COLOR) [N/y/?] 
+perl-module-tap-formatter-console (ROOTFS_PACKAGES_PERL_MODULE_TAP_FORMATTER_CONSOLE) [N/y/?] 
+perl-module-tap-formatter-console-parallelsession (ROOTFS_PACKAGES_PERL_MODULE_TAP_FORMATTER_CONSOLE_PARALLELSESSION) [N/y/?] 
+perl-module-tap-formatter-console-session (ROOTFS_PACKAGES_PERL_MODULE_TAP_FORMATTER_CONSOLE_SESSION) [N/y/?] 
+perl-module-tap-formatter-file (ROOTFS_PACKAGES_PERL_MODULE_TAP_FORMATTER_FILE) [N/y/?] 
+perl-module-tap-formatter-file-session (ROOTFS_PACKAGES_PERL_MODULE_TAP_FORMATTER_FILE_SESSION) [N/y/?] 
+perl-module-tap-formatter-session (ROOTFS_PACKAGES_PERL_MODULE_TAP_FORMATTER_SESSION) [N/y/?] 
+perl-module-tap-harness (ROOTFS_PACKAGES_PERL_MODULE_TAP_HARNESS) [N/y/?] 
+perl-module-tap-harness-env (ROOTFS_PACKAGES_PERL_MODULE_TAP_HARNESS_ENV) [N/y/?] 
+perl-module-tap-object (ROOTFS_PACKAGES_PERL_MODULE_TAP_OBJECT) [N/y/?] 
+perl-module-tap-parser (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER) [N/y/?] 
+perl-module-tap-parser-aggregator (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_AGGREGATOR) [N/y/?] 
+perl-module-tap-parser-grammar (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_GRAMMAR) [N/y/?] 
+perl-module-tap-parser-iterator (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_ITERATOR) [N/y/?] 
+perl-module-tap-parser-iterator-array (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_ITERATOR_ARRAY) [N/y/?] 
+perl-module-tap-parser-iterator-process (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_ITERATOR_PROCESS) [N/y/?] 
+perl-module-tap-parser-iterator-stream (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_ITERATOR_STREAM) [N/y/?] 
+perl-module-tap-parser-iteratorfactory (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_ITERATORFACTORY) [N/y/?] 
+perl-module-tap-parser-multiplexer (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_MULTIPLEXER) [N/y/?] 
+perl-module-tap-parser-result (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT) [N/y/?] 
+perl-module-tap-parser-result-bailout (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT_BAILOUT) [N/y/?] 
+perl-module-tap-parser-result-comment (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT_COMMENT) [N/y/?] 
+perl-module-tap-parser-result-plan (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT_PLAN) [N/y/?] 
+perl-module-tap-parser-result-pragma (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT_PRAGMA) [N/y/?] 
+perl-module-tap-parser-result-test (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT_TEST) [N/y/?] 
+perl-module-tap-parser-result-unknown (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT_UNKNOWN) [N/y/?] 
+perl-module-tap-parser-result-version (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT_VERSION) [N/y/?] 
+perl-module-tap-parser-result-yaml (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULT_YAML) [N/y/?] 
+perl-module-tap-parser-resultfactory (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_RESULTFACTORY) [N/y/?] 
+perl-module-tap-parser-scheduler (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SCHEDULER) [N/y/?] 
+perl-module-tap-parser-scheduler-job (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SCHEDULER_JOB) [N/y/?] 
+perl-module-tap-parser-scheduler-spinner (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SCHEDULER_SPINNER) [N/y/?] 
+perl-module-tap-parser-source (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SOURCE) [N/y/?] 
+perl-module-tap-parser-sourcehandler (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SOURCEHANDLER) [N/y/?] 
+perl-module-tap-parser-sourcehandler-executable (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SOURCEHANDLER_EXECUTABLE) [N/y/?] 
+perl-module-tap-parser-sourcehandler-file (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SOURCEHANDLER_FILE) [N/y/?] 
+perl-module-tap-parser-sourcehandler-handle (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SOURCEHANDLER_HANDLE) [N/y/?] 
+perl-module-tap-parser-sourcehandler-perl (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SOURCEHANDLER_PERL) [N/y/?] 
+perl-module-tap-parser-sourcehandler-rawtap (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_SOURCEHANDLER_RAWTAP) [N/y/?] 
+perl-module-tap-parser-yamlish-reader (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_YAMLISH_READER) [N/y/?] 
+perl-module-tap-parser-yamlish-writer (ROOTFS_PACKAGES_PERL_MODULE_TAP_PARSER_YAMLISH_WRITER) [N/y/?] 
+perl-module-term-ansicolor (ROOTFS_PACKAGES_PERL_MODULE_TERM_ANSICOLOR) [N/y/?] 
+perl-module-term-cap (ROOTFS_PACKAGES_PERL_MODULE_TERM_CAP) [N/y/?] 
+perl-module-term-complete (ROOTFS_PACKAGES_PERL_MODULE_TERM_COMPLETE) [N/y/?] 
+perl-module-term-readline (ROOTFS_PACKAGES_PERL_MODULE_TERM_READLINE) [N/y/?] 
+perl-module-test (ROOTFS_PACKAGES_PERL_MODULE_TEST) [N/y/?] 
+perl-module-test-builder (ROOTFS_PACKAGES_PERL_MODULE_TEST_BUILDER) [N/y/?] 
+perl-module-test-builder-module (ROOTFS_PACKAGES_PERL_MODULE_TEST_BUILDER_MODULE) [N/y/?] 
+perl-module-test-builder-tester (ROOTFS_PACKAGES_PERL_MODULE_TEST_BUILDER_TESTER) [N/y/?] 
+perl-module-test-builder-tester-color (ROOTFS_PACKAGES_PERL_MODULE_TEST_BUILDER_TESTER_COLOR) [N/y/?] 
+perl-module-test-harness (ROOTFS_PACKAGES_PERL_MODULE_TEST_HARNESS) [N/y/?] 
+perl-module-test-more (ROOTFS_PACKAGES_PERL_MODULE_TEST_MORE) [N/y/?] 
+perl-module-test-simple (ROOTFS_PACKAGES_PERL_MODULE_TEST_SIMPLE) [N/y/?] 
+perl-module-text-abbrev (ROOTFS_PACKAGES_PERL_MODULE_TEXT_ABBREV) [N/y/?] 
+perl-module-text-balanced (ROOTFS_PACKAGES_PERL_MODULE_TEXT_BALANCED) [N/y/?] 
+perl-module-text-parsewords (ROOTFS_PACKAGES_PERL_MODULE_TEXT_PARSEWORDS) [N/y/?] 
+perl-module-text-tabs (ROOTFS_PACKAGES_PERL_MODULE_TEXT_TABS) [N/y/?] 
+perl-module-text-wrap (ROOTFS_PACKAGES_PERL_MODULE_TEXT_WRAP) [N/y/?] 
+perl-module-thread (ROOTFS_PACKAGES_PERL_MODULE_THREAD) [N/y/?] 
+perl-module-thread-queue (ROOTFS_PACKAGES_PERL_MODULE_THREAD_QUEUE) [N/y/?] 
+perl-module-thread-semaphore (ROOTFS_PACKAGES_PERL_MODULE_THREAD_SEMAPHORE) [N/y/?] 
+perl-module-threads (ROOTFS_PACKAGES_PERL_MODULE_THREADS) [N/y/?] 
+perl-module-threads-shared (ROOTFS_PACKAGES_PERL_MODULE_THREADS_SHARED) [N/y/?] 
+perl-module-tie-array (ROOTFS_PACKAGES_PERL_MODULE_TIE_ARRAY) [N/y/?] 
+perl-module-tie-file (ROOTFS_PACKAGES_PERL_MODULE_TIE_FILE) [N/y/?] 
+perl-module-tie-handle (ROOTFS_PACKAGES_PERL_MODULE_TIE_HANDLE) [N/y/?] 
+perl-module-tie-hash (ROOTFS_PACKAGES_PERL_MODULE_TIE_HASH) [N/y/?] 
+perl-module-tie-hash-namedcapture (ROOTFS_PACKAGES_PERL_MODULE_TIE_HASH_NAMEDCAPTURE) [N/y/?] 
+perl-module-tie-memoize (ROOTFS_PACKAGES_PERL_MODULE_TIE_MEMOIZE) [N/y/?] 
+perl-module-tie-refhash (ROOTFS_PACKAGES_PERL_MODULE_TIE_REFHASH) [N/y/?] 
+perl-module-tie-scalar (ROOTFS_PACKAGES_PERL_MODULE_TIE_SCALAR) [N/y/?] 
+perl-module-tie-stdhandle (ROOTFS_PACKAGES_PERL_MODULE_TIE_STDHANDLE) [N/y/?] 
+perl-module-tie-substrhash (ROOTFS_PACKAGES_PERL_MODULE_TIE_SUBSTRHASH) [N/y/?] 
+perl-module-time-gmtime (ROOTFS_PACKAGES_PERL_MODULE_TIME_GMTIME) [N/y/?] 
+perl-module-time-hires (ROOTFS_PACKAGES_PERL_MODULE_TIME_HIRES) [N/y/?] 
+perl-module-time-local (ROOTFS_PACKAGES_PERL_MODULE_TIME_LOCAL) [N/y/?] 
+perl-module-time-localtime (ROOTFS_PACKAGES_PERL_MODULE_TIME_LOCALTIME) [N/y/?] 
+perl-module-time-piece (ROOTFS_PACKAGES_PERL_MODULE_TIME_PIECE) [N/y/?] 
+perl-module-time-seconds (ROOTFS_PACKAGES_PERL_MODULE_TIME_SECONDS) [N/y/?] 
+perl-module-time-tm (ROOTFS_PACKAGES_PERL_MODULE_TIME_TM) [N/y/?] 
+perl-module-unicode-collate (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_COLLATE) [N/y/?] 
+perl-module-unicode-collate-cjk-big5 (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_COLLATE_CJK_BIG5) [N/y/?] 
+perl-module-unicode-collate-cjk-gb2312 (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_COLLATE_CJK_GB2312) [N/y/?] 
+perl-module-unicode-collate-cjk-jisx0208 (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_COLLATE_CJK_JISX0208) [N/y/?] 
+perl-module-unicode-collate-cjk-korean (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_COLLATE_CJK_KOREAN) [N/y/?] 
+perl-module-unicode-collate-cjk-pinyin (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_COLLATE_CJK_PINYIN) [N/y/?] 
+perl-module-unicode-collate-cjk-stroke (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_COLLATE_CJK_STROKE) [N/y/?] 
+perl-module-unicode-collate-cjk-zhuyin (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_COLLATE_CJK_ZHUYIN) [N/y/?] 
+perl-module-unicode-normalize (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_NORMALIZE) [N/y/?] 
+perl-module-unicode-ucd (ROOTFS_PACKAGES_PERL_MODULE_UNICODE_UCD) [N/y/?] 
+perl-module-unicore (ROOTFS_PACKAGES_PERL_MODULE_UNICORE) [N/y/?] 
+perl-module-universal (ROOTFS_PACKAGES_PERL_MODULE_UNIVERSAL) [N/y/?] 
+perl-module-user-grent (ROOTFS_PACKAGES_PERL_MODULE_USER_GRENT) [N/y/?] 
+perl-module-user-pwent (ROOTFS_PACKAGES_PERL_MODULE_USER_PWENT) [N/y/?] 
+perl-module-utf8 (ROOTFS_PACKAGES_PERL_MODULE_UTF8) [N/y/?] 
+perl-module-utf8-heavy (ROOTFS_PACKAGES_PERL_MODULE_UTF8_HEAVY) [N/y/?] 
+perl-module-version (ROOTFS_PACKAGES_PERL_MODULE_VERSION) [N/y/?] 
+perl-module-version-regex (ROOTFS_PACKAGES_PERL_MODULE_VERSION_REGEX) [N/y/?] 
+perl-module-version-vpp (ROOTFS_PACKAGES_PERL_MODULE_VERSION_VPP) [N/y/?] 
+perl-module-vmsish (ROOTFS_PACKAGES_PERL_MODULE_VMSISH) [N/y/?] 
+perl-module-xsloader (ROOTFS_PACKAGES_PERL_MODULE_XSLOADER) [N/y/?] 
+perl-modules (ROOTFS_PACKAGES_PERL_MODULES) [N/y/?] 
+perl-pod (ROOTFS_PACKAGES_PERL_POD) [N/y/?] 
+*
+* doc
+*
+*
+* base-files
+*
+base-files-doc (ROOTFS_PACKAGES_BASE_FILES_DOC) [N/y/?] 
+*
+* base-passwd
+*
+base-passwd-doc (ROOTFS_PACKAGES_BASE_PASSWD_DOC) [N/y/?] 
+*
+* bash
+*
+bash-doc (ROOTFS_PACKAGES_BASH_DOC) [N/y/?] 
+*
+* bridge-utils
+*
+bridge-utils-doc (ROOTFS_PACKAGES_BRIDGE_UTILS_DOC) [N/y/?] 
+*
+* bzip2
+*
+bzip2-doc (ROOTFS_PACKAGES_BZIP2_DOC) [N/y/?] 
+*
+* db
+*
+db-doc (ROOTFS_PACKAGES_DB_DOC) [N/y/?] 
+*
+* e2fsprogs
+*
+e2fsprogs-doc (ROOTFS_PACKAGES_E2FSPROGS_DOC) [N/y/?] 
+*
+* ethtool
+*
+ethtool-doc (ROOTFS_PACKAGES_ETHTOOL_DOC) [N/y/?] 
+*
+* expat
+*
+libexpat-doc (ROOTFS_PACKAGES_LIBEXPAT_DOC) [N/y/?] 
+*
+* external-xilinx-toolchain
+*
+libc6-doc (ROOTFS_PACKAGES_LIBC6_DOC) [N/y/?] 
+*
+* flex
+*
+flex-doc (ROOTFS_PACKAGES_FLEX_DOC) [N/y/?] 
+*
+* gdbm
+*
+libgdbm-doc (ROOTFS_PACKAGES_LIBGDBM_DOC) [N/y/?] 
+*
+* gettext
+*
+gettext-doc (ROOTFS_PACKAGES_GETTEXT_DOC) [N/y/?] 
+*
+* gmp
+*
+libgmp-doc (ROOTFS_PACKAGES_LIBGMP_DOC) [N/y/?] 
+*
+* i2c-tools
+*
+i2c-tools-doc (ROOTFS_PACKAGES_I2C_TOOLS_DOC) [N/y/?] 
+*
+* iproute2
+*
+iproute2-doc (ROOTFS_PACKAGES_IPROUTE2_DOC) [N/y/?] 
+*
+* iptables
+*
+iptables-doc (ROOTFS_PACKAGES_IPTABLES_DOC) [N/y/?] 
+*
+* libffi
+*
+libffi-doc (ROOTFS_PACKAGES_LIBFFI_DOC) [N/y/?] 
+*
+* libnet
+*
+libnet-doc (ROOTFS_PACKAGES_LIBNET_DOC) [N/y/?] 
+*
+* libnl
+*
+libnl-3-doc (ROOTFS_PACKAGES_LIBNL_3_DOC) [N/y/?] 
+*
+* libpcap
+*
+libpcap-doc (ROOTFS_PACKAGES_LIBPCAP_DOC) [N/y/?] 
+*
+* libpcre
+*
+libpcre-doc (ROOTFS_PACKAGES_LIBPCRE_DOC) [N/y/?] 
+*
+* libpng
+*
+libpng16-doc (ROOTFS_PACKAGES_LIBPNG16_DOC) [N/y/?] 
+*
+* lzo
+*
+liblzo2-doc (ROOTFS_PACKAGES_LIBLZO2_DOC) [N/y/?] 
+*
+* m4
+*
+m4-doc (ROOTFS_PACKAGES_M4_DOC) [N/y/?] 
+*
+* mtd-utils
+*
+mtd-utils-doc (ROOTFS_PACKAGES_MTD_UTILS_DOC) [N/y/?] 
+*
+* ncurses
+*
+ncurses-doc (ROOTFS_PACKAGES_NCURSES_DOC) [Y/n/?] 
+*
+* net-tools
+*
+net-tools-doc (ROOTFS_PACKAGES_NET_TOOLS_DOC) [N/y/?] 
+*
+* netbase
+*
+netbase-doc (ROOTFS_PACKAGES_NETBASE_DOC) [N/y/?] 
+*
+* netcat
+*
+netcat-doc (ROOTFS_PACKAGES_NETCAT_DOC) [N/y/?] 
+*
+* openssl
+*
+openssl-doc (ROOTFS_PACKAGES_OPENSSL_DOC) [N/y/?] 
+*
+* oprofile
+*
+*
+* pciutils
+*
+pciutils-doc (ROOTFS_PACKAGES_PCIUTILS_DOC) [N/y/?] 
+*
+* perl
+*
+perl-doc (ROOTFS_PACKAGES_PERL_DOC) [N/y/?] 
+*
+* popt
+*
+libpopt-doc (ROOTFS_PACKAGES_LIBPOPT_DOC) [N/y/?] 
+*
+* portmap
+*
+portmap-doc (ROOTFS_PACKAGES_PORTMAP_DOC) [N/y/?] 
+*
+* strace
+*
+strace-doc (ROOTFS_PACKAGES_STRACE_DOC) [N/y/?] 
+*
+* sysfsutils
+*
+sysfsutils-doc (ROOTFS_PACKAGES_SYSFSUTILS_DOC) [N/y/?] 
+*
+* sysvinit
+*
+sysvinit-doc (ROOTFS_PACKAGES_SYSVINIT_DOC) [N/y/?] 
+*
+* tcp-wrappers
+*
+tcp-wrappers-doc (ROOTFS_PACKAGES_TCP_WRAPPERS_DOC) [N/y/?] 
+*
+* tcpdump
+*
+tcpdump-doc (ROOTFS_PACKAGES_TCPDUMP_DOC) [N/y/?] 
+*
+* unzip
+*
+unzip-doc (ROOTFS_PACKAGES_UNZIP_DOC) [N/y/?] 
+*
+* usbutils
+*
+usbutils-doc (ROOTFS_PACKAGES_USBUTILS_DOC) [N/y/?] 
+*
+* util-linux
+*
+util-linux-doc (ROOTFS_PACKAGES_UTIL_LINUX_DOC) [N/y/?] 
+*
+* zlib
+*
+libz-doc (ROOTFS_PACKAGES_LIBZ_DOC) [N/y/?] 
+*
+* libs
+*
+*
+* db
+*
+db (ROOTFS_PACKAGES_DB) [N/y/?] 
+db-bin (ROOTFS_PACKAGES_DB_BIN) [N/y/?] 
+db-cxx (ROOTFS_PACKAGES_DB_CXX) [N/y/?] 
+*
+* expat
+*
+libexpat-bin (ROOTFS_PACKAGES_LIBEXPAT_BIN) [N/y/?] 
+libexpat1 (ROOTFS_PACKAGES_LIBEXPAT1) [N/y/?] 
+*
+* gdbm
+*
+libgdbm-bin (ROOTFS_PACKAGES_LIBGDBM_BIN) [N/y/?] 
+libgdbm-compat4 (ROOTFS_PACKAGES_LIBGDBM_COMPAT4) [N/y/?] 
+libgdbm4 (ROOTFS_PACKAGES_LIBGDBM4) [N/y/?] 
+*
+* gettext
+*
+gettext (ROOTFS_PACKAGES_GETTEXT) [N/y/?] 
+gettext-runtime (ROOTFS_PACKAGES_GETTEXT_RUNTIME) [N/y/?] 
+gettext-runtime-doc (ROOTFS_PACKAGES_GETTEXT_RUNTIME_DOC) [N/y/?] 
+libgettextlib (ROOTFS_PACKAGES_LIBGETTEXTLIB) [N/y/?] 
+libgettextsrc (ROOTFS_PACKAGES_LIBGETTEXTSRC) [N/y/?] 
+*
+* glib-2.0
+*
+libglib-2.0-0 (ROOTFS_PACKAGES_LIBGLIB_2_0_0) [N/y/?] 
+libglib-2.0-bash-completion (ROOTFS_PACKAGES_LIBGLIB_2_0_BASH_COMPLETION) [N/y/?] 
+libglib-2.0-codegen (ROOTFS_PACKAGES_LIBGLIB_2_0_CODEGEN) [N/y/?] 
+libglib-2.0-utils (ROOTFS_PACKAGES_LIBGLIB_2_0_UTILS) [N/y/?] 
+*
+* libnet
+*
+libnet9 (ROOTFS_PACKAGES_LIBNET9) [N/y/?] 
+*
+* libpng
+*
+libpng16-16 (ROOTFS_PACKAGES_LIBPNG16_16) [N/y/?] 
+libpng16-tools (ROOTFS_PACKAGES_LIBPNG16_TOOLS) [N/y/?] 
+*
+* libusb-compat
+*
+libusb-0.1-4 (ROOTFS_PACKAGES_LIBUSB_0_1_4) [N/y/?] 
+*
+* libusb1
+*
+libusb-1.0-0 (ROOTFS_PACKAGES_LIBUSB_1_0_0) [N/y/?] 
+*
+* lzo
+*
+liblzo2-2 (ROOTFS_PACKAGES_LIBLZO2_2) [N/y/?] 
+*
+* ncurses
+*
+libform5 (ROOTFS_PACKAGES_LIBFORM5) [N/y/?] 
+libformw5 (ROOTFS_PACKAGES_LIBFORMW5) [N/y/?] 
+libmenu5 (ROOTFS_PACKAGES_LIBMENU5) [N/y/?] 
+libmenuw5 (ROOTFS_PACKAGES_LIBMENUW5) [N/y/?] 
+libncurses5 (ROOTFS_PACKAGES_LIBNCURSES5) [N/y/?] 
+libncursesw5 (ROOTFS_PACKAGES_LIBNCURSESW5) [Y/?] y
+libpanel5 (ROOTFS_PACKAGES_LIBPANEL5) [N/y/?] 
+libpanelw5 (ROOTFS_PACKAGES_LIBPANELW5) [N/y/?] 
+libtic5 (ROOTFS_PACKAGES_LIBTIC5) [N/y/?] 
+libticw5 (ROOTFS_PACKAGES_LIBTICW5) [N/y/?] 
+libtinfo5 (ROOTFS_PACKAGES_LIBTINFO5) [Y/?] y
+ncurses (ROOTFS_PACKAGES_NCURSES) [N/y/?] 
+ncurses-terminfo (ROOTFS_PACKAGES_NCURSES_TERMINFO) [N/y/?] 
+ncurses-terminfo-base (ROOTFS_PACKAGES_NCURSES_TERMINFO_BASE) [N/y/?] 
+ncurses-tools (ROOTFS_PACKAGES_NCURSES_TOOLS) [N/y/?] 
+*
+* popt
+*
+libpopt0 (ROOTFS_PACKAGES_LIBPOPT0) [N/y/?] 
+*
+* zlib
+*
+libz1 (ROOTFS_PACKAGES_LIBZ1) [Y/?] y
+*
+* libs/network
+*
+*
+* libnl
+*
+libnl-3-200 (ROOTFS_PACKAGES_LIBNL_3_200) [Y/?] y
+libnl-3-cli (ROOTFS_PACKAGES_LIBNL_3_CLI) [Y/?] y
+libnl-3-genl (ROOTFS_PACKAGES_LIBNL_3_GENL) [Y/n/?] 
+libnl-idiag-3-200 (ROOTFS_PACKAGES_LIBNL_IDIAG_3_200) [Y/?] y
+libnl-nf-3-200 (ROOTFS_PACKAGES_LIBNL_NF_3_200) [Y/?] y
+libnl-route-3-200 (ROOTFS_PACKAGES_LIBNL_ROUTE_3_200) [Y/?] y
+*
+* libpcap
+*
+libpcap1 (ROOTFS_PACKAGES_LIBPCAP1) [Y/n/?] 
+*
+* openssl
+*
+libcrypto1.0.0 (ROOTFS_PACKAGES_LIBCRYPTO1_0_0) [N/y/?] 
+libssl1.0.0 (ROOTFS_PACKAGES_LIBSSL1_0_0) [N/y/?] 
+openssl (ROOTFS_PACKAGES_OPENSSL) [N/y/?] 
+openssl-conf (ROOTFS_PACKAGES_OPENSSL_CONF) [N/y/?] 
+openssl-engines (ROOTFS_PACKAGES_OPENSSL_ENGINES) [N/y/?] 
+openssl-misc (ROOTFS_PACKAGES_OPENSSL_MISC) [N/y/?] 
+*
+* Libs
+*
+*
+* Apps
+*
+*
+* fwupgrade
+*
+fwupgrade (ROOTFS_COMPONENT_APPS_NAME_FWUPGRADE) [Y/n] 
+*
+* gpio-demo
+*
+gpio-demo (ROOTFS_COMPONENT_APPS_NAME_GPIO__DEMO) [N/y] 
+*
+* latencystat
+*
+latencystat (ROOTFS_COMPONENT_APPS_NAME_LATENCYSTAT) [N/y] 
+*
+* peekpoke
+*
+peekpoke (ROOTFS_COMPONENT_APPS_NAME_PEEKPOKE) [Y/n] 
+*
+* snes
+*
+snes (ROOTFS_COMPONENT_APPS_NAME_SNES) [Y/n] 
+  *
+  * No additional options for SNES
+  *
+*
+* uWeb
+*
+uWeb (ROOTFS_COMPONENT_APPS_NAME_UWEB) [Y/n] 
+*
+* Modules
+*
+*
+* PetaLinux RootFS Settings
+*
+Root password (ROOTFS_ROOT_PASSWD) [root] 
+*
+* Service configuration
+*
+Enable busybox FTPD with inetd service (ROOTFS_BUSYBOX_INETD_FTPD) [Y/n/?] 
+Enable busybox TELNETD with inetd service (ROOTFS_BUSYBOX_INETD_TELNETD) [Y/n/?] 
+*
+* Debugging
+*
+build debugable applications (USER_DEBUG) [N/y/?] 
+#
+# configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/rootfs/config
+#

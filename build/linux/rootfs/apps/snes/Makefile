@@ -23,6 +23,8 @@ clean:
 
 install: $(APP)
 	$(TARGETINST) -d $(APP) /bin/$(APP)
+	$(TARGETINST) program /home/root 
+
 
 %.o: %.c
 	$(CC) -c $(CFLAGS) -o $@ $<

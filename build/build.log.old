@@ -1,4 +1,6 @@
 [ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
 [INFO ] install linux/rootfs/snes
 [ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -d snes /bin/snes
+[ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh program /home/root 
+[ALL  ] rm: cannot remove ‘/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/root’: Is a directory
 [ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'

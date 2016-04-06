@@ -1,0 +1,43 @@
+INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
+
+****** Webtalk v2014.4 (64-bit)
+  **** SW Build 1071353 on Tue Nov 18 16:58:04 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+WARNING: [Common 17-204] Your XILINX environment variable is undefined. You will not be able to run Synthesis and Implementation using ISE based strategies, or import ngc netlists. Please set up your XILINX environment to get full functionality.
+source /home/steven/Desktop/LINUX_SNES/.petalinux/webtalk/plnx_wb_9013.tcl
+# webtalk_init -webtalk_dir /home/steven/Desktop/LINUX_SNES/.petalinux/webtalk
+# webtalk_register_client -client project
+# webtalk_add_data -client project -key date_generated -value "Thu Mar 31 23:28:05 2016" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key product_version -value "PetaLinux v2014.4" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key build_version -value "2014.4" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key registration_id -value "210816789_0_0_826" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key tool_flow -value "PetaLinux" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key beta -value "FALSE" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key route_design -value "FALSE" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_family -value "not_applicable" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_device -value "not_applicable" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_package -value "not_applicable" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key random_id -value "fa734431b164ed3b77f1905c58625194" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_id -value "a325d18d45ebcfa637f5e4eec028b016" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key project_iteration -value "0" -context "software_version_and_target_device"
+# webtalk_add_data -client project -key os_name -value "Ubuntu" -context "user_environment"
+# webtalk_add_data -client project -key os_release -value "Ubuntu 14.04.4 LTS" -context "user_environment"
+# webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i5-2400 CPU @ 3.10GHz" -context "user_environment"
+# webtalk_add_data -client project -key cpu_speed -value "3099.878 MHz" -context "user_environment"
+# webtalk_add_data -client project -key total_processors -value "4" -context "user_environment"
+# webtalk_add_data -client project -key system_ram -value "15.634 GB" -context "user_environment"
+# webtalk_register_client -client petalinux_config
+# webtalk_add_data -client petalinux_config -key tool_name -value "petalinux-config" -context "petalinux_config\\usage"
+# webtalk_add_data -client petalinux_config -key total_run -value "1" -context "petalinux_config\\usage"
+# webtalk_add_data -client petalinux_config -key failure -value "0" -context "petalinux_config\\usage"
+# webtalk_add_data -client petalinux_config -key searchpath -value "" -context "petalinux_config\\command_line_options"
+# webtalk_add_data -client petalinux_config -key print -value "" -context "petalinux_config\\command_line_options"
+# webtalk_transmit -clientid 1215976243 -regid "210816789_0_0_826" -xml /home/steven/Desktop/LINUX_SNES/.petalinux/webtalk/usage_statistics_ext_petalinux.xml -html /home/steven/Desktop/LINUX_SNES/.petalinux/webtalk/usage_statistics_ext_petalinux.html -wdm /opt/petalinux/petalinux-v2014.4-final/tools/common/petalinux/webtalk/usage_statistics_ext_petalinux.wdm -intro "<H3>PetaLinux Usage Report</H3><BR>"
+
+    while executing
+"webtalk_transmit -clientid 1215976243 -regid "210816789_0_0_826" -xml /home/steven/Desktop/LINUX_SNES/.petalinux/webtalk/usage_statistics_ext_petalinu..."
+    (file "/home/steven/Desktop/LINUX_SNES/.petalinux/webtalk/plnx_wb_9013.tcl" line 30)
+INFO: [Common 17-206] Exiting Webtalk at Thu Mar 31 23:28:47 2016...

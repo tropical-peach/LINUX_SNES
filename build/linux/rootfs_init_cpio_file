@@ -272,6 +272,7 @@ file /home/httpd/img/checked.png /home/steven/Desktop/LINUX_SNES/build/linux/roo
 file /home/httpd/img/close.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/close.png 755 0 0
 file /home/httpd/img/modify.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/modify.png 755 0 0
 file /home/httpd/img/view.png /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/httpd/img/view.png 755 0 0
+file /home/root/program /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/home/root/program 664 0 0
 file /sbin/fstab-decode /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/fstab-decode 755 0 0
 file /sbin/swapoff.util-linux /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/swapoff.util-linux 755 0 0
 file /sbin/pivot_root.util-linux /home/steven/Desktop/LINUX_SNES/build/linux/rootfs/targetroot/sbin/pivot_root.util-linux 755 0 0
