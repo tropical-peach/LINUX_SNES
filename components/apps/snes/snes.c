@@ -54,9 +54,10 @@
 #define reg_proc 		  *(adress + 7 )
 #define reg_dbr 		  *(adress + 8 )
 #define state_machine	*(adress + 9 )
-#define ready 			  *(adress + 10)
+#define rw_ready 		  *(adress + 10)
 #define d_bus 			  *(adress + 11)
 #define data_ready 		*(adress + 12)
+#define d_bus_out 		*(adress + 13)
 #define version_reg 	*(adress + 31)
 
 
@@ -124,7 +125,7 @@ int main(int argc, char *argv[])
 		char instruction_string[BUF_SIZE];
 		unsigned int instruction_code = 0;
 		int ready_next_value;
-
+		char * write_back_pointer;
 		//TODO:
 		//	1)	get 32 bit value from file								|✔
 		//	2)	set to D-Bus															|✔
@@ -136,10 +137,12 @@ int main(int argc, char *argv[])
 		{
 		
 				fseek(program_memory, (long)(addr_bus), SEEK_SET);
-				if(0 == (fread(instruction_string, 8, 1, program_memory)));
+				if(0 == (fread(instruction_string, 8, 1, program_memory)))
 				{
-					//TODO:
-					//	Finalize ending of program here
+					puts( "\033[0;0f"  );	//Set home
+					puts( "\033[2J" 	 );	//Clear screen
+					printf("End of Memory, exiting...\n");
+					return(EXIT_SUCCESS);
 				}
 				instruction_code = (int)strtoul(instruction_string, NULL, 16);
 				
@@ -150,6 +153,18 @@ int main(int argc, char *argv[])
 				do
 				{
 						write_all_registers();
+						if (rw_ready == 0x00000002)
+						{
+							write_back_pointer = binrep((d_bus_out ),binary_buffer, BUF_SIZE);
+							fseek(program_memory, (long)(addr_bus), SEEK_SET);
+							fwrite((write_back_pointer), sizeof(char), sizeof(*(write_back_pointer)), program_memory);
+
+						}
+
+						write_back_pointer = binrep((d_bus_out ),binary_buffer, BUF_SIZE);
+						puts( "\033[55;15f");
+						printf("Regular :\t%s \nDereferenced:\t%u",write_back_pointer,sizeof( *(write_back_pointer)));
+
 						if (ready_next() == 1337)
 								break;
 						else
@@ -281,7 +296,7 @@ void write_all_registers(void)
 	printf("reg_proc     : \t");	printf("%s", binrep((reg_proc 	  ),binary_buffer, BUF_SIZE)); 										printf("[N O M I D irq Z C ] \n\t%x\n",reg_proc);
 	printf("reg_dbr      : \t");	printf("%s", binrep((reg_dbr 	    ),binary_buffer, BUF_SIZE));									 	printf("\t0x%x\n",reg_dbr 	   );
 	printf("state_machine: \t");	printf("%s", binrep((state_machine),binary_buffer, BUF_SIZE));									 	printf("\t0x%x\n",state_machine);
-	printf("ready        : \t");	printf("%s", binrep((ready 		    ),binary_buffer, BUF_SIZE));									 	printf("\t0x%x\n",ready 		   );
+	printf("rw_ready     : \t");	printf("%s", binrep((rw_ready	    ),binary_buffer, BUF_SIZE));									 	printf("\t0x%x\n",rw_ready	   );
 	printf("d_bus        : \t");	printf("%s", binrep((d_bus 		    ),binary_buffer, BUF_SIZE)); puts("\n\033[k"); 	printf("\t0x%x\n",d_bus 		   );
 	printf("data_ready   : \t");	printf("%s", binrep((data_ready 	),binary_buffer, BUF_SIZE)); 										printf("\t0x%x\n",data_ready 	 );
 	printf("version_reg  : \t");	printf("%s", binrep((version_reg  ),binary_buffer, BUF_SIZE)); 										printf("\t0x%x\n",version_reg  );
@@ -348,7 +363,7 @@ void initalize(void)
  */
 int ready_next(void)
 {
-		if (ready == 0x00000001)
+		if (rw_ready == 0x00000001)
 		{
 				puts("\033[35;0f");
 				puts("\033[2k");
