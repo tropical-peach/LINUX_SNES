@@ -1,26 +1,4 @@
 [ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
-[INFO ] pre-build linux/rootfs/snes
-[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
-[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
-[INFO ] build linux/rootfs/snes
-[ALL  ] arm-xilinx-linux-gnueabi-gcc  -c -Os -g -fomit-frame-pointer -pipe -fno-common -fno-builtin -Wall  -march=armv7-a -mfpu=neon -mfloat-abi=softfp -mthumb-interwork -mtune=cortex-a9  -DEMBED -Dlinux -D__linux__ -Dunix -fPIC --sysroot=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage -o snes.o snes.c
-[ALL  ] snes.c: In function 'main':
-[ALL  ] snes.c:127:7: warning: unused variable 'ready_next_value' [-Wunused-variable]
-[ALL  ]    int ready_next_value;
-[ALL  ]        ^
-[ALL  ] snes.c: In function 'initalize':
-[ALL  ] snes.c:319:7: warning: unused variable 'i' [-Wunused-variable]
-[ALL  ]    int i;
-[ALL  ]        ^
-[ALL  ] arm-xilinx-linux-gnueabi-gcc  --sysroot=/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/stage -o snes snes.o  
-[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
-[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
-[INFO ] post-build linux/rootfs/snes
-[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
-[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
-[INFO ] pre-install linux/rootfs/snes
-[ALL  ] make: Leaving directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
-[ALL  ] make: Entering directory `/home/steven/Desktop/LINUX_SNES/build/linux/rootfs/apps/snes'
 [INFO ] install linux/rootfs/snes
 [ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh -d snes /bin/snes
 [ALL  ] /opt/petalinux/petalinux-v2014.4-final/components/rootfs/targetroot-inst.sh program /home/root 

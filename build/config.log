@@ -387,6 +387,43 @@ Firmware Version (SUBSYSTEM_FW_VERSION) [1.5]
 #
 # configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/config
 #
+[INFO ] generate DTS to /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/device-tree
+INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
+
+****** hsi v
+  **** SW Build 1071353 on Tue Nov 18 16:37:08 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
+source /opt/petalinux/petalinux-v2014.4-final/etc/hsm/scripts/petalinux_hsm_bridge.tcl -notrace
+WARNING: ps7_ethernet_0: No reset found
+WARNING: ps7_i2c_0: No reset found
+WARNING: ps7_usb_0: No reset found
+INFO: [Common 17-206] Exiting hsi at Mon Apr 11 17:15:56 2016...
+[INFO ] generate linux/u-boot board header files
+INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
+
+****** hsi v
+  **** SW Build 1071353 on Tue Nov 18 16:37:08 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
+source /opt/petalinux/petalinux-v2014.4-final/etc/hsm/scripts/petalinux_hsm_bridge.tcl -notrace
+INFO: [Common 17-206] Exiting hsi at Mon Apr 11 17:18:00 2016...
+[INFO ] generate BSP for zynq_fsbl
+INFO: [Common 17-701] A license check has taken more than 10 seconds to complete. This may indicate that there is a performance issue with one or more license servers listed in XILINXD_LICENSE_FILE or LM_LICENSE_FILE, or that the license servers are just not responding at all. Try setting the FLEXLM_DIAGNOSTICS environment variable to 3 and running Vivado again to get more information.
+
+****** hsi v
+  **** SW Build 1071353 on Tue Nov 18 16:37:08 MST 2014
+    ** Copyright 1986-2014 Xilinx, Inc. All Rights Reserved.
+
+INFO: [Hsi 55-1698] elapsed time for repository loading 0 seconds
+source /opt/petalinux/petalinux-v2014.4-final/etc/hsm/scripts/petalinux_hsm_bridge.tcl -notrace
+CRITICAL WARNING: [Hsi 55-1564] TCL file /home/steven/Desktop/65816_Interface_System/65816_Interface_System.ipdefs/Vivado_Custom_IP_Repo/AXIinterfacefor65816_1.0/drivers/AXIinterfacefor65816_v1_0/data/axiinterfacefor65816.tcl doesn't exist for driver axiinterfacefor65816
+CRITICAL WARNING: [Hsi 55-1564] TCL file /home/steven/Desktop/65816_Interface_System/65816_Interface_System.ipdefs/Vivado_Custom_IP_Repo/AXIinterfacefor65816_1.0/drivers/AXIinterfacefor65816_v1_0/data/axiinterfacefor65816.tcl doesn't exist for driver axiinterfacefor65816
+CRITICAL WARNING: [Hsi 55-1564] TCL file /home/steven/Desktop/65816_Interface_System/65816_Interface_System.ipdefs/Vivado_Custom_IP_Repo/AXIinterfacefor65816_1.0/drivers/AXIinterfacefor65816_v1_0/data/axiinterfacefor65816.tcl doesn't exist for driver axiinterfacefor65816
+CRITICAL WARNING: [Hsi 55-1564] TCL file /home/steven/Desktop/65816_Interface_System/65816_Interface_System.ipdefs/Vivado_Custom_IP_Repo/AXIinterfacefor65816_1.0/drivers/AXIinterfacefor65816_v1_0/data/axiinterfacefor65816.tcl doesn't exist for driver axiinterfacefor65816
+INFO: [Common 17-206] Exiting hsi at Mon Apr 11 17:20:03 2016...
 [INFO ] oldconfig linux/kernel
 #
 # configuration written to /home/steven/Desktop/LINUX_SNES/subsystems/linux/configs/kernel/config

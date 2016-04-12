@@ -1,6 +1,6 @@
 the_ROM_image:
 {
-	[bootloader] /tmp/tmp.wHH82RGDht/zynq_fsbl.elf
-	/tmp/tmp.wHH82RGDht/Interface_Master_BD_wrapper.bit
-	/tmp/tmp.wHH82RGDht/u-boot.elf
+	[bootloader] /tmp/tmp.xSMhFzWBUc/zynq_fsbl.elf
+	/tmp/tmp.xSMhFzWBUc/Interface_Master_BD_wrapper.bit
+	/tmp/tmp.xSMhFzWBUc/u-boot.elf
 }

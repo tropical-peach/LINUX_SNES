@@ -142,6 +142,7 @@ int main(int argc, char *argv[])
 					puts( "\033[0;0f"  );	//Set home
 					puts( "\033[2J" 	 );	//Clear screen
 					printf("End of Memory, exiting...\n");
+					fclose(program_memory);
 					return(EXIT_SUCCESS);
 				}
 				instruction_code = (int)strtoul(instruction_string, NULL, 16);
@@ -160,18 +161,24 @@ int main(int argc, char *argv[])
 							fwrite((write_back_pointer), sizeof(char), sizeof(*(write_back_pointer)), program_memory);
 
 						}
-
-						write_back_pointer = binrep((d_bus_out ),binary_buffer, BUF_SIZE);
-						puts( "\033[55;15f");
-						printf("Regular :\t%s \nDereferenced:\t%u",write_back_pointer,sizeof( *(write_back_pointer)));
-
-						if (ready_next() == 1337)
+						ready_next_value = ready_next();
+						if (ready_next_value == 1337)
 								break;
-						else
+						else if (ready_next_value == 2)
+						{
+								fclose(program_memory);
 								return(EXIT_SUCCESS);
+						}
+						else if (ready_next_value == 3)
+						{
+								init_screen();
+								break;
+						}
+						
 				}while(state_machine != 0x00000001);
 
 		}while( 1 );
+
 
 
 		return (EXIT_SUCCESS);
@@ -267,7 +274,7 @@ void init_screen(void)
 
 	puts( "\033[0;0f"  );	//Set home
 	puts( "\033[2J" );	//Clear screen
-	puts( "\033[35m");	//Set type color magenta
+	puts( "\033[33m");	//Set type color magenta
 	return;
 
 }
@@ -286,20 +293,20 @@ void write_all_registers(void)
 
 
 	puts( "\033[0;0f"  );	//Set home
-	printf("addr_bus     : \t");	printf("%s", binrep((addr_bus 	  ),binary_buffer, BUF_SIZE)); puts("\n\033[k"); 	printf("\t0x%x\n",addr_bus 	   );
-	printf("emulation_sel: \t");	printf("%s", binrep((emulation_sel),binary_buffer, BUF_SIZE)); 										printf("\t0x%x\n",emulation_sel);
-	printf("reg_a        : \t");	printf("%s", binrep((reg_a 		    ),binary_buffer, BUF_SIZE)); 										printf("\t0x%x\n",reg_a 		   );
-	printf("reg_x	     : \t"  );	printf("%s", binrep((reg_x		    ),binary_buffer, BUF_SIZE));										printf("\tx%x\n",reg_x		     );
-	printf("reg_y        : \t");	printf("%s", binrep((reg_y 	    	),binary_buffer, BUF_SIZE));										printf("\t0x%x\n",reg_y 	     );
-	printf("reg_sp       : \t");	printf("%s", binrep((reg_sp 	  	),binary_buffer, BUF_SIZE));										printf("\t0x%x\n",reg_sp 	  	 );
-	printf("reg_pc       : \t");	printf("%s", binrep((reg_pc 		  ),binary_buffer, BUF_SIZE)); puts("\n\033[k"); 	printf("\t0x%x\n",reg_pc 		   );
-	printf("reg_proc     : \t");	printf("%s", binrep((reg_proc 	  ),binary_buffer, BUF_SIZE)); 										printf("[N O M I D irq Z C ] \n\t%x\n",reg_proc);
-	printf("reg_dbr      : \t");	printf("%s", binrep((reg_dbr 	    ),binary_buffer, BUF_SIZE));									 	printf("\t0x%x\n",reg_dbr 	   );
-	printf("state_machine: \t");	printf("%s", binrep((state_machine),binary_buffer, BUF_SIZE));									 	printf("\t0x%x\n",state_machine);
-	printf("rw_ready     : \t");	printf("%s", binrep((rw_ready	    ),binary_buffer, BUF_SIZE));									 	printf("\t0x%x\n",rw_ready	   );
-	printf("d_bus        : \t");	printf("%s", binrep((d_bus 		    ),binary_buffer, BUF_SIZE)); puts("\n\033[k"); 	printf("\t0x%x\n",d_bus 		   );
-	printf("data_ready   : \t");	printf("%s", binrep((data_ready 	),binary_buffer, BUF_SIZE)); 										printf("\t0x%x\n",data_ready 	 );
-	printf("version_reg  : \t");	printf("%s", binrep((version_reg  ),binary_buffer, BUF_SIZE)); 										printf("\t0x%x\n",version_reg  );
+	printf("addr_bus     : \t");	printf("%s", binrep((addr_bus 	  ),binary_buffer, BUF_SIZE)); puts("\n\033[K"); 	printf("\n\t0x%x\n",addr_bus 	   );
+	printf("emulation_sel: \t");	printf("%s", binrep((emulation_sel),binary_buffer, BUF_SIZE)); 							  		printf("\n\t0x%x\n",emulation_sel);
+	printf("reg_a        : \t");	printf("%s", binrep((reg_a 		    ),binary_buffer, BUF_SIZE)); 							  		printf("\n\t0x%x\n",reg_a 		   );
+	printf("reg_x	     : \t"  );	printf("%s", binrep((reg_x		    ),binary_buffer, BUF_SIZE));							  		printf("\n\tx%x\n",reg_x		     );
+	printf("reg_y        : \t");	printf("%s", binrep((reg_y 	    	),binary_buffer, BUF_SIZE));							  		printf("\n\t0x%x\n",reg_y 	     );
+	printf("reg_sp       : \t");	printf("%s", binrep((reg_sp 	  	),binary_buffer, BUF_SIZE));							  		printf("\n\t0x%x\n",reg_sp 	  	 );
+	printf("reg_pc       : \t");	printf("%s", binrep((reg_pc 		  ),binary_buffer, BUF_SIZE)); puts("\n\033[K"); 	printf("\n\t0x%x\n",reg_pc 		   );
+	printf("reg_proc     : \t");	printf("%s", binrep((reg_proc 	  ),binary_buffer, BUF_SIZE)); 							  		printf("[N O M I D irq Z C ] \n\t%x\n",reg_proc);
+	printf("reg_dbr      : \t");	printf("%s", binrep((reg_dbr 	    ),binary_buffer, BUF_SIZE));							  	 	printf("\n\t0x%x\n",reg_dbr 	   );
+	printf("state_machine: \t");	printf("%s", binrep((state_machine),binary_buffer, BUF_SIZE));							  	 	printf("\n\t0x%x\n",state_machine);
+	printf("rw_ready     : \t");	printf("%s", binrep((rw_ready	    ),binary_buffer, BUF_SIZE));							  	 	printf("\n\t0x%x\n",rw_ready	   );
+	printf("d_bus        : \t");	printf("%s", binrep((d_bus 		    ),binary_buffer, BUF_SIZE)); puts("\n\033[K"); 	printf("\n\t0x%x\n",d_bus 		   );
+	printf("data_ready   : \t");	printf("%s", binrep((data_ready 	),binary_buffer, BUF_SIZE)); 										printf("\n\t0x%x\n",data_ready 	 );
+	printf("version_reg  : \t");	printf("%s", binrep((version_reg  ),binary_buffer, BUF_SIZE)); 										printf("\n\t0x%x\n",version_reg  );
 
 	return;
 }
@@ -352,8 +359,10 @@ void initalize(void)
 /*
  *	@ready_next
  *		Return: int--
- *						1057 on fail
- *						1337 on success
+ *						0001 on ready not high
+ *						0002 on received no
+ *						0003 on receivde reset
+ *						1337 on succsess
  *
  *		This function checks for ready high.
  *		If it is high, it waits for user input, 
@@ -366,34 +375,34 @@ int ready_next(void)
 		if (rw_ready == 0x00000001)
 		{
 				puts("\033[35;0f");
-				puts("\033[2k");
+				puts("\033[2K");
 				fprintf(stdout, "Ready is high, no error. Continuing in ready_next.\n");
 		}
 		else
 		{
 				puts("\033[35;0f");
-				puts("\033[2k");
+				puts("\033[2K");
 				fprintf(stdout, "Ready is not high. Exiting function and continueing.\n");
-				return(1057);
+				return(1);
 		}
 
-		puts("\033[36;0f");
 		fprintf(stdout, "Instruction Done, execute next?\n");
 		char next[BUF_SIZE];
 		char end[2] = "NO";
 		char reset[5] = "reset";
-		fgets(next, BUF_SIZE - 25, stdin);
+		fgets(next, BUF_SIZE - 20, stdin);
 		
-		puts("\033[2k");
+		puts("\033[2K");
 		if (!strncmp(next, end, 2))
 		{
 				fprintf(stderr, "\tRECEIVED 'NO'. Exiting program\n");
-				return (EXIT_SUCCESS);
+				return (2);
 		}
 		else if (!strncmp(next, reset, 5))
 		{
 				fprintf(stderr, "\tResetting after 5 second sleep. Please toggle reset\n");
 				sleep(5);
+				return(3);
 		}
 
 		return(1337);

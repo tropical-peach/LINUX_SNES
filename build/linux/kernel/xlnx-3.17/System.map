@@ -23321,10 +23321,10 @@
 40460000 R __start_rodata
 4046000f R linux_proc_banner
 40460083 R linux_banner
-40460132 r __func__.5984
-40460142 r sqrt_oddadjust
-40460162 r sqrt_evenadjust
-40460182 r __func__.5952
+40460134 r __func__.5984
+40460144 r sqrt_oddadjust
+40460164 r sqrt_evenadjust
+40460184 r __func__.5952
 40460194 r __func__.22490
 4046019f r __func__.22537
 404601ac r cc_map
@@ -49539,8 +49539,8 @@
 40649fcc t __irf_start
 40649fcc T __security_initcall_end
 40649fcc T __security_initcall_start
-40c0d98d t __irf_end
-40c0d990 T __initramfs_size
+40c0d557 t __irf_end
+40c0d558 T __initramfs_size
 40c0e000 D __per_cpu_load
 40c0e000 D __per_cpu_start
 40c0e000 d cpu_loops_per_jiffy
